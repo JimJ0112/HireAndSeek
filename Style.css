@@ -1,0 +1,282 @@
+               /* Initializing body*/
+               body{
+                margin: 0;
+                padding:0;
+              
+            }
+
+            /* nav bar */
+                nav{ margin: 0;
+                    background-color: rgba(0, 0, 0, 0.438);
+                }
+
+                ul {
+                 list-style-type: none;
+                 margin: 0;
+                 margin-left: 40rem;
+                 padding: 0;
+              
+                }
+
+                .navElement{
+                    display: inline-flex;
+                    margin: 10px;
+                   
+                }
+                #searchbar{height: 30px;}
+
+
+/* Index*/
+
+                /* Carousel */
+                
+                #index_carousel{
+                    
+                    border: 3px dashed black;
+                    height: 300px;
+
+                }
+
+                /*Services Offered*/
+                #index_ServicesOfferedtxt{
+                    margin-left: 1rem;
+                }
+
+                #index_ServicesOfferedTable{
+                   /* border: 1px dashed black; */
+                    height: 250px;
+                    width: 100%;
+                }
+
+                .index_ServicesOfferedTableElement{
+                    border: 1px dashed black;
+                }
+
+                /* Footer */
+                footer{
+                    background-color: rgba(0, 0, 0, 0.438);
+                    padding: 0;
+                    margin: 0;
+                    height: 100px;
+                }
+
+        
+
+/* Services Offered */
+
+
+/* Categories */
+#ServicesOffered_Categories{
+                    margin: 0;
+                    background-color: rgba(66, 39, 39, 0.438);
+                    height:20px;
+                    text-align: center;
+                    padding-top: 20px;
+                    padding-bottom: 0;
+                    
+}
+
+#ServicesOffered_CategoriesList {
+    list-style-type: none;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+   
+ 
+   }
+
+  .ServicesOffered_CategoriesElement{
+       display: inline;
+       margin: 60px;
+       text-align: center;
+       cursor: pointer;
+      
+   }
+
+/*Carousel*/
+#ServicesOffered_Carousel{
+    border: 3px dashed black;
+    height: 300px;
+}
+
+/*Services Offered*/
+
+/*Categories Text*/
+#ServicesOffered_CategoryTxt{
+    margin-left: 1rem;
+}
+
+/* Services Card Parent*/
+#ServicesOffered_Cards{
+    border: 1px dashed black;
+    height:fit-content;
+    padding:10px;
+    line-height: 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+/*Services Card Children*/
+.card {
+    border: 1px solid black;
+    max-width: 300px;
+    max-height: 470px;
+    margin: 10px;
+    padding: 10px;
+    
+   
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: rgb(38, 160, 216);
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    
+    margin-left: 3rem;
+  }
+  
+
+
+
+.ratings{
+text-align: right;
+}
+
+.AccountProfilePicture{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.Card_FreelancerAccount{
+    display: inline;
+}
+
+.Card_Carousel{
+    border: 1px solid black;
+    object-fit:fill;
+    width: 20px;
+    height: 150px;
+}
+
+.AccountName{ 
+margin:0;
+padding: 0;
+display: inline-block;
+}
+
+.AccountLevel{
+    display: block;
+    margin-left: 45px;
+}
+
+.ratings{
+    display: inline-block;
+}
+
+
+/* Avail Service*/
+#AvailService_Carousel{
+    border: 3px dashed black;
+    height: 300px;
+}
+
+#ServiceContainer{
+    display: grid;
+    height: 600px;
+    border: 1px solid black;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+    grid-template-areas: 'description description description  message'
+                         'description description description  message'
+                         'plan plan plan ratings'
+                         'plan plan plan ratings'
+                         'rate rate rate ratings';
+                        
+}
+
+.ServiceContainerChild{
+
+    border: 1px solid black;
+    margin:0;
+    text-align: justify;
+    
+}
+
+.ServiceContainerChild:nth-child(1){
+    grid-area: description;
+    width: 100%;
+    height: 100%;
+}
+
+.ServiceContainerChild:nth-child(2){
+    grid-area: message;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+
+.ServiceContainerChild:nth-child(3){
+    grid-area: plan;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+.ServiceContainerChild:nth-child(4){
+    grid-area: ratings;
+    width: 100%;
+    height: 100%;
+}
+.ServiceContainerChild:nth-child(5){
+    grid-area: rate;
+    width: 100%;
+    height: 100%;
+}
+
+/* Message to Freelancer */
+#MessageToFreelancer{
+    height: 50px;
+}
+
+/* Plans */
+#Plan_Basic{}
+#Plan_Standard{}
+#Plan_Premium{}
+
+.Plan{
+    border: 1px solid black;
+    width: 360px;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#Buy{
+    align-self: right;
+}
+
+.StarRatings{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-right: 50px;
+
+}
+
