@@ -134,7 +134,7 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.send("ReqServiceID=" + rqID);
 
-window.location.replace ("availService.php");
+//window.location.replace ("availService.html");
 
 
 }

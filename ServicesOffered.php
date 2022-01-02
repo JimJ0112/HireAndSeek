@@ -10,18 +10,18 @@
 
     <body>
     
-                  <!-- Nav bar section -->
-                  <nav> 
-                      <a href="Index.php">Home</a>
-                    <ul id = "navlist">
-                        <li class= "navElement" id="searchbar"> <input type = "text" >  <input type="button"> </li>
-                        <li class= "navElement"> <a href = "ServicesOffered.html"> EXPLORE </a> </li>
-                        <li class= "navElement"> <a href = "BecomeAFreelancer.html"> BECOME A FREELANCER </a> </li>
-                        <li class= "navElement"> <a href = "Login_Index.html"> LOGIN </a> </li>
-                        <li class= "navElement"> <a href = "About.html"> ABOUT </a> </li>
-                    
-                    </ul>
-                </nav>
+            <!-- Nav bar section -->
+            <nav> 
+                <a href="Index.php">Home</a>
+                <ul id = "navlist">
+                    <li class= "navElement" id="searchbar"> <input type = "text" >  <input type="button"> </li>
+                    <li class= "navElement"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
+                    <li class= "navElement"> <a href = "BecomeAFreelancer.php"> BECOME A FREELANCER </a> </li>
+                    <li class= "navElement"> <a href = "Login_Index.php"> LOGIN </a> </li>
+                    <li class= "navElement"> <a href = "About.php"> ABOUT </a> </li>
+                
+                </ul>
+            </nav>
             
                 <!-- Categories Section -->
                 <nav id="ServicesOffered_Categories">
@@ -67,7 +67,7 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                        <button class ="ButtonPrice"  id="1" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button>
+                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="1" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
                         
                       </div>
 
@@ -92,7 +92,7 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                        <button class="ButtonPrice" id="2" onclick="ButtonClicked(this.id)" >Price Starts at Php 000.00</button>
+                        <a href="AvailService.php"> <button class="ButtonPrice" id="2" onclick="ButtonClicked(this.id)" >Price Starts at Php 000.00</button> </a>
                       </div>
 
                       <div class="card">
@@ -115,7 +115,7 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                        <button class="ButtonPrice" id="3" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button>
+                        <a href="AvailService.php"> <button class="ButtonPrice" id="3" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
                       </div>
 
                       <div class="card">
@@ -138,7 +138,7 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                      <button class="ButtonPrice" id="4"onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button>
+                        <a href="AvailService.php"> <button class="ButtonPrice" id="4"onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button></a>
                       </div>
 
 
@@ -163,7 +163,7 @@
                          <p class="ServiceDescription"> Some text about the Service..</p>
                         
                        
-                        <button class="ButtonPrice" id="5" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button>
+                         <a href="AvailService.php">  <button class="ButtonPrice" id="5" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button></a>
                       </div>
 
 

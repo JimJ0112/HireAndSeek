@@ -9,13 +9,13 @@
 
             <!-- Nav bar section -->
             <nav> 
-                <a href="Index.html">Home</a>
+                <a href="Index.php">Home</a>
                 <ul id = "navlist">
                     <li class= "navElement" id="searchbar"> <input type = "text" >  <input type="button"> </li>
-                    <li class= "navElement"> <a href = "ServicesOffered.html"> EXPLORE </a> </li>
-                    <li class= "navElement"> <a href = "BecomeAFreelancer.html"> BECOME A FREELANCER </a> </li>
-                    <li class= "navElement"> <a href = "Login_Index.html"> LOGIN </a> </li>
-                    <li class= "navElement"> <a href = "About.html"> ABOUT </a> </li>
+                    <li class= "navElement"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
+                    <li class= "navElement"> <a href = "BecomeAFreelancer.php"> BECOME A FREELANCER </a> </li>
+                    <li class= "navElement"> <a href = "Login_Index.php"> LOGIN </a> </li>
+                    <li class= "navElement"> <a href = "About.php"> ABOUT </a> </li>
                 
                 </ul>
             </nav>
