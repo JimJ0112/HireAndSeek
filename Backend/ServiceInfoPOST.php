@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 
 $temp = $_SESSION["SelectedAccount"];
