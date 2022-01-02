@@ -1,7 +1,8 @@
-<?php
-
+<?Php 
+session_start();
 
 ?>
+
 <DOCTYPE>
     <html>
         <head>
