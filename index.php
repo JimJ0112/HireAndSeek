@@ -1,7 +1,4 @@
-<?Php 
-session_start();
 
-?>
 
 <DOCTYPE>
     <html>
