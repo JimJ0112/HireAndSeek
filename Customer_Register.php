@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
     <html>
         <head>
@@ -25,22 +24,53 @@
 
             <div id="LoginForm">
                
-            <form action="Backend/Login.php" method="post">
+            <form action="Backend/Customer_Register.backend.php" method="post">
                 <br> <br>
-            <label name="Username_LBL"> EMAIL</label> <br>
-            <input type="text" name="Username_TB" placeholder="juandelacruz@email.com">
+         
+            <input type="text" name="FirstName" placeholder="FIRST NAME">
+            <input type="text" name="LastName" placeholder="LAST NAME">
+            <input type="text" name="MiddleInitial" placeholder="M.I">
+            <input type="text" name="Age" placeholder="AGE">
+            <select name="Gender"> 
+                <option value="" disabled selected hidden> GENDER </option>
+            <option value="male"> MALE </option>
+            <option value="female"> FEMALE </option>
+            </select>
+
             <br><br>
-            <label name="Password_LBL"> Password </label> <br>
-            <input type="password" name="Password_TB"  >
+
+            <input type="text" name="Email" placeholder="Email">
+            <input type="text" name="Contact" placeholder="Contact Number">
+            <input type="text" name="Address" placeholder="Address">
+            
+            
+          
+            
             <br> <br>
-            <a href="Freelancer_Register.php"> <u> Forgot Password? <u> </a> <br> <br>
-            <input type="submit" value="LOG IN">
+
+            <input type="text" name="BirthDate" placeholder="BirthDate">
+            <input type="text" name="Language" placeholder="Language">
+            <input type="text" name="CivilStatus" placeholder="Civil Status">
+
             <br> <br>
-            <a href="Freelancer_Register.php"> Create an Account as Freelancer </a> <br> <br>
-            <a href="Customer_Register.php"> Create an Account as Customer </a> <br> <br>
-            <p> OR LOGIN WITH </p> <br>
-            <a> FACEBOOK </a> <br> <br>
-            <a> GMAIL </a>
+
+            <br> <br> <br>
+            <select name="IDTYPE"> 
+                <option value="" disabled selected hidden> ID TYPE </option>
+            <option value="Driving License"> Driving License </option>
+            <option value="National ID"> National ID </option>
+            <option value="School ID"> School ID </option>
+            </select>
+
+           <br><br>
+           UPLOAD ID <br>
+        <input type="file" name="IDFile" placeholder="ID "
+            accept=".jpg,.png">
+
+            <br> <br>
+ 
+            <input type="submit" value="Sign Up">
+   
             </form>
 
 
@@ -53,4 +83,4 @@
             </footer>
 
         </body>
-    </html>
+    </html>  
