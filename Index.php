@@ -1,6 +1,6 @@
 <?Php 
 session_start();
-
+//session start
 ?>
 
 <DOCTYPE>
