@@ -23,7 +23,7 @@
             <div id="index_carousel">
 
                 <center>
-                  <a href="Freelancer_Login.php"> <button> GET STARTED </button></a>  
+                  <a href=""> <button> </button></a>  
             </center>
             </div>
             <div id="index_carousel">

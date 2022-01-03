@@ -284,3 +284,10 @@ display: inline-block;
 
 }
 
+
+/*-------------------Freelancer_Login.php----------------------------------------------------*/
+#LoginForm{
+    /*border: 1px dashed black;*/
+    height: 80vh;
+    margin-left: 30px;
+}
