@@ -1,6 +1,4 @@
-<?php
-include("Backend/Freelancer_Register.backend.php");
-?>
+
 
 <!DOCTYPE html>
     <html>
