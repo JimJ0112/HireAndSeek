@@ -12,7 +12,7 @@
         
             <!-- Nav bar section -->
             <nav> 
-                <a href="Index.php">Home</a>
+                <a href="index.php">Home</a>
                 <ul id = "navlist">
                     <li class= "navElement" id="searchbar"> <input type = "text" >  <input type="button"> </li>
                     <li class= "navElement"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
