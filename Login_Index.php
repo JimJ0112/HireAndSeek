@@ -27,10 +27,10 @@
                
             <form action="Backend/Login.php" method="post">
                 <br> <br>
-            <label name="Username_LBL"> EMAIL</label> <br>
+            EMAIL <br>
             <input type="text" name="Username_TB" placeholder="juandelacruz@email.com">
             <br><br>
-            <label name="Password_LBL"> Password </label> <br>
+            Password  <br>
             <input type="password" name="Password_TB"  >
             <br> <br>
             <a href="Freelancer_Register.php"> <u> Forgot Password? <u> </a> <br> <br>
