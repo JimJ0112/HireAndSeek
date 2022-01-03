@@ -6,7 +6,7 @@ session_start();
 <html>
     <head>
 
-        <script src="ServicesOffered.js"> </script>
+        <script src="Scripts/ServicesOffered.js"> </script>
         <link rel="stylesheet" href="Style.css" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

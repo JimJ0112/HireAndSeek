@@ -2,7 +2,7 @@
 <html>
     <head>
 
-        <script src="ServicesOffered.js"> </script>
+        <script src="Scripts/ServicesOffered.js"> </script>
         <link rel="stylesheet" href="Style.css" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -49,13 +49,13 @@
 
                     <div class="card">
                       <p class="ServiceID">N</p>
-                        <img id="Card_Carousel" src="placeholder.png" alt="Denim Jeans" style="width:100%">
+                        <img id="Card_Carousel" src="WebsiteImages/placeholder.png" alt="Denim Jeans" style="width:100%">
 
                       
 
                      
                        
-                         <img class="AccountProfilePicture" src="profilepic-placeholder.jpg"> 
+                         <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
                          <h4 class="AccountName" id="accname_1">Account Name </h4> 
                         
 
@@ -72,15 +72,16 @@
                       </div>
 
 
+
                       <div class="card">
-                        <p class="ServiceID">N</p>
-                        <img id="Card_Carousel" src="placeholder.png" alt="Denim Jeans" style="width:100%">
+                      <p class="ServiceID">N</p>
+                        <img id="Card_Carousel" src="WebsiteImages/placeholder.png" alt="Denim Jeans" style="width:100%">
 
                       
 
-                        
+                     
                        
-                         <img class="AccountProfilePicture" src="profilepic-placeholder.jpg"> 
+                         <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
                          <h4 class="AccountName" id="accname_2">Account Name </h4> 
                         
 
@@ -92,18 +93,20 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                        <a href="AvailService.php"> <button class="ButtonPrice" id="2" onclick="ButtonClicked(this.id)" >Price Starts at Php 000.00</button> </a>
+                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="2" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
+                        
                       </div>
+  
 
                       <div class="card">
-                        <p class="ServiceID">N</p>
-                        <img id="Card_Carousel" src="placeholder.png" alt="Denim Jeans" style="width:100%">
+                      <p class="ServiceID">N</p>
+                        <img id="Card_Carousel" src="WebsiteImages/placeholder.png" alt="Denim Jeans" style="width:100%">
 
                       
 
-                        
+                     
                        
-                         <img class="AccountProfilePicture" src="profilepic-placeholder.jpg"> 
+                         <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
                          <h4 class="AccountName" id="accname_3">Account Name </h4> 
                         
 
@@ -115,18 +118,19 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                        <a href="AvailService.php"> <button class="ButtonPrice" id="3" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
+                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="3" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
+                        
                       </div>
 
                       <div class="card">
-                        <p class="ServiceID">N</p>
-                        <img id="Card_Carousel" src="placeholder.png" alt="Denim Jeans" style="width:100%">
+                      <p class="ServiceID">N</p>
+                        <img id="Card_Carousel" src="WebsiteImages/placeholder.png" alt="Denim Jeans" style="width:100%">
 
                       
 
-                        
+                     
                        
-                         <img class="AccountProfilePicture" src="profilepic-placeholder.jpg"> 
+                         <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
                          <h4 class="AccountName" id="accname_4">Account Name </h4> 
                         
 
@@ -138,19 +142,19 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                        <a href="AvailService.php"> <button class="ButtonPrice" id="4"onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button></a>
+                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="4" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
+                        
                       </div>
 
-
                       <div class="card">
-                        <p class="ServiceID">N</p>
-                        <img id="Card_Carousel" src="placeholder.png" alt="Denim Jeans" style="width:100%">
+                      <p class="ServiceID">N</p>
+                        <img id="Card_Carousel" src="WebsiteImages/placeholder.png" alt="Denim Jeans" style="width:100%">
 
                       
 
-                        
+                     
                        
-                         <img class="AccountProfilePicture" src="profilepic-placeholder.jpg"> 
+                         <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
                          <h4 class="AccountName" id="accname_5">Account Name </h4> 
                         
 
@@ -159,12 +163,13 @@
 
                         <p class="ServiceTitle">Service Title Placeholder</p>
                         <p class="ratings">Ratings Placeholder</p>
-
-                         <p class="ServiceDescription"> Some text about the Service..</p>
+                        <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                         <a href="AvailService.php">  <button class="ButtonPrice" id="5" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button></a>
+                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="5" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
+                        
                       </div>
+
 
 
 

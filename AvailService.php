@@ -2,7 +2,7 @@
 <html>
     <head>
 
-        <script src= "AvailService.js"></script>
+        <script src= "Scripts/AvailService.js"></script>
         <link rel="stylesheet" href="Style.css" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -41,7 +41,7 @@
 
                     <div id="MessageTheFreelancer" class="ServiceContainerChild"> 
                         <center>
-                        <img class="AccountProfilePicture" src="profilepic-placeholder.jpg"> 
+                        <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
                         <h4 class="AccountName">Account Name </h4> 
                        
 
