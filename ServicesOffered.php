@@ -179,7 +179,7 @@
             <footer>
                 <h1> Footer Placeholder</h1>
             </footer>
-<script src="ServicesOffered.js"> </script>
+<script src="Scripts/ServicesOffered.js"> </script>
      
     </body>
 </html>
