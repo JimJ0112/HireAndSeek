@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
     <head>
 
@@ -37,135 +37,13 @@
                 <h3 id="ServicesOffered_CategoryTxt"> Category Placeholder </h3>
 
                 <!-- Services Offered cards -->
+
+                
                 <div id="ServicesOffered_Cards">
 
                 
-
-                      
-
-                    <div class="card">
-                      <p class="ServiceID">N</p>
-                        <img id="Card_Carousel" src="WebsiteImages/placeholder.png" alt="Denim Jeans" style="width:100%">
-
-                      
-
+              <!--  <iframe src="ServicesOffered_Cards.php" width="100%" height="100%"> </iframe> -->
                      
-                       
-                         <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
-                         <h4 class="AccountName" id="accname_1">Account Name </h4> 
-                        
-
-                        <p class="AccountLevel">Level </p>
-                   
-
-                        <p class="ServiceTitle">Service Title Placeholder</p>
-                        <p class="ratings">Ratings Placeholder</p>
-                        <p class="ServiceDescription">Some text about the Service..</p>
-                        
-                       
-                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="1" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
-                        
-                      </div>
-
-
-
-                      <div class="card">
-                      <p class="ServiceID">N</p>
-                        <img id="Card_Carousel" src="WebsiteImages/placeholder.png" alt="Denim Jeans" style="width:100%">
-
-                      
-
-                     
-                       
-                         <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
-                         <h4 class="AccountName" id="accname_2">Account Name </h4> 
-                        
-
-                        <p class="AccountLevel">Level </p>
-                   
-
-                        <p class="ServiceTitle">Service Title Placeholder</p>
-                        <p class="ratings">Ratings Placeholder</p>
-                        <p class="ServiceDescription">Some text about the Service..</p>
-                        
-                       
-                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="2" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
-                        
-                      </div>
-  
-
-                      <div class="card">
-                      <p class="ServiceID">N</p>
-                        <img id="Card_Carousel" src="WebsiteImages/placeholder.png" alt="Denim Jeans" style="width:100%">
-
-                      
-
-                     
-                       
-                         <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
-                         <h4 class="AccountName" id="accname_3">Account Name </h4> 
-                        
-
-                        <p class="AccountLevel">Level </p>
-                   
-
-                        <p class="ServiceTitle">Service Title Placeholder</p>
-                        <p class="ratings">Ratings Placeholder</p>
-                        <p class="ServiceDescription">Some text about the Service..</p>
-                        
-                       
-                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="3" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
-                        
-                      </div>
-
-                      <div class="card">
-                      <p class="ServiceID">N</p>
-                        <img id="Card_Carousel" src="WebsiteImages/placeholder.png" alt="Denim Jeans" style="width:100%">
-
-                      
-
-                     
-                       
-                         <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
-                         <h4 class="AccountName" id="accname_4">Account Name </h4> 
-                        
-
-                        <p class="AccountLevel">Level </p>
-                   
-
-                        <p class="ServiceTitle">Service Title Placeholder</p>
-                        <p class="ratings">Ratings Placeholder</p>
-                        <p class="ServiceDescription">Some text about the Service..</p>
-                        
-                       
-                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="4" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
-                        
-                      </div>
-
-                      <div class="card">
-                      <p class="ServiceID">N</p>
-                        <img id="Card_Carousel" src="WebsiteImages/placeholder.png" alt="Denim Jeans" style="width:100%">
-
-                      
-
-                     
-                       
-                         <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
-                         <h4 class="AccountName" id="accname_5">Account Name </h4> 
-                        
-
-                        <p class="AccountLevel">Level </p>
-                   
-
-                        <p class="ServiceTitle">Service Title Placeholder</p>
-                        <p class="ratings">Ratings Placeholder</p>
-                        <p class="ServiceDescription">Some text about the Service..</p>
-                        
-                       
-                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="5" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
-                        
-                      </div>
-
 
 
 
@@ -179,7 +57,7 @@
             <footer>
                 <h1> Footer Placeholder</h1>
             </footer>
-<script src="Scripts/ServicesOffered.js"> </script>
+
      
     </body>
 </html>
