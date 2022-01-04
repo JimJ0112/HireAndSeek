@@ -63,7 +63,7 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                        <button class ="ButtonPrice"  id="1" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> 
+                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="1" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
                         
                       </div>
 
@@ -89,7 +89,7 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                       <button class ="ButtonPrice"  id="2" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> 
+                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="2" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
                         
                       </div>
   
@@ -114,7 +114,7 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                       <button class ="ButtonPrice"  id="3" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> 
+                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="3" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
                         
                       </div>
 
@@ -138,7 +138,7 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                        <button class ="ButtonPrice"  id="4" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> 
+                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="4" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
                         
                       </div>
 
@@ -162,7 +162,7 @@
                         <p class="ServiceDescription">Some text about the Service..</p>
                         
                        
-                        <button class ="ButtonPrice"  id="5" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> 
+                       <a href="AvailService.php"> <button class ="ButtonPrice"  id="5" onclick="ButtonClicked(this.id)">Price Starts at Php 000.00</button> </a>
                         
                       </div>
 
