@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <DOCTYPE>
     <html>
         <head>
@@ -9,7 +13,14 @@
 
             <!-- Nav bar section -->
             <?php
-            include_once("Header.php");
+                        if(isset($_SESSION['SessionName'])){
+
+                            include_once("LoggedIn_Header.php");
+                            
+                        }
+                        else{
+                            include_once("Header.php");
+                        }
             ?>
 
             <div id="index_carousel">

@@ -1,3 +1,9 @@
+<?php
+//session_start();
+
+$sessionID = $_SESSION['SessionName'];
+?>
+
 <!DOCTYPE html>
     <html>
         <head>
@@ -15,10 +21,9 @@
                     <li class= "navElement" id="searchbar"> <input type = "text" >  <input type="button"> </li>
                     <li class= "navElement"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
                     <li class= "navElement"> <a href = "BecomeAFreelancer.php"> BECOME A FREELANCER </a> </li>
-                    <li class= "navElement"> <a href = "Login_Index.php"> LOGIN </a> </li>
                     <li class= "navElement"> <a href = "About.php"> ABOUT </a> </li>
-                    <li class="navElement"> Account Profile </li>
-                    <li class="navElement"> LOG OUT </li>
+                    <li class="navElement"> <a href="Customer_Dashboard.php"> <?php echo $sessionID;?> </a> </li>
+                    <li class="navElement"><a href="Backend/logout.php"> LOG OUT </a> </li>
                 </ul>
             </nav>
 </body>

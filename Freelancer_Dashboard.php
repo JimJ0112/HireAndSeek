@@ -11,7 +11,7 @@ else{
 ?>
 
 <?php
-            include_once("Header.php");
+           
             if(isset($_SESSION['SessionName'])){
 
                 include_once("LoggedIn_Header.php");

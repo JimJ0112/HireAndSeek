@@ -11,6 +11,10 @@
 
             <!-- Nav bar section -->
             <?php
+                        session_start();
+                        session_destroy();
+                        session_unset();
+                        include_once("Header.php");
             include_once("Header.php");
             ?>
             

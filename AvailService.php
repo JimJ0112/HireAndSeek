@@ -1,6 +1,6 @@
 <?php
- session_start();
-    
+session_start();
+   $_SESSION['SessionName'];
 if(isset($_SESSION['SessionName'])){
 
     echo "welcome, ".$_SESSION['SessionName'];
@@ -8,6 +8,7 @@ if(isset($_SESSION['SessionName'])){
 else{
     echo "Session name invalid";
 }
+//echo $_SESSION['SessionName'];
 ?>
 
 <!DOCTYPE html>
