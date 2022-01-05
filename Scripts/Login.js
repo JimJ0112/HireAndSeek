@@ -5,7 +5,7 @@ xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState === 4 || this.status === 200){ 
-        console.log(this.responseText); // echo from php
+        //console.log(this.responseText); // echo from php
  
    
     }       

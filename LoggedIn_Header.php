@@ -17,7 +17,8 @@
                     <li class= "navElement"> <a href = "BecomeAFreelancer.php"> BECOME A FREELANCER </a> </li>
                     <li class= "navElement"> <a href = "Login_Index.php"> LOGIN </a> </li>
                     <li class= "navElement"> <a href = "About.php"> ABOUT </a> </li>
-                    
+                    <li class="navElement"> Account Profile </li>
+                    <li class="navElement"> LOG OUT </li>
                 </ul>
             </nav>
 </body>

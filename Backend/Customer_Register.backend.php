@@ -1,5 +1,5 @@
 <?php
-         
+         session_start();
        $firstname = $_POST[ "FirstName"]; 
        $lastname = $_POST["LastName" ];
        $middleInitial = $_POST["MiddleInitial"];
