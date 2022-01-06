@@ -2,6 +2,17 @@
 //session_start();
 
 $sessionID = $_SESSION['SessionName'];
+$accountType = $_SESSION["AccountType"];
+
+if($accountType == "Freelancer"){
+    $redirectQuery = "Freelancer_Dashboard.php";
+
+} else if($accountType == "Customer"){
+    $redirectQuery= "Customer_Dashboard.php";
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +33,7 @@ $sessionID = $_SESSION['SessionName'];
                     <li class= "navElement"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
                     <li class= "navElement"> <a href = "BecomeAFreelancer.php"> BECOME A FREELANCER </a> </li>
                     <li class= "navElement"> <a href = "About.php"> ABOUT </a> </li>
-                    <li class="navElement"> <a href="Customer_Dashboard.php"> <?php echo $sessionID;?> </a> </li>
+                    <li class="navElement"> <a href=<?php echo $redirectQuery;?>> <?php echo $sessionID;?> </a> </li>
                     <li class="navElement"><a href="Backend/logout.php"> LOG OUT </a> </li>
                 </ul>
             </nav>
