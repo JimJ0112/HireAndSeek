@@ -24,6 +24,7 @@ else{
     <body>
     <!-- Raz -->
     <!-- jim -->
+    <!-- kita mo raz?-->
             <!-- Nav bar section -->
             <?php
             
