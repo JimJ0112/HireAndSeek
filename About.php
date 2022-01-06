@@ -22,7 +22,7 @@ else{
     </head>
 
     <body>
-    
+    <!-- Raz -->
             <!-- Nav bar section -->
             <?php
             
