@@ -23,6 +23,7 @@ else{
 
     <body>
     <!-- Raz -->
+    <!-- jim -->
             <!-- Nav bar section -->
             <?php
             
