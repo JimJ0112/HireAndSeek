@@ -347,3 +347,19 @@ cursor: pointer;}
     grid-area: PROFILE;
 
 }
+
+/* JOBS */
+#JobsTitle_table {
+    height: auto;
+    width: 100%;
+  
+    text-align: center;
+   
+}
+#JobsTitle_table td, tr, th{
+ border: 1px solid black;
+ height: auto;
+ width: auto;
+ 
+    
+}

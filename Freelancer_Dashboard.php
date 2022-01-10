@@ -49,9 +49,28 @@ else{
             <br>
         <!-- dashboard content -->
         <div id="dashboard_content_grid"> 
-            <div class="dashboard_content"> JOBS</div>
+            <!-- JOBS -->
+            <div class="dashboard_content"> 
+            <h5> JOBS </h5>
+            <table id="JobsTitle_table" class="jobs_table"> 
+            <tr> 
+                <th> TITLE </th>
+                <th> DESCRIPTION  </th>
+            </tr>
+
+            <tr>
+            <td> adas</td>
+            <td> fdsfs</td>
+            </tr>
+
+ 
+
+            </table>
+        </div>
+
+
             <div class="dashboard_content"> TRANSACTIONS </div>
-            <div class="dashboard_content"> DASHBOARD </div>
+            <div class="dashboard_content"> PERFORMANCE </div>
             <div class="dashboard_content"> PROFILE </div>
 
         </div>
