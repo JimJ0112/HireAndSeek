@@ -47,14 +47,20 @@ else{
 
         </nav>
             <br>
-
+        <!-- dashboard content -->
         <div id="dashboard_content_grid"> 
-            <div class="dashboard_content"> JOB</div>
+            <div class="dashboard_content"> JOBS</div>
             <div class="dashboard_content"> TRANSACTIONS </div>
             <div class="dashboard_content"> DASHBOARD </div>
             <div class="dashboard_content"> PROFILE </div>
 
         </div>
+
+                    <!-- Footer -->
+                    <footer>
+                <h1> Footer Placeholder</h1>
+            </footer>
+
 
         </body>
     </html>

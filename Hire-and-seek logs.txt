@@ -5,7 +5,7 @@
 - implemented the planned layouts to the client side page files
 - created placeholders to hold data from backend php files
 - created backend php files and javascript files
-- created arrays of datas from php files (for testing purposes)
+- created arrays of datas in backend/php files (for testing purposes)
 - created code for fetching data from backend php files to frontend (temporarily using data from array)
 - created code for logging in (temporarily using data from array)
 - created code for sessions and session variables 

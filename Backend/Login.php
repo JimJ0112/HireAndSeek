@@ -14,7 +14,7 @@ $AccountsLength = count($Accounts)-1;
 for($i = 0; $i <= $AccountsLength;$i++){
 
 if($Email == $Accounts[$i][0] and $Password == $Accounts[$i][1]){
-
+ 
     $_SESSION["SessionName"] = $Accounts[$i][0];
     $_SESSION["AccountType"]=$Accounts[$i][2];
 
