@@ -291,3 +291,59 @@ display: inline-block;
     height: 80vh;
     margin-left: 30px;
 }
+
+
+/*-----------------------------------------DASHBOARD------------------------------------------------------*/
+
+/* Dashboard Categories*/
+
+#Dashboard_Categories{
+    height: 50px;
+}
+
+#Dashboard_CategoriesList{
+   
+}
+
+.Dashboard_CategoriesElement{
+display: inline;
+
+
+margin-right: 100px;
+padding: 10px;
+cursor: pointer;}
+
+/*Dashboard Content*/
+#dashboard_content_grid{
+    border: 1px dashed black;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "JOB JOB DASHBOARD DASHBOARD"
+                         "TRANSACTION TRANSACTION TRANSACTION TRANSACTION"
+                         "PROFILE PROFILE PROFILE PROFILE";
+    grid-row-gap: 0;
+    grid-column-gap:0;
+}
+
+.dashboard_content{
+    border: 1px dashed black;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+.dashboard_content:nth-child(1){
+    grid-area: JOB;
+
+}
+.dashboard_content:nth-child(2){
+    grid-area: TRANSACTION;
+
+}
+.dashboard_content:nth-child(3){
+    grid-area: DASHBOARD;
+
+}
+.dashboard_content:nth-child(4){
+    grid-area: PROFILE;
+
+}
