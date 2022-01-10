@@ -1,0 +1,12 @@
+01/10/2022 Logs:
+
+- created a github repository to store the project files and collaborate remotely. we have also committed files to the said repository
+- created client side page files
+- implemented the planned layouts to the client side page files
+- created placeholders to hold data from backend php files
+- created backend php files and javascript files
+- created arrays of datas from php files (for testing purposes)
+- created code for fetching data from backend php files to frontend (temporarily using data from array)
+- created code for logging in (temporarily using data from array)
+- created code for sessions and session variables 
+
