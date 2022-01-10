@@ -35,28 +35,83 @@ else{
 
             <!-- Carousel Section-->
 
-            <div id="index_carousel">
-             <H1> CAROUSEL PLACEHOLDER </H1>
-            </div>
+            
+              <div class="carousel">
+                <img class="slides" src="WebsiteImages/Carousel1.jpg" style="width:100%">
+                <img class="slides" src="WebsiteImages/Carousel2.jpg" style="width:100%">
+                <img class="slides" src="WebsiteImages/Carousel3.jpg" style="width:100%">
+                <div class="slideCaption">ACCOMPLISH IT WITH </div>
+                <div class="slideCaption2">A FREELANCER</div>
 
+                <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="display-right" onclick="plusDivs(1)">&#10095;</button>
+                <div class="dotNav"style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+              </div>
+
+              <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                showDivs(slideIndex += n);
+                }
+                function currentSlide(n) {
+                showDivs(slideIndex = n);
+                }
+
+                function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("slides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                x[slideIndex-1].style.display = "block"; 
+                dots[slideIndex-1].className += " active"; 
+                }
+                </script>
+
+            
+    
             <!-- Services Offered -->
-            <h3 id="index_ServicesOfferedTxt"> Services Offered </h3>
+            <div class="index_ServicesOfferedtxt"> Services Offered </div>
    
             <table id="index_ServicesOfferedTable">
-                <tr id="index_ServicesOfferedtr">
-                    <th class="index_ServicesOfferedTableElement"> High Rated Services </th>
-                    <th class="index_ServicesOfferedTableElement" > Graphics and Design </th>
-                    <th class="index_ServicesOfferedTableElement"> Video and Presentation </th>
-                    <th class="index_ServicesOfferedTableElement"> Music and Audio </th>
-                    <th class="index_ServicesOfferedTableElement"> Development and IT </th>
+                <tr class="index_ServicesOfferedtr">
+                    <th id="THcategory1" style="background-image: url('WebsiteImages/HighRated.png'); "><a href="" class="thText"> High Rated Services </a>
+                    <th id="THcategory2" style="background-image: url('WebsiteImages/Graphics.png');"><a href="" class="thText"> Graphics and Design </a></th>
+                    <th id="THcategory3" style="background-image: url('WebsiteImages/Video.png');"><a href="" class="thText"> Video and Presentation </a></th>
+                    <th id="THcategory4" style="background-image: url('WebsiteImages/Music.jpg');"><a href="" class="thText"> Music and Audio </a></th>
+                    <th id="THcategory5" style="background-image: url('WebsiteImages/Development.png');"><a href="" class="thText"> Development and IT </a></th>
                 </tr>
             </table>
       
 
             <!-- Footer -->
-            <footer>
-                <h1> Footer Placeholder</h1>
-            </footer>
+            <div class="footer">
+               <div class="LeftFooter"> 
+                   <div class="txtFooterTitle"><a href="ServicesOffered.php">Service Offered</a></div>
+                   <div class="txtFooter"><a href=""> High Rated Services</a></div>
+                   <div class="txtFooter"><a href=""> Graphics and Design</a></div>
+                   <div class="txtFooter"><a href=""> Video and Presentation</a></div>
+                </div>
+               <div class="RightFooter">
+                   <div class="txtFooterTitle"><a href="About.php"> About</a></div>
+                   <div class="txtFooter"><a href=""> Team Members</a></div>
+                   <div class="txtFooter"><a href=""> Team Overview</a></div></div>       
+               <div class="CenterFooter">
+                   <div class="txtFooter"><a href=""> Music and Audio</a></div>
+                   <div class="txtFooter"><a href=""> Development and IT</a></div></div> 
+          </div>
 
         </body>
     </html>

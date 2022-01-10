@@ -13,14 +13,14 @@
 
             <!-- Nav bar section -->
             <nav> 
-                <a href="index.php">Home</a>
-                <ul id = "navlist">
-                    <li class= "navElement" id="searchbar"> <input type = "text" >  <input type="button"> </li>
-                    <li class= "navElement"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
-                    <li class= "navElement"> <a href = "BecomeAFreelancer.php"> BECOME A FREELANCER </a> </li>
-                    <li class= "navElement"> <a href = "Login_Index.php"> LOGIN </a> </li>
-                    <li class= "navElement"> <a href = "About.php"> ABOUT </a> </li>
-                    
+               <ul id = "navlist">
+                    <a href="index.php"><img id="Logo" src="WebsiteImages/Logo.png"></a>
+                    <li class= "navElement" id="searchbar"> <input type = "text" placeholder="Search..  "></li>
+                    <li class= "navElement"> <input type="button" id="btnSearch"> </li>
+                    <li class= "navElement" id="btnExplore"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
+                    <li class= "navElement" id="btnBecome"> <a href = "BecomeAFreelancer.php"> BECOME A FREELANCER </a> </li>
+                    <li class= "navElement" id="btnLogin"> <a href = "Login_Index.php"> LOGIN </a> </li>
+                    <li class= "navElement" id="btnAbout"> <a href = "About.php"> ABOUT </a> </li>
                 </ul>
             </nav>
 </body>
