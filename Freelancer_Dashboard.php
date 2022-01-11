@@ -38,9 +38,10 @@ else{
             <nav id="Dashboard_Categories">
 
     <ul id="Dashboard_CategoriesList">
+    <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > DASHBOARD </li>
     <li class="Dashboard_CategoriesElement" id="Freelancer_jobs" > JOBS </li>
     <li class="Dashboard_CategoriesElement" id="Freelancerd_transactions" > TRANSACTIONS </li>
-    <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > DASHBOARD </li>
+    <li class="Dashboard_CategoriesElement" id="Freelancer_performance" > PERFORMANCE</li>
     <li class="Dashboard_CategoriesElement" id="Freelancer_profile" > PROFILE </li>
   
     </ul>
@@ -70,7 +71,10 @@ else{
 
 
             <div class="dashboard_content"> TRANSACTIONS </div>
-            <div class="dashboard_content"> PERFORMANCE </div>
+            <div class="dashboard_content"> PERFORMANCE 
+                <div id="performance_chart"> </div>
+                <div id="performance_table"> </div>
+            </div>
             <div class="dashboard_content"> PROFILE </div>
 
         </div>
