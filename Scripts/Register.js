@@ -65,7 +65,7 @@ displayVideo.style.display = "none";
 
 document.getElementById("CaptureImage").addEventListener('click',
 function(){
-    canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+    var image_captured = canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
     let image_data_url = canvas.toDataURL('image/jpeg');
 }
 
