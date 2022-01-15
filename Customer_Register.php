@@ -4,7 +4,9 @@
         <head>
             <link rel="stylesheet" href="Style.css" type="text/css">
             <script src="Scripts/Login.js"> </script>
+            
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
 
         </head>
         <body>
@@ -20,11 +22,15 @@
             
             <!--Php form -->
 
+            
             <div id="LoginForm">
-               
+
+            
+
             <form action="Backend/Customer_Register.backend.php" method="post">
                 <br> <br>
-         
+
+<div id="Register_Layer1">
             <input type="text" name="FirstName" placeholder="FIRST NAME">
             <input type="text" name="LastName" placeholder="LAST NAME">
             <input type="text" name="MiddleInitial" placeholder="M.I">
@@ -51,7 +57,9 @@
             <input type="text" name="CivilStatus" placeholder="Civil Status">
 
             <br> <br>
+</div>
 
+<div id="Register_Layer2">
             <br> <br> <br>
             <select name="IDTYPE"> 
                 <option value="" disabled selected hidden> ID TYPE </option>
@@ -67,14 +75,27 @@
 
             <br> <br>
  
-            <input type="submit" value="Sign Up">
+            
    
+</div>
+
+<div id="Register_Layer3"> 
+    LAYER 3
+</div>
+
+<div id="Register_Layer4">
+<input type="submit" value="Submit">
+</div>
+
             </form>
+
+            <script src="Scripts/Register.js"> </script>
+            <button onclick="displayNext()"> NEXT </button>
 
 
             </div>
         
-
+            
             <!-- Footer -->
             <footer>
                 <h1> Footer Placeholder</h1>

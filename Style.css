@@ -564,3 +564,20 @@ cursor: pointer;}
 }
 
 /*PERFORMANCE*/
+
+
+/*-----------------------------------------REGISTER----------------------------------------------------------*/
+#Register_Layer1{
+    display: block;
+}
+
+#Register_Layer2{
+    display: none;
+}
+
+#Register_Layer3{
+    display: none;
+}
+#Register_Layer4{
+    display:none;
+}

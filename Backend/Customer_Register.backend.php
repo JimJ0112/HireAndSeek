@@ -19,6 +19,7 @@ session_start();
        $idType = $_POST["IDTYPE"];
 
        $idFile = $_POST["IDFile" ];
+       
 
 
        echo $firstname." <br> "; 
