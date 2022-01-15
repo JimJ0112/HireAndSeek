@@ -18,7 +18,7 @@ Layer1.style.display = "none";
 Layer2.style.display = "block";
 Layer3.style.display = "none";
 Layer4.style.display = "none";
-
+document.getElementById("Next").style.display = "block";
 } 
 else if(Layer2_Display != "none" && Layer1_Display == "none" && Layer3_Display == "none" && Layer4_Display == "none"){
 console.log(Layer1_Display + " /" + Layer2_Display + " / " + Layer3_Display+ " / " + Layer4_Display);
@@ -26,7 +26,7 @@ Layer1.style.display = "none";
 Layer2.style.display = "none";
 Layer3.style.display = "block";
 Layer4.style.display = "none";
-
+document.getElementById("Next").style.display = "block";
 }
 else if(Layer3_Display != "none" && Layer1_Display == "none" && Layer2_Display == "none" && Layer4_Display == "none"){
     console.log(Layer1_Display + " /" + Layer2_Display + " / " + Layer3_Display+ " / " + Layer4_Display);
@@ -34,7 +34,7 @@ Layer1.style.display = "none";
 Layer2.style.display = "none";
 Layer3.style.display = "none";
 Layer4.style.display = "block";
-
+document.getElementById("Next").style.display = "none";
 }
 else if(Layer4_Display != "none" && Layer1_Display == "none" && Layer2_Display == "none" && Layer3_Display == "none"){
     console.log(Layer1_Display + " /" + Layer2_Display + " / " + Layer3_Display+ " / " + Layer4_Display);
@@ -42,5 +42,6 @@ Layer1.style.display = "block";
 Layer2.style.display = "none";
 Layer3.style.display = "none";
 Layer4.style.display = "none";
+
        
 }}

@@ -89,8 +89,8 @@
 
             </form>
 
-            <script src="Scripts/Register.js"> </script>
-            <button onclick="displayNext()"> NEXT </button>
+            
+            <button onclick="displayNext()" id="Next"> NEXT </button>
 
 
             </div>
@@ -100,6 +100,6 @@
             <footer>
                 <h1> Footer Placeholder</h1>
             </footer>
-
+            <script src="Scripts/Register.js"> </script>
         </body>
     </html>  
