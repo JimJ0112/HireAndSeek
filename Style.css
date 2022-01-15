@@ -602,3 +602,7 @@ cursor: pointer;}
 #startvideo{
     display: none;
 }
+
+#CaptureImage{
+    display: none;
+}

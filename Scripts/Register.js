@@ -1,6 +1,7 @@
 const clientVideo = document.getElementById("video");
 const canvas = document.getElementById("photocapture");
 
+
 function displayNext(){
 const Layer1 = document.getElementById("Register_Layer1");
 const Layer2 = document.getElementById("Register_Layer2");
@@ -23,6 +24,7 @@ Layer3.style.display = "none";
 Layer4.style.display = "none";
 displayVideo.style.display = "none";
 document.getElementById("Next").style.display = "block";
+document.getElementById("CaptureImage").style.display="none";
 
 } 
 else if(Layer2_Display != "none" && Layer1_Display == "none" && Layer3_Display == "none" && Layer4_Display == "none"){
@@ -32,7 +34,9 @@ Layer2.style.display = "none";
 Layer3.style.display = "block";
 Layer4.style.display = "none";
 displayVideo.style.display = "block";
+document.getElementById("CaptureImage").style.display="block";
 document.getElementById("Next").style.display = "block";
+
 }
 else if(Layer3_Display != "none" && Layer1_Display == "none" && Layer2_Display == "none" && Layer4_Display == "none"){
     console.log(Layer1_Display + " /" + Layer2_Display + " / " + Layer3_Display+ " / " + Layer4_Display);
@@ -42,6 +46,7 @@ Layer3.style.display = "none";
 Layer4.style.display = "block";
 displayVideo.style.display = "none";
 document.getElementById("Next").style.display = "none";
+document.getElementById("CaptureImage").style.display="none";
 
 }
 else if(Layer4_Display != "none" && Layer1_Display == "none" && Layer2_Display == "none" && Layer3_Display == "none"){
@@ -51,6 +56,7 @@ Layer2.style.display = "none";
 Layer3.style.display = "none";
 Layer4.style.display = "none";
 displayVideo.style.display = "none";
+document.getElementById("CaptureImage").style.display="none";
 
        
 }}

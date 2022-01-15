@@ -87,9 +87,7 @@
 </div>
 <div id="Register_Layer3">
  
-<canvas id="photocapture"> 
-    
-    </canvas>
+<canvas id="photocapture"> </canvas>
     <video autoplay id="video"> </video>
    
 </div>
@@ -100,9 +98,11 @@
             <br> <br> <br>
             <button onclick="startvideo()" id="startvideo"> Start Video </button>
             <button  id="CaptureImage"> Capture </button>
+            <br>
             <button onclick="displayNext()" id="Next"> NEXT </button>
             </div>
         
+            <br> <br>
 
             <!-- Footer -->
             <footer>
