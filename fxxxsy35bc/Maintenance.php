@@ -12,9 +12,7 @@ else{
 
 echo"<br> <br> <br>";
 
-$useragent = $_SERVER ['HTTP_USER_AGENT'];
-echo "<b>Your User Agent is</b>: " . $useragent;
-
+echo $_GET['auth'];
 
 
 
