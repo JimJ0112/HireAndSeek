@@ -30,7 +30,7 @@
             <form action="Backend/Customer_Register.backend.php" method="post">
                 <br> <br>
 
-<div id="Register_Layer1">
+        <div id="Register_Layer1">
             <input type="text" name="FirstName" placeholder="FIRST NAME">
             <input type="text" name="LastName" placeholder="LAST NAME">
             <input type="text" name="MiddleInitial" placeholder="M.I">
@@ -74,6 +74,18 @@
             accept=".jpg,.png">
 
             <br> <br>
+            <br> <br>
+            <select name="IDTYPE"> 
+                <option value="" disabled selected hidden> ID TYPE </option>
+            <option value="Driving License"> Driving License </option>
+            <option value="National ID"> National ID </option>
+            <option value="School ID"> School ID </option>
+            </select>
+
+           <br><br>
+           UPLOAD ID <br>
+        <input type="file" name="IDFile" placeholder="ID "
+            accept=".jpg,.png">
  
             
    

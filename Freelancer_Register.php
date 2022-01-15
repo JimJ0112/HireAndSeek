@@ -22,7 +22,8 @@
                
             <form action="Backend/Freelancer_Register.backend.php" method="post">
                 <br> <br>
-         
+            <div id="Register_Layer1">
+
             <input type="text" name="FirstName" placeholder="FIRST NAME">
             <input type="text" name="LastName" placeholder="LAST NAME">
             <input type="text" name="MiddleInitial" placeholder="M.I">
@@ -53,6 +54,10 @@
             <input type="text" name="Education" placeholder="Education">
             <input type="text" name="Skills" placeholder="Skills">
             <br> <br> <br>
+</div>
+
+<div id="Register_Layer2">
+
             <select name="IDTYPE"> 
                 <option value="" disabled selected hidden> ID TYPE </option>
             <option value="Driving License"> Driving License </option>
@@ -66,12 +71,29 @@
             accept=".jpg,.png">
 
             <br> <br>
- 
+
+            <br> <br>
+            <select name="IDTYPE2"> 
+                <option value="" disabled selected hidden> ID TYPE </option>
+            <option value="Driving License"> Driving License </option>
+            <option value="National ID"> National ID </option>
+            <option value="School ID"> School ID </option>
+            </select>
+
+           <br><br>
+           UPLOAD ID <br>
+        <input type="file" name="IDFile2" placeholder="ID "
+            accept=".jpg,.png">
+</div>
+<div id="Register_Layer3">
+    LAYER 3
+</div>
+<div id="Register_Layer4">
             <input type="submit" value="Sign Up">
-   
+</div>  
             </form>
 
-
+            <button onclick="displayNext()" id="Next"> NEXT </button>
             </div>
         
 
@@ -79,6 +101,6 @@
             <footer>
                 <h1> Footer Placeholder</h1>
             </footer>
-
+            <script src="Scripts/Register.js"> </script>
         </body>
     </html>  
