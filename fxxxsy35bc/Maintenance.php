@@ -12,17 +12,8 @@ else{
 
 echo"<br> <br> <br>";
 
-$Mac  = "E0-D5-5E-3A-92-A7 \Device\Tcpip_{CD3D1C7D-3C22-4405-8104-70B32A2D612F}";
-$DeviceMac = exec('getmac');
-
-
-if($DeviceMac == $Mac){
-    echo $DeviceMac." is equal to ".$Mac;
-} else {
-    echo $DeviceMac." is not equal to ".$Mac;
-}
-
-
+$useragent = $_SERVER ['HTTP_USER_AGENT'];
+echo "<b>Your User Agent is</b>: " . $useragent;
 
 
 
