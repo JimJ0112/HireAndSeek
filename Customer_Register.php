@@ -75,7 +75,7 @@
 
             <br> <br>
             <br> <br>
-            <select name="IDTYPE"> 
+            <select name="IDTYPE2"> 
                 <option value="" disabled selected hidden> ID TYPE </option>
             <option value="Driving License"> Driving License </option>
             <option value="National ID"> National ID </option>
@@ -84,7 +84,7 @@
 
            <br><br>
            UPLOAD ID <br>
-        <input type="file" name="IDFile" placeholder="ID "
+        <input type="file" name="IDFile2" placeholder="ID "
             accept=".jpg,.png">
  
             
@@ -101,7 +101,7 @@
 
             </form>
 
-            
+            <br> <br> <br>
             <button onclick="displayNext()" id="Next"> NEXT </button>
 
 

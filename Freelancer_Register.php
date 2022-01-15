@@ -92,7 +92,7 @@
             <input type="submit" value="Sign Up">
 </div>  
             </form>
-
+            <br> <br> <br>
             <button onclick="displayNext()" id="Next"> NEXT </button>
             </div>
         
