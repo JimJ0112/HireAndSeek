@@ -108,10 +108,14 @@
             <button  id="CaptureImage"> Capture </button>
             <br>
             <button onclick="displayNext()" id="Next"> NEXT </button>
-
+            <br>
+            <br>
+            <br>
 
             </div>
-        
+            <br>
+            <br>
+            <br>
             
             <!-- Footer -->
             <footer>
