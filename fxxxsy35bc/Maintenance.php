@@ -10,25 +10,24 @@ else{
     echo "Session name invalid";
 }
 
-/*
+echo"<br> <br> <br>";
 
 $Mac  = "E0-D5-5E-3A-92-A7 \Device\Tcpip_{CD3D1C7D-3C22-4405-8104-70B32A2D612F}";
 $DeviceMac = exec('getmac');
 
 
 if($DeviceMac == $Mac){
-    echo"Admin";
+    echo $DeviceMac." is equal to ".$Mac;
 } else {
-    header("Location: ../ServicesOffered.php");
+    echo $DeviceMac." is not equal to ".$Mac;
 }
 
 
-echo "<br>";
-echo $Mac." <br>";
-echo $DeviceMac;
 
-*/
 
+
+
+/*
 
 $clientIP = $_SERVER['REMOTE_ADDR'];
 $ServerIP = "::1";
@@ -38,6 +37,8 @@ if($clientIP != $ServerIP){
 } else {echo $clientIP." equal to ".$ServerIP;}
 
 echo "<br> <br> <br>";
+*/
+
 
 /*
 if($clientIP !== $ServerIP ){
