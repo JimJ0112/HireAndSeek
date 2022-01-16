@@ -32,17 +32,22 @@ session_start();
        $idType2 = $_POST["IDTYPE2"];
 
        /*get ID image file */
-       $idFile = $_FILES["IDFile" ]["tmp_name"];
+     //  $idFile = $_FILES["IDFile" ]["tmp_name1"];
      
        /*convert to base64 */
-       $idFileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile" ]["tmp_name"]));
+       $id1FileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile" ]["tmp_name"]));
 
        /* decode encoded base64 image file into base64 string */
       // $IMGData1 = base64_decode($idFileImgBase64);
      //  file_put_contents($firstname.$lastname.'.png', $IMGData1);
 
 
-       $idFile2 = $_POST["IDFile2" ];
+    //   $idFile2 = $_FILES["IDFile2" ]["tmp_name2"];
+
+       $id2FileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile2" ]["tmp_name"]));
+       $IMGData2 = base64_decode($id1FileImgBase64);
+       file_put_contents('sadadagjkhkjsh.png', $IMGData2);
+
 
 
        echo $firstname." <br> "; 
@@ -66,7 +71,7 @@ session_start();
 
        echo $idType." <br> " ;
 
-       echo $idFileImgBase64." <br> " ;
+       echo $id1FileImgBase64." <br> " ;
 
        echo $idType2." <br> " ;
 
