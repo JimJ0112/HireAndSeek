@@ -23,6 +23,7 @@ session_start();
        /* making directory to store the files for user */
        $Directory = '../UserRegisterFiles/'.$firstname.$lastname;
        mkdir($Directory);
+       
        /* converting image data URL to base 64 and decoding it to png file*/
        $UserSnapshot = $_POST["UserSnapshot"];
        $UserSnapshot = str_replace(' ','+',$UserSnapshot);
