@@ -1,4 +1,5 @@
 <?php
+include_once("databaseConnection.php");
 session_start();
 
        $firstname = $_POST[ "FirstName"]; 
@@ -32,6 +33,7 @@ session_start();
        $IMGData = base64_decode($UserSnapshot);
       file_put_contents($Directory."/".$firstname.$lastname.'.png', $IMGData);
       
+      $snapshotdirectory = $Directory."/".$firstname.$lastname.'.png';
        /* end of convertion */
 
        $idType = $_POST["IDTYPE"];
@@ -46,6 +48,7 @@ session_start();
        /* decode encoded base64 image file into base64 string */
        $IMGData1 = file_get_contents($_FILES["IDFile"]["tmp_name"]);
       file_put_contents($Directory."/ID1".$firstname.$lastname.'.png', $IMGData1);
+      $ID1directory = $Directory."/ID1".$firstname.$lastname.'.png';
 
 
     //   $idFile2 = $_FILES["IDFile2" ]["tmp_name2"];
@@ -54,6 +57,7 @@ session_start();
      // $id2FileImgBase64 = file_get_contents($_FILES["IDFile2"]["tmp_name"]);
       $IMGData2 = file_get_contents($_FILES["IDFile2"]["tmp_name"]);
        file_put_contents($Directory."/ID2".$firstname.$lastname.'.png', $IMGData2);
+       $ID2directory = $Directory."/ID2".$firstname.$lastname.'.png';
 
 
 
@@ -85,6 +89,13 @@ session_start();
        echo $idType2." <br> " ;
 
        //echo $id2FileImgBase64." <br> " ;
+
+
+      $number = 0;
+      $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middleinitial,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotdirectory,idimage1type,idimage1directory,idimage2type,idimage2directory) VALUES($number,'$firstname','$lastname','$middleInitial','$age','$gender','$email','$password','$contact','$address','$description','$language','$occupation','$education','$skills','$snapshotdirectory','$idType','$ID1directory','$idType2','$ID2directory');";
+     // $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middleinitial,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotdirectory,idimage1type,idimagefile1directory,idimage2type,idimage2directory) VALUES(0,'JL','Manrique','M','21','MALE','jimmanrique12@gmail.com','09355026284','dfsds','dff','sdfdsaf','sdfdsfa','college','sleeping','../UserRegisterFiles/JLManrique/JLManrique.png','National ID','../UserRegisterFiles/JLManrique/ID1JLManrique.png','Driver's license','../UserRegisterFiles/JLManrique/ID1JLManrique.png');";
+       mysqli_query($conn,$sqlquery);
+       
          
 
 ?>
