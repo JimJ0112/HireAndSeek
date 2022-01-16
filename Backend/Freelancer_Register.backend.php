@@ -19,14 +19,18 @@ session_start();
        $education = $_POST[ "Education" ];
        $skills = $_POST[ "Skills" ];
 
+
+       /* making directory to store the files for user */
+       $Directory = '../UserRegisterFiles/'.$firstname.$lastname;
+       mkdir($Directory);
        /* converting image data URL to base 64 and decoding it to png file*/
        $UserSnapshot = $_POST["UserSnapshot"];
        $UserSnapshot = str_replace(' ','+',$UserSnapshot);
        list($type, $UserSnapshot) = explode(';', $UserSnapshot);
        list(, $UserSnapshot)      = explode(',', $UserSnapshot);
        $IMGData = base64_decode($UserSnapshot);
-      // file_put_contents($firstname.$lastname.'.txt', $IMGData);
-
+      file_put_contents($firstname.$lastname.'.png', $IMGData);
+      
        /* end of convertion */
 
        $idType = $_POST["IDTYPE"];
@@ -39,7 +43,7 @@ session_start();
        $id1FileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile" ]["tmp_name"]));
 
        /* decode encoded base64 image file into base64 string */
-       $IMGData1 = base64_decode($idFileImgBase64);
+       $IMGData1 = base64_decode($id1FileImgBase64);
       file_put_contents('ID IMG 1.png', $IMGData1);
 
 
