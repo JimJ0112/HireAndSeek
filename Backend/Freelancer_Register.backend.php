@@ -16,6 +16,8 @@ session_start();
 
        $education = $_POST[ "Education" ];
        $skills = $_POST[ "Skills" ];
+
+       $UserSnapshot = $_POST["UserSnapshot"];
          
        $idType = $_POST["IDTYPE"];
        $idType2 = $_POST["IDTYPE2"];
@@ -39,7 +41,9 @@ session_start();
 
        echo $education." <br> ";
        echo $skills." <br> " ;
-         
+       
+       echo  $UserSnapshot."<br>";
+       
        echo $idType." <br> " ;
 
        echo $idFile." <br> " ;

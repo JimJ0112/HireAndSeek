@@ -72,6 +72,14 @@ document.getElementById("CaptureImage").style.display="none";
 document.getElementById("CaptureImage").addEventListener('click',function(){
     var image_captured = canvas.getContext('2d').drawImage(clientVideo, 0, 0, canvas.width, canvas.height);
     let image_data_url = canvas.toDataURL('image/jpeg');
+    
+   document.getElementById("UserSnapshot").value = image_data_url;
+
 }
 
 );
+
+
+
+
+

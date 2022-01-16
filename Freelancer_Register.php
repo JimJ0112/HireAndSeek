@@ -20,7 +20,7 @@
 
             <div id="LoginForm">
                
-            <form action="Backend/Freelancer_Register.backend.php" method="post">
+            <form action="Backend/Freelancer_Register.backend.php" method="post" enctype = "multipart/form-data">
                 <br> <br>
             <div id="Register_Layer1">
 
@@ -86,7 +86,9 @@
             accept=".jpg,.png">
 </div>
 <div id="Register_Layer3">
- 
+
+<input type="hidden"  id="UserSnapshot" name ="UserSnapshot">     
+
 <canvas id="photocapture"> </canvas>
     <video autoplay id="video"> </video>
    
