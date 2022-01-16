@@ -8,6 +8,7 @@ session_start();
        $gender = $_POST["Gender"];
         
        $email = $_POST[ "Email" ];
+       $password = $_POST["UserPassword"];
        $contact = $_POST[ "Contact" ];
        $address = $_POST[ "Address" ];
          

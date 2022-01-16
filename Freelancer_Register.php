@@ -36,10 +36,11 @@
 
             <br><br>
 
-            <input type="text" name="Email" placeholder="Email">
+            
             <input type="text" name="Contact" placeholder="Contact Number">
             <input type="text" name="Address" placeholder="Address">
-            
+            <input type="text" name="Email" placeholder="Email">
+            <input type="password" name="UserPassword" placeholder="Password">
             
           
             
