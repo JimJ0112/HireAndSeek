@@ -25,10 +25,10 @@ session_start();
        list($type, $UserSnapshot) = explode(';', $UserSnapshot);
        list(, $UserSnapshot)      = explode(',', $UserSnapshot);
        $data = base64_decode($UserSnapshot);
-       
-       file_put_contents('image.png', $data);
+       mkdir('upload/UserSnapshot/');
+       file_put_contents("upload/UserSnapshot/".$firstname.$lastname.'.png', $data);
 
-
+       /* end of convertion */
        $idType = $_POST["IDTYPE"];
        $idType2 = $_POST["IDTYPE2"];
        $idFile = $_POST["IDFile" ];
