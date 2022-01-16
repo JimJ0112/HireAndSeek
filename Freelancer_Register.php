@@ -68,8 +68,7 @@
 
            <br><br>
            UPLOAD ID <br>
-        <input type="file" name="IDFile" placeholder="ID "
-            accept=".jpg,.png">
+        <input type="file" name="IDFile" placeholder="ID " accept=".jpg,.png">
 
             <br> <br>
 
@@ -83,8 +82,7 @@
 
            <br><br>
            UPLOAD ID <br>
-        <input type="file" name="IDFile2" placeholder="ID "
-            accept=".jpg,.png">
+        <input type="file" name="IDFile2" placeholder="ID" accept=".jpg,.png">
 </div>
 <div id="Register_Layer3">
 

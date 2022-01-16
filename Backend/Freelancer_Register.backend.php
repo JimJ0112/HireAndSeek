@@ -30,7 +30,7 @@ session_start();
        list($type, $UserSnapshot) = explode(';', $UserSnapshot);
        list(, $UserSnapshot)      = explode(',', $UserSnapshot);
        $IMGData = base64_decode($UserSnapshot);
-      file_put_contents($firstname.$lastname.'.png', $IMGData);
+      file_put_contents($Directory."/".$firstname.$lastname.'.png', $IMGData);
       
        /* end of convertion */
 
@@ -41,18 +41,19 @@ session_start();
      //  $idFile = $_FILES["IDFile" ]["tmp_name1"];
      
        /*convert to base64 */
-       $id1FileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile" ]["tmp_name"]));
-
+      // $id1FileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile"]["tmp_name"]));
+      $id1FileImgBase64 = $_FILES["IDFile"]["tmp_name"];
        /* decode encoded base64 image file into base64 string */
-       $IMGData1 = base64_decode($id1FileImgBase64);
-      file_put_contents('ID IMG 1.png', $IMGData1);
+       $IMGData1 = file_get_contents(base64_decode($id1FileImgBase64[0]));
+      file_put_contents($Directory."/".'ID IMG 1.png', $IMGData1);
 
 
     //   $idFile2 = $_FILES["IDFile2" ]["tmp_name2"];
 
-       $id2FileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile2" ]["tmp_name"]));
+      // $id2FileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile2"]["tmp_name"]));
+      $id2FileImgBase64 = file_get_contents($_FILES["IDFile2"]["tmp_name"]);
        $IMGData2 = base64_decode($id1FileImgBase64);
-       file_put_contents('ID IMG 2.png', $IMGData2);
+       file_put_contents($Directory."/".'ID IMG 2.png', $IMGData2);
 
 
 
