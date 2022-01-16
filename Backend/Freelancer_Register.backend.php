@@ -1,5 +1,5 @@
 <?php
-include_once("databaseConnection.php");
+include_once("../includes/databaseConnection.php");
 session_start();
 
        $firstname = $_POST[ "FirstName"]; 
@@ -91,7 +91,7 @@ session_start();
        //echo $id2FileImgBase64." <br> " ;
 
 
-      $number = 0;
+      $number = rand();
       $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middleinitial,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotdirectory,idimage1type,idimage1directory,idimage2type,idimage2directory) VALUES($number,'$firstname','$lastname','$middleInitial','$age','$gender','$email','$password','$contact','$address','$description','$language','$occupation','$education','$skills','$snapshotdirectory','$idType','$ID1directory','$idType2','$ID2directory');";
      // $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middleinitial,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotdirectory,idimage1type,idimagefile1directory,idimage2type,idimage2directory) VALUES(0,'JL','Manrique','M','21','MALE','jimmanrique12@gmail.com','09355026284','dfsds','dff','sdfdsaf','sdfdsfa','college','sleeping','../UserRegisterFiles/JLManrique/JLManrique.png','National ID','../UserRegisterFiles/JLManrique/ID1JLManrique.png','Driver's license','../UserRegisterFiles/JLManrique/ID1JLManrique.png');";
        mysqli_query($conn,$sqlquery);
