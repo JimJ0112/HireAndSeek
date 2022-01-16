@@ -44,16 +44,16 @@ session_start();
       // $id1FileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile"]["tmp_name"]));
       $id1FileImgBase64 = $_FILES["IDFile"]["tmp_name"];
        /* decode encoded base64 image file into base64 string */
-       $IMGData1 = file_get_contents(base64_decode($id1FileImgBase64[0]));
-      file_put_contents($Directory."/".'ID IMG 1.png', $IMGData1);
+       $IMGData1 = file_get_contents($_FILES["IDFile"]["tmp_name"]);
+      file_put_contents($Directory."/ID1".$firstname.$lastname.'.png', $IMGData1);
 
 
     //   $idFile2 = $_FILES["IDFile2" ]["tmp_name2"];
 
       // $id2FileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile2"]["tmp_name"]));
-      $id2FileImgBase64 = file_get_contents($_FILES["IDFile2"]["tmp_name"]);
-       $IMGData2 = base64_decode($id1FileImgBase64);
-       file_put_contents($Directory."/".'ID IMG 2.png', $IMGData2);
+     // $id2FileImgBase64 = file_get_contents($_FILES["IDFile2"]["tmp_name"]);
+      $IMGData2 = file_get_contents($_FILES["IDFile2"]["tmp_name"]);
+       file_put_contents($Directory."/ID2".$firstname.$lastname.'.png', $IMGData2);
 
 
 
@@ -78,13 +78,13 @@ session_start();
 
        echo $idType." <br> " ;
 
-       echo $id1FileImgBase64." <br> " ;
+       //echo $id1FileImgBase64." <br> " ;
 
        echo strlen($id1FileImgBase64);
 
        echo $idType2." <br> " ;
 
-       echo $id2FileImgBase64." <br> " ;
+       //echo $id2FileImgBase64." <br> " ;
          
 
 ?>
