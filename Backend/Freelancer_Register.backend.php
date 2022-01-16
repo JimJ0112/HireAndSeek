@@ -1,5 +1,6 @@
 <?php
 session_start();
+
        $firstname = $_POST[ "FirstName"]; 
        $lastname = $_POST["LastName" ];
        $middleInitial = $_POST["MiddleInitial"];
@@ -17,8 +18,17 @@ session_start();
        $education = $_POST[ "Education" ];
        $skills = $_POST[ "Skills" ];
 
+       /* converting image data URL to base 64 and decoding it to png file*/
        $UserSnapshot = $_POST["UserSnapshot"];
-         
+       $UserSnapshot = str_replace(' ','+',$UserSnapshot);
+
+       list($type, $UserSnapshot) = explode(';', $UserSnapshot);
+       list(, $UserSnapshot)      = explode(',', $UserSnapshot);
+       $data = base64_decode($UserSnapshot);
+       
+       file_put_contents('image.png', $data);
+
+
        $idType = $_POST["IDTYPE"];
        $idType2 = $_POST["IDTYPE2"];
        $idFile = $_POST["IDFile" ];
@@ -42,8 +52,8 @@ session_start();
        echo $education." <br> ";
        echo $skills." <br> " ;
        
-       echo  $UserSnapshot."<br>";
-       
+       echo $IMGData."<br>";
+
        echo $idType." <br> " ;
 
        echo $idFile." <br> " ;
