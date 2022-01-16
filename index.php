@@ -20,7 +20,9 @@ else{
         </head>
         <body>
 
-            <!-- Nav bar section -->
+<div class="Grid-container">
+    <div class="nav">
+        <!-- Nav bar section -->
             <?php
            
             if(isset($_SESSION['SessionName'])){
@@ -32,11 +34,11 @@ else{
                 include_once("Header.php");
             }
             ?>
+    </div>
+    <div class="caro">
+        <!-- Carousel Section-->
 
-            <!-- Carousel Section-->
-
-            
-              <div class="carousel">
+           <div class="carousel">
                 <img class="slides" src="WebsiteImages/Carousel1.jpg" style="width:100%">
                 <img class="slides" src="WebsiteImages/Carousel2.jpg" style="width:100%">
                 <img class="slides" src="WebsiteImages/Carousel3.jpg" style="width:100%">
@@ -79,25 +81,24 @@ else{
                 dots[slideIndex-1].className += " active"; 
                 }
                 </script>
-
-            
-    
-            <!-- Services Offered -->
-            <div class="index_ServicesOfferedtxt"> Services Offered </div>
+    </div>
+    <div class="categ">
+        <!-- Services Offered -->
+        <div class="index_ServicesOfferedtxt"> Services Offered </div>
    
-            <table id="index_ServicesOfferedTable">
-                <tr class="index_ServicesOfferedtr">
-                    <th id="THcategory1" style="background-image: url('WebsiteImages/HighRated.png'); "><a href="" class="thText"> High Rated Services </a>
-                    <th id="THcategory2" style="background-image: url('WebsiteImages/Graphics.png');"><a href="" class="thText"> Graphics and Design </a></th>
-                    <th id="THcategory3" style="background-image: url('WebsiteImages/Video.png');"><a href="" class="thText"> Video and Presentation </a></th>
-                    <th id="THcategory4" style="background-image: url('WebsiteImages/Music.jpg');"><a href="" class="thText"> Music and Audio </a></th>
-                    <th id="THcategory5" style="background-image: url('WebsiteImages/Development.png');"><a href="" class="thText"> Development and IT </a></th>
-                </tr>
-            </table>
-      
-
-            <!-- Footer -->
-            <div class="footer">
+        <table id="index_ServicesOfferedTable">
+            <tr class="index_ServicesOfferedtr">
+                <th class="thCategory" style="background-image: url('WebsiteImages/HighRated.png'); "><a href="" class="thText"> High<br> Rated<br> Services </a>
+                <th class="thCategory" style="background-image: url('WebsiteImages/Graphics.png');"><a href="" class="thText"> Graphics<br> and<br> Design </a></th>
+                <th class="thCategory" style="background-image: url('WebsiteImages/Video.png');"><a href="" class="thText"> Video<br> and<br> Presentation </a></th>
+                <th class="thCategory" style="background-image: url('WebsiteImages/Music.jpg');"><a href="" class="thText"> Music<br> and<br> Audio </a></th>
+                <th class="thCategory" style="background-image: url('WebsiteImages/Development.png');"><a href="" class="thText" id="thText5"> Development<br> and IT </a></th>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <!-- Footer -->
+         <div class="footer">
                <div class="LeftFooter"> 
                    <div class="txtFooterTitle"><a href="ServicesOffered.php">Service Offered</a></div>
                    <div class="txtFooter"><a href=""> High Rated Services</a></div>
@@ -111,7 +112,16 @@ else{
                <div class="CenterFooter">
                    <div class="txtFooter"><a href=""> Music and Audio</a></div>
                    <div class="txtFooter"><a href=""> Development and IT</a></div></div> 
-          </div>
+         </div>
+    </div>
+</div>
+      
+
+  
+            
+      
+
+           
 
         </body>
     </html>
