@@ -21,18 +21,27 @@ session_start();
        /* converting image data URL to base 64 and decoding it to png file*/
        $UserSnapshot = $_POST["UserSnapshot"];
        $UserSnapshot = str_replace(' ','+',$UserSnapshot);
-
        list($type, $UserSnapshot) = explode(';', $UserSnapshot);
        list(, $UserSnapshot)      = explode(',', $UserSnapshot);
-       $data = base64_decode($UserSnapshot);
-       mkdir('upload/UserSnapshot/');
-       file_put_contents($firstname.$lastname.'.png', $data);
+       $IMGData = base64_decode($UserSnapshot);
+      // file_put_contents($firstname.$lastname.'.txt', $IMGData);
 
        /* end of convertion */
-       
+
        $idType = $_POST["IDTYPE"];
        $idType2 = $_POST["IDTYPE2"];
-       $idFile = $_POST["IDFile" ];
+
+       /*get ID image file */
+       $idFile = $_FILES["IDFile" ]["tmp_name"];
+     
+       /*convert to base64 */
+       $idFileImgBase64 = base64_encode(file_get_contents($_FILES["IDFile" ]["tmp_name"]));
+
+       /* decode encoded base64 image file into base64 string */
+      // $IMGData1 = base64_decode($idFileImgBase64);
+     //  file_put_contents($firstname.$lastname.'.png', $IMGData1);
+
+
        $idFile2 = $_POST["IDFile2" ];
 
 
@@ -53,11 +62,11 @@ session_start();
        echo $education." <br> ";
        echo $skills." <br> " ;
        
-       echo $IMGData."<br>";
+      // echo $IMGData."<br>";
 
        echo $idType." <br> " ;
 
-       echo $idFile." <br> " ;
+       echo $idFileImgBase64." <br> " ;
 
        echo $idType2." <br> " ;
 

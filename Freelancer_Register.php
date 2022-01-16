@@ -110,6 +110,8 @@
             <footer>
                 <h1> Footer Placeholder</h1>
             </footer>
+
+            
             <script src="Scripts/Register.js"> </script>
         </body>
     </html>  
