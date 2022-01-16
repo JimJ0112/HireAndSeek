@@ -563,7 +563,19 @@ cursor: pointer;}
     
 }
 
+table,th,tr{
+    border-collapse: collapse;
+    text-align: center;
+    
+}
+
+table{
+    width: 100%;
+}
+
 /*PERFORMANCE*/
+
+/*TRANSACTIONS */
 
 
 /*-----------------------------------------REGISTER----------------------------------------------------------*/

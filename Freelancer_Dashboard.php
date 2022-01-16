@@ -70,7 +70,35 @@ else{
         </div>
 
 
-            <div class="dashboard_content"> TRANSACTIONS </div>
+            <div class="dashboard_content"> 
+                
+                
+            TRANSACTIONS
+
+            <table id="Transactions_table" class="Transactions_table"> 
+            <tr> 
+                <th> NAME </th>
+                <th> CONTACT  </th>
+                <th> JOB  </th>
+                <th> DATE  </th>
+                <th> STATUS  </th>
+              
+            </tr>
+
+            <tr>
+            <td> adas</td>
+            <td> fdsfs</td>
+            <td> adas</td>
+            <td> fdsfs</td>
+            <td> adas</td>
+            
+            </tr>
+
+ 
+
+            </table>
+        
+        </div>
             <div class="dashboard_content"> PERFORMANCE 
                 <div id="performance_chart"> </div>
                 <div id="performance_table"> </div>

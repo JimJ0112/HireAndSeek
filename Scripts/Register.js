@@ -64,14 +64,13 @@ document.getElementById("CaptureImage").style.display="none";
 
 
  async function startvideo(){
-    let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+    let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
 	clientVideo.srcObject = stream;
 
 }
 
-document.getElementById("CaptureImage").addEventListener('click',
-function(){
-    var image_captured = canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+document.getElementById("CaptureImage").addEventListener('click',function(){
+    var image_captured = canvas.getContext('2d').drawImage(clientVideo, 0, 0, canvas.width, canvas.height);
     let image_data_url = canvas.toDataURL('image/jpeg');
 }
 
