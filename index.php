@@ -1,6 +1,7 @@
 <?php
 session_start();
-    
+
+/* check if the session name is set */
 if(isset($_SESSION['SessionName'])){
 
     echo "welcome, ".$_SESSION['SessionName'];
@@ -9,6 +10,19 @@ if(isset($_SESSION['SessionName'])){
 else{
     echo "Session name invalid";
 }
+
+/* if the user registed: check the registration status */
+if(isset($_GET['data']) == 'registrationSuccess'){
+    echo"<script> alert('registration success!');</script>";
+
+}elseif(isset($_GET['data']) == 'registrationfailed'){
+    echo"<script> alert('registration failed!');</script>";
+
+}else{
+
+}
+
+
 ?>
 
 <DOCTYPE>
