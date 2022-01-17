@@ -26,14 +26,14 @@ else{
             <!-- Nav bar section -->
             <?php
           
-            if(isset($_SESSION['SessionName'])){
+          if(isset($_SESSION['SessionName'])){
 
-                include_once("LoggedIn_Header.php");
-                
-            }
-            else{
-                include_once("Header.php");
-            }
+            include_once("includes/LoggedIn_Header.php");
+            
+        }
+        else{
+            include_once("includes/Header.php");
+        }
             ?>
             
                 <!-- Carousel-->
