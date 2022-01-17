@@ -1,5 +1,6 @@
 <?php
 //session_start();
+include('checkIfExists.php');
 ?>
 <!DOCTYPE html>
     <html>
