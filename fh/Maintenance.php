@@ -3,30 +3,29 @@ session_start();
     
 if(isset($_SESSION['SessionName'])){
 
-    echo "welcome, ".$_SESSION['SessionName'];
+    //echo "welcome, ".$_SESSION['SessionName'];
     
 }
 else{
-    echo "Session name invalid";
+   // echo "Session name invalid";
 }
 
-echo"<br> <br> <br>";
-
-echo $_GET['auth'];
 
 
 
-/*
+
+
+
 
 $clientIP = $_SERVER['REMOTE_ADDR'];
-$ServerIP = "::1";
+$ServerIP = "122.2.121.183";
 
 if($clientIP != $ServerIP){
-    echo $clientIP." not equal to ".$ServerIP;
-} else {echo $clientIP." equal to ".$ServerIP;}
+    header('location:../index.php');
+} else {echo $clientIP." equal to ".$ServerIP."\n Hello Admin";}
 
 echo "<br> <br> <br>";
-*/
+
 
 
 /*
@@ -48,18 +47,7 @@ if($clientIP !== $ServerIP ){
         </head>
         <body>
 
-            <!-- Nav bar section -->
-            <?php
-           
-            if(isset($_SESSION['SessionName'])){
 
-                include_once("../LoggedIn_Header.php");
-                
-            }
-            else{
-                include_once("../Header.php");
-            }
-            ?>
 
 
 
