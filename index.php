@@ -11,16 +11,7 @@ else{
     echo "Session name invalid";
 }
 
-/* if the user registed: check the registration status */
-if(isset($_GET['data']) == 'registrationSuccess'){
-    echo"<script> alert('registration success!');</script>";
 
-}elseif(isset($_GET['data']) == 'registrationfailed'){
-    echo"<script> alert('registration failed!');</script>";
-
-}else{
-
-}
 
 
 ?>
