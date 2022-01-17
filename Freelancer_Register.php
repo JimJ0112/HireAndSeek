@@ -1,4 +1,14 @@
+<?php
 
+
+/* if the user registed: check the registration status */
+if(isset($_GET['data'])){
+
+$data = $_GET['data'];
+    echo"<script> alert('$data');</script>";
+
+}
+?>
 <!DOCTYPE html>
     <html>
         <head>

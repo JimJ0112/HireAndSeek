@@ -1,30 +1,25 @@
 <?php
 
-//include_once('databaseConnection.php');
+include_once('databaseConnection.php');
 
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName ="hireandseektest";
 
-$conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName) or die("Connection failed");
+function checkIfExists(mysqli $conn,$tablename,$auth,$column){
 
-$email = "jimmanrique12@gmail.com";
-$tablename="signupverification";
-
-function checkIfExists(mysqli $conn,$tablename,$email){
-
-    $queryString = "SELECT email FROM $tablename WHERE email = $email";
+    $queryString = "SELECT $column FROM $tablename WHERE $column = '$auth'";
     $result = mysqli_query($conn,$queryString);
-    
-    echo $result;
+    $resultCheck = mysqli_num_rows($result);
+    /*
+    if($resultCheck > 0){
+        while($row = mysqli_fetch_assoc($result)){
+            $FinalResult =  $row[$column];
+        }
+    }
 
- 
-
-
+    return $FinalResult;*/
+    return $resultCheck;
 }
 
-checkIfExists($conn,$tablename,$email);
+
 
 
 
