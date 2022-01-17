@@ -91,9 +91,11 @@
               
                 #btnExplore a{background-color: rgb(180, 180, 180);}
                 #btnBecome a{background-color: rgb(196, 33, 33);}
-                #btnLogin a{background-color: rgb(223, 136, 23);}
+                #btnLogin a{background-color: #ff9001;}
                 #btnAbout a{color:white;background-color: rgb(0, 0, 0);}
-                
+                #btnUser a{color:white;background-color: #183040;text-transform: uppercase;}
+                #btnLogout a{background-color: #ff9001;}
+              
                 #dropdown{
                     display: none;
                 }
@@ -197,6 +199,8 @@
                     height: 250px;
                     width: 100%;
                     table-layout: fixed;
+                    margin-bottom: 10px;
+         
                 }
                 
                 .thCategory{ 
@@ -215,27 +219,6 @@
                     line-height: 35px;
                     text-decoration: none;
                }
-
-                #THcategory1{
-                    
-                }
-                 
-                #THcategory2{
-                   
-                }
-                 
-                #THcategory3{
-                    
-                  
-                }
-                 
-                #THcategory4{
-
-                }
-                 
-                #thText5 {
-                   
-                }
 
              /* Footer */
                 .footer{
@@ -282,18 +265,17 @@
 
 
 /* Categories */
-#ServicesOffered_Categories{
+                #ServicesOffered_Categories{
                     margin: 0;
                     background-color: rgba(66, 39, 39, 0.438);
                     height:20px;
                     text-align: center;
-                    padding-top: 20px;
-                    padding-bottom: 0;
+                    padding: 10px 0px 5px 0px;
                     
-}
+            }
 
 #ServicesOffered_CategoriesList {
-    list-style-type: none;
+    list-style-type:none;
     margin: auto;
     text-align: center;
     padding: auto;
@@ -638,7 +620,7 @@ table{
     display: none;
 
 }
-
+/*-------------------------------------- Media Testing------------------------------------ */
 @media all and (max-width:800px){
     .Grid-container{
         grid-template-columns: 1fr;
@@ -709,7 +691,9 @@ table{
      #dropBecome{background:  rgb(196, 33, 33);}
      #dropLogin{background: rgb(223, 136, 23);}
      #dropAbout{background: rgb(0, 0, 0);}
-    
+     #dropUser{color:white; background: #183040; text-transform: uppercase;}
+     #dropLogout{background-color: #ff9001;}
+  
   .slides{
     max-height: 200px;
     max-width: 100%;
@@ -743,3 +727,4 @@ table{
         margin-top: 5px;
     }
 
+}
