@@ -10,11 +10,13 @@ function SendSearch(){
     
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 || this.status === 200){ 
+
             console.log(this.responseText); // echo from php
      
        
         }       
     };
+
     xmlhttp.send(params);
 
 

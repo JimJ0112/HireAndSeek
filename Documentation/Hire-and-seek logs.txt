@@ -18,4 +18,4 @@
 01/17/2022
 -created  database
 -created  signupverification table where user datas will be saved until verified by the admin
-
+-created servicesinfo table where the services info will be saved
