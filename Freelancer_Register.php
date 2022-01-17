@@ -24,11 +24,11 @@
                 <br> <br>
             <div id="Register_Layer1">
 
-            <input type="text" name="FirstName" placeholder="FIRST NAME">
-            <input type="text" name="LastName" placeholder="LAST NAME">
-            <input type="text" name="MiddleInitial" placeholder="M.I">
-            <input type="text" name="Age" placeholder="AGE">
-            <select name="Gender"> 
+            <input type="text" name="FirstName" placeholder="FIRST NAME" required>
+            <input type="text" name="LastName" placeholder="LAST NAME"required>
+            <input type="text" name="MiddleInitial" placeholder="M.I"required>
+            <input type="text" name="Age" placeholder="AGE"required>
+            <select name="Gender"required> 
                 <option value="" disabled selected hidden> GENDER </option>
             <option value="male"> MALE </option>
             <option value="female"> FEMALE </option>
@@ -37,16 +37,16 @@
             <br><br>
 
             
-            <input type="text" name="Contact" placeholder="Contact Number">
-            <input type="text" name="Address" placeholder="Address">
-            <input type="text" name="Email" placeholder="Email">
-            <input type="password" name="UserPassword" placeholder="Password">
+            <input type="text" name="Contact" placeholder="Contact Number"required>
+            <input type="text" name="Address" placeholder="Address"required>
+            <input type="text" name="Email" placeholder="Email"required>
+            <input type="password" name="UserPassword" placeholder="Password"required>
             
           
             
             <br> <br>
 
-            <input type="text" name="Description" placeholder="Description">
+            <input type="text" name="Description" placeholder="Description"required>
             <input type="text" name="Language" placeholder="Language">
             <input type="text" name="Occupation" placeholder="Occupation">
 
@@ -60,6 +60,20 @@
 <div id="Register_Layer2">
 
             <select name="IDTYPE"> 
+                <option value="" disabled selected hidden required> ID TYPE </option>
+            <option value="Driving License"> Driving License </option>
+            <option value="National ID"> National ID </option>
+            <option value="School ID"> School ID </option>
+            </select>
+
+           <br><br>
+           UPLOAD ID <br>
+        <input type="file" name="IDFile" placeholder="ID " accept=".jpg,.png" required>
+
+            <br> <br>
+
+            <br> <br>
+            <select name="IDTYPE2" required> 
                 <option value="" disabled selected hidden> ID TYPE </option>
             <option value="Driving License"> Driving License </option>
             <option value="National ID"> National ID </option>
@@ -68,25 +82,11 @@
 
            <br><br>
            UPLOAD ID <br>
-        <input type="file" name="IDFile" placeholder="ID " accept=".jpg,.png">
-
-            <br> <br>
-
-            <br> <br>
-            <select name="IDTYPE2"> 
-                <option value="" disabled selected hidden> ID TYPE </option>
-            <option value="Driving License"> Driving License </option>
-            <option value="National ID"> National ID </option>
-            <option value="School ID"> School ID </option>
-            </select>
-
-           <br><br>
-           UPLOAD ID <br>
-        <input type="file" name="IDFile2" placeholder="ID" accept=".jpg,.png">
+        <input type="file" name="IDFile2" placeholder="ID" accept=".jpg,.png" required>
 </div>
 <div id="Register_Layer3">
 
-<input type="hidden"  id="UserSnapshot" name ="UserSnapshot">     
+<input type="hidden"  id="UserSnapshot" name ="UserSnapshot" required>     
 
 <canvas id="photocapture"> </canvas>
     <video autoplay id="video"> </video>

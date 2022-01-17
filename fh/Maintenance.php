@@ -22,7 +22,11 @@ $ServerIP = "122.2.121.183";
 
 if($clientIP != $ServerIP){
     header('location:../index.php');
-} else {echo $clientIP." equal to ".$ServerIP."\n Hello Admin";}
+} else {
+    //echo $clientIP." equal to ".$ServerIP."\n Hello Admin";
+}
+
+
 
 echo "<br> <br> <br>";
 
