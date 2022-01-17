@@ -4,7 +4,9 @@
         <head>
             <link rel="stylesheet" href="Style.css" type="text/css">
             <script src="Scripts/Login.js"> </script>
+            
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
 
         </head>
         <body>
@@ -14,17 +16,21 @@
                         session_start();
                         session_destroy();
                         session_unset();
-                        include_once("Header.php");
-            include_once("Header.php");
+                        include_once("includes/Header.php");
+ 
             ?>
             
             <!--Php form -->
 
+            
             <div id="LoginForm">
-               
+
+            
+
             <form action="Backend/Customer_Register.backend.php" method="post">
                 <br> <br>
-         
+
+        <div id="Register_Layer1">
             <input type="text" name="FirstName" placeholder="FIRST NAME">
             <input type="text" name="LastName" placeholder="LAST NAME">
             <input type="text" name="MiddleInitial" placeholder="M.I">
@@ -51,7 +57,9 @@
             <input type="text" name="CivilStatus" placeholder="Civil Status">
 
             <br> <br>
+</div>
 
+<div id="Register_Layer2">
             <br> <br> <br>
             <select name="IDTYPE"> 
                 <option value="" disabled selected hidden> ID TYPE </option>
@@ -66,19 +74,53 @@
             accept=".jpg,.png">
 
             <br> <br>
+            <br> <br>
+            <select name="IDTYPE2"> 
+                <option value="" disabled selected hidden> ID TYPE </option>
+            <option value="Driving License"> Driving License </option>
+            <option value="National ID"> National ID </option>
+            <option value="School ID"> School ID </option>
+            </select>
+
+           <br><br>
+           UPLOAD ID <br>
+        <input type="file" name="IDFile2" placeholder="ID "
+            accept=".jpg,.png">
  
-            <input type="submit" value="Sign Up">
+            
    
+</div>
+
+<div id="Register_Layer3"> 
+<canvas id="photocapture"> </canvas>
+    <video autoplay id="video"> </video>
+</div>
+
+<div id="Register_Layer4">
+<input type="submit" value="Submit">
+</div>
+
             </form>
 
+            <br> <br> <br>
+          
+            <button onclick="startvideo()" id="startvideo"> Start Video </button>
+            <button  id="CaptureImage"> Capture </button>
+            <br>
+            <button onclick="displayNext()" id="Next"> NEXT </button>
+            <br>
+            <br>
+            <br>
 
             </div>
-        
-
+            <br>
+            <br>
+            <br>
+            
             <!-- Footer -->
             <footer>
                 <h1> Footer Placeholder</h1>
             </footer>
-
+            <script src="Scripts/Register.js"> </script>
         </body>
     </html>  

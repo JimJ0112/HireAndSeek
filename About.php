@@ -27,14 +27,13 @@ else{
     <!-- kita mo raz?-->
             <!-- Nav bar section -->
             <?php
-            
             if(isset($_SESSION['SessionName'])){
 
-                include_once("LoggedIn_Header.php");
+                include_once("includes/LoggedIn_Header.php");
                 
             }
             else{
-                include_once("Header.php");
+                include_once("includes/Header.php");
             }
             ?>
             

@@ -14,20 +14,21 @@
             session_start();
             session_destroy();
             session_unset();
-            include_once("Header.php");
+            include_once("includes/Header.php");
             ?>
             <!-- Php form-->  
 
             <div id="LoginForm">
                
-            <form action="Backend/Freelancer_Register.backend.php" method="post">
+            <form action="Backend/Freelancer_Register.backend.php" method="post" enctype = "multipart/form-data">
                 <br> <br>
-         
-            <input type="text" name="FirstName" placeholder="FIRST NAME">
-            <input type="text" name="LastName" placeholder="LAST NAME">
-            <input type="text" name="MiddleInitial" placeholder="M.I">
-            <input type="text" name="Age" placeholder="AGE">
-            <select name="Gender"> 
+            <div id="Register_Layer1">
+
+            <input type="text" name="FirstName" placeholder="FIRST NAME" required>
+            <input type="text" name="LastName" placeholder="LAST NAME"required>
+            <input type="text" name="MiddleInitial" placeholder="M.I"required>
+            <input type="text" name="Age" placeholder="AGE"required>
+            <select name="Gender"required> 
                 <option value="" disabled selected hidden> GENDER </option>
             <option value="male"> MALE </option>
             <option value="female"> FEMALE </option>
@@ -35,16 +36,17 @@
 
             <br><br>
 
-            <input type="text" name="Email" placeholder="Email">
-            <input type="text" name="Contact" placeholder="Contact Number">
-            <input type="text" name="Address" placeholder="Address">
             
+            <input type="text" name="Contact" placeholder="Contact Number"required>
+            <input type="text" name="Address" placeholder="Address"required>
+            <input type="text" name="Email" placeholder="Email"required>
+            <input type="password" name="UserPassword" placeholder="Password"required>
             
           
             
             <br> <br>
 
-            <input type="text" name="Description" placeholder="Description">
+            <input type="text" name="Description" placeholder="Description"required>
             <input type="text" name="Language" placeholder="Language">
             <input type="text" name="Occupation" placeholder="Occupation">
 
@@ -53,7 +55,25 @@
             <input type="text" name="Education" placeholder="Education">
             <input type="text" name="Skills" placeholder="Skills">
             <br> <br> <br>
+</div>
+
+<div id="Register_Layer2">
+
             <select name="IDTYPE"> 
+                <option value="" disabled selected hidden required> ID TYPE </option>
+            <option value="Driving License"> Driving License </option>
+            <option value="National ID"> National ID </option>
+            <option value="School ID"> School ID </option>
+            </select>
+
+           <br><br>
+           UPLOAD ID <br>
+        <input type="file" name="IDFile" placeholder="ID " accept=".jpg,.png" required>
+
+            <br> <br>
+
+            <br> <br>
+            <select name="IDTYPE2" required> 
                 <option value="" disabled selected hidden> ID TYPE </option>
             <option value="Driving License"> Driving License </option>
             <option value="National ID"> National ID </option>
@@ -62,23 +82,35 @@
 
            <br><br>
            UPLOAD ID <br>
-        <input type="file" name="IDFile" placeholder="ID "
-            accept=".jpg,.png">
+        <input type="file" name="IDFile2" placeholder="ID" accept=".jpg,.png" required>
+</div>
+<div id="Register_Layer3">
 
-            <br> <br>
- 
-            <input type="submit" value="Sign Up">
+<input type="hidden"  id="UserSnapshot" name ="UserSnapshot" required>     
+
+<canvas id="photocapture"> </canvas>
+    <video autoplay id="video"> </video>
    
+</div>
+<div id="Register_Layer4">
+            <input type="submit" value="Sign Up">
+</div>  
             </form>
-
-
+            <br> <br> <br>
+            <button onclick="startvideo()" id="startvideo"> Start Video </button>
+            <button  id="CaptureImage"> Capture </button>
+            <br>
+            <button onclick="displayNext()" id="Next"> NEXT </button>
             </div>
         
+            <br> <br>
 
             <!-- Footer -->
             <footer>
                 <h1> Footer Placeholder</h1>
             </footer>
 
+            
+            <script src="Scripts/Register.js"> </script>
         </body>
     </html>  

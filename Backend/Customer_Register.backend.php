@@ -1,4 +1,5 @@
 <?php
+include_once'';
 session_start();
        $firstname = $_POST[ "FirstName"]; 
        $lastname = $_POST["LastName" ];
@@ -17,8 +18,9 @@ session_start();
  
          
        $idType = $_POST["IDTYPE"];
-
+       $idType2 = $_POST["IDTYPE2"];
        $idFile = $_POST["IDFile" ];
+       $idFile2 = $_POST["IDFile2" ];
 
 
        echo $firstname." <br> "; 
@@ -38,6 +40,11 @@ session_start();
        echo $idType." <br> " ;
 
        echo $idFile." <br> " ;
-         
+       
+       echo $idType2." <br> " ;
+
+       echo $idFile2." <br> " ;
+
+       
 
 ?>
