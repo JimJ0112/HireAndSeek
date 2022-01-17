@@ -637,7 +637,8 @@ table{
 #CaptureImage{
     display: none;
 
- 
+}
+
 @media all and (max-width:800px){
     .Grid-container{
         grid-template-columns: 1fr;
