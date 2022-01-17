@@ -75,7 +75,7 @@ session_start();
       
       echo $result;
 
-     // header('location:../index.php?data=registrationSuccess');
+      header('location:../index.php?data=registrationSuccess');
 
       //mail($email,'Hire and seek registration status ','Your registration to hire and seek is up for verification, you will be notified once your application has been approved \n -Hire and seek');
 

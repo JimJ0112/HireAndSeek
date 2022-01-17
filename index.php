@@ -18,6 +18,9 @@ if(isset($_GET['data']) == 'registrationSuccess'){
 }elseif(isset($_GET['data']) == 'registrationfailed'){
     echo"<script> alert('registration failed!');</script>";
 
+}elseif(isset($_GET['data']) == 'ACCESSNOTALLOWED'){
+    echo"<script> alert('ACCESS NOT ALLOWED!');</script>";
+
 }else{
 
 }
