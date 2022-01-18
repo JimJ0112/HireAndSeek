@@ -23,7 +23,7 @@ function checkIfExists(mysqli $conn,$tablename,$auth,$column){
 
 function searchSimilar(mysqli $conn,$tablename,$title,$column){
 
-    $queryString = "SELECT $column FROM $tablename WHERE $column = '$title'";
+    $queryString = "SELECT $column FROM $tablename WHERE $column LIKE '$title%' LIMIT 10";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
 
