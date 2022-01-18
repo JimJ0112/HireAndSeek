@@ -17,8 +17,9 @@
 - file handling code for accepting image files created
 
 01/16/2022 Logs:
-- created a snapshot capturing feature in registration page
-- created php code to let the website automatically creates directory 
+- created a snapshot capturing feature in registration(step 3:picture taking) page
+- created php code to make the website automatically create directory for newly registered users
+ 
 
 01/17/2022 Logs:
 -created  database
@@ -27,7 +28,7 @@
 -created servicesinfo table where the services info will be saved
 
 01/18/2022 Logs:
--implemented grid display to the landing page to fit the website to different screen sizes
+-implemented grid display to the landing page (index) to make the page to different screen sizes
 -started creating search feature 
 -connected the search feature to the servicesinfo table
  
