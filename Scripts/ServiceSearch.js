@@ -3,7 +3,7 @@ const searchSuggestions = document.getElementById("SearchSuggestions");
 const searchBar = document.getElementById("title");
 console.log(searchBar);
 var searchResults;
-var isTyping = false;
+
 
 function SendSearch(){
     
@@ -22,26 +22,26 @@ function SendSearch(){
             console.log(this.responseText); // echo from php
           
             searchResults = this.responseText;
-
+            console.log(searchBar.value)
             
 
-            searchBar.addEventListener('keydown',function(){
-               isTyping = true;
-            });
-           // isTyping = false;
+          
+            
+           
 
-           searchBar.addEventListener('keyup',function(){
-            isTyping = true;
-         });
+                if(searchBar.value == ''){
+                    searchSuggestions.style.display = "none";
 
-            if(isTyping){
-
+                }else{ 
+            
                 searchSuggestions.style.display = "block";
-                searchSuggestions.innerHTML = searchResults;
+                searchSuggestions.innerHTML = searchResults;}
+                
 
-            } 
-                searchSuggestions.style.display = "hidden";
-            
+           
+
+
+
 
             
 

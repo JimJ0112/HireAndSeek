@@ -10,12 +10,22 @@
 - created code for logging in (temporarily using data from array)
 - created code for sessions and session variables 
 
-01/15/2022
+/--------------------------------------------New-----------------------------------------------------------/
+
+01/15/2022 Logs:
 - divided the account registration into 4 steps (personal info, submit valid ID, picture taking,agreement to terms and conditions)
 - file handling code for accepting image files created
+- created a snapshot capturing feature in registration page
 - website automatically creates directory 
 
-01/17/2022
+01/17/2022 Logs:
 -created  database
 -created  signupverification table where user datas will be saved until verified by the admin
+-connected the freelancer registration page to the signupverification table
 -created servicesinfo table where the services info will be saved
+
+01/18/2022 Logs:
+-implemented grid display to the front end to fit the website to different screen sizes
+-started creating search feature 
+-connected the search feature to the servicesinfo table
+ 

@@ -10,7 +10,7 @@ $title = $_POST['title'];
 $tbname = "servicesinfo";
 $column = "ServiceTitle";
 
-$result = searchSimilar($conn,$tbname,$title,$column);
+$result = searchSuggestions($conn,$tbname,$title,$column);
 
 echo $result;
 
