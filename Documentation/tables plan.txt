@@ -12,7 +12,7 @@ Hire-and-seek
 //email PRIMARY KEY
 
 
-- Account transaction records (transactionID,userID or userEmail,ServiceTitle,clientRequest,transaction,date,Plan,payment,status,clientEmail or clientID ,AccountType,FilesDirectory);
+- Account transaction records (transactionID,userID or userEmail,ServiceID,ServiceTitle,clientNotes,transactionstartDate,transactionFinishedDate,availedPlan,payment,status,clientEmail,FilesDirectory,AgreementContract);
 //TRANSACTION ID PRIMARY KEY
 //userID or userEmail Foreignkey(pwedeng hindi)
 //ServiceTitle Foreignkey(pwedeng hindi)
@@ -22,16 +22,17 @@ Hire-and-seek
 // inbox ni user
 // not chat type, email type
 
--$AccountInbox(MessageID,SenderEmail,RecieverEmail,Date,Time,Message,MessageFilePath);
+-$AccountInbox(MessageID,SenderEmail,RecieverEmail,Date,Time,Message,MessageFilesPath);
 
 //MessageID PRIMARY KEY	
 
 
 SERVICES DATABASE
+
 - servicesinfo (ServiceID,ServiceTitle,ServiceOwnerUserID,ServiceFilesPath,ServiceDescription,ServiceBasicPlanDescription,ServiceBasicPlanPrice,ServiceStandardPlanDescription,ServiceStandardPlanPrice,ServiceBasicPremiumDescription,ServicePremiumPlanPrice,Service5StarRatings,Service4StarRatings,Service3StarRatings,Service2StarRatings,Service1StarRatings,ServiceCommentsTableName);
 //ServiceID PRIMARY KEY
 //ServiceOwnerUserID or ServiceOwnerUserEmail foreign key
 
--$ServiceComments(CommentID,ServiceID,CommentatorEmail,Date,Comment);
+-$ServiceComments(CommentID,ServiceID,CommentatorEmail,Date,time,Comment);
  
 - User reports records(ReportID,UserEmail,date,time,Description,Status);
