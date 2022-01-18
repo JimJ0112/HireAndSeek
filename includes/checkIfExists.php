@@ -5,7 +5,7 @@ include_once('databaseConnection.php');
 
 function checkIfExists(mysqli $conn,$tablename,$auth,$column){
 
-    $queryString = "SELECT $column FROM $tablename WHERE $column = '$auth'";
+    $queryString = "SELECT $column FROM $tablename WHERE UPPER($column) = UPPER('$auth')";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
     /*
@@ -23,7 +23,7 @@ function checkIfExists(mysqli $conn,$tablename,$auth,$column){
 
 function searchSimilar(mysqli $conn,$tablename,$title,$column){
 
-    $queryString = "SELECT $column FROM $tablename WHERE $column LIKE '$title%' LIMIT 10";
+    $queryString = "SELECT $column FROM $tablename WHERE UPPER( $column) LIKE UPPER('$title%') LIMIT 10";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
 
