@@ -73,9 +73,20 @@
                     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     -webkit-transition: width 0.3s ease-in-out;
                     transition: width 0.3s ease-in-out;
+                    z-index: 1;
                 }
                 #searchbar input[type=text]:focus{
                     width: 100%;
+                }
+
+                #SearchSuggestions{
+                    border:1px solid black;
+                    width: 150px;
+                    height: 200px;
+                    z-index:2;
+                    background-color: white;
+                    position: absolute;
+                    display: none;
                 }
                 
                 #btnSearch {
