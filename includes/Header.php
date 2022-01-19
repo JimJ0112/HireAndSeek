@@ -19,7 +19,7 @@ include('checkIfExists.php');
                <ul id = "navlist">
                  
                     <a href="index.php"><img id="Logo" src="WebsiteImages/Logo.png"></a>
-                    <li class= "navElement" id="searchbar"> <input type = "text" id="title" placeholder="Search..  "    >
+                    <li class= "navElement" id="searchbar"> <input type = "text" id="title" placeholder="Search..  "   oninput="SendSearch()" >
                     <div id="SearchSuggestions"> </div>
                 </li>
                     <li class= "navElement"> <input type="button" id="btnSearch" onclick="SendSearch()" > </li>

@@ -57,11 +57,3 @@ function SendSearch(){
 }
 
 
-function showSuggestions(){
-    searchSuggestions.style.display = "block";
-    searchSuggestions.innerText = searchResults;
-}
-
-function hideSuggestions(){
-    searchSuggestions.style.display = "none";
-}
