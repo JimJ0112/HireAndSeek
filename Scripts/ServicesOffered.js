@@ -112,13 +112,13 @@ var price = document.getElementsByClassName("ButtonPrice");
 
 for(var i = 0; i<=accountname.length;i++){
 
-    /*
+    
     accountname[i].innerHTML = array[i][0];
     accountLevel[i].innerHTML = array[i][1];
     accountratings[i].innerHTML = array[i][2];
     serviceDescription[i].innerHTML = array[i][3];
     price[i].innerHTML = array[i][4];
-    */
+    
 
 }
 

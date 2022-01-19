@@ -17,9 +17,9 @@ $Accounts = array(
 //import database
 require('../includes/databaseConnection.php');
 
-function search(mysqli $conn,$tablename,$category,$column){
+function search(mysqli $conn,$tablename){
 
-    $queryString = "SELECT * FROM $tablename WHERE UPPER( $column) LIKE UPPER('$category%')";
+    $queryString = "SELECT * FROM $tablename ";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
     $data = array();
@@ -62,7 +62,7 @@ function search(mysqli $conn,$tablename,$category,$column){
 
 }
 
-search($conn,'servicesinfo','Development and IT','category');
+search($conn,'servicesinfo');
 
 
 
