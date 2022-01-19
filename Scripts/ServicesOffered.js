@@ -120,11 +120,6 @@ for(var i = 0; i<=accountname.length;i++){
     price[i].innerHTML = array[i][4];
     */
 
-    accountname[i].innerHTML = array[i][0];
-    accountLevel[i].innerHTML = array[i][1];
-    accountratings[i].innerHTML = array[i][2];
-    serviceDescription[i].innerHTML = array[i][3];
-    price[i].innerHTML = array[i][4];
 }
 
 }
@@ -150,7 +145,8 @@ xhr.open("GET",PHPQuery,true);
     xhr.onload = function(){
         var PhpHandler = this.response;
 
-        PhpHandler = JSON.parse(PhpHandler);
+        //PhpHandler = JSON.parse(PhpHandler);
+        console.log(PhpHandler);
         
         GetProcessDatas(PhpHandler);
     }
@@ -175,7 +171,8 @@ var serviceDescription = document.getElementsByClassName("ServiceDescription");
 var price = document.getElementsByClassName("ButtonPrice");
 var cards = document.getElementsByClassName("card");
 
-console.log(serviceID);
+//console.log(serviceID);
+
 //assign value
 for(var i = 0; i<=cards.length;i++){
 

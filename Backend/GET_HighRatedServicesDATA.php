@@ -24,7 +24,7 @@ function search(mysqli $conn,$tablename,$category,$column){
         
         }
         //return $FinalResult;
-        //echo json_encode($data);
+        echo json_encode($data);
         
     } else{
         echo" does not exist";

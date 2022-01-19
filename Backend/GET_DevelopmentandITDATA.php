@@ -31,7 +31,7 @@ function search(mysqli $conn,$tablename,$category,$column){
            // echo "</table>";
 
             //echo json_encode($rows);
-           // $data[] = $row;
+            $data[] = $row;
    
 
             
