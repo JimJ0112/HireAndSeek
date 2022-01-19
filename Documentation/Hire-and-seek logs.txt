@@ -33,4 +33,5 @@
 -connected the search feature to the servicesinfo table
  
  01/19/2022 Logs:
- -connected GET
+ -connected GET_DevelopmentandITDATA.php, GET_VideoandPresentationDATA.php to the servicesinfo table and was able to fetch categorized data
+ -front end side was able to fetch data from GET_DevelopmentandITDATA.php (data placing still in progress)
