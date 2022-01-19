@@ -32,3 +32,5 @@
 -started creating search feature 
 -connected the search feature to the servicesinfo table
  
+ 01/19/2022 Logs:
+ -connected GET
