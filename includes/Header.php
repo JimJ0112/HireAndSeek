@@ -7,7 +7,7 @@ include('checkIfExists.php');
         <head>
             <link rel="stylesheet" href="Style.css" type="text/css">
             <script src="Scripts/Login.js"> </script>
-           
+           <!-- <script src="Scripts/ServiceSearch.js"> </script> -->
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         </head>
@@ -19,7 +19,7 @@ include('checkIfExists.php');
                <ul id = "navlist">
                  
                     <a href="index.php"><img id="Logo" src="WebsiteImages/Logo.png"></a>
-                    <li class= "navElement" id="searchbar"> <input type = "text" id="title" placeholder="Search..  "   oninput="searchSuggestions()" >
+                    <li class= "navElement" id="searchbar"> <input type = "text" id="title" placeholder="Search..  "   oninput="searchSuggestionResults()" >
                     <div id="SearchSuggestions"> </div>
                 </li>
                     <li class= "navElement"> <input type="button" id="btnSearch" onclick="SendSearch()" > </li>
@@ -39,7 +39,7 @@ include('checkIfExists.php');
                     </div>
                 </ul>
             </nav>
-            <script src="Scripts/ServiceSearch.js"> </script>
-            <script src="Scripts/ServicesOffered.js"> </script>
+          <script src="Scripts/ServiceSearch.js"> </script>
+         
 </body>
 </html>

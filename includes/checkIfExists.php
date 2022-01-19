@@ -43,7 +43,7 @@ if($resultCheck > 0){
 
     while($row = mysqli_fetch_assoc($result)){
         $id = $row['ServiceID'] ;
-        echo " <a href='#' onclick='ButtonClicked($id)' class='ServiceID'>$row[$column] \n <a>";
+        echo " <a href='#' onclick='searchSuggestionClicked($id)' class='ServiceID'>$row[$column] \n <a>";
         echo "<hr>";
     }
     

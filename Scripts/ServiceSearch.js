@@ -5,7 +5,7 @@ console.log(searchBar);
 var searchResults;
 
 
-function SendSearch(){
+function searchSuggestionResults(){
     
     
     var query = document.getElementById("title").value;
@@ -56,4 +56,10 @@ function SendSearch(){
 
 }
 
+
+/* function for clicking the search suggestions */
+function searchSuggestionClicked($id){
+
+    alert('You have clicked suggestion id number: '+$id);
+}
 
