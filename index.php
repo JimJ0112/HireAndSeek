@@ -101,7 +101,7 @@ else{
             </tr>
         </table>
     </div>
-    <div class="footer">
+
         <!-- Footer -->
          <div class="footer">
                <div class="LeftFooter"> 
@@ -118,15 +118,10 @@ else{
                    <div class="txtFooter"><a href=""> Music and Audio</a></div>
                    <div class="txtFooter"><a href=""> Development and IT</a></div></div> 
          </div>
-    </div>
+   
 </div>
       
 
-  
-            
-      
-
-           
 
         </body>
     </html>
