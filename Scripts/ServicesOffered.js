@@ -144,10 +144,11 @@ xhr.open("GET",PHPQuery,true);
 
     xhr.onload = function(){
         var PhpHandler = this.response;
-
-        //PhpHandler = JSON.parse(PhpHandler);
-        console.log(PhpHandler);
         
+        PhpHandler = JSON.parse(PhpHandler);
+       // console.log(JSON.stringify(PhpHandler));
+        
+       console.log(PhpHandler.ServiceID);
         GetProcessDatas(PhpHandler);
     }
 
@@ -162,7 +163,7 @@ document.getElementById("ServicesOffered_Cards").innerHTML = "";
 //generate cards
 generateCards(array.length);
 //get class and id of generated cards
-var serviceID = document.getElementsByClassName("ServiceID");
+var serviceIDS = document.getElementsByClassName("ServiceID");
 var accountname = document.getElementsByClassName("AccountName");
 var accountLevel = document.getElementsByClassName("AccountLevel");
 var accountratings = document.getElementsByClassName("ratings");
@@ -176,12 +177,12 @@ var cards = document.getElementsByClassName("card");
 //assign value
 for(var i = 0; i<=cards.length;i++){
 
-    serviceID[i].innerHTML = array[i][0];
-    accountname[i].innerHTML = array[i][1];
-    accountLevel[i].innerHTML = array[i][2];
-    serviceTitle[i].innerHTML = array[i][3];
-    accountratings[i].innerHTML = array[i][4];
-    serviceDescription[i].innerHTML = array[i][5];
+    serviceIDS[i].innerHTML = arrays[i][0];
+    accountname[i].innerHTML = arrays[i][1];
+    accountLevel[i].innerHTML = arrays[i][2];
+    serviceTitle[i].innerHTML = arrays[i][3];
+    accountratings[i].innerHTML = arrays[i][4];
+    serviceDescription[i].innerHTML = arrays[i][5];
     
     price[i].innerHTML = array[i][6];
 }
