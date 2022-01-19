@@ -14,8 +14,12 @@
 - divided the account registration into 4 steps (personal info, submit valid ID, picture taking,agreement to terms and conditions)
 - file handling code for accepting image files created
 - website automatically creates directory 
+- Implemented Grid for responsive page for the homepage
 
 01/17/2022
 -created  database
 -created  signupverification table where user datas will be saved until verified by the admin
 -created servicesinfo table where the services info will be saved
+-Included the User page at the header
+-Created an alternate Menu when the screen get smaller
+

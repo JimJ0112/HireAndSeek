@@ -28,7 +28,38 @@ function generateCards(int){
     ServiceID.innerHTML="N";
 
     imgCarousel.setAttribute('id','Card_Carousel');
-    imgCarousel.setAttribute('src','WebsiteImages/placeholder.png');
+    
+        if(i==1){ imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT1.png');
+        } else if (i==2) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT2.jpg');
+        } else if (i==3) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT3.jpg'); 
+        } else if (i==4) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT4.jpg');    
+        } else if (i==5) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT5.png');  
+        } else if (i==6) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND1.jpg');
+        } else if (i==7) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND2.jpg'); 
+        } else if (i==8) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND3.jpg');    
+        } else if (i==9) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND4.jpg');  
+        } else if (i==10) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND5.jpg');
+        } else if (i==11) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT6.jpg'); 
+        } else if (i==12) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND6.jpg');    
+        } else if (i==13) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND7.jpg');  
+        } else if (i==14) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA6.jpg');
+        } else if (i==15) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP6.jpg');    
+        } else if (i==16) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA1.jpg');  
+        } else if (i==17) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA2.jpg');
+        } else if (i==18) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA3.jpg'); 
+        } else if (i==19) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA4.jpg');    
+        } else if (i==20) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA5.jpg');  
+        } else if (i==21) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP1.jpg');
+        } else if (i==22) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP2.jpg'); 
+        } else if (i==23) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP3.jpg');    
+        } else if (i==24) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP4.jpg');  
+        } else if (i==25) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP5.jpg');
+            
+        } else {
+            imgCarousel.setAttribute('src','WebsiteImages/placeholder.png');
+    
+        }
+
     AccountProfilePicture.setAttribute('class','AccountProfilePicture');
     AccountProfilePicture.setAttribute('src','WebsiteImages/profilepic-placeholder.jpg');
 
@@ -223,7 +254,6 @@ xmlhttp.send("ReqServiceID=" + rqID);
 
 
 }
-
 
 
 
