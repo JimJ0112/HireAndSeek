@@ -34,7 +34,7 @@ $data = $_GET['data'];
                 <br> <br>
             <div id="Register_Layer1">
 
-            <input type="text" name="FirstName" placeholder="FIRST NAME" required>
+            <input type="text" name="FirstName" placeholder="FIRST NAME" required >
             <input type="text" name="LastName" placeholder="LAST NAME"required>
             <input type="text" name="MiddleInitial" placeholder="M.I"required>
             <input type="text" name="Age" placeholder="AGE"required>
@@ -103,11 +103,11 @@ $data = $_GET['data'];
    
 </div>
 <div id="Register_Layer4">
-            <input type="submit" value="Sign Up">
+            <input type="submit" value="Sign Up" >
 </div>  
             </form>
             <br> <br> <br>
-            <button onclick="startvideo()" id="startvideo"> Start Video </button>
+            <button onclick="startvideo()" id="startvideo"> Open Camera </button>
             <button  id="CaptureImage"> Capture </button>
             <br>
             <button onclick="displayNext()" id="Next"> NEXT </button>

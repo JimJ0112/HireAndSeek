@@ -64,9 +64,16 @@ document.getElementById("CaptureImage").style.display="none";
 
 
  async function startvideo(){
-    let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+    let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
 	clientVideo.srcObject = stream;
 
+    // stops the video after the capture button has been pushed
+    document.getElementById("CaptureImage").addEventListener('click',function(){
+        const tracks = stream.getTracks(); // getTracks() are from 
+        tracks[0].stop();
+
+
+    });
 }
 
 document.getElementById("CaptureImage").addEventListener('click',function(){
@@ -74,7 +81,7 @@ document.getElementById("CaptureImage").addEventListener('click',function(){
     let image_data_url = canvas.toDataURL();
     
    document.getElementById("UserSnapshot").value = image_data_url;
-
+    document.getElementById("video").stop();   
 }
 
 );
