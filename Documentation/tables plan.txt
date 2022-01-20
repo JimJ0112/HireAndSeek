@@ -1,0 +1,38 @@
+Hire-and-seek
+
+/*Account verification*/
+- signupverification(id,firstname,lastname,middlename,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,Status);
+//id PRIMARY KEY 
+// pwede din gamitin yung email address as primary key();
+
+
+
+/* Account Database */
+- Accounts(id,firstname,lastname,middlename,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,TransactionsTableName,InboxTableName);
+//email PRIMARY KEY
+
+
+- Account transaction records (transactionID,userID or userEmail,ServiceID,ServiceTitle,clientNotes,transactionstartDate,transactionFinishedDate,availedPlan,payment,status,clientEmail,FilesDirectory,AgreementContract);
+//TRANSACTION ID PRIMARY KEY
+//userID or userEmail Foreignkey(pwedeng hindi)
+//ServiceTitle Foreignkey(pwedeng hindi)
+//clientEmail Foreignkey(pwedeng hindi)
+
+
+// inbox ni user
+// not chat type, email type
+
+-$AccountInbox(MessageID,SenderEmail,RecieverEmail,Date,Time,Message,MessageFilesPath);
+
+//MessageID PRIMARY KEY	
+
+
+SERVICES DATABASE
+
+- servicesinfo (ServiceID,ServiceTitle,ServiceOwnerUserID,ServiceFilesPath,ServiceDescription,ServiceBasicPlanDescription,ServiceBasicPlanPrice,ServiceStandardPlanDescription,ServiceStandardPlanPrice,ServiceBasicPremiumDescription,ServicePremiumPlanPrice,Service5StarRatings,Service4StarRatings,Service3StarRatings,Service2StarRatings,Service1StarRatings,ServiceCommentsTableName);
+//ServiceID PRIMARY KEY
+//ServiceOwnerUserID or ServiceOwnerUserEmail foreign key
+
+-$ServiceComments(CommentID,ServiceID,CommentatorEmail,Date,time,Comment);
+ 
+- User reports records(ReportID,UserEmail,date,time,Description,Status);
