@@ -18,7 +18,7 @@
 
 
 - website automatically creates directory 
-- Implemented Grid for responsive page for the homepage
+-implemented grid display to the landing page (index) to make the page responsive to different screen sizes
 
 
 01/16/2022 Logs:
@@ -34,7 +34,6 @@
 
 
 01/18/2022 Logs:
--implemented grid display to the landing page (index) to make the page to different screen sizes
 -started creating search feature 
 -connected the search feature to the servicesinfo table
  
