@@ -100,8 +100,8 @@ else{
 
                 <!-- Services Offered cards -->
 
-            <div class="SOcards">   
-                <div id="ServicesOffered_Cards">
+              
+                <div id="ServicesOffered_Cards" class="SOcards">
 
                 
               <!--  <iframe src="ServicesOffered_Cards.php" width="100%" height="100%"> </iframe> -->
@@ -111,7 +111,7 @@ else{
 
 
                 </div>
-            </div>
+           
                 <br>
 
 
