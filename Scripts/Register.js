@@ -81,7 +81,7 @@ document.getElementById("CaptureImage").addEventListener('click',function(){
     let image_data_url = canvas.toDataURL();
     
    document.getElementById("UserSnapshot").value = image_data_url;
-    document.getElementById("video").stop();   
+       
 }
 
 );
