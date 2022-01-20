@@ -16,6 +16,11 @@
 - divided the account registration into 4 steps (personal info, submit valid ID, picture taking,agreement to terms and conditions)
 - file handling code for accepting image files created
 
+
+- website automatically creates directory 
+- Implemented Grid for responsive page for the homepage
+
+
 01/16/2022 Logs:
 - created a snapshot capturing feature in registration(step 3:picture taking) page
 - created php code to make the website automatically create directory for newly registered users
@@ -27,6 +32,7 @@
 -connected the freelancer registration page to the signupverification table
 -created servicesinfo table where the services info will be saved
 
+
 01/18/2022 Logs:
 -implemented grid display to the landing page (index) to make the page to different screen sizes
 -started creating search feature 
@@ -35,3 +41,8 @@
  01/19/2022 Logs:
  -connected Backend php files to the servicesinfo table and was able to fetch categorized data
  -front end side was able to fetch data from GET_DevelopmentandITDATA.php (data placing still in progress)
+
+-Included the User page at the header
+-Created an alternate Menu when the screen get smaller
+
+
