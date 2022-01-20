@@ -28,7 +28,9 @@ function generateCards(int){
     ServiceID.innerHTML="N";
 
     imgCarousel.setAttribute('id','Card_Carousel');
-    
+
+    // Set the source of the images according to count of iteration
+
         if(i==1){ imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT1.png');
         } else if (i==2) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT2.jpg');
         } else if (i==3) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT3.jpg'); 
