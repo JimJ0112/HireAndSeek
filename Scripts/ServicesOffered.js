@@ -148,7 +148,7 @@ xhr.open("GET",PHPQuery,true);
         PhpHandler = JSON.parse(PhpHandler);
        // console.log(JSON.stringify(PhpHandler));
         
-       console.log(PhpHandler.ServiceID);
+       console.log(PhpHandler);
         GetProcessDatas(PhpHandler);
     }
 
@@ -180,9 +180,9 @@ for(var i = 0; i<=cards.length;i++){
     serviceIDS[i].innerHTML = arrays[i][0];
     accountname[i].innerHTML = arrays[i][1];
     accountLevel[i].innerHTML = arrays[i][2];
-    serviceTitle[i].innerHTML = arrays[i][3];
-    accountratings[i].innerHTML = arrays[i][4];
-    serviceDescription[i].innerHTML = arrays[i][5];
+    serviceTitle[i].innerHTML = arrays[i][1];
+    accountratings[i].innerHTML = arrays[i]['Service5StarRatings'];
+  serviceDescription[i].innerText = arrays[i][4];
     
     price[i].innerHTML = array[i][6];
 }

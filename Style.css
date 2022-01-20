@@ -82,14 +82,14 @@
                 }
 
                 #SearchSuggestions{
-                    border:1px solid black;
+                    /*border:1px solid black;*/
                     width: 155px;
                     height: 200px;
                     z-index:2;
                     background-color: white;
                     position: absolute;
                     display: none;
-                    opacity: 0.7;
+                   /* opacity: 0.7; */
                     text-align: center;
                     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     -webkit-transition: width 0.3s ease-in-out;
@@ -360,9 +360,10 @@
     max-height: 500px;
     margin: 10px;
     padding: 10px;
+    /*
     height: fit-content;
     width: fit-content;
-    
+    */
    
     font-family: arial;
   }
@@ -426,6 +427,10 @@ display: inline-block;
     display: inline-block;
 }
 
+.ServiceDescription{
+    font-size: fit-content;
+    padding: auto;
+}
 
 /* Avail Service*/
 #AvailService_Carousel{
