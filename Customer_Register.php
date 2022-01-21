@@ -117,10 +117,8 @@
             <br>
             <br>
             
-            <!-- Footer -->
-            <footer>
-                <h1> Footer Placeholder</h1>
-            </footer>
+        <!-- Footer -->
+        <?php include_once('Includes/footer.php')?>
             <script src="Scripts/Register.js"> </script>
         </body>
     </html>  
