@@ -250,13 +250,12 @@ a{
                     grid-template-columns: 1fr 1fr 1fr;
                     grid-auto-rows: minmax(auto, auto);
                     place-items: center;
-                    
+                     /* margin between text and background*/
+                    padding: 20px;
                 }
                 
                 .leftFooter{
                     text-align: left;
-                      /* margin between text and background*/
-                    margin: 15px;
                  }
                 .centerFooter{
                     text-align: center;
