@@ -89,12 +89,13 @@ else{
                     <div id="ServiceRatings" class="ServiceContainerChild"> <h3>Ratings </h3> 
                     <h2 id="totalRatings"> TOTAL RATINGS: 5.0 </h2>
                     <br>
-                    <h3 id="5starRatingsTotal"> 5 Star Ratings: </h3>
-                    <h3 id="4starRatingsTotal"> 4 Star Ratings:</h3>
-                    <h3 id="5starRatingsTotal"> 3 Star Ratings:</h3>
-                    <h3 id="6starRatingsTotal"> 2 Star Ratings:</h3>
-                    <h3 id="7starRatingsTotal"> 1 Star Ratings:</h3>
-
+                    <ul>
+                   <li> 5 Star Ratings: <h3 id="5starRatingsTotal"> N </h3> </li>
+                   <li> 4 Star Ratings: <h3 id="4starRatingsTotal"> N </h3> </li>
+                   <li> 3 Star Ratings: <h3 id="3starRatingsTotal"> N </h3> </li>
+                   <li> 2 Star Ratings: <h3 id="2starRatingsTotal"> N </h3> </li>
+                   <li> 1 Star Ratings: <h3 id="1starRatingsTotal"> N </h3> </li>
+                     </ul>
                     </div>
 
 
@@ -113,7 +114,7 @@ else{
                     </div>
 
                 </div>
-
+               <!-- <script src= "Scripts/AvailService.js"></script> -->
             <!-- Footer -->
             <footer>
                 

@@ -26,13 +26,75 @@ xmlhttp.send();
 
 */
 
-var AvailedService = sessionStorage.getItem('AvailedServiceResult');
+var AvailedService = sessionStorage.getItem('AvailedServiceID');
 
-console.log(AvailedService);
 
-document.getElementsByClassName("AccountName")[0].value = AvailedService[1];
-document.getElementsByClassName("AccountLevel")[1].innerHTML = AvailedService[2];
-document.getElementById("ServiceTitle").innerHTML = AvailedService[1];
-document.getElementById("totalRatings").innerHTML = AvailedService[''];
-document.getElementById("AvailService_Description").innerHTML = AvailedService[0];
-document.getElementById("Buy").innerHTML = AvailedService[0];
+
+
+    //Main
+    
+    var xmlhttp = new XMLHttpRequest(AvailedService);
+    xmlhttp.open("POST", "Backend/ServiceInfoRequest.php", true);
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+            
+             AvailedServiceINFO=this.response;
+             AvailedServiceINFO = JSON.parse(AvailedServiceINFO); 
+            console.log(AvailedServiceINFO);
+            setValues(AvailedServiceINFO);
+
+            
+        }       
+    };
+    
+     xmlhttp.send("ReqServiceID=" + AvailedService);
+
+
+// functions
+
+function setValues(array){
+
+    var Passedarray = array;
+
+    const AccountName = document.getElementsByClassName("AccountName")[0];
+    const AccountLevel = document.getElementsByClassName("AccountLevel")[0];
+    const ServiceTitle = document.getElementById("ServiceTitle");
+    const totalRatings = document.getElementById("totalRatings");
+    const ServiceDescription = document.getElementById("AvailService_Description");
+    const BuyButton = document.getElementById("Buy");
+    const Service5StarRatings = document.getElementById("5starRatingsTotal");
+    const Service4StarRatings = document.getElementById("4starRatingsTotal");
+    const Service3StarRatings = document.getElementById("3starRatingsTotal");
+    const Service2StarRatings =  document.getElementById("2starRatingsTotal");
+    const Service1StarRatings = document.getElementById("1starRatingsTotal");
+
+  
+
+
+  
+
+    ServiceTitle.innerText = array[0]['ServiceTitle'];
+    ServiceDescription.innerText = array[0]['ServiceDescription'];
+    AccountName.innerText = array[0]['ServiceOwnerUserID'];
+    console.log(array[0]['Service5StarRatings']);
+   Service5StarRatings.innerText =  array[0]['Service5StarRatings'];
+   Service4StarRatings.innerText =  array[0]['Service4StarRatings'];
+   Service3StarRatings.innerText =  array[0]['Service3StarRatings'];
+   Service2StarRatings.innerText =  array[0]['Service2StarRatings'];
+   Service1StarRatings.innerText =  array[0]['Service1StarRatings'];
+
+    //totalRatings.innerHTML = ;
+    
+    //console.log(AccountName);
+    //console.log(AccountLevel);
+   console.log(ServiceTitle);
+   // console.log(totalRatings);
+   // console.log(ServiceDescription);
+   // console.log(BuyButton);
+
+
+}

@@ -209,7 +209,7 @@ for(var i = 0; i<=cards.length;i++){
 
 //this shit already fetches data from backend but cant transfer said data
 
-
+/*
 function AvailThis(ID){
 var ThisID = ID;
 
@@ -236,10 +236,15 @@ xmlhttp.send("ReqServiceID=" + ThisID);
 
 
 }
-
+*/
 
 // imma try this shit muna
 
+function AvailThis(ID){
+    var ThisID = ID;
+    sessionStorage.setItem('AvailedServiceID',ThisID);
+    window.location.href='AvailService.php';
+}
 
 
 
