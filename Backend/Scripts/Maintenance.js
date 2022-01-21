@@ -49,14 +49,14 @@ function createElements(Number){
     
     AccountID1Type =document.createElement('td');
     AccountID1COL =document.createElement('td');
-   // AccountID1Img = document.createElement('image');
+  
     
     AccountID2Type = document.createElement('td');
     AccountID2COL =document.createElement('td');
-   // AccountID2Img =document.createElement('image');
+  
     
     AccountSnapshot =document.createElement('td');
-   // AccountSnapshotImg =document.createElement('image');
+ 
     
     
     
@@ -77,14 +77,14 @@ function createElements(Number){
     
     AccountID1Type.setAttribute('class','AccountID1Type'); 
     AccountID1COL.setAttribute('class','AccountID1Col'); 
-   // AccountID1Img.setAttribute('class','AccountIDImg'); 
+   
     
     AccountID2Type.setAttribute('class','AccountID2Type'); 
     AccountID2COL.setAttribute('class','AccountID2COL'); 
-   // AccountID2Img.setAttribute('class','AccountID2Img'); 
+
     
     AccountSnapshot.setAttribute('class','AccountSnapShot'); 
-  //  AccountSnapshotImg.setAttribute('class','AccountSnapShotImg'); 
+
     
     
     AccountCheckBox.setAttribute('type','checkbox');
@@ -92,18 +92,13 @@ function createElements(Number){
 
 
 
-   // AccountID1Img.setAttribute('src',null);
-   // AccountID2Img.setAttribute( 'src','');
+
 
 
 
     
     AccountCheckBoxCOL.appendChild(AccountCheckBox);
-    //AccountID1COL.appendChild(AccountID1Img);
-    
-   // AccountID2COL.appendChild(AccountID2Img);
-    
-   // AccountSnapshot.appendChild(AccountSnapshotImg);
+ 
     
     row.appendChild(AccountCheckBoxCOL);
     row.appendChild(AccountIDCOL);
@@ -157,10 +152,10 @@ function createElements(Number){
         AccountID1Img = document.getElementsByClassName('AccountIDImg');
         AccountID2Type = document.getElementsByClassName('AccountID2Type');
         AccountID2COL= document.getElementsByClassName( 'AccountID2COL');
-       // AccountID2Img = document.getElementsByClassName('AccountID2Img');
+       
         AccountSnapshot = document.getElementsByClassName('AccountSnapShot'); 
-      //  AccountSnapshotImg = document.getElementsByClassName('AccountSnapShotImg'); 
-      // var reader = new FileReader();
+     
+   
 
         for(var i =0;i<Number;i++){
 
@@ -179,7 +174,7 @@ function createElements(Number){
             AccountLanguage[i].innerText =DataArray[i][''];
             AccountOccupation[i].innerText =DataArray[i]['occupation'];
             AccountID1Type[i].innerText =DataArray[i]['idimage1type'];
-
+            AccountID2Type[i].innerText =DataArray[i]['idimage2type'];
             var imgID1 = new Image();
             imgID1.src = DataArray[i]['idimage1directory'];
             AccountID1COL[i].appendChild(imgID1);

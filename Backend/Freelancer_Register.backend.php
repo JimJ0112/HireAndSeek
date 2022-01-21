@@ -5,6 +5,8 @@ session_start();
 
 
       /* GET DATA FROM FRONT END FORM */
+      $AccountType = "Freelancer";
+      $customUsername ="";
        $firstname = $_POST[ "FirstName"]; 
        $lastname = $_POST["LastName" ];
        $middleInitial = $_POST["MiddleInitial"];
@@ -85,7 +87,7 @@ session_start();
         header('location:../Freelancer_Register.php?data=registrationfailed-email_already_exists');
  
       } else{
-        $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middleinitial,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotdirectory,idimage1type,idimage1directory,idimage2type,idimage2directory) VALUES(0,'$firstname','$lastname','$middleInitial','$age','$gender','$email','$password','$contact','$address','$description','$language','$occupation','$education','$skills','$snapshotdirectory','$idType','$ID1directory','$idType2','$ID2directory');";
+        $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middleinitial,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotdirectory,idimage1type,idimage1directory,idimage2type,idimage2directory,AccountType,filesdirectory,customUsername) VALUES(0,'$firstname','$lastname','$middleInitial','$age','$gender','$email','$password','$contact','$address','$description','$language','$occupation','$education','$skills','$snapshotdirectory','$idType','$ID1directory','$idType2','$ID2directory','$AccountType','$Directory','$customUsername');";
         $result = mysqli_query($conn,$sqlquery);
         
         //echo $result;

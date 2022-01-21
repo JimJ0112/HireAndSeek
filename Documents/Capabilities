@@ -23,4 +23,5 @@ Progress:
 -the website can let freelancers and customers can search existing services 
     //progress: done na pero naiiisip iimplement yung pag pinindot yung search button may new page na lalabas tas nandun cards ng results
 
-
+-the website can let the administrator can manually verify if the given personal details/identity of the user is valid
+    // nasetup na maintenance page, nafefetch narin yung files from database, need nalang gawan ng functions
