@@ -19,7 +19,7 @@ function generateCards(int){
     var AccountLevel = document.createElement('p');
     var ServiceTitle = document.createElement('p');
     var ratings= document.createElement('p');
-    var ServiceDescription = document.createElement('p');
+    var ServiceDescription = document.createElement('pre');
   //  var nextpageButton = document.createElement('a');
     var Buttonprice = document.createElement('Button');
     
@@ -188,12 +188,12 @@ var cards = document.getElementsByClassName("card");
 //assign value
 for(var i = 0; i<=cards.length;i++){
 
-    serviceIDS[i].innerHTML = arrays[i][0];
-    accountname[i].innerHTML = arrays[i][1];
-    accountLevel[i].innerHTML = arrays[i][2];
-    serviceTitle[i].innerHTML = arrays[i][1];
+    serviceIDS[i].innerHTML = arrays[i]['ServiceID'];
+    accountname[i].innerHTML = arrays[i]['ServiceOwnerUserID'];
+    //accountLevel[i].innerHTML = arrays[i][2];
+    serviceTitle[i].innerHTML = arrays[i]['ServiceTitle'];
     accountratings[i].innerHTML = arrays[i]['Service5StarRatings'];
-    serviceDescription[i].innerText = arrays[i][4];
+    serviceDescription[i].innerText = arrays[i]['ServiceDescription'];
     price[i].innerHTML = array[i][6];
 
     //sets id to button 

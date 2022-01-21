@@ -391,6 +391,7 @@ padding: 7px 0px 7px 0px;
     width: 100%; 
   }
   
+
   
 .AccountProfilePicture{
     height: 40px;
@@ -449,9 +450,15 @@ font-weight:bolder;
 }
 
 .ServiceDescription{
+ /*   
 width: 100%; 
 margin: 20px;
 position: relative;
+*/
+
+line-height: 1.8;
+white-space: normal;
+padding: auto;
 }
 
 /* Avail Service*/
