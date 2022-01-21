@@ -1,5 +1,10 @@
                /* Initializing body*/
      
+a{
+    text-decoration: none;
+    
+}
+
 
                body{
                 margin: 0;
@@ -444,9 +449,9 @@ font-weight:bolder;
 }
 
 .ServiceDescription{
-    width: 100%; 
-    margin: 20px;
-    position: relative;
+width: 100%; 
+margin: 20px;
+position: relative;
 }
 
 /* Avail Service*/
@@ -501,6 +506,7 @@ font-weight:bolder;
     grid-area: ratings;
     width: 100%;
     height: 100%;
+   display: inline;
 }
 .ServiceContainerChild:nth-child(5){
     grid-area: rate;
@@ -514,9 +520,15 @@ font-weight:bolder;
 }
 
 /* Plans */
-#Plan_Basic{}
-#Plan_Standard{}
-#Plan_Premium{}
+#Plan_Basic{
+    cursor: pointer;
+}
+#Plan_Standard{
+    cursor: pointer;
+}
+#Plan_Premium{
+    cursor: pointer;
+}
 
 .Plan{
     border: 1px solid black;

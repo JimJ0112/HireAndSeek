@@ -35,10 +35,10 @@ $data = $_GET['data'];
             <div id="Register_Layer1">
 
             <input type="text" name="FirstName" placeholder="FIRST NAME" required>
-            <input type="text" name="LastName" placeholder="LAST NAME"required>
-            <input type="text" name="MiddleInitial" placeholder="M.I"required>
-            <input type="text" name="Age" placeholder="AGE"required>
-            <select name="Gender"required> 
+            <input type="text" name="LastName" placeholder="LAST NAME" required>
+            <input type="text" name="MiddleInitial" placeholder="MIDDLE NAME">
+            <input type="text" name="Age" placeholder="AGE">
+            <select name="Gender"> 
                 <option value="" disabled selected hidden> GENDER </option>
             <option value="male"> MALE </option>
             <option value="female"> FEMALE </option>
@@ -47,16 +47,16 @@ $data = $_GET['data'];
             <br><br>
 
             
-            <input type="text" name="Contact" placeholder="Contact Number"required>
-            <input type="text" name="Address" placeholder="Address"required>
-            <input type="text" name="Email" placeholder="Email"required>
-            <input type="password" name="UserPassword" placeholder="Password"required>
+            <input type="text" name="Contact" placeholder="Contact Number">
+            <input type="text" name="Address" placeholder="Address">
+            <input type="text" name="Email" placeholder="Email">
+            <input type="password" name="UserPassword" placeholder="Password">
             
           
             
             <br> <br>
 
-            <input type="text" name="Description" placeholder="Description"required>
+            <input type="text" name="Description" placeholder="Description">
             <input type="text" name="Language" placeholder="Language">
             <input type="text" name="Occupation" placeholder="Occupation">
 
@@ -78,7 +78,7 @@ $data = $_GET['data'];
 
            <br><br>
            UPLOAD ID <br>
-        <input type="file" name="IDFile" placeholder="ID " accept=".jpg,.png" required>
+        <input type="file" name="IDFile" placeholder="ID " accept=".jpg,.png">
 
             <br> <br>
 
@@ -92,22 +92,23 @@ $data = $_GET['data'];
 
            <br><br>
            UPLOAD ID <br>
-        <input type="file" name="IDFile2" placeholder="ID" accept=".jpg,.png" required>
+        <input type="file" name="IDFile2" placeholder="ID" accept=".jpg,.png">
 </div>
 <div id="Register_Layer3">
 
-<input type="hidden"  id="UserSnapshot" name ="UserSnapshot" required>     
+<input type="hidden"  id="UserSnapshot" name ="UserSnapshot">     
 
 <canvas id="photocapture"> </canvas>
     <video autoplay id="video"> </video>
    
 </div>
 <div id="Register_Layer4">
-            <input type="submit" value="Sign Up">
+    <h3>  Terms and Conditions Placeholder</h3>
+            <input type="submit" value="Sign Up" >
 </div>  
             </form>
             <br> <br> <br>
-            <button onclick="startvideo()" id="startvideo"> Start Video </button>
+            <button onclick="startvideo()" id="startvideo"> Open Camera </button>
             <button  id="CaptureImage"> Capture </button>
             <br>
             <button onclick="displayNext()" id="Next"> NEXT </button>

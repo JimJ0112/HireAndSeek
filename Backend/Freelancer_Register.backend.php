@@ -25,21 +25,36 @@ session_start();
 
 
        /* making directory to store the files for user */
-       $Directory = '../UserRegisterFiles/'.$firstname.$lastname;
-       mkdir($Directory);
+       $Directory = '../UserRegisterFiles/'.$email.$firstname;
+       if(is_dir($Directory)==false){
+        mkdir($Directory);
+
+       } else {echo"Directory Already Exists!";}
+       
        
        /* converting image data URL to base 64 and decoding it to png file*/
+
        /* it needs to be done because the image has been converted to dataurl, cant read to server's computer */
        $UserSnapshot = $_POST["UserSnapshot"];
+       
+       //replaces space with + sign in the string
        $UserSnapshot = str_replace(' ','+',$UserSnapshot);
-       list($type, $UserSnapshot) = explode(';', $UserSnapshot);
-       list(, $UserSnapshot)      = explode(',', $UserSnapshot);
+       
+       // convert the string into array, use ',' as separator
+       list(, $UserSnapshot)= explode(',', $UserSnapshot);
+       
+       // extract base64 string from the array
        $IMGData = base64_decode($UserSnapshot);
-      file_put_contents($Directory."/".$firstname.$lastname.'.png', $IMGData);
+
+       // save the base64 string into .png to the directory
+      file_put_contents($Directory."/".$email.$firstname.'.png', $IMGData);
       
-      $snapshotdirectory = $Directory."/".$firstname.$lastname.'.png';
+      // snapshot directory string that will be saved in the database
+
+      $snapshotdirectory = $Directory."/".$email.$firstname.'.png';
       
        /* end of convertion */
+       
 
        $idType = $_POST["IDTYPE"];
        $idType2 = $_POST["IDTYPE2"];
@@ -55,7 +70,7 @@ session_start();
       $ID1directory = $Directory."/ID1".$firstname.$lastname.'.png';
 
 
-    //   $idFile2 = $_FILES["IDFile2" ]["tmp_name2"];
+   
 
    
       $IMGData2 = file_get_contents($_FILES["IDFile2"]["tmp_name"]);

@@ -17,7 +17,7 @@
 - file handling code for accepting image files created
 
 - website automatically creates directory 
--implemented grid display to the landing page (index) to make the page responsive to different screen sizes
+- implemented grid display to the landing page (index) to make the page responsive to different screen sizes
 
 
 01/16/2022 Logs:

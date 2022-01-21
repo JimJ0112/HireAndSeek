@@ -22,7 +22,7 @@ include('checkIfExists.php');
                     <li class= "navElement" id="searchbar"> <input type = "text" id="title" placeholder="Search..  "   oninput="searchSuggestionResults()" >
                     <div id="SearchSuggestions"> </div>
                 </li>
-                    <li class= "navElement"> <input type="button" id="btnSearch" onclick="SendSearch()" > </li>
+                    <li class= "navElement"> <input type="button" id="btnSearch" onclick="" > </li>
                     <li class= "navElement" id="btnExplore"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
                         <li class= "navElement" id="btnBecome"> <a href = "BecomeAFreelancer.php"> BECOME A FREELANCER </a> </li>
                         <li class= "navElement" id="btnLogin"> <a href = "Login_Index.php"> LOGIN </a> </li>
@@ -40,6 +40,7 @@ include('checkIfExists.php');
                 </ul>
             </nav>
           <script src="Scripts/ServiceSearch.js"> </script>
+          <script src="Scripts/ServicesOffered.js"> </script>
          
 </body>
 </html>

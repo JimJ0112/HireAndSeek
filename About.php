@@ -45,9 +45,8 @@ else{
                 <!-- Services Offered-->
  
             <!-- Footer -->
-            <footer>
-                <h1> Footer Placeholder</h1>
-            </footer>
+         
+            <?php include_once('Includes/footer.php')?>
 
      
     </body>
