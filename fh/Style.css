@@ -49,6 +49,7 @@ li{
     height: 100%;
     border: 1px solid black;
     grid-area:Tables;
+    overflow: scroll;
    
 }
 

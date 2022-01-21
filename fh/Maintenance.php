@@ -36,7 +36,7 @@ echo "<br> <br> <br>";
         <head>
             <link rel="Stylesheet" href="Style.css" type="text/css">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script src="Scripts/Get_signupVerificationDATA.php.js"> </script>
+            <script src="Scripts/Maintenance.js"> </script>
 
         </head>
         <body>
@@ -63,8 +63,8 @@ echo "<br> <br> <br>";
             <div id="ApproveControls">
                 <br> <br>
                 <center>
-                    <button> Disapprove Account </button> <br> <br>
-                    <button> Approve Account    </button> <br> <br> 
+                    <button> Accept Account </button> <br> <br>
+                    <button> Decline </button> <br> <br> 
                     <button> Status             </button> <br> <br>
                     <button> Send Notice        </button> <br> <br> 
                 </center>
@@ -90,7 +90,27 @@ echo "<br> <br> <br>";
             <center>
                 <table id="DisplayTable">
                     
-                    <tr> <td> Column </td> <td>  Column  </td>  <td> Column </td>  <td>  Column  </td> <td>  Column  </td> <td>  Column  </td></tr>
+                    <tr>
+                         <td> Column </td> 
+                         <td> Column </td> 
+                         <td> Column </td>
+                         <td> Column </td>
+                         <td> Column </td>
+                         <td> Column </td>
+                         <td> Column </td> 
+                         <td> Column </td> 
+                         <td> Column </td>
+                         <td> Column </td>
+                         <td> Column </td>
+                         <td> Column </td>
+                         <td> Column </td> 
+                         <td> Column </td> 
+                         <td> Column </td>
+                         <td> Column </td>
+
+                         
+
+                    </tr>
                     
                 </table>          
             </center>
