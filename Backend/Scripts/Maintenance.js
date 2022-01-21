@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("POST", "Backend/GET_signupVerificationDATA.php", true);
+xmlhttp.open("POST", "GET_signupVerificationDATA.php", true);
 
 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
@@ -9,7 +9,7 @@ xmlhttp.onreadystatechange = function() {
         
         var dataArray = this.response;
         dataArray = JSON.parse(dataArray);
-        console.log(dataArray.length);
+        console.log(dataArray);
         var Number = dataArray.length;  
         createElements(Number);
         setData(dataArray);
@@ -49,14 +49,14 @@ function createElements(Number){
     
     AccountID1Type =document.createElement('td');
     AccountID1COL =document.createElement('td');
-    AccountID1Img = document.createElement('image');
+   // AccountID1Img = document.createElement('image');
     
     AccountID2Type = document.createElement('td');
     AccountID2COL =document.createElement('td');
-    AccountID2Img =document.createElement('image');
+   // AccountID2Img =document.createElement('image');
     
     AccountSnapshot =document.createElement('td');
-    AccountSnapshotImg =document.createElement('image');
+   // AccountSnapshotImg =document.createElement('image');
     
     
     
@@ -77,14 +77,14 @@ function createElements(Number){
     
     AccountID1Type.setAttribute('class','AccountID1Type'); 
     AccountID1COL.setAttribute('class','AccountID1Col'); 
-    AccountID1Img.setAttribute('class','AccountIDImg'); 
+   // AccountID1Img.setAttribute('class','AccountIDImg'); 
     
     AccountID2Type.setAttribute('class','AccountID2Type'); 
     AccountID2COL.setAttribute('class','AccountID2COL'); 
-    AccountID2Img.setAttribute('class','AccountID2Img'); 
+   // AccountID2Img.setAttribute('class','AccountID2Img'); 
     
     AccountSnapshot.setAttribute('class','AccountSnapShot'); 
-    AccountSnapshotImg.setAttribute('class','AccountSnapShotImg'); 
+  //  AccountSnapshotImg.setAttribute('class','AccountSnapShotImg'); 
     
     
     AccountCheckBox.setAttribute('type','checkbox');
@@ -92,18 +92,18 @@ function createElements(Number){
 
 
 
-    AccountID1Img.setAttribute('src','');
-    AccountID2Img.setAttribute( 'src','');
+   // AccountID1Img.setAttribute('src',null);
+   // AccountID2Img.setAttribute( 'src','');
 
 
 
     
     AccountCheckBoxCOL.appendChild(AccountCheckBox);
-    AccountID1COL.appendChild(AccountID1Img);
+    //AccountID1COL.appendChild(AccountID1Img);
     
-    AccountID2COL.appendChild(AccountID2Img);
+   // AccountID2COL.appendChild(AccountID2Img);
     
-    AccountSnapshot.appendChild(AccountSnapshotImg);
+   // AccountSnapshot.appendChild(AccountSnapshotImg);
     
     row.appendChild(AccountCheckBoxCOL);
     row.appendChild(AccountIDCOL);
@@ -138,6 +138,7 @@ function createElements(Number){
         var ID2imgArray = new Array();
         var SnapshotimgArray = new Array();
 
+
      
         AccountCheckBox = document.getElementsByClassName('AccountCheckBox');
         AccountIDCOL= document.getElementsByClassName('AccountID');
@@ -156,37 +157,16 @@ function createElements(Number){
         AccountID1Img = document.getElementsByClassName('AccountIDImg');
         AccountID2Type = document.getElementsByClassName('AccountID2Type');
         AccountID2COL= document.getElementsByClassName( 'AccountID2COL');
-        AccountID2Img = document.getElementsByClassName('AccountID2Img');
+       // AccountID2Img = document.getElementsByClassName('AccountID2Img');
         AccountSnapshot = document.getElementsByClassName('AccountSnapShot'); 
-        AccountSnapshotImg = document.getElementsByClassName('AccountSnapShotImg'); 
-  
+      //  AccountSnapshotImg = document.getElementsByClassName('AccountSnapShotImg'); 
+      // var reader = new FileReader();
 
         for(var i =0;i<Number;i++){
-           // AccountCheckBoxCOL[i].setAttribute('click','function( )');
-          
-           //ID1IMG.src = DataArray[i]['idimage1directory'];
-            ID1imgArray[i]= new Image();
-            ID1imgArray[i].src= DataArray[i]['idimage1type'];
 
-            ID1imgArray[i].onload = function(){
-                AccountID1Img[i].src = ID1imgArray[i];
-            }
-
-            ID2imgArray[i]= new Image();
-            ID2imgArray[i].src= DataArray[i]['idimage2type'];
-            ID2imgArray[i].onload = function(){
-                AccountID2Img[i].src = ID2imgArray[i];
-            }
-
-            SnapshotimgArray[i] = new Image();
-            SnapshotimgArray[i].src= DataArray[i]['snapshotdirectory'];
-            
-            SnapshotimgArray[i].onload = function(){
-                SnapshotimgArray[i].src = SnapshotimgArray[i];
-            }
 
             
-           
+             
             AccountIDCOL[i].innerText = DataArray[i]['id'];
             AccountEmailCOL[i].innerText = DataArray[i]['email'];
             AccountFirstName[i].innerText = DataArray[i]['firstname'];
@@ -199,20 +179,19 @@ function createElements(Number){
             AccountLanguage[i].innerText =DataArray[i][''];
             AccountOccupation[i].innerText =DataArray[i]['occupation'];
             AccountID1Type[i].innerText =DataArray[i]['idimage1type'];
+
+            var imgID1 = new Image();
+            imgID1.src = DataArray[i]['idimage1directory'];
+            AccountID1COL[i].appendChild(imgID1);
             
-            /*
-            AccountID1Img[i].setAttribute('src',DataArray[i]['idimage1directory']);
-            AccountID1Img[i].setAttribute('alt','image not found');
+            var imgID2 = new Image();
+            imgID2.src = DataArray[i]['idimage2directory'];
+            AccountID2COL[i].appendChild(imgID2);
+     
+            var imgSS = new Image();
+            imgSS.src = DataArray[i]['snapshotdirectory'];
+            AccountSnapshot[i].appendChild(imgSS);
 
-
-        
-            AccountID2Type[i].innerText =DataArray[i]['idimage2type'];
-            AccountID2Img[i].setAttribute( 'src',DataArray[i]['idimage2directory']);
-            
-    
-            AccountSnapshotImg[i].src=DataArray[i]['idimage1directory'];
-
-            */
          
 
 

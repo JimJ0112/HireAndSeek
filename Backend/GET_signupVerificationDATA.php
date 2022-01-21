@@ -12,36 +12,52 @@ function getDatas(mysqli $conn,$tablename){
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
     $data = array();
-    $ID1Images = array();
-    $ID2Images = array();
-    $SnapShotImages = array();
+    $ID1Images;
+    $ID2Images ;
+    $SnapShotImages;
 
     if($resultCheck > 0){
        
         while($row = mysqli_fetch_array($result)){
             
             
-            $data[] = $row;
+            //$data[] = $row;
 
-           // echo $data['idimage1directory'];
 
-           /*
-           foreach($row as $row){
-            $image = $row['idimage1directory'];
-            $type = pathinfo($image, PATHINFO_EXTENSION);
-            $data = file_get_contents($image);
-            $dataUri = 'data:image/' . $type . ';base64,' . base64_encode($data);
-            echo $dataUri ;
+
             
-           }
+           
+            $datas = file_get_contents($row['idimage1directory']);
+            $ID1Images = 'data:image/image/png;base64,'.base64_encode($datas);
+            
+            $datasID2 = file_get_contents($row['idimage2directory']);
+            $ID2Images = 'data:image/image/png;base64,'.base64_encode($datasID2);
+
+            $datasSnapshot = file_get_contents($row['snapshotdirectory']);
+            $SnapShotImages ='data:image/image/png;base64,'.base64_encode($datasSnapshot);
+                //echo $row['snapshotdirectory'];
+
+            $row['idimage1directory'] = $ID1Images;
+            $row['idimage2directory'] = $ID2Images;
+            $row['snapshotdirectory'] = $SnapShotImages;
+            
+
+            /*
+            $datas = "<? php <img src={$row['idimage1directory']}> </img> >?";
+        
+            
+
+                //echo $row['snapshotdirectory'];
+
+            $row['idimage1directory'] = $datas;
 
             */
+            $data[] = $row;
+
             
-            $datas = $row['idimage1directory'];
-            echo file_get_contents($datas);
         }
 
-         //echo json_encode($data);
+         echo json_encode($data);
 
 
         
