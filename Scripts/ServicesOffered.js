@@ -20,7 +20,7 @@ function generateCards(int){
     var ServiceTitle = document.createElement('p');
     var ratings= document.createElement('p');
     var ServiceDescription = document.createElement('p');
-    var nextpageButton = document.createElement('a');
+  //  var nextpageButton = document.createElement('a');
     var Buttonprice = document.createElement('Button');
     
     card.setAttribute('class','card');
@@ -80,11 +80,13 @@ function generateCards(int){
     ServiceDescription.setAttribute('class','ServiceDescription');
     ServiceDescription.innerHTML="Description...";
 
-    nextpageButton.setAttribute('href','AvailService.php');
+  //  nextpageButton.setAttribute('href','AvailService.php');
     Buttonprice.setAttribute('class','ButtonPrice');
     Buttonprice.innerHTML="PHP 000.00";
-    Buttonprice.setAttribute('id',i);
-    Buttonprice.setAttribute('onclick','ButtonClicked(this.id)');
+
+   // Buttonprice.setAttribute('id',i);
+
+    Buttonprice.setAttribute('onclick','AvailThis(this.id)');
     
     card.appendChild(ServiceID);
     card.appendChild(imgCarousel);
@@ -94,9 +96,11 @@ function generateCards(int){
     card.appendChild(ServiceTitle);
     card.appendChild(ratings);
     card.appendChild(ServiceDescription);
-    card.appendChild(nextpageButton);
-    nextpageButton.appendChild(Buttonprice);
-    card.appendChild(nextpageButton);
+   // card.appendChild(nextpageButton);
+   // nextpageButton.appendChild(Buttonprice);
+   // card.appendChild(nextpageButton);
+
+   card.appendChild(Buttonprice);
 
     cardContainer.appendChild(card);
     
@@ -130,33 +134,6 @@ GetProcessDatas(PhpHandler);
 
 xhr.send();
 
-//GETS DATA FROM ARRAY AND PUTS IT TO HTML CARDS
-function GetProcessDatas(array){
-var arrays = array;
-
-
-//console.log(arrays);
-
-var accountname = document.getElementsByClassName("AccountName");
-var accountLevel = document.getElementsByClassName("AccountLevel");
-var accountratings = document.getElementsByClassName("ratings");
-var serviceDescription = document.getElementsByClassName("ServiceDescription");
-var price = document.getElementsByClassName("ButtonPrice");
-
-for(var i = 0; i<=accountname.length;i++){
-
-    
-    accountname[i].innerHTML = array[i][0];
-    accountLevel[i].innerHTML = array[i][1];
-    accountratings[i].innerHTML = array[i][2];
-    serviceDescription[i].innerHTML = array[i][3];
-    price[i].innerHTML = array[i][4];
-    
-
-}
-
-}
-
 
 
 
@@ -188,6 +165,7 @@ xhr.open("GET",PHPQuery,true);
 xhr.send();
 }
 
+
 //GETS DATA FROM ARRAY AND PUTS IT TO HTML CARDS
 function GetProcessDatas(array){
 var arrays = array;
@@ -215,52 +193,53 @@ for(var i = 0; i<=cards.length;i++){
     accountLevel[i].innerHTML = arrays[i][2];
     serviceTitle[i].innerHTML = arrays[i][1];
     accountratings[i].innerHTML = arrays[i]['Service5StarRatings'];
-  serviceDescription[i].innerText = arrays[i][4];
-    
+    serviceDescription[i].innerText = arrays[i][4];
     price[i].innerHTML = array[i][6];
+
+    //sets id to button 
+    price[i].setAttribute('id',arrays[i][0]);
 }
 
 
 }
 
 /*-------------------------------Processing User Input--------------------------------------------------- */
+// get id when clicked
 
 
+//this shit already fetches data from backend but cant transfer said data
 
 
-var serviceID = document.getElementsByClassName("ServiceID");
-function ButtonClicked(str){
-var listNumber = str - 1;
+function AvailThis(ID){
+var ThisID = ID;
 
 
-var ID = serviceID[listNumber].innerHTML;
-
-ServiceInfoRequest(ID);
-}
-
-
-
-function ServiceInfoRequest(ID){
-
-var rqID = ID;
-/* Transfer Variables to Javascript */
-
-var xmlhttp = new XMLHttpRequest(rqID);
+var xmlhttp = new XMLHttpRequest(ThisID);
 xmlhttp.open("POST", "Backend/ServiceInfoRequest.php", true);
 
 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState === 4 || this.status === 200){ 
-       // console.log(this.responseText); // echo from php
+        console.log(this.response); // echo from php
+        
+        var AvailedServiceResult =this.response; 
+
+        // saves php result to session storage
+        sessionStorage.setItem('AvailedServiceResult',AvailedServiceResult);
+
+        window.location.href='AvailService.php';
     }       
 };
-xmlhttp.send("ReqServiceID=" + rqID);
 
-//window.location.href= "availService.php";
+xmlhttp.send("ReqServiceID=" + ThisID);
 
 
 }
+
+
+// imma try this shit muna
+
 
 
 
