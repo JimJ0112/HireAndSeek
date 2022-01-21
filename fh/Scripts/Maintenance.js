@@ -10,11 +10,12 @@ xmlhttp.onreadystatechange = function() {
         var dataArray = this.response;
         dataArray = JSON.parse(dataArray);
         console.log(dataArray.length);
-        var Number = dataArray.length;
+        var Number = dataArray.length;  
         createElements(Number);
+        setData(dataArray);
         
  
-    }       
+    }else{console.log(err);}      
 };
 
 xmlhttp.send();
@@ -60,7 +61,7 @@ function createElements(Number){
     
     
     AccountCheckBox.setAttribute('type','checkbox');
-    AccountCheckBoxCOL.setAttribute('class','AccountCheckBox');
+    AccountCheckBox.setAttribute('class','AccountCheckBox');
     
     AccountIDCOL.setAttribute('class','AccountID');
     AccountEmailCOL.setAttribute('class','AccountEmail');
@@ -87,16 +88,24 @@ function createElements(Number){
     
     
     AccountCheckBox.setAttribute('type','checkbox');
-    AccountCheckBoxCOL.setAttribute('class','AccountCheckBox');
+    AccountCheckBoxCOL.setAttribute('class','AccountCheckBoxCOL');
+
+
+
+    AccountID1Img.setAttribute('src','');
+    AccountID2Img.setAttribute( 'src','');
+
+
+
     
-    
+    AccountCheckBoxCOL.appendChild(AccountCheckBox);
     AccountID1COL.appendChild(AccountID1Img);
     
     AccountID2COL.appendChild(AccountID2Img);
     
     AccountSnapshot.appendChild(AccountSnapshotImg);
     
-    
+    row.appendChild(AccountCheckBoxCOL);
     row.appendChild(AccountIDCOL);
     row.appendChild(AccountEmailCOL);
     row.appendChild(AccountFirstName);
@@ -123,8 +132,73 @@ function createElements(Number){
 
 
     function setData(array){
-        var DataArray;
+        var DataArray = array;
+        var Number = parseInt(DataArray.length);
+
+     
+
+     
+        AccountCheckBox = document.getElementsByClassName('AccountCheckBox');
+        AccountIDCOL= document.getElementsByClassName('AccountID');
+        AccountEmailCOL = document.getElementsByClassName('AccountEmail');
+        AccountFirstName = document.getElementsByClassName('AccountFirstName');
+        AccountLastname = document.getElementsByClassName('AccountLastName'); 
+        AccountMiddleName = document.getElementsByClassName('AccountMiddleName'); 
+        AccountAge = document.getElementsByClassName('AccountAge'); 
+        AccountContact = document.getElementsByClassName('AccountContact'); 
+        AccountAddress = document.getElementsByClassName('AccountAddress');
+        AccountGender = document.getElementsByClassName('AccountGender');
+        AccountLanguage = document.getElementsByClassName('AccountLanguage'); 
+        AccountOccupation = document.getElementsByClassName('AccountOccupation'); 
+        AccountID1Type= document.getElementsByClassName( 'AccountID1Type');
+        AccountID1COL = document.getElementsByClassName('AccountID1Col');
+        AccountID1Img = document.getElementsByClassName('AccountIDImg');
+        AccountID2Type = document.getElementsByClassName('AccountID2Type');
+        AccountID2COL= document.getElementsByClassName( 'AccountID2COL');
+        AccountID2Img = document.getElementsByClassName('AccountID2Img');
+        AccountSnapshot = document.getElementsByClassName('AccountSnapShot'); 
+        AccountSnapshotImg = document.getElementsByClassName('AccountSnapShotImg'); 
+  
+
+        for(var i =0;i<Number;i++){
+           // AccountCheckBoxCOL[i].setAttribute('click','function( )');
+          
+           //ID1IMG.src = DataArray[i]['idimage1directory'];
+ 
+           
+            AccountIDCOL[i].innerText = DataArray[i]['id'];
+            AccountEmailCOL[i].innerText = DataArray[i]['email'];
+            AccountFirstName[i].innerText = DataArray[i]['firstname'];
+            AccountLastname[i].innerText = DataArray[i]['lastname'];
+            AccountMiddleName[i].innerText = DataArray[i]['middleinitial'];
+            AccountAge[i].innerText = DataArray[i]['age'];
+            AccountContact[i].innerText =DataArray[i]['contact'];
+            AccountAddress[i].innerText =DataArray[i]['address'];
+            AccountGender[i].innerText =DataArray[i]['gender'];
+            AccountLanguage[i].innerText =DataArray[i][''];
+            AccountOccupation[i].innerText =DataArray[i]['occupation'];
+            AccountID1Type[i].innerText =DataArray[i]['idimage1type'];
+            
+            /*
+            AccountID1Img[i].setAttribute('src',DataArray[i]['idimage1directory']);
+            AccountID1Img[i].setAttribute('alt','image not found');
+
+
         
+            AccountID2Type[i].innerText =DataArray[i]['idimage2type'];
+            AccountID2Img[i].setAttribute( 'src',DataArray[i]['idimage2directory']);
+            
+    
+            AccountSnapshotImg[i].src=DataArray[i]['idimage1directory'];
+
+            */
+         
+
+
+
+        }
+
+
 
     }
 
