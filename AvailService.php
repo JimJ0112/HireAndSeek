@@ -87,15 +87,15 @@ else{
 
 
                     <div id="ServiceRatings" class="ServiceContainerChild"> <h3>Ratings </h3> 
-                    <h2 id="totalRatings"> TOTAL RATINGS: 5.0 </h2>
+                   <h2> TOTAL RATINGS: <span id="totalRatings"> N </span> </h2>
                     <br>
-                    <ul>
-                   <li> 5 Star Ratings: <h3 id="5starRatingsTotal"> N </h3> </li>
-                   <li> 4 Star Ratings: <h3 id="4starRatingsTotal"> N </h3> </li>
-                   <li> 3 Star Ratings: <h3 id="3starRatingsTotal"> N </h3> </li>
-                   <li> 2 Star Ratings: <h3 id="2starRatingsTotal"> N </h3> </li>
-                   <li> 1 Star Ratings: <h3 id="1starRatingsTotal"> N </h3> </li>
-                     </ul>
+                    
+                   <h3> 5 Star Ratings: <span id="5starRatingsTotal"> N </span> </h3>
+                   <h3> 4 Star Ratings: <span id="4starRatingsTotal"> N </span> </h3>
+                   <h3> 3 Star Ratings: <span id="3starRatingsTotal"> N </span> </h3>
+                   <h3> 2 Star Ratings: <span id="2starRatingsTotal"> N </span> </h3>
+                   <h3> 1 Star Ratings: <span id="1starRatingsTotal"> N </span> </h3>
+                    
                     </div>
 
 

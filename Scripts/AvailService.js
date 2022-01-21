@@ -71,8 +71,9 @@ function setValues(array){
     const Service3StarRatings = document.getElementById("3starRatingsTotal");
     const Service2StarRatings =  document.getElementById("2starRatingsTotal");
     const Service1StarRatings = document.getElementById("1starRatingsTotal");
-
-  
+    // total ratings (not yet final)
+    var ComputedTotalRatings = (1*parseFloat(array[0]['Service5StarRatings'])+2 * parseFloat(array[0]['Service4StarRatings'])+3* parseFloat(array[0]['Service3StarRatings'])+4* parseFloat(array[0]['Service2StarRatings'])+5* parseFloat(array[0]['Service1StarRatings']))/5;
+  console.log(ComputedTotalRatings);
 
 
   
@@ -80,7 +81,7 @@ function setValues(array){
     ServiceTitle.innerText = array[0]['ServiceTitle'];
     ServiceDescription.innerText = array[0]['ServiceDescription'];
     AccountName.innerText = array[0]['ServiceOwnerUserID'];
-    console.log(array[0]['Service5StarRatings']);
+    totalRatings.innerText = ComputedTotalRatings;
    Service5StarRatings.innerText =  array[0]['Service5StarRatings'];
    Service4StarRatings.innerText =  array[0]['Service4StarRatings'];
    Service3StarRatings.innerText =  array[0]['Service3StarRatings'];
