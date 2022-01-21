@@ -102,12 +102,9 @@ else{
         </table>
     </div>
 
-<?php include_once('Includes/footer.php')?>
+    <?php include_once('Includes/footer.php')?>
    
 </div>
-      
-
-
-
-        </body>
-    </html>
+ 
+</body>
+</html>
