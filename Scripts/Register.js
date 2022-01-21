@@ -64,25 +64,32 @@ document.getElementById("CaptureImage").style.display="none";
 
 
  async function startvideo(){
+    //ask the user for permission to use a media input
     let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+    //save the data from media input into the <video> tag
 	clientVideo.srcObject = stream;
 
     // stops the video after the capture button has been pushed
     document.getElementById("CaptureImage").addEventListener('click',function(){
-        const tracks = stream.getTracks(); // getTracks() are from 
+
+        const tracks = stream.getTracks(); // getTracks() are built in functionality of javascript
         tracks[0].stop();
 
 
     });
-}
+} // para sa camera  
 
 document.getElementById("CaptureImage").addEventListener('click',function(){
+    // gets the image data from the <video> and draws it into the html <canvas>
     var image_captured = canvas.getContext('2d').drawImage(clientVideo, 0, 0, canvas.width, canvas.height);
+    // save canvas into a variable
     let image_data_url = canvas.toDataURL();
     
+    // set the value of hidden input field into the data from canvas
    document.getElementById("UserSnapshot").value = image_data_url;
        
-}
+} 
+
 
 );
 

@@ -103,6 +103,7 @@ $data = $_GET['data'];
    
 </div>
 <div id="Register_Layer4">
+    <h3>  Terms and Conditions Placeholder</h3>
             <input type="submit" value="Sign Up" >
 </div>  
             </form>

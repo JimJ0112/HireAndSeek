@@ -51,9 +51,9 @@ session_start();
         
 
             <!-- Footer -->
-            <footer>
-                <h1> Footer Placeholder</h1>
-            </footer>
+
+   
+</div>
 
         </body>
     </html>
