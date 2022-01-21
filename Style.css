@@ -17,9 +17,9 @@ a{
                 .Grid-container{
                     display:grid;
                     grid-template-columns: 1fr 1fr 1fr 1fr;
-                    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
-               /*     grid-auto-rows: minmax(auto, auto); */
-                    height: 100vh;
+                    grid-template-rows: auto 1fr auto;
+                    min-height: 100vh;
+                    margin: 0;
                     grid-template-areas: 
                     "nav nav nav nav"
                     "caro caro caro caro" 
@@ -249,9 +249,8 @@ a{
                     padding: 0;
                     margin: 0;
                     width: 100%;
-                     ;
-                    
-                }
+                    height: auto;
+                 }
                 .txtFooterTitle a{
                     color: rgb(223, 136, 23);
                     font-size: 17px;
@@ -289,7 +288,8 @@ a{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto 1fr auto;
-       min-height: 100%;
+        min-height: 100vh;
+        margin:0;
         grid-template-areas: 
         "nav nav nav nav nav"
         "SOcateg SOcateg SOcateg SOcateg SOcateg"
@@ -371,18 +371,8 @@ padding: 7px 0px 7px 0px;
     max-width: 300px;
     max-height: 500px;
     margin: 10px;
-
-    padding: 10px;
-    /*
-    height: fit-content;
-    width: fit-content;
-    */
-   
-    font-family: arial;
-
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: inline-block;
-
   }
   
   .price {
@@ -459,14 +449,9 @@ font-weight:bolder;
 }
 
 .ServiceDescription{
-
-    font-size: fit-content;
-    padding: auto;
-
 width: 100%; 
 margin: 20px;
 position: relative;
-
 }
 
 /* Avail Service*/
@@ -808,9 +793,4 @@ table{
         padding-top:35px;
         margin-top: 5px;
     }
-
-/*<<<<<<< main */
-}}
-=======
 }
-/*>>>>>>> main*/
