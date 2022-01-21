@@ -25,9 +25,9 @@ session_start();
 
 
        /* making directory to store the files for user */
-       $Directory = '../UserRegisterFiles/'.$email.$firstname;
+       $Directory = 'UserRegisterFiles/'.$email.$firstname;
        if(is_dir($Directory)==false){
-        mkdir($Directory);
+       echo mkdir($Directory);
 
        } else {echo"Directory Already Exists!";}
        
