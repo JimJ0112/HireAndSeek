@@ -49,8 +49,8 @@ echo "<br> <br> <br>";
             <nav id="categories">
                 <ul>
                     <center>
-                    <li> Approve Client Accounts </li> 
-                    <li> Approve Freelancer Accounts </li> 
+                    <li onclick ="listCustomerAccounts()"> Approve Client Accounts </li> 
+                    <li onclick = "listFreelancerAccounts()"> Approve Freelancer Accounts </li> 
                     <li> User Reports </li>
                     <li> Monitor User Accounts </li>
                     </center>

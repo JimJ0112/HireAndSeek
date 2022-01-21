@@ -1,12 +1,14 @@
+
+function listFreelancerAccounts(){
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("POST", "GET_signupVerificationDATA.php", true);
+xmlhttp.open("POST", "GET_FreelancerVerificationDATA.php", true);
 
 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState === 4 || this.status === 200){ 
        
-        
+        Table = document.getElementById("DisplayTable").innerHTML = "";
         var dataArray = this.response;
         dataArray = JSON.parse(dataArray);
         console.log(dataArray);
@@ -20,12 +22,43 @@ xmlhttp.onreadystatechange = function() {
 
 xmlhttp.send();
 
+}// end of function
+
+
+
+function listCustomerAccounts(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "GET_CustomerVerificationDATA.php", true);
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+            Table = document.getElementById("DisplayTable").innerHTML = "";
+            var dataArray = this.response;
+            dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+            var Number = dataArray.length;  
+            createElements(Number);
+            setData(dataArray);
+            
+     
+        }else{console.log(err);}      
+    };
+    
+    xmlhttp.send();
+    
+    }// end of function
+
+
 //function that creates table elements for user data and append it to the displayTable
 
 function createElements(Number){
 
     DataNumber = Number;
     Table = document.getElementById("DisplayTable");
+    
     for(var i = 0;i<DataNumber;i++){
     
     

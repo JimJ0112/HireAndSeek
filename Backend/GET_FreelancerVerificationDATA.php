@@ -8,7 +8,7 @@ require('../includes/databaseConnection.php');
 
 function getDatas(mysqli $conn,$tablename){
 
-    $queryString = "SELECT * FROM $tablename";
+    $queryString = "SELECT * FROM $tablename WHERE AccountType = 'Freelancer'";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
     $data = array();
@@ -42,16 +42,7 @@ function getDatas(mysqli $conn,$tablename){
             $row['snapshotdirectory'] = $SnapShotImages;
             
 
-            /*
-            $datas = "<? php <img src={$row['idimage1directory']}> </img> >?";
-        
-            
 
-                //echo $row['snapshotdirectory'];
-
-            $row['idimage1directory'] = $datas;
-
-            */
             $data[] = $row;
 
             
