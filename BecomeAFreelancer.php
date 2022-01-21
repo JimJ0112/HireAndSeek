@@ -35,9 +35,8 @@ session_start();
             </div>
 
             <!-- Footer -->
-            <footer>
-                <h1> Footer Placeholder</h1>
-            </footer>
+        <!-- Footer -->
+        <?php include_once('Includes/footer.php')?>
 
         </body>
     </html>

@@ -50,10 +50,12 @@ session_start();
             </div>
         
 
-            <!-- Footer -->
+
 
    
 </div>
 
+            <!-- Footer -->
+            <?php include_once('Includes/footer.php')?>
         </body>
     </html>

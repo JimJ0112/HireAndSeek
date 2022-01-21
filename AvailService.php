@@ -115,10 +115,8 @@ else{
 
                 </div>
                <!-- <script src= "Scripts/AvailService.js"></script> -->
-            <!-- Footer -->
-            <footer>
-                
-            </footer>
+             <!-- Footer -->
+             <?php include_once('Includes/footer.php')?>
 
      
     </body>
