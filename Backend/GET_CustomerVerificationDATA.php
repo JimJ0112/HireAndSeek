@@ -8,7 +8,7 @@ require('../includes/databaseConnection.php');
 
 function getDatas(mysqli $conn,$tablename){
 
-    $queryString = "SELECT * FROM $tablename WHERE AccountType = 'Customer'";
+    $queryString = "SELECT * FROM $tablename WHERE AccountType = 'Customer' && SignupStatus = '' ";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
     $data = array();

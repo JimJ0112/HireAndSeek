@@ -13,7 +13,8 @@ else{
 
 
 $clientIP = $_SERVER['REMOTE_ADDR'];
-$MyServerIP = "122.2.121.183";
+//$MyServerIP = "122.52.82.255";
+$MyServerIP = "122.52.82.255";
 $PartnerIP = "180.191.216.101";    
 
 if($clientIP != $MyServerIP && $clientIP != $PartnerIP){
@@ -63,22 +64,22 @@ echo "<br> <br> <br>";
             <div id="ApproveControls">
                 <br> <br>
                 <center>
-                    <button> Accept Account </button> <br> <br>
-                    <button> Decline </button> <br> <br> 
-                    <button> Status             </button> <br> <br>
-                    <button> Send Notice        </button> <br> <br> 
+                    <Button class="ControlButtons" onclick="submitAccept()"> Accept Accounts </button> <br> <br>
+                    <button class="ControlButtons" onclick="submitDecline()"> Decline </button> <br> <br> 
+                    <button class="ControlButtons"> Status             </button> <br> <br>
+                    <button class="ControlButtons"> Send Notice        </button> <br> <br> 
                 </center>
             </div>
 
             <div id="ReportControls">
                 <br> <br>
                 <center>
-                    <button> View All Reports   </button> <br> <br>
-                    <button> Send Notification  </button> <br> <br> 
-                    <button> Disable Account    </button> <br> <br> 
-                    <button> Disable Job        </button> <br> <br> 
-                    <button> Enable Account     </button> <br> <br>
-                    <button> Enable Job         </button> <br> <br>  
+                    <button class="ControlButtons"> View All Reports   </button> <br> <br>
+                    <button class="ControlButtons"> Send Notification  </button> <br> <br> 
+                    <button class="ControlButtons"> Disable Account    </button> <br> <br> 
+                    <button class="ControlButtons"> Disable Job        </button> <br> <br> 
+                    <button class="ControlButtons"> Enable Account     </button> <br> <br>
+                    <button class="ControlButtons"> Enable Job         </button> <br> <br>  
                     
                 </center>
             </div>
@@ -88,6 +89,7 @@ echo "<br> <br> <br>";
 
         <div id="Maintenance_Tables">
             <center>
+                <form method="POST" id="DataForm">
                 <table id="DisplayTable">
                     
                     <tr>
@@ -113,7 +115,8 @@ echo "<br> <br> <br>";
 
                     </tr>
                     
-                </table>          
+                </table> 
+            </form>         
             </center>
         </div>
             

@@ -44,7 +44,7 @@ function listCustomerAccounts(){
             setData(dataArray);
             
      
-        }else{console.log(err);}      
+        }else{console.log("connection request failed");}      
     };
     
     xmlhttp.send();
@@ -95,7 +95,7 @@ function createElements(Number){
     
     AccountCheckBox.setAttribute('type','checkbox');
     AccountCheckBox.setAttribute('class','AccountCheckBox');
-    
+    AccountCheckBox.setAttribute('name','AccountCheckBox[]');
     AccountIDCOL.setAttribute('class','AccountID');
     AccountEmailCOL.setAttribute('class','AccountEmail');
     AccountFirstName .setAttribute('class','AccountFirstName');
@@ -194,7 +194,7 @@ function createElements(Number){
 
 
             
-             
+            AccountCheckBox[i].setAttribute('value',DataArray[i]['id']);
             AccountIDCOL[i].innerText = DataArray[i]['id'];
             AccountEmailCOL[i].innerText = DataArray[i]['email'];
             AccountFirstName[i].innerText = DataArray[i]['firstname'];
@@ -208,16 +208,21 @@ function createElements(Number){
             AccountOccupation[i].innerText =DataArray[i]['occupation'];
             AccountID1Type[i].innerText =DataArray[i]['idimage1type'];
             AccountID2Type[i].innerText =DataArray[i]['idimage2type'];
+
+
             var imgID1 = new Image();
             imgID1.src = DataArray[i]['idimage1directory'];
+            imgID1.setAttribute('class','DataImg');
             AccountID1COL[i].appendChild(imgID1);
             
             var imgID2 = new Image();
             imgID2.src = DataArray[i]['idimage2directory'];
             AccountID2COL[i].appendChild(imgID2);
+            imgID2.setAttribute('class','DataImg');
      
             var imgSS = new Image();
             imgSS.src = DataArray[i]['snapshotdirectory'];
+            imgSS.setAttribute('class','DataImg');
             AccountSnapshot[i].appendChild(imgSS);
 
          
@@ -231,3 +236,18 @@ function createElements(Number){
     }// end of function
 
 
+
+
+    // submit accepted
+
+function submitAccept(){
+    document.getElementById("DataForm").setAttribute('action','SubmitAcceptedAccounts.php');
+    document.getElementById("DataForm").submit();
+}
+
+function submitDecline(){
+    document.getElementById("DataForm").setAttribute('action','SubmitDeclinedAccounts.php');
+    document.getElementById("DataForm").submit();
+}
+
+ 

@@ -182,17 +182,22 @@ var serviceTitle = document.getElementsByClassName("ServiceTitle");
 var serviceDescription = document.getElementsByClassName("ServiceDescription");
 var price = document.getElementsByClassName("ButtonPrice");
 var cards = document.getElementsByClassName("card");
+var totalRatings;
 
 //console.log(serviceID);
 
 //assign value
 for(var i = 0; i<=cards.length;i++){
+    var ratings = parseFloat(arrays[i]['Service1StarRatings'] + arrays[i]['Service2StarRatings']+arrays[i]['Service3StarRatings']+ arrays[i]['Service4StarRatings']+ arrays[i]['Service5StarRatings']).toFixed(1);
+    console.log(ratings);
+    totalRatings = parseFloat(1*arrays[i]['Service1StarRatings'] + 2* arrays[i]['Service2StarRatings']+3* arrays[i]['Service3StarRatings']+ 4*arrays[i]['Service4StarRatings']+ 5* arrays[i]['Service5StarRatings']/ratings).toFixed(1);
+    
 
     serviceIDS[i].innerHTML = arrays[i]['ServiceID'];
-    accountname[i].innerHTML = arrays[i]['ServiceOwnerUserID'];
+    accountname[i].innerHTML = arrays[i]['ServiceOwnerEmail'];
     //accountLevel[i].innerHTML = arrays[i][2];
     serviceTitle[i].innerHTML = arrays[i]['ServiceTitle'];
-    accountratings[i].innerHTML = arrays[i]['Service5StarRatings'];
+    accountratings[i].innerHTML = totalRatings;
     serviceDescription[i].innerText = arrays[i]['ServiceDescription'];
     price[i].innerHTML = array[i][6];
 
