@@ -21,6 +21,6 @@
         echo" connection failed";
     }// end of if
 
-
+header("location:Maintenance.php");
 
 ?>

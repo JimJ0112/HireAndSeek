@@ -31,6 +31,6 @@ if(!empty($_POST["AccountCheckBox"])){
 } // end of IF
 
 
-
+header("location:TransferToAccounts.php");
 
 ?>

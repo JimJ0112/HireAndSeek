@@ -1,28 +1,41 @@
 <?php
+require('Includes/databaseConnection.php');
+
 session_start();
+
 $Email = $_POST["Username_TB"];
 $Password = $_POST["Password_TB"];
 
-$Accounts = array(
 
-    array("Admin","1234","Freelancer"),
-    array("JL Manrique","4321","Customer")
-);
 
-$AccountsLength = count($Accounts)-1;
+$Query = "SELECT email, userpassword FROM accounts WHERE email = '$Email' && userpassword = '$Password' ";
 
-for($i = 0; $i <= $AccountsLength;$i++){
+$result = mysqli_query($conn,$Query);
+$resultCheck = mysqli_num_rows($result);
 
-if($Email == $Accounts[$i][0] and $Password == $Accounts[$i][1]){
+if($resultCheck > 0){
+       
+    while($row = mysqli_fetch_array($result)){
+
+  
+        $_SESSION["SessionName"] = $row['email'] ;
+        $_SESSION["AccountType"]= $row['AccountType'];
+  
+
  
-    $_SESSION["SessionName"] = $Accounts[$i][0];
-    $_SESSION["AccountType"]=$Accounts[$i][2];
 
-} else {
-    echo"invalid";
-}
+    } // end of while
+} else{echo"Login Failed";
 
-}
+}// end of if
+
+
+
+ 
+ 
+
+
+
 
 
 
@@ -39,7 +52,7 @@ if(isset($_SESSION["SessionName"]) && isset($_SESSION["AccountType"])){
         //session_regenerate_id(true);
         exit();
     }
-}else{
+    }else{
         header("Location: ../ServicesOffered.php");
         //session_regenerate_id(true);
         exit();

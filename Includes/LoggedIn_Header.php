@@ -4,6 +4,7 @@
 $sessionID = $_SESSION['SessionName'];
 $accountType = $_SESSION["AccountType"];
 
+
 if($accountType == "Freelancer"){
     $redirectQuery = "Freelancer_Dashboard.php";
 
@@ -36,7 +37,7 @@ if($accountType == "Freelancer"){
                     <li class= "navElement" id="btnExplore"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
                     <li class= "navElement" id="btnBecome"> <a href = "BecomeAFreelancer.php"> BECOME A FREELANCER </a> </li>
                     <li class= "navElement" id="btnAbout"> <a href = "About.php"> ABOUT </a> </li>
-                    <li class="navElement" id="btnUser"> <a href=<?php echo $redirectQuery;?>> <?php echo $sessionID;?> </a> </li>
+                    <li class="navElement" id="btnUser"> <a href=<?php $redirectQuery;?>> <?php echo $sessionID;?> </a> </li>
                     <li class="navElement" id="btnLogout"><a href="Backend/logout.php"> LOG OUT </a> </li>
               
                     <div id="dropdown" class="navElement">
@@ -45,7 +46,7 @@ if($accountType == "Freelancer"){
                         <li class= "dropElement" id="dropExplore"> <a href = "ServicesOffered.php"><span> EXPLORE </span></a> </li>
                         <li class= "dropElement" id="dropBecome"> <a href = "BecomeAFreelancer.php"><span> BECOME A FREELANCER</span> </a> </li>
                         <li class= "dropElement" id="dropAbout"> <a href = "About.php"><span style="color:white;">ABOUT </span></a> </li>
-                        <li class="dropElement" id="dropUser"><a href=<?php echo $redirectQuery;?>><span style="color:white;"> <?php echo $sessionID;?></span></a> </li>
+                        <li class="dropElement" id="dropUser"><span style="color:white;"> <?php echo $sessionID;?></span></a> </li>
                         <li class="dropElement" id="dropLogout"><span><a href="Backend/logout.php"> LOG OUT </span></a> </li>
                         </div>
                     </div>
