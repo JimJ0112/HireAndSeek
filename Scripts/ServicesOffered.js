@@ -19,7 +19,7 @@ function generateCards(int){
     var AccountLevel = document.createElement('p');
     var ServiceTitle = document.createElement('p');
     var ratings= document.createElement('p');
-    var ServiceDescription = document.createElement('p');
+    var ServiceDescription = document.createElement('pre');
   //  var nextpageButton = document.createElement('a');
     var Buttonprice = document.createElement('Button');
     
@@ -182,18 +182,23 @@ var serviceTitle = document.getElementsByClassName("ServiceTitle");
 var serviceDescription = document.getElementsByClassName("ServiceDescription");
 var price = document.getElementsByClassName("ButtonPrice");
 var cards = document.getElementsByClassName("card");
+var totalRatings;
 
 //console.log(serviceID);
 
 //assign value
 for(var i = 0; i<=cards.length;i++){
+    var ratings = parseFloat(arrays[i]['Service1StarRatings'] + arrays[i]['Service2StarRatings']+arrays[i]['Service3StarRatings']+ arrays[i]['Service4StarRatings']+ arrays[i]['Service5StarRatings']).toFixed(1);
+    console.log(ratings);
+    totalRatings = parseFloat(1*arrays[i]['Service1StarRatings'] + 2* arrays[i]['Service2StarRatings']+3* arrays[i]['Service3StarRatings']+ 4*arrays[i]['Service4StarRatings']+ 5* arrays[i]['Service5StarRatings']/ratings).toFixed(1);
+    
 
-    serviceIDS[i].innerHTML = arrays[i][0];
-    accountname[i].innerHTML = arrays[i][1];
-    accountLevel[i].innerHTML = arrays[i][2];
-    serviceTitle[i].innerHTML = arrays[i][1];
-    accountratings[i].innerHTML = arrays[i]['Service5StarRatings'];
-    serviceDescription[i].innerText = arrays[i][4];
+    serviceIDS[i].innerHTML = arrays[i]['ServiceID'];
+    accountname[i].innerHTML = arrays[i]['ServiceOwnerEmail'];
+    //accountLevel[i].innerHTML = arrays[i][2];
+    serviceTitle[i].innerHTML = arrays[i]['ServiceTitle'];
+    accountratings[i].innerHTML = totalRatings;
+    serviceDescription[i].innerText = arrays[i]['ServiceDescription'];
     price[i].innerHTML = array[i][6];
 
     //sets id to button 

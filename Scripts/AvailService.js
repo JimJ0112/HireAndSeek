@@ -56,7 +56,7 @@ function setValues(array){
 
     ServiceTitle.innerText = array[0]['ServiceTitle'];
     ServiceDescription.innerText = array[0]['ServiceDescription'];
-    AccountName.innerText = array[0]['ServiceOwnerUserID'];
+    AccountName.innerText = array[0]['ServiceOwnerEmail'];
     totalRatings.innerText = ComputedTotalRatings;
    Service5StarRatings.innerText =  array[0]['Service5StarRatings'];
    Service4StarRatings.innerText =  array[0]['Service4StarRatings'];

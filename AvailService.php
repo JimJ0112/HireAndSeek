@@ -1,14 +1,19 @@
 <?php
+/*
 session_start();
-   $_SESSION['SessionName'];
+   //$_SESSION['SessionName'];
+
 if(isset($_SESSION['SessionName'])){
 
     echo "welcome, ".$_SESSION['SessionName'];
 }
 else{
-   
+   //echo"Session unavailable";
 }
 //echo $_SESSION['SessionName'];
+*/
+
+include_once('includes/SessionName.php');
 ?>
 
 <!DOCTYPE html>

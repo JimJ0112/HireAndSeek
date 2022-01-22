@@ -1,4 +1,6 @@
 <?php
+
+/*
 session_start();
     
 if(isset($_SESSION['SessionName'])){
@@ -8,6 +10,8 @@ if(isset($_SESSION['SessionName'])){
 else{
     echo "Session name invalid";
 }
+*/
+include_once('includes/SessionName.php');
 ?>
 
 

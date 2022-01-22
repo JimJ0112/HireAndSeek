@@ -34,10 +34,16 @@ $data = $_GET['data'];
                 <br> <br>
             <div id="Register_Layer1">
 
+            <input type="text" name="Email" placeholder="Email">
+            <input type="text" name="UserName" placeholder="User Name ">
+            <input type="password" name="UserPassword" placeholder="Password">
+            <input type="password" placeholder=" Confirm Password">
+
+
             <input type="text" name="FirstName" placeholder="FIRST NAME" required>
             <input type="text" name="LastName" placeholder="LAST NAME" required>
             <input type="text" name="MiddleInitial" placeholder="MIDDLE NAME">
-            <input type="text" name="Age" placeholder="AGE">
+            <input type="text" name="Birthdate" placeholder="BIRTH DATE">
             <select name="Gender"> 
                 <option value="" disabled selected hidden> GENDER </option>
             <option value="male"> MALE </option>
@@ -49,8 +55,7 @@ $data = $_GET['data'];
             
             <input type="text" name="Contact" placeholder="Contact Number">
             <input type="text" name="Address" placeholder="Address">
-            <input type="text" name="Email" placeholder="Email">
-            <input type="password" name="UserPassword" placeholder="Password">
+
             
           
             

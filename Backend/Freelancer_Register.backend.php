@@ -5,10 +5,12 @@ session_start();
 
 
       /* GET DATA FROM FRONT END FORM */
+      $AccountType = "Freelancer";
+      $customUsername ="";
        $firstname = $_POST[ "FirstName"]; 
        $lastname = $_POST["LastName" ];
        $middleInitial = $_POST["MiddleInitial"];
-       $age= $_POST[ "Age" ];
+       $Birthdate= $_POST[ "Birthdate" ];
        $gender = $_POST["Gender"];
         
        $email = $_POST[ "Email" ];
@@ -25,9 +27,9 @@ session_start();
 
 
        /* making directory to store the files for user */
-       $Directory = '../UserRegisterFiles/'.$email.$firstname;
+       $Directory = 'UserRegisterFiles/'.$email.$firstname;
        if(is_dir($Directory)==false){
-        mkdir($Directory);
+       echo mkdir($Directory);
 
        } else {echo"Directory Already Exists!";}
        
@@ -85,12 +87,12 @@ session_start();
         header('location:../Freelancer_Register.php?data=registrationfailed-email_already_exists');
  
       } else{
-        $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middleinitial,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotdirectory,idimage1type,idimage1directory,idimage2type,idimage2directory) VALUES(0,'$firstname','$lastname','$middleInitial','$age','$gender','$email','$password','$contact','$address','$description','$language','$occupation','$education','$skills','$snapshotdirectory','$idType','$ID1directory','$idType2','$ID2directory');";
-        $result = mysqli_query($conn,$sqlquery);
+        $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middlename,Birthdate,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,SignupStatus,filesdirectory,customUsername) VALUES(0,'$firstname','$lastname','$middleInitial','$Birthdate','$gender','$email','$password','$contact','$address','$description','$language','$occupation','$education','$skills','$snapshotdirectory','$idType','$ID1directory','$idType2','$ID2directory','$AccountType','','$Directory','$customUsername');";
+        $result = mysqli_query($conn,$sqlquery) ;
         
         //echo $result;
   
-        header('location:../Freelancer_Register.php?data=registrationSuccess');
+        //header('location:../Freelancer_Register.php?data=registrationSuccess');
 
       }
 

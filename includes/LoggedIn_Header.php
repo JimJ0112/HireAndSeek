@@ -52,5 +52,6 @@ if($accountType == "Freelancer"){
                 </ul>
             </nav>
             <script src="Scripts/ServiceSearch.js"> </script>
+          <script src="Scripts/ServicesOffered.js"> </script>
 </body>
 </html>

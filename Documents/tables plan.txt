@@ -1,7 +1,7 @@
 Hire-and-seek
 
 /*Account verification*/
-- signupverification(id,firstname,lastname,middlename,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,Status);
+- signupverification(id,firstname,lastname,middlename,Birthdate,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,Status,filesdirectory,customUsername);
 //id PRIMARY KEY 
 // pwede din gamitin yung email address as primary key();
 

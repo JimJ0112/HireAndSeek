@@ -1,5 +1,5 @@
 <?php
-include_once'';
+require('../Includes/databaseConnection.php');
 session_start();
        $firstname = $_POST[ "FirstName"]; 
        $lastname = $_POST["LastName" ];
