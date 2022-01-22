@@ -36,7 +36,7 @@ session_start();
             Password  <br>
             <input type="password" name="Password_TB"  >
             <br> <br>
-            <a href="Freelancer_Register.php"> <u> Forgot Password? <u> </a> <br> <br>
+            <a href="Freelancer_Register.php"> <u> Forgot Password? </u> </a> <br> <br>
             <input type="submit" value="LOG IN">
             <br> <br>
             <a href="Freelancer_Register.php"> Create an Account as Freelancer </a> <br> <br>
