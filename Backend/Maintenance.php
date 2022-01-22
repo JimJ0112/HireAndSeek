@@ -14,7 +14,7 @@ else{
 
 $clientIP = $_SERVER['REMOTE_ADDR'];
 //$MyServerIP = "122.52.82.255";
-$MyServerIP = "122.52.82.255";
+$MyServerIP = "122.53.36.68";
 $PartnerIP = "180.191.216.101";    
 
 if($clientIP != $MyServerIP && $clientIP != $PartnerIP){

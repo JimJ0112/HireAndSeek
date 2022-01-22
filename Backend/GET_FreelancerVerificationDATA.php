@@ -1,6 +1,6 @@
 <?php
 
-require('../includes/databaseConnection.php');
+require('../Includes/databaseConnection.php');
 
 
 
@@ -10,6 +10,7 @@ function getDatas(mysqli $conn,$tablename){
 
     $queryString = "SELECT * FROM $tablename WHERE AccountType = 'Freelancer' && SignupStatus = '' ";
     $result = mysqli_query($conn,$queryString);
+    
     $resultCheck = mysqli_num_rows($result);
     $data = array();
     $ID1Images;
@@ -27,13 +28,13 @@ function getDatas(mysqli $conn,$tablename){
 
             
            
-            $datas = file_get_contents($row['idimage1directory']);
+            $datas = file_get_contents($row['idimage1Path']);
             $ID1Images = 'data:image/image/png;base64,'.base64_encode($datas);
             
-            $datasID2 = file_get_contents($row['idimage2directory']);
+            $datasID2 = file_get_contents($row['idimage2Path']);
             $ID2Images = 'data:image/image/png;base64,'.base64_encode($datasID2);
 
-            $datasSnapshot = file_get_contents($row['snapshotdirectory']);
+            $datasSnapshot = file_get_contents($row['snapshotPath']);
             $SnapShotImages ='data:image/image/png;base64,'.base64_encode($datasSnapshot);
                 //echo $row['snapshotdirectory'];
 
