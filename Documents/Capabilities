@@ -16,12 +16,16 @@ Progress:
 
 -the website can sort services into 5 categories (Highest rated services, Graphics and Design, Video and Presentation, Music and Audio, Development and IT) 
     // progress: Highest rated services nalang kulang
+    // almost done na yung highest rated services, 
 
 - the website can let customers can browse and avail services offered by the freelancers
     //progress: almost done na inaayos nalang frontend saka aayusin nalang table sa db
+    // Account level at images nalang kulang since wala pang users and wala pang form para makapag create ng service (ininsert lang dummy data mula sa db mismo)
 
 -the website can let freelancers and customers can search existing services 
     //progress: done na pero naiiisip iimplement yung pag pinindot yung search button may new page na lalabas tas nandun cards ng results
 
 -the website can let the administrator can manually verify if the given personal details/identity of the user is valid
     // nasetup na maintenance page, nafefetch narin yung files from database, need nalang gawan ng functions
+
+    // nalilist na sa table yung data ni user tapos naaapprove na ni admin 
