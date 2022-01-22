@@ -12,8 +12,9 @@ session_start();
 
         </head>
         <body>
-
+<div class="Login-Container">
             <!-- Nav bar section -->
+        <div class="nav">
             <?php
             if(isset($_SESSION['SessionName'])){
 
@@ -24,38 +25,43 @@ session_start();
                 include_once("includes/Header.php");
             }
             ?>
-           
-
-            <div id="LoginForm">
-               
-            <form action="Backend/Login.php" method="post">
-                <br> <br>
-            EMAIL <br>
-            <input type="text" name="Username_TB" placeholder="juandelacruz@email.com">
-            <br><br>
-            Password  <br>
-            <input type="password" name="Password_TB"  >
-            <br> <br>
-            <a href="Freelancer_Register.php"> <u> Forgot Password? </u> </a> <br> <br>
-            <input type="submit" value="LOG IN">
-            <br> <br>
-            <a href="Freelancer_Register.php"> Create an Account as Freelancer </a> <br> <br>
-            <a href="Customer_Register.php"> Create an Account as Customer </a> <br> <br>
-            <p> OR LOGIN WITH </p> <br>
-            <a> FACEBOOK </a> <br> <br>
-            <a> GMAIL </a>
-            </form>
-
-
+        </div>
+            <div class="logForm">
+                 <form action="Backend/Login.php" method="post">
+                    <fieldset id="logFieldset">
+                        <div class="logDiv"><label class="logTxtLogin">LOG IN</label></div>
+                        <div class="logDiv"><label class="logTxt">EMAIL</label></div>
+                        <div class="logDiv"><input type="text" name="Username_TB" placeholder="juandelacruz@email.com" class="logTB"></div>
+                        <div class="logDiv"><label class="logTxt">PASSWORD</label></div>
+                        <div class="logDiv"><input type="password" name="Password_TB" class="logTB"></div>
+                        <div class="logDiv"><a href="Freelancer_Register.php" class="logAForgot">Forgot Password?</a></div>
+                    <div class="logDiv">
+                        <input type="submit" value="LOG IN" class="logBtnSubmit">
+                    </div>
+                    <div class="logDivCreate">
+                        <a href="Freelancer_Register.php" class="logACreateFree">Create an Account as Freelancer</a> <br>
+                        <a href="Freelancer_Register.php" class="logACreateCus">Create an Account as Customer</a>
+                    </div>
+                    
+                    <div class="lineBehind"><span id="logSpan"></span><h3 class="logTxtOr">OR LOGIN WITH</h3></div>
+                        <div class="logSocials">
+                        <input type="button" class="logBtnFB">
+                        <input type="button" class="logBtnGM">
+                        </div>
+                    
+                    </fieldset>
+                </form>
             </div>
-        
-
+        <div class="logImg">
+         <img src="WebsiteImages/Logo.png">
+        </div>
 
 
    
-</div>
 
             <!-- Footer -->
             <?php include_once('Includes/footer.php')?>
+
+</div>
         </body>
     </html>
