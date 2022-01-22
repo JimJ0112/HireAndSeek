@@ -846,7 +846,23 @@ table{
         "categ"
         "footer";
      }
-     img#Logo{
+        /*-----------------Login Page----------------*/
+        .Login-Container{
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            'nav'
+            'logImg'
+            'logForm'
+            'footer';
+        }
+        .logImg{
+            width: 200px;
+            margin-top: 25px;
+        }
+        .logForm{
+            width: 80%;
+        }
+    img#Logo{
         max-width: 15%;
      }
      #searchbar input[type=text]{
