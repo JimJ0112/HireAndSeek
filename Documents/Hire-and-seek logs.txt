@@ -45,7 +45,11 @@
 -Included the User page at the header
 -Created an alternate Menu when the screen get smaller
 
-01/21/22 Logs:
+01/23/22 Logs:
+
+-signup system functional
+-admin approval of accounts functional 
+-Login system functional
 
 
 
