@@ -724,7 +724,7 @@ padding: auto;
 }
 .logBtnFB:hover, .logBtnGM:hover{
     transform: scale(1.2);
-    box-shadow: 0 0 5px 0 black;
+    box-shadow: 0 0 0.3em 0 #000000;
 }
 
 /*-----------------------------------------DASHBOARD------------------------------------------------------*/
