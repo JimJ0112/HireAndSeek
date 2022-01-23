@@ -8,8 +8,8 @@ if(!isset($_SESSION['SessionName'])){
     header('location:Login_Index.php?data=PleaseLogIn');
 } 
 
-if($_SESSION["AccountType"] == "Customer"){
-    header('location:Login_Index.php?data=PleaseLogIn');
+if($_SESSION["AccountType"] != "Freelancer"){
+    header('location:Login_Index.php?data=NotAFreelancerAccount');
     
 }
 
