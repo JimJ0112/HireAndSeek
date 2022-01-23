@@ -425,13 +425,23 @@
     display: inline;
 }
          /*----------- Card image ----------*/
-#Card_Carousel{
+.Card_Carousel{
     border: 1px solid black;
     object-fit:cover;
     width: 100%;
     padding: 0px;
     height: 160px;
     position: relative;
+}
+
+.card_Banner{
+    
+    object-fit:cover;
+    width: 99%;
+    padding: 0px;
+    height: 160px;
+    position: relative;
+
 }
 
 .AccountName{

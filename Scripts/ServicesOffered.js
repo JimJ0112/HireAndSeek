@@ -13,7 +13,7 @@ function generateCards(int){
     
     var card = document.createElement('div');
     var ServiceID = document.createElement('p');
-    var imgCarousel = document.createElement('img');
+    var imgCarousel = document.createElement('div');
     var AccountProfilePicture = document.createElement('img');
     var AccountName = document.createElement('h4');
     var AccountLevel = document.createElement('p');
@@ -27,40 +27,11 @@ function generateCards(int){
     ServiceID.setAttribute('class','ServiceID');
     ServiceID.innerHTML="N";
 
-    imgCarousel.setAttribute('id','Card_Carousel');
+    imgCarousel.setAttribute('class','Card_Carousel');
 
-    // Set the source of the images according to count of iteration
+   
 
-        if(i==1){ imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT1.png');
-        } else if (i==2) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT2.jpg');
-        } else if (i==3) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT3.jpg'); 
-        } else if (i==4) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT4.jpg');    
-        } else if (i==5) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT5.png');  
-        } else if (i==6) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND1.jpg');
-        } else if (i==7) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND2.jpg'); 
-        } else if (i==8) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND3.jpg');    
-        } else if (i==9) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND4.jpg');  
-        } else if (i==10) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND5.jpg');
-        } else if (i==11) { imgCarousel.setAttribute('src','WebsiteImages/Services/DNIT6.jpg'); 
-        } else if (i==12) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND6.jpg');    
-        } else if (i==13) { imgCarousel.setAttribute('src','WebsiteImages/Services/GND7.jpg');  
-        } else if (i==14) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA6.jpg');
-        } else if (i==15) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP6.jpg');    
-        } else if (i==16) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA1.jpg');  
-        } else if (i==17) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA2.jpg');
-        } else if (i==18) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA3.jpg'); 
-        } else if (i==19) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA4.jpg');    
-        } else if (i==20) { imgCarousel.setAttribute('src','WebsiteImages/Services/MNA5.jpg');  
-        } else if (i==21) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP1.jpg');
-        } else if (i==22) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP2.jpg'); 
-        } else if (i==23) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP3.jpg');    
-        } else if (i==24) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP4.jpg');  
-        } else if (i==25) { imgCarousel.setAttribute('src','WebsiteImages/Services/VNP5.jpg');
-            
-        } else {
-            imgCarousel.setAttribute('src','WebsiteImages/placeholder.png');
-    
-        }
+    //imgCarousel.setAttribute('src','WebsiteImages/placeholder.png');
 
     AccountProfilePicture.setAttribute('class','AccountProfilePicture');
     AccountProfilePicture.setAttribute('src','WebsiteImages/profilepic-placeholder.jpg');
@@ -183,15 +154,20 @@ var serviceDescription = document.getElementsByClassName("ServiceDescription");
 var price = document.getElementsByClassName("ButtonPrice");
 var cards = document.getElementsByClassName("card");
 var totalRatings;
+var imgCarousel = document.getElementsByClassName("Card_Carousel");
 
 //console.log(serviceID);
 
 //assign value
 for(var i = 0; i<=cards.length;i++){
-    var ratings = parseFloat(arrays[i]['Service1StarRatings'] + arrays[i]['Service2StarRatings']+arrays[i]['Service3StarRatings']+ arrays[i]['Service4StarRatings']+ arrays[i]['Service5StarRatings']).toFixed(1);
-    console.log(ratings);
-    totalRatings = parseFloat(1*arrays[i]['Service1StarRatings'] + 2* arrays[i]['Service2StarRatings']+3* arrays[i]['Service3StarRatings']+ 4*arrays[i]['Service4StarRatings']+ 5* arrays[i]['Service5StarRatings']/ratings).toFixed(1);
+   // var ratings = parseFloat(arrays[i]['Service1StarRatings'] + arrays[i]['Service2StarRatings']+arrays[i]['Service3StarRatings']+ arrays[i]['Service4StarRatings']+ arrays[i]['Service5StarRatings']).toFixed(1);
+   // console.log(ratings);
+   // totalRatings = parseFloat(1*arrays[i]['Service1StarRatings'] + 2* arrays[i]['Service2StarRatings']+3* arrays[i]['Service3StarRatings']+ 4*arrays[i]['Service4StarRatings']+ 5* arrays[i]['Service5StarRatings']/ratings).toFixed(1);
     
+    var Banner = new Image();
+    Banner.src = arrays[i]['Banner1Path'];
+    Banner.setAttribute('class','card_Banner');
+    imgCarousel[i].appendChild(Banner);
 
     serviceIDS[i].innerHTML = arrays[i]['ServiceID'];
 
