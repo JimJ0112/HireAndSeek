@@ -195,15 +195,15 @@ for(var i = 0; i<=cards.length;i++){
 
     serviceIDS[i].innerHTML = arrays[i]['ServiceID'];
 
-    if(arrays[i]['ServiceOwnerUserName'] == " "){
+    if(arrays[i]['ServiceOwnerUserName'] == ""){
     accountname[i].innerHTML = arrays[i]['ServiceOwnerEmail'];
     } else {accountname[i].innerHTML = arrays[i]['ServiceOwnerUserName'];}
 
-    //accountLevel[i].innerHTML = arrays[i][2];
+    accountLevel[i].innerHTML = arrays[i]['AccountLevel'];
     serviceTitle[i].innerHTML = arrays[i]['ServiceTitle'];
-    accountratings[i].innerHTML = totalRatings;
+    accountratings[i].innerHTML = arrays[i]['ServiceTotalRatings'];
     serviceDescription[i].innerText = arrays[i]['ServiceDescription'];
-    price[i].innerHTML = array[i]['ServiceBasicPlanPrice'];
+    price[i].innerText ="Php " +array[i]['ServiceBasicPlanPrice'] +".00";
 
     //sets id to button 
     price[i].setAttribute('id',arrays[i][0]);
