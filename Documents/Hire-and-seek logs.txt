@@ -47,5 +47,12 @@
 
 01/21/22 Logs:
 
+01/22/22 Logs:
+-Completed the Login page design
+
+01/23/22 Logs:
+-Fixed bugs on carousel's left & right navigation button. 
+-Responsive to media screen size (Homepage, Explore, login)
+
 
 
