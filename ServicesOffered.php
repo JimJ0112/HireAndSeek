@@ -42,18 +42,18 @@ else{
         </div>
             <div class="SOCateg">
                 <!-- Categories Section -->
-                <nav id="ServicesOffered_Categories">
+                <div id="ServicesOffered_Categories">
 
-                    <ul id="ServicesOffered_CategoriesList">
-                        <li class="ServicesOffered_CategoriesElement" id="HRS" onclick="GetData('Backend/GET_HighRatedServicesDATA.php')"><a href="#"> High Rated Services</a> </li>
-                        <li class="ServicesOffered_CategoriesElement" id="GND" onclick="GetData('Backend/GET_GraphicsAndDesignDATA.php')"><a href="#"> Graphics and Design </a></li>
-                        <li class="ServicesOffered_CategoriesElement" id="VNP" onclick="GetData('Backend/GET_VideoandPresentationDATA.php')"><a href="#"> Video and Presentation </a></li>
-                        <li class="ServicesOffered_CategoriesElement" id="MNA" onclick="GetData('Backend/GET_MusicandAudioDATA.php')"><a href="#"> Music and Audio </a></li>
-                        <li class="ServicesOffered_CategoriesElement" id="DNIT" onclick="GetData('Backend/GET_DevelopmentandITDATA.php')"><a href="#"> Development and IT</a></li>
-                    </ul>
+                    <div id="ServicesOffered_CategoriesList">
+                        <div class="HRS ServicesOffered_CategoriesElement" onclick="GetData('Backend/GET_HighRatedServicesDATA.php')"><a href="#"> High Rated Services</a> </div>
+                        <div class="GND ServicesOffered_CategoriesElement" onclick="GetData('Backend/GET_GraphicsAndDesignDATA.php')"><a href="#"> Graphics and Design </a></div>
+                        <div class="VNP ServicesOffered_CategoriesElement" onclick="GetData('Backend/GET_VideoandPresentationDATA.php')"><a href="#"> Video and Presentation </a></div>
+                        <div class="MNA ServicesOffered_CategoriesElement" onclick="GetData('Backend/GET_MusicandAudioDATA.php')"><a href="#"> Music and Audio </a></div>
+                        <div class="DNIT ServicesOffered_CategoriesElement" onclick="GetData('Backend/GET_DevelopmentandITDATA.php')"><a href="#"> Development and IT</a></div>
+                   </div>
+                </div>
             </div>
 
-                </nav>
             <div class="caro">
                 <!-- Carousel-->
                 <div class="carousel">
@@ -63,13 +63,17 @@ else{
                 <div class="slideCaption">ACCOMPLISH IT WITH </div>
                 <div class="slideCaption2">A FREELANCER</div>
 
-                <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="display-right" onclick="plusDivs(1)">&#10095;</button>
+                <div class="display-caro">
+                <div class="display-leftNav"><button class="display-leftBtn" onclick="plusDivs(-1)">&#10094;</button></div>
+                <div class="display-rightNav"><button class="display-rightBtn" onclick="plusDivs(1)">&#10095;</button></div>
+                </div>
+
                 <div class="dotNav"style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
+                 </div>
+              </div>
             </div>
            
               <script>

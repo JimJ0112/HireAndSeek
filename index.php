@@ -52,13 +52,16 @@ else{
                 <div class="slideCaption">ACCOMPLISH IT WITH </div>
                 <div class="slideCaption2">A FREELANCER</div>
 
-                <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="display-right" onclick="plusDivs(1)">&#10095;</button>
+                <div class="display-caro">
+                <div class="display-leftNav"><button class="display-leftBtn" onclick="plusDivs(-1)">&#10094;</button></div>
+                <div class="display-rightNav"><button class="display-rightBtn" onclick="plusDivs(1)">&#10095;</button></div>
+                </div>
+
                 <div class="dotNav"style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
-               
+                 </div>
               </div>
 
               <script>

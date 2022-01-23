@@ -136,7 +136,8 @@ a{
                     object-fit: cover;
                     object-position: 0% 30%;
                 }
-                .display-left{
+                  /*---------- Carousel left right button-------- */
+                .display-leftBtn{
                     cursor: pointer;
                     font-size: 25px;
                     width: 50px;
@@ -145,12 +146,9 @@ a{
                     border-style: solid;
                     border-radius: 50%;
                     padding: 0px 3px 5px 0px;
-                    position: absolute;
-                    top:29%;
-                    left: 1%;
                     opacity:70%
                 }  
-                    .display-right{
+                .display-rightBtn{
                     cursor: pointer;
                     font-size: 25px;
                     width: 50px;
@@ -159,15 +157,34 @@ a{
                     border-style: solid;
                     border-radius: 50%;
                     padding: 0px 0px 5px 3px;
-                    position: absolute;
-                    top:29%;
-                    right: 1%;
                     opacity:70%
                 }
-
-                .display-left:hover{opacity: 100%; width: 53px; height: 53px;}
-                .display-right:hover{opacity: 100%; width: 53px; height: 53px;}
-
+                .display-leftBtn:hover{opacity: 100%; transform:scale(1.1,1.1);}
+                .display-rightBtn:hover{opacity: 100%; transform:scale(1.1,1.1);}
+                
+                .display-caro{
+                    position: absolute;
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: 
+                    'left right';
+                 
+                 }
+                .display-leftNav{
+                    margin: 0px 20px;
+                    grid-area: left;
+                    transform: translateY(-350%);
+                    text-align: left;
+                 }
+                .display-rightNav{
+                    margin: 0px 20px;
+                    grid-area: right;
+                    transform: translateY(-350%);
+                    text-align: right;
+                }
+                  /*------- Carousel 3 dots----------- */
+               
                 .dotNav{
                     position: absolute;
                     text-align: center;
@@ -188,7 +205,7 @@ a{
                   .active, .dot:hover {
                     background-color: #717171;
                   }
-                  
+                    /*----- Carousel text -----*/
                   .slideCaption{
                     font-size: 80px;
                     text-shadow: 2px 2px 5px #302f2f;
@@ -309,25 +326,34 @@ a{
         grid-area: SOcards;
     }
   
-/* Categories */
-#ServicesOffered_Categories{
-background-color: rgb(58, 58, 58);
-padding: 7px 0px 7px 0px;
-                    
-}
-            
-#ServicesOffered_CategoriesList {
-    list-style-type:none;
-    margin: 0;
-    padding: 0;
-   }
+/* -------Categories -----*/
+    #ServicesOffered_CategoriesList{
+    background-color: rgb(58, 58, 58);
+    width: 100%;
+    height: 30px;
+    display: grid;
+    text-align: center;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'list1 list2 list3 list4 list5';                    
+    }
+    .HRS{
+        grid-area: list1;
+    } 
+    .GND{
+        grid-area: list2;
+    }           
+    .VNP{
+        grid-area: list3;
+    }
+    .MNA{
+        grid-area: list4;
+    }
+    .DNIT{
+        grid-area: list5;
+    }
 
-  .ServicesOffered_CategoriesElement{
-       display: inline-block;
-       margin: 0px 70px;
-       text-align: center;
-       cursor: pointer;
-   }
    .ServicesOffered_CategoriesElement a{
     color: rgb(247, 247, 247);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -846,7 +872,24 @@ table{
         "categ"
         "footer";
      }
-     img#Logo{
+        /*-----------------Login Page----------------*/
+        .Login-Container{
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            'nav'
+            'logImg'
+            'logForm'
+            'footer';
+        }
+        .logImg{
+            width: 200px;
+            margin-top: 25px;
+        }
+        .logForm{
+            width: 80%;
+        }
+         /*-----------------Header / Nav----------------*/
+    img#Logo{
         max-width: 15%;
      }
      #searchbar input[type=text]{
@@ -907,15 +950,16 @@ table{
      #dropAbout{background: rgb(0, 0, 0);}
      #dropUser{color:white; background: #183040; text-transform: uppercase;}
      #dropLogout{background-color: #ff9001;}
-  
-  .slides{
-    max-height: 200px;
-    max-width: 100%;
-    overflow: hidden;
-    display: block;
-    object-fit: cover;
-    object-position: 0% 20%;
-}
+
+   /*-----------------Carousel ----------------*/
+    .slides{
+        max-height: 200px;
+        max-width: 100%;
+        overflow: hidden;
+        display: block;
+        object-fit: cover;
+        object-position: 0% 20%;
+    }
     .slideCaption{
         font-size: 30px;
         transform: translateY(-400%);
@@ -924,6 +968,10 @@ table{
         font-size: 30px;
         transform: translateY(-300%);
     }
+    .display-caro{
+        transform: translateY(100%);
+    }
+    /*----------------- Footer ----------------*/
     .thText{
         font-size: 20px;
         line-height: 25px;
@@ -944,5 +992,9 @@ table{
     .rightFooter{
         text-align: left;
         margin-top: -20px;
+     }
+     /*--------------Service Offered---------------*/
+     .ServicesOffered_CategoriesElement a{
+        font-size: 9px;
      }
 }
