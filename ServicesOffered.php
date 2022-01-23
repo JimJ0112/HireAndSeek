@@ -20,7 +20,7 @@ else{
        
         <link rel="stylesheet" href="Style.css" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <script src="Scripts/ServicesOffered.js"> </script>
     </head>
 
     <body>
@@ -74,7 +74,7 @@ else{
                 <span class="dot" onclick="currentSlide(3)"></span>
                  </div>
               </div>
-            </div>
+           
            
               <script>
                 var slideIndex = 1;
@@ -103,29 +103,24 @@ else{
                 dots[slideIndex-1].className += " active"; 
                 }
                 </script>
+            </div>
+               
+          
+            <div class="SOcards">
                 <!-- Services Offered-->
                 <div id="ServicesOffered_CategoryTxt"> Explore </div>
-
                 <!-- Services Offered cards -->
+                <div id="ServicesOffered_Cards"></div>
+            </div> 
+            
+            <!--  <iframe src="ServicesOffered_Cards.php" width="100%" height="100%"> </iframe> -->
+         
 
-              
-                <div id="ServicesOffered_Cards" class="SOcards">
+          
 
-                
-              <!--  <iframe src="ServicesOffered_Cards.php" width="100%" height="100%"> </iframe> -->
-                     
-
-              <script src="Scripts/ServicesOffered.js"> </script>
-
-
-                </div>
-           
-                <br>
-
-
-
-    </div>
             <!-- Footer -->
             <?php include_once('Includes/footer.php')?>
+   
+        </div>
     </body>
 </html>
