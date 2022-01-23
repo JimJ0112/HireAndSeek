@@ -64,8 +64,10 @@ if($_SESSION["AccountType"] == "Customer"){
                         <div class="logDiv"><input type="text" name="StandardPlanPrice" placeholder="Job Standard Plan Price" class="logTB"></div>
                         <div class="logDiv"><input type="text" name="PremiumPlanPrice" placeholder="Job Premium Price" class="logTB"></div>
                         
-                        
-                       
+                        <label> Banners </label>
+                        <input type="file" name="Banner1">
+                        <input type="file" name="Banner2">
+                        <input type="file" name="Banner3">
 
                     <div class="logDiv">
                         <input type="submit" value="CREATE JOB" class="logBtnSubmit">

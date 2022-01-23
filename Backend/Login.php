@@ -9,7 +9,7 @@ $Password = $_POST["Password_TB"];
 
 
 
-$Query = "SELECT email, userpassword FROM accounts WHERE email = '$Email' && userpassword = '$Password' ";
+$Query = "SELECT email, userpassword,AccountType,AccountLevel,TransactionsTableName,InboxTableName FROM accounts WHERE email = '$Email' && userpassword = '$Password' ";
 
 $result = mysqli_query($conn,$Query);
 $resultCheck = mysqli_num_rows($result);
@@ -21,6 +21,9 @@ if($resultCheck > 0){
   
         $_SESSION["SessionName"] = $row['email'] ;
         $_SESSION["AccountType"]= $row['AccountType'];
+        $_SESSION["AccountLevel"] = $row['AccountLevel'];
+        $_SESSION["TransactionsTableName"] = $row['TransactionsTableName'];
+        $_SESSION["InboxTableName"] = $row['InboxTableName'];
   
 
  
@@ -46,17 +49,17 @@ if(isset($_SESSION["SessionName"]) && isset($_SESSION["AccountType"])){
     if($_SESSION["AccountType"] == "Freelancer"){
         header("Location: ../Freelancer_Dashboard.php");
         //session_regenerate_id(true);
-        exit();
+        //exit();
 
     } else if($_SESSION["AccountType"] == "Customer"){
         header("Location: ../ServicesOffered.php");
         //session_regenerate_id(true);
-        exit();
+        //exit();
     }
     }else{
         header("Location: ../ServicesOffered.php");
         //session_regenerate_id(true);
-        exit();
+        //exit();
     }
 
 
