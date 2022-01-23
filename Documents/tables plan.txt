@@ -9,6 +9,10 @@ Hire-and-seek
 
 /* Account Database */
 - Accounts(id,firstname,lastname,middlename,age,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,TransactionsTableName,InboxTableName);
+
+v2
+Accounts(email,firstname,lastname,middlename,Birthdate,gender,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,AccountLevel,filesdirectory,TransactionsTableName,InboxTableName,customUsername);
+
 //email PRIMARY KEY
 
 

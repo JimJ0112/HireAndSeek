@@ -18,7 +18,7 @@ session_start();
             <?php
             if(isset($_SESSION['SessionName'])){
 
-                include_once("includes/LoggedIn_Header.php");
+                header("location:Freelancer_Dashboard.php");
                 
             }
             else{

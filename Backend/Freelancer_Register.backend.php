@@ -6,7 +6,7 @@ session_start();
 
       /* GET DATA FROM FRONT END FORM */
       $AccountType = "Freelancer";
-      $customUsername ="";
+      $customUsername = $_POST["UserName"];
        $firstname = $_POST[ "FirstName"]; 
        $lastname = $_POST["LastName" ];
        $middleInitial = $_POST["MiddleInitial"];
@@ -92,7 +92,7 @@ session_start();
         
         //echo $result;
   
-        //header('location:../Freelancer_Register.php?data=registrationSuccess');
+        header('location:../Freelancer_Register.php?data=registrationSuccess');
 
       }
 

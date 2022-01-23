@@ -34,18 +34,17 @@ $data = $_GET['data'];
                 <br> <br>
             <div id="Register_Layer1">
 
-            <input type="text" name="Email" placeholder="Email">
-            <input type="text" name="UserName" placeholder="User Name ">
-            <input type="password" name="UserPassword" placeholder="Password">
-            <input type="password" placeholder=" Confirm Password">
+            <input type="text" name="Email" placeholder="Email"> <br>  
+            <input type="text" name="UserName" placeholder="User Name "> <br>  
+            <input type="password" name="UserPassword" placeholder="Password"> <br> 
+            <input type="password" placeholder=" Confirm Password"> <br> <br> 
 
-
-            <input type="text" name="FirstName" placeholder="FIRST NAME" required>
-            <input type="text" name="LastName" placeholder="LAST NAME" required>
-            <input type="text" name="MiddleInitial" placeholder="MIDDLE NAME">
-            <input type="text" name="Birthdate" placeholder="BIRTH DATE">
-            <select name="Gender"> 
-                <option value="" disabled selected hidden> GENDER </option>
+            <input type="text" name="FirstName" placeholder="FIRST NAME" required> 
+            <input type="text" name="LastName" placeholder="LAST NAME" required> 
+            <input type="text" name="MiddleInitial" placeholder="MIDDLE NAME"> <br> 
+            <input type="text" name="Birthdate" placeholder="BIRTH DATE"> <br> 
+            <select name="Gender">  <br> 
+                <option value="" disabled selected hidden> GENDER </option> 
             <option value="male"> MALE </option>
             <option value="female"> FEMALE </option>
             </select>
@@ -53,23 +52,23 @@ $data = $_GET['data'];
             <br><br>
 
             
-            <input type="text" name="Contact" placeholder="Contact Number">
-            <input type="text" name="Address" placeholder="Address">
+            <input type="text" name="Contact" placeholder="Contact Number"> <br>  
+            <input type="text" name="Address" placeholder="Address"> <br>  
 
             
           
             
             <br> <br>
 
-            <input type="text" name="Description" placeholder="Description">
-            <input type="text" name="Language" placeholder="Language">
-            <input type="text" name="Occupation" placeholder="Occupation">
+            <input type="text" name="Description" placeholder="Description"> <br> 
+            <input type="text" name="Language" placeholder="Language"> <br> 
+            <input type="text" name="Occupation" placeholder="Occupation"> <br>
 
             <br> <br>
 
-            <input type="text" name="Education" placeholder="Education">
-            <input type="text" name="Skills" placeholder="Skills">
-            <br> <br> <br>
+            <input type="text" name="Education" placeholder="Education"> <br> 
+            <input type="text" name="Skills" placeholder="Skills"> <br> 
+            <br> 
 </div>
 
 <div id="Register_Layer2">
@@ -112,7 +111,7 @@ $data = $_GET['data'];
             <input type="submit" value="Sign Up" >
 </div>  
             </form>
-            <br> <br> <br>
+            <br> 
             <button onclick="startvideo()" id="startvideo"> Open Camera </button>
             <button  id="CaptureImage"> Capture </button>
             <br>

@@ -89,7 +89,7 @@ function createElements(Number){
   
     
     AccountSnapshot =document.createElement('td');
- 
+    AccountType = document.createElement('td');
     
     
     
@@ -122,7 +122,7 @@ function createElements(Number){
     
     AccountCheckBox.setAttribute('type','checkbox');
     AccountCheckBoxCOL.setAttribute('class','AccountCheckBoxCOL');
-
+    AccountType.setAttribute('class','AccountType')
 
 
 
@@ -150,7 +150,8 @@ function createElements(Number){
     row.appendChild(AccountID2Type);
     row.appendChild(AccountID2COL);
     row.appendChild(AccountSnapshot);
-    
+    row.appendChild(AccountType);
+
     Table.append(row);
 
     } 
@@ -185,7 +186,7 @@ function createElements(Number){
         AccountID1Img = document.getElementsByClassName('AccountIDImg');
         AccountID2Type = document.getElementsByClassName('AccountID2Type');
         AccountID2COL= document.getElementsByClassName( 'AccountID2COL');
-       
+       AccountType = document.getElementsByClassName('AccountType');
         AccountSnapshot = document.getElementsByClassName('AccountSnapShot'); 
      
    
@@ -199,16 +200,16 @@ function createElements(Number){
             AccountEmailCOL[i].innerText = DataArray[i]['email'];
             AccountFirstName[i].innerText = DataArray[i]['firstname'];
             AccountLastname[i].innerText = DataArray[i]['lastname'];
-            AccountMiddleName[i].innerText = DataArray[i]['middleinitial'];
-            AccountAge[i].innerText = DataArray[i]['age'];
+            AccountMiddleName[i].innerText = DataArray[i]['middlename'];
+            AccountAge[i].innerText = DataArray[i]['Birthdate'];
             AccountContact[i].innerText =DataArray[i]['contact'];
             AccountAddress[i].innerText =DataArray[i]['address'];
             AccountGender[i].innerText =DataArray[i]['gender'];
-            AccountLanguage[i].innerText =DataArray[i][''];
+            AccountLanguage[i].innerText =DataArray[i]['userlanguage'];
             AccountOccupation[i].innerText =DataArray[i]['occupation'];
             AccountID1Type[i].innerText =DataArray[i]['idimage1type'];
             AccountID2Type[i].innerText =DataArray[i]['idimage2type'];
-
+            AccountType[i].innerText = DataArray[i]['AccountType'];
 
             var imgID1 = new Image();
             imgID1.src = DataArray[i]['idimage1directory'];

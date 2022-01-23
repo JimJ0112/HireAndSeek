@@ -3,6 +3,7 @@ require('Includes/databaseConnection.php');
 $_POST["AccountCheckBox"];
 $Queries = array();
 
+
 if(!empty($_POST["AccountCheckBox"])){
 
     foreach($_POST["AccountCheckBox"] as $ID){
@@ -13,11 +14,23 @@ if(!empty($_POST["AccountCheckBox"])){
 
     foreach($Queries as $Queries){
         mysqli_query($conn,$Queries);
+        
+  
+
+
     } // submit query to database
 
-}
 
 
 
+
+ 
+
+
+
+} // end of IF
+
+
+header("location:TransferToAccounts.php");
 
 ?>
