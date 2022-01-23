@@ -1,7 +1,8 @@
 <?php
+session_start();
 require('Includes/databaseConnection.php');
 
-session_start();
+
 
 $Email = $_POST["Username_TB"];
 $Password = $_POST["Password_TB"];

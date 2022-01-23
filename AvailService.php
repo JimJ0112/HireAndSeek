@@ -1,8 +1,8 @@
 <?php
-/*
+
 session_start();
    //$_SESSION['SessionName'];
-
+/*
 if(isset($_SESSION['SessionName'])){
 
     echo "welcome, ".$_SESSION['SessionName'];
@@ -13,7 +13,12 @@ else{
 //echo $_SESSION['SessionName'];
 */
 
-include_once('includes/SessionName.php');
+//include_once('includes/SessionName.php');
+if(!isset($_SESSION['SessionName'])){
+
+    header('location:Login_Index.php?data=PleaseLogIn');
+}
+
 ?>
 
 <!DOCTYPE html>

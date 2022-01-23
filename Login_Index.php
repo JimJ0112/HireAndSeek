@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if(isset($_GET['data'])){
+$err= $_GET['data'];
+    echo "<script> alert('$err')</script>";
+}
+
 ?>
 
 <!DOCTYPE html>
