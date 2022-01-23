@@ -45,7 +45,7 @@ if($_SESSION["AccountType"] == "Customer"){
 
         </div>
             <div class="logForm">
-                 <form action="Backend/CreateJobBackend.php" method="post">
+                 <form action="Backend/CreateJobBackend.php" method="post" enctype = "multipart/form-data">
                     
                          <select name="Category">  <br> 
                          <option value="" disabled selected hidden> Category </option> 
@@ -64,10 +64,10 @@ if($_SESSION["AccountType"] == "Customer"){
                         <div class="logDiv"><input type="text" name="StandardPlanPrice" placeholder="Job Standard Plan Price" class="logTB"></div>
                         <div class="logDiv"><input type="text" name="PremiumPlanPrice" placeholder="Job Premium Price" class="logTB"></div>
                         
-                        <label> Banners </label>
-                        <input type="file" name="Banner1">
-                        <input type="file" name="Banner2">
-                        <input type="file" name="Banner3">
+                        
+                        <input type="file" name="Banner1" accept=".jpg,.png">
+                        <input type="file" name="Banner2" accept=".jpg,.png">
+                        <input type="file" name="Banner3" accept=".jpg,.png">
 
                     <div class="logDiv">
                         <input type="submit" value="CREATE JOB" class="logBtnSubmit">
