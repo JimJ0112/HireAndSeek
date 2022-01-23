@@ -39,4 +39,4 @@ SERVICES DATABASE
 
 -$ServiceComments(CommentID,ServiceID,CommentatorEmail,Date,time,Comment);
  
-- User reports records(ReportID,UserEmail,date,time,Description,Status);
+-User reports records(ReportID,UserEmail,date,time,Description,Status);
