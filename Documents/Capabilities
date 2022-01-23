@@ -31,3 +31,7 @@ Progress:
     // nalilist na sa table yung data ni user tapos naaapprove na ni admin 
 
     // naaapprove na at natatransfer sa main accounts table. done na yung 1 capability (need pa ayusin yung user reports)
+
+
+-the website can let the freelancers can offer/post their services to the customers
+    // almost complete, nalalagay na sa database lahat ng info dito + file management
