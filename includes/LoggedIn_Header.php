@@ -37,7 +37,7 @@ if($accountType == "Freelancer"){
                     <li class= "navElement" id="btnExplore"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
                     <li class= "navElement" id="btnBecome"> <a href = "BecomeAFreelancer.php"> BECOME A FREELANCER </a> </li>
                     <li class= "navElement" id="btnAbout"> <a href = "About.php"> ABOUT </a> </li>
-                    <li class="navElement" id="btnUser"> <a href=<?php $redirectQuery;?>> <?php echo $sessionID;?> </a> </li>
+                    <li class="navElement" id="btnUser"> <a href=<?php echo $redirectQuery;?>> <?php echo $sessionID;?> </a> </li>
                     <li class="navElement" id="btnLogout"><a href="Backend/logout.php"> LOG OUT </a> </li>
               
                     <div id="dropdown" class="navElement">
