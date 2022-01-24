@@ -16,7 +16,7 @@ Accounts(email,firstname,lastname,middlename,Birthdate,gender,userpassword,conta
 //email PRIMARY KEY
 
 
-- Account transaction records (transactionID,userID or userEmail,ServiceID,ServiceTitle,clientNotes,transactionstartDate,transactionFinishedDate,availedPlan,payment,status,clientEmail,FilesDirectory,AgreementContract);
+- Account transaction records (transactionID,OwnerEmail,ClientEmail,ServiceID,ServiceTitle,clientNotes,transactionstartDate,transactionFinishedDate,availedPlan,payment,status,clientEmail,FilesDirectory,AgreementContract);
 //TRANSACTION ID PRIMARY KEY
 //userID or userEmail Foreignkey(pwedeng hindi)
 //ServiceTitle Foreignkey(pwedeng hindi)
