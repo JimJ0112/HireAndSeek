@@ -1065,6 +1065,98 @@ table{
 
 
 
+/*------------------------Messages Page--------------------------------------------------------*/
+
+#Messages_Body{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 23% 75%;
+    grid-template-areas: 
+                         "messagelist messagebody messagebody messagebody messagebody messagebody messagebody"
+                         "messagelist messagebody messagebody messagebody messagebody messagebody messagebody"
+                         "messagelist messagebody messagebody messagebody messagebody messagebody messagebody";
+}
+
+#Messages_List{
+    border: 1px solid black;
+    grid-area: messagelist;
+    padding: 0;
+
+}
+#MessageDisplay_Message{
+    border: 1px solid black;
+    grid-area: messagebody;
+}
+
+
+.Message_categories{
+    text-decoration:none;
+    list-style-type: none;
+    display: inline;
+    padding:5px;
+    border: 1px solid black;
+    margin-right: 5px;
+    cursor: pointer;
+
+}
+
+#message_nav{
+/*text-align: center;*/
+border: 1px solid black;
+}
+
+
+#MessageRecepient_Form{
+    width: 85%;
+    height: 5%;
+}
+
+#MessageSubject_Form{
+    width: 90%;
+    height: 7%;
+}
+
+#MessageBody_Form{
+    width: 90%;
+    height: 60%;
+}
+
+#Create_Message{
+    display:none;
+    z-index: 1;
+}
+
+#Read_Message{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    
+}
+
+#Message_SenderContainer{
+    height: 5%;
+    width: 99.5%;
+    border: 1px solid black;
+}
+
+#Message_SubjectContainer{
+    width: 99.5%;
+    height: 7%;
+    border: 1px solid black;
+}
+
+#Message_BodyContainer{
+    width: 99.5%;
+    border: 1px solid black;
+    height: 75%;
+}
+
+
+
+
 /*-------------------------------------- Media Testing------------------------------------ */
 @media all and (max-width:800px){
     .Grid-container{

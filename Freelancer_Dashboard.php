@@ -5,7 +5,7 @@ session_start();
     
 if(isset($_SESSION['SessionName'])){
 
-    echo "welcome, ".$_SESSION['SessionName'];
+    //echo "welcome, ".$_SESSION['SessionName'];
 }
 else{
     echo "Session name invalid";
@@ -43,6 +43,7 @@ else{
 
     <ul id="Dashboard_CategoriesList">
     <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="CreateJob.php"> Add Job </a> </li>
+    <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="Messages.php"> Messages </a> </li>
     <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > DASHBOARD </li>
     <li class="Dashboard_CategoriesElement" id="Freelancer_jobs" > JOBS </li>
     <li class="Dashboard_CategoriesElement" id="Freelancerd_transactions" > TRANSACTIONS </li>
@@ -112,10 +113,9 @@ else{
 
         </div>
 
-                    <!-- Footer -->
-                    <footer>
-                <h1> Footer Placeholder</h1>
-            </footer>
+                   
+           <!-- Footer -->
+           <?php include_once('Includes/footer.php')?>
 
 
         </body>
