@@ -1,19 +1,7 @@
 <?php
 
 session_start();
-   //$_SESSION['SessionName'];
-/*
-if(isset($_SESSION['SessionName'])){
 
-    echo "welcome, ".$_SESSION['SessionName'];
-}
-else{
-   //echo"Session unavailable";
-}
-//echo $_SESSION['SessionName'];
-*/
-
-//include_once('includes/SessionName.php');
 if(!isset($_SESSION['SessionName'])){
 
     header('location:Login_Index.php?data=PleaseLogIn');
@@ -22,7 +10,7 @@ if(!isset($_SESSION['SessionName'])){
 
 if(isset($_GET['data'])){
 $data = $_GET['data'];
-    echo"<script> Result: $data </script>";
+    echo"<script> alert('Result: $data') </script>";
 }
 ?>
 
