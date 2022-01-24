@@ -126,6 +126,32 @@ if(!isset($_SESSION['SessionName'])){
                 </div>
                <!-- <script src= "Scripts/AvailService.js"></script> -->
              <!-- Footer -->
+
+
+             <!-- Avail servie form -->
+
+            <div id="AvailServiceForm">
+            <form action="" method="post"> 
+
+            OwnerEmail   <input type="text" name="OwnerEmail" id="OwnerEmail"> <br>
+            ClientEmail  <input type="text" name="ClientEmail" id="ClientEmail"> <br>
+            ServiceID    <input type="text" name="ServiceID" id="ServiceID"> <br> 
+            ServiceTitle <input type="text" name="ServiceTitle" id="ServiceTitle"> <br>
+            clientNotes  <input type="text" name="clientNotes" id="clientNotes"> <br>
+            startDate    <input type="text" name="startDate" id="startDate"> <br>
+            FinishedDate <input type="text" name="finishedDate" id="finishedDate"> <br>
+            availedPlan  <input type="text" name="availedPlan" id="availedPlan"> <br>
+            Price        <input type="text" name="availedPlan" id="availedPlan"> <br>
+            AgreementContract <br>
+            Agree   <input type="checkbox" value="Agree" name="Agree"  > 
+            Decline <input type="checkbox" value="Agree" name="Decline" > <br>
+
+            <input type="submit" value="submit" id="ButtonSubmit">
+            </form>
+
+             </div> 
+
+
              <?php include_once('Includes/footer.php')?>
 
      

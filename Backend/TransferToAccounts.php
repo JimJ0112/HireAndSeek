@@ -24,6 +24,7 @@
         echo" connection failed";
     }// end of if
 
-header("location:CreateInboxTables.php");
+
+header("location:Maintenance.php");
 
 ?>

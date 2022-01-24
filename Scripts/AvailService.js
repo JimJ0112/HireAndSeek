@@ -78,3 +78,27 @@ function setValues(array){
 
 
 }
+
+
+function availService(array){
+var DataArray = array;
+
+            
+
+const OwnerEmail = document.getElementById("OwnerEmail");
+const ClientEmail = document.getElementById("ClientEmail");
+const ServiceID = document.getElementById("ServiceID");
+const ServiceTitle = document.getElementById("ServiceTitle"); 
+const clientNotes = document.getElementById("clientNotes");
+const startDate = document.getElementById("startDate");
+const finishedDate =document.getElementById("finishedDate");
+const availedPlan = document.getElementById("availedPlan");
+const Price = document.getElementById("Price");
+           
+
+
+  
+    
+
+
+} // end of avail service function
