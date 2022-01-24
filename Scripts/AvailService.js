@@ -95,6 +95,7 @@ const finishedDate =document.getElementById("finishedDate");
 const availedPlan = document.getElementById("availedPlan");
 const Price = document.getElementById("Price");
            
+OwnerEmail.value= DataArray[0]['ServiceOwnerEmail'];
 
 
   
@@ -102,3 +103,4 @@ const Price = document.getElementById("Price");
 
 
 } // end of avail service function
+

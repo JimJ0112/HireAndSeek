@@ -25,7 +25,7 @@ if(!isset($_SESSION['SessionName'])){
 <html>
     <head>
 
-        <script src= "Scripts/AvailService.js"></script>
+       <!-- <script src= "Scripts/AvailService.js"></script>-->
         <link rel="stylesheet" href="Style.css" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -130,30 +130,34 @@ if(!isset($_SESSION['SessionName'])){
 
              <!-- Avail servie form -->
 
-            <div id="AvailServiceForm">
-            <form action="" method="post"> 
 
-            OwnerEmail   <input type="text" name="OwnerEmail" id="OwnerEmail"> <br>
-            ClientEmail  <input type="text" name="ClientEmail" id="ClientEmail"> <br>
-            ServiceID    <input type="text" name="ServiceID" id="ServiceID"> <br> 
-            ServiceTitle <input type="text" name="ServiceTitle" id="ServiceTitle"> <br>
-            clientNotes  <input type="text" name="clientNotes" id="clientNotes"> <br>
-            startDate    <input type="text" name="startDate" id="startDate"> <br>
-            FinishedDate <input type="text" name="finishedDate" id="finishedDate"> <br>
-            availedPlan  <input type="text" name="availedPlan" id="availedPlan"> <br>
-            Price        <input type="text" name="availedPlan" id="availedPlan"> <br>
-            AgreementContract <br>
-            Agree   <input type="checkbox" value="Agree" name="Agree"  > 
-            Decline <input type="checkbox" value="Agree" name="Decline" > <br>
-
-            <input type="submit" value="submit" id="ButtonSubmit">
-            </form>
-
-             </div> 
 
 
              <?php include_once('Includes/footer.php')?>
 
-     
+<center>
+             <div id="AvailServiceForm">
+            <form action="" method="post"> 
+
+            OwnerEmail   <input type="text" name="OwnerEmail" id="OwnerEmail" readonly> <br>
+            ClientEmail  <input type="text" name="ClientEmail" id="ClientEmail" readonly> <br>
+            ServiceID    <input type="text" name="ServiceID" id="ServiceID" readonly > <br> 
+            ServiceTitle <input type="text" name="ServiceTitle" id="ServiceTitle" readonly> <br>
+            clientNotes  <input type="text" name="clientNotes" id="clientNotes" > <br>
+            startDate    <input type="text" name="startDate" id="startDate" readonly > <br>
+            FinishedDate <input type="text" name="finishedDate" id="finishedDate"> <br>
+            availedPlan  <input type="text" name="availedPlan" id="availedPlan"> <br>
+            Price        <input type="text" name="Price" id="Price" readonly> <br>
+            AgreementContract <br>
+            Agree   <input type="checkbox" value="Agree" name="Agree"  > 
+            Decline <input type="checkbox" value="Agree" name="Decline" > <br>
+
+            <input type="submit" value="Buy" id="ButtonSubmit">
+            
+            </form>
+
+             </div> 
+    </center>
+             <script src= "Scripts/AvailService.js"></script>
     </body>
 </html>
