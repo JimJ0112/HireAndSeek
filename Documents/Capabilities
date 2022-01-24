@@ -39,3 +39,7 @@ Progress:
     // almost complete, nalalagay na sa database lahat ng info dito + file management
 
 
+-the website can let the freelancers and customers can communicate via messages
+    // almost done, nakakapag send ng message at fetch ng messages 
+    // problem lang yung address, mahaba masyado need ng address suggester
+    // reply button need din iimplement, automatic mag gegenerate sa frontend yung address ng rereplyan
