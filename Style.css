@@ -862,6 +862,19 @@ table{
     display: none;
 
 }
+
+/*----------------------------Avail service form---------------------------------------------*/
+#AvailServiceForm{
+    /*display: none;*/
+    border: 1px solid;
+    
+    
+}
+
+
+
+
+
 /*-------------------------------------- Media Testing------------------------------------ */
 @media all and (max-width:800px){
     .Grid-container{

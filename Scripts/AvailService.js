@@ -7,7 +7,9 @@ console.log(AvailedService);
 
 
     //Main
-    
+    var BuyButton = document.getElementById("Buy");
+    var Form = document.getElementById("AvailServiceForm");
+
     var xmlhttp = new XMLHttpRequest(AvailedService);
     xmlhttp.open("POST", "Backend/ServiceInfoRequest.php", true);
     
@@ -22,7 +24,13 @@ console.log(AvailedService);
             console.log(AvailedServiceINFO);
             setValues(AvailedServiceINFO);
 
-            availService(AvailedServiceINFO);
+            BuyButton.addEventListener('clicked',
+
+            availService(AvailedServiceINFO),
+            
+            
+            );
+            
 
 
 
@@ -87,28 +95,36 @@ function setValues(array){
 function availService(array){
 var DataArray = array;
 
+//declarations
+var date = new Date();
+
 var client = sessionStorage.getItem('sessionName');
+var AvailedID = sessionStorage.getItem('AvailedServiceID');
 var PlanValue = document.getElementById('Plan_Plan').innerText;
 var PriceValue =document.getElementById('Buy').innerText;
 
 const OwnerEmail = document.getElementById("OwnerEmail");
 const ClientEmail = document.getElementById("ClientEmail");
 const ServiceID = document.getElementById("ServiceID");
-const ServiceTitle = document.getElementById("ServiceTitle"); 
+const ServiceTitleForm = document.getElementById("ServiceTitleForm"); 
 const Category = document.getElementById("Category");
 const clientNotes = document.getElementById("clientNotes");
 const startDate = document.getElementById("startDate");
-const finishedDate =document.getElementById("finishedDate");
+const finishedDate =document.getElementById("finishDate");
 const availedPlan = document.getElementById("availedPlan");
 const Price = document.getElementById("Price");
-           
+
+
+// setting
 OwnerEmail.value= DataArray[0]['ServiceOwnerEmail'];
 ClientEmail.value= client;
 ServiceID.value= DataArray[0]['ServiceID'];
-ServiceTitle.value= DataArray[0]['ServiceTitle'];
+ServiceTitleForm.value = DataArray[0]['ServiceTitle'];
 
-startDate.value= DataArray[0]['ServiceOwnerEmail'];
+startDate.value= date.getMonth() + 1 +"/"+ date.getDay()+"/" + date.getFullYear() ;
 
+
+Category.value = DataArray[0]['category'];
 availedPlan.value= PlanValue;
 Price.value= PriceValue;
 
