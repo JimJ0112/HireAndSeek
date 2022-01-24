@@ -22,6 +22,8 @@ Progress:
     //progress: almost done na inaayos nalang frontend saka aayusin nalang table sa db
     // Account level at images nalang kulang since wala pang users and wala pang form para makapag create ng service (ininsert lang dummy data mula sa db mismo)
 
+        // almost complete, need nalang makapag notif and display sa freelancer everytime na magkaka request sakanya
+
 -the website can let freelancers and customers can search existing services 
     //progress: done na pero naiiisip iimplement yung pag pinindot yung search button may new page na lalabas tas nandun cards ng results
 
@@ -35,3 +37,5 @@ Progress:
 
 -the website can let the freelancers can offer/post their services to the customers
     // almost complete, nalalagay na sa database lahat ng info dito + file management
+
+
