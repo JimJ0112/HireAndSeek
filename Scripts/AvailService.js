@@ -24,12 +24,10 @@ console.log(AvailedService);
             console.log(AvailedServiceINFO);
             setValues(AvailedServiceINFO);
 
-            BuyButton.addEventListener('clicked',
-
-            availService(AvailedServiceINFO),
+      
             
             
-            );
+            
             
 
 
@@ -59,6 +57,7 @@ function setValues(array){
     const Service2StarRatings =  document.getElementById("2starRatingsTotal");
     const Service1StarRatings = document.getElementById("1starRatingsTotal");
     const PlanBasic = document.getElementById("Plan_Basic");
+    const Category = document.getElementById("ServCategory");
     // total ratings (not yet final)
     var ComputedTotalRatings = (1*parseFloat(array[0]['Service5StarRatings'])+2 * parseFloat(array[0]['Service4StarRatings'])+3* parseFloat(array[0]['Service3StarRatings'])+4* parseFloat(array[0]['Service2StarRatings'])+5* parseFloat(array[0]['Service1StarRatings']))/5;
   console.log(ComputedTotalRatings);
@@ -75,6 +74,7 @@ function setValues(array){
    Service3StarRatings.innerText =  array[0]['Service3StarRatings'];
    Service2StarRatings.innerText =  array[0]['Service2StarRatings'];
    Service1StarRatings.innerText =  array[0]['Service1StarRatings'];
+   Category.innerText = array[0]['category'];
 
 
    // NOT DONE YET
@@ -92,8 +92,7 @@ function setValues(array){
 }
 
 
-function availService(array){
-var DataArray = array;
+function availService(){
 
 //declarations
 var date = new Date();
@@ -102,6 +101,10 @@ var client = sessionStorage.getItem('sessionName');
 var AvailedID = sessionStorage.getItem('AvailedServiceID');
 var PlanValue = document.getElementById('Plan_Plan').innerText;
 var PriceValue =document.getElementById('Buy').innerText;
+const AccountName = document.getElementsByClassName("AccountName")[0].innerText;
+const Title = document.getElementById("ServiceTitle").innerText;
+const CategoryValue = document.getElementById("ServCategory").innerText;
+
 
 const OwnerEmail = document.getElementById("OwnerEmail");
 const ClientEmail = document.getElementById("ClientEmail");
@@ -116,15 +119,15 @@ const Price = document.getElementById("Price");
 
 
 // setting
-OwnerEmail.value= DataArray[0]['ServiceOwnerEmail'];
+OwnerEmail.value= AccountName;
 ClientEmail.value= client;
-ServiceID.value= DataArray[0]['ServiceID'];
-ServiceTitleForm.value = DataArray[0]['ServiceTitle'];
+ServiceID.value= AvailedID;
+ServiceTitleForm.value = Title;
 
 startDate.value= date.getMonth() + 1 +"/"+ date.getDay()+"/" + date.getFullYear() ;
 
 
-Category.value = DataArray[0]['category'];
+Category.value = CategoryValue;
 availedPlan.value= PlanValue;
 Price.value= PriceValue;
 

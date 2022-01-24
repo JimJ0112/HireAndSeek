@@ -57,6 +57,7 @@ if(!isset($_SESSION['SessionName'])){
 
                     <div id="ServiceDescription" class="ServiceContainerChild"> 
                         <h2 id="ServiceTitle"> Service Title Placeholder</h2>
+                        <h4 id="ServCategory"> Category </h4>
                          <h3> About the Service </h3>
                          <p Id="AvailService_Description"> This is a Description Placeholder</p>
                     </div>
@@ -90,7 +91,7 @@ if(!isset($_SESSION['SessionName'])){
                         <div id="Plan_DescriptionContainer"> 
                         <h4 id="Plan_Plan"> Plan  </h4>
                             <h4 id="Plan_Description"> Plan Description Placeholder </h4>
-                            <button id = "Buy">Price Php 000.00</button>
+                            <button id = "Buy" onclick="availService()">Price Php 000.00</button>
                         </div>
                    
                     </div>
