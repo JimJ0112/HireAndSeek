@@ -133,7 +133,7 @@ else{
                         </div>
                         <div class="Team-Member">
                             <img class="memberImages memberImages2" src="WebsiteImages/Manrique.jpg" >
-                            <div class="memberName">Jim Lourdy S. Manrique</div>
+                            <div class="memberName">Jim Lourdy M. Manrique</div>
                             <div class="memberRole">Back-end Developer</div>
                             <ul class="memberSocials">
                                 <li><a href="#"><img src="WebsiteImages/fb.png"></a></li>
