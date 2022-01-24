@@ -19,6 +19,11 @@ if(!isset($_SESSION['SessionName'])){
     header('location:Login_Index.php?data=PleaseLogIn');
 }
 
+
+if(isset($_GET['data'])){
+$data = $_GET['data'];
+    echo"<script> Result: $data </script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +73,7 @@ if(!isset($_SESSION['SessionName'])){
             availedPlan  <input type="text" name="availedPlan" id="availedPlan" readonly> <br> <br>
             Price        <input type="text" name="Price" id="Price" readonly> <br> <br>
             AgreementContract <br>
-            Agree   <input type="checkbox" value="Agree" name="Agree"  > 
+            Agree   <input type="checkbox" value="Agree" name="AgreedToContract"  > 
             Decline <input type="checkbox" value="Agree" name="Decline" > <br> <br>
 
             <input type="submit" value="Buy" id="ButtonSubmit" onclick="HideDiv()"> <input type="button" value="Cancel" onclick="HideDiv()">
