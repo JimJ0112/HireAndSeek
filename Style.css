@@ -867,11 +867,21 @@ table{
 #AvailServiceForm{
     /*display: none;*/
     border: 1px solid;
+    display: none;
+    position:Absolute;
+    z-index: 1;
+    background-color: white;
     
     
 }
 
+#HiddenDiv{
+    display:none;
+}
 
+#content{
+    z-index: 0;
+}
 
 
 

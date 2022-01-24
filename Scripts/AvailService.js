@@ -1,6 +1,5 @@
-
 var AvailedService = sessionStorage.getItem('AvailedServiceID');
-;
+
 if(!AvailedService){ window.location.href="ServicesOffered.php";
 console.log(AvailedService);
 }
@@ -35,12 +34,6 @@ console.log(AvailedService);
 
             
 
-            /*
-            PlanBasic.addEventListener('click', function(){ alert("Basic")});
-            PlanStandard.addEventListener('click', function(){alert("standard");});
-            PlanPremium.addEventListener('click', function(){ alert("premium")});
-            */
-
 
 
 
@@ -71,6 +64,14 @@ function setValues(array){
     const Service1StarRatings = document.getElementById("1starRatingsTotal");
     const PlanBasic = document.getElementById("Plan_Basic");
     const Category = document.getElementById("ServCategory");
+
+    const BasicPlanDescription = document.getElementById("BasicPlanDescription_Info");
+    const BasicPlanPrice = document.getElementById("BasicPlanPrice_Info");
+    const StandardPlanDescription = document.getElementById("StandardPlanDescription_Info");
+    const StandardPlanPrice = document.getElementById("StandardPlanPrice_Info");
+    const PremiumPlanDescription = document.getElementById("PremiumPlanDescription_Info");
+    const PremiumPlanPrice = document.getElementById("PremiumPlanPrice_Info");
+
     // total ratings (not yet final)
     var ComputedTotalRatings = (1*parseFloat(array[0]['Service5StarRatings'])+2 * parseFloat(array[0]['Service4StarRatings'])+3* parseFloat(array[0]['Service3StarRatings'])+4* parseFloat(array[0]['Service2StarRatings'])+5* parseFloat(array[0]['Service1StarRatings']))/5;
   console.log(ComputedTotalRatings);
@@ -89,18 +90,19 @@ function setValues(array){
    Service1StarRatings.innerText =  array[0]['Service1StarRatings'];
    Category.innerText = array[0]['category'];
 
+   BasicPlanDescription.innerText = array[0]['ServiceBasicPlanDescription'];
+   BasicPlanPrice.innerText = array[0]['ServiceBasicPlanPrice'];
+   StandardPlanDescription.innerText = array[0]['ServiceStandardPlanDescription'];
+   StandardPlanPrice.innerText = array[0]['ServiceStandardPlanPrice'];
+   PremiumPlanDescription.innerText = array[0]['ServicePremiumPlanDescription'];
+   PremiumPlanPrice.innerText = array[0]['ServicePremiumPlanPrice'];
 
+   
    // NOT DONE YET
    
    console.log(ServiceTitle);
 
-const PlanBasicBtn = document.getElementById("Plan_Basic");
-const PlanStandardBtn= document.getElementById("Plan_Standard");
-const PlanPremiumBtn = document.getElementById("Plan_Premium");
 
-PlanBasicBtn.addEventListener('click',BasicPlan(array));
-PlanStandardBtn.addEventListener('click',StandardPlan(array));
-PlanPremiumBtn.addEventListener('click',PremiumPlan(array));
 
 
 
@@ -108,7 +110,7 @@ PlanPremiumBtn.addEventListener('click',PremiumPlan(array));
 
 
 function availService(){
-
+document.getElementById("AvailServiceForm").style.display = "block";
 //declarations
 var date = new Date();
 
@@ -157,39 +159,57 @@ Price.value= PriceValue;
 
 
 
-function BasicPlan(array){
-DataArray = array;
+function BasicPlan(){
+    const BasicPlanDescription = document.getElementById("BasicPlanDescription_Info");
+    const BasicPlanPrice = document.getElementById("BasicPlanPrice_Info");
+
+
+
 var Plan = document.getElementById('Plan_Plan');
 var PlanDescription = document.getElementById('Plan_Description');
 var Price  = document.getElementById("Buy");
 
 Plan.innerText = "Basic Plan";
-PlanDescription.innerText = DataArray[0]['ServiceBasicPlanDescription'];
-Price.innerText = "Php "+DataArray[0]['ServiceBasicPlanPrice'] + ".00";
+PlanDescription.innerText = BasicPlanDescription.innerText;
+Price.innerText = "Php "+BasicPlanPrice.innerText + ".00";
 
 }
 
-function StandardPlan(array){
-    DataArray = array;
+function StandardPlan(){
+
+
+    const StandardPlanDescription = document.getElementById("StandardPlanDescription_Info");
+    const StandardPlanPrice = document.getElementById("StandardPlanPrice_Info");
+
+    
     var Plan = document.getElementById('Plan_Plan');
     var PlanDescription = document.getElementById('Plan_Description');
     var Price  = document.getElementById("Buy");
     
     Plan.innerText = "Standard Plan";
-    PlanDescription.innerText = DataArray[0]['ServiceStandardPlanDescription'];
-    Price.innerText = "Php "+DataArray[0]['ServiceStandardPlanPrice'] + ".00";
+    PlanDescription.innerText = StandardPlanDescription.innerText;
+    Price.innerText = "Php "+StandardPlanPrice.innerText+ ".00";
     
 }
 
-    function PremiumPlan(array){
-        DataArray = array;
+    function PremiumPlan(){
+        
+
+        const PremiumPlanDescription = document.getElementById("PremiumPlanDescription_Info");
+        const PremiumPlanPrice = document.getElementById("PremiumPlanPrice_Info");
+
         var Plan = document.getElementById('Plan_Plan');
         var PlanDescription = document.getElementById('Plan_Description');
         var Price  = document.getElementById("Buy");
         
         Plan.innerText = "Premium Plan";
-        PlanDescription.innerText = DataArray[0]['ServicePremiumPlanDescription'];
-        Price.innerText = "Php "+DataArray[0]['ServicePremiumPlanPrice'] + ".00";
+        PlanDescription.innerText = PremiumPlanDescription.innerText;
+        Price.innerText ="Php "+ PremiumPlanPrice.innerText+ ".00";
         
+ }
+
+
+ function HideDiv(){
+    document.getElementById("AvailServiceForm").style.display = "none";
  }
 

@@ -46,6 +46,61 @@ if(!isset($_SESSION['SessionName'])){
         }
             ?>
             
+
+
+
+
+
+            <center>
+
+        <!-- Form will show when buy button have been clicked-->
+             
+            <form action="" method="post" id="AvailServiceForm"> 
+
+            OwnerEmail   <input type="text" name="OwnerEmail" id="OwnerEmail" readonly> <br> <br>
+            ClientEmail  <input type="text" name="ClientEmail" id="ClientEmail" readonly> <br> <br>
+            ServiceID    <input type="text" name="ServiceID" id="ServiceID" readonly > <br> <br>
+            Category     <input type="text" name="Category" id="Category" readonly > <br> <br>
+            ServiceTitle <input type="text" name="ServiceTitleForm" id="ServiceTitleForm" readonly> <br> <br>
+            clientNotes  <input type="text" name="clientNotes" id="clientNotes" > <br> <br>
+            startDate    <input type="text" name="startDate" id="startDate" readonly > <br> <br>
+            Finish Date <input type="text" name="finishDate" id="finishDate"> <br> <br>
+            availedPlan  <input type="text" name="availedPlan" id="availedPlan" readonly> <br> <br>
+            Price        <input type="text" name="Price" id="Price" readonly> <br> <br>
+            AgreementContract <br>
+            Agree   <input type="checkbox" value="Agree" name="Agree"  > 
+            Decline <input type="checkbox" value="Agree" name="Decline" > <br> <br>
+
+            <input type="submit" value="Buy" id="ButtonSubmit" onclick="HideDiv()"> <input type="button" value="Cancel" onclick="HideDiv()">
+            
+            </form>
+
+            
+            </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="content"> 
                 <!-- Carousel-->
                 <div id="AvailService_Carousel">
 
@@ -84,9 +139,9 @@ if(!isset($_SESSION['SessionName'])){
 
                     <div id="ServicePlans" class="ServiceContainerChild"> 
                         
-                        <div id="Plan_Basic" class="Plan"> <h3>BASIC </h3></div>
-                        <div id="Plan_Standard" class="Plan" > <h3> STANDARD  </h3> </div>
-                        <div id="Plan_Premium" class="Plan"> <h3> PREMIUM </h3> </div>
+                        <div id="Plan_Basic" class="Plan" onclick="BasicPlan()"> <h3>BASIC </h3></div>
+                        <div id="Plan_Standard" class="Plan" onclick="StandardPlan()"> <h3> STANDARD  </h3> </div>
+                        <div id="Plan_Premium" class="Plan" onclick="PremiumPlan()"> <h3> PREMIUM </h3> </div>
 
                         <div id="Plan_DescriptionContainer"> 
                         <h4 id="Plan_Plan"> Plan  </h4>
@@ -131,37 +186,22 @@ if(!isset($_SESSION['SessionName'])){
 
              <!-- Avail servie form -->
 
+<div id="HiddenDiv">
+<p id="BasicPlanDescription_Info"> P </p>
+<p id="BasicPlanPrice_Info"> P </p>
 
+<p id="StandardPlanDescription_Info"> P </p>
+<p id="StandardPlanPrice_Info"> P </p>
 
+<p id="PremiumPlanDescription_Info"> P </p>
+<p id="PremiumPlanPrice_Info"> P </p>
+    
+</div>
 
+    </div> <!--end of contents -->
              <?php include_once('Includes/footer.php')?>
 
-<center>
 
-<!-- Form will show when buy button have been clicked-->
-             
-            <form action="" method="post" id="AvailServiceForm"> 
-
-            OwnerEmail   <input type="text" name="OwnerEmail" id="OwnerEmail" readonly> <br> <br>
-            ClientEmail  <input type="text" name="ClientEmail" id="ClientEmail" readonly> <br> <br>
-            ServiceID    <input type="text" name="ServiceID" id="ServiceID" readonly > <br> <br>
-            Category     <input type="text" name="Category" id="Category" readonly > <br> <br>
-            ServiceTitle <input type="text" name="ServiceTitleForm" id="ServiceTitleForm" readonly> <br> <br>
-            clientNotes  <input type="text" name="clientNotes" id="clientNotes" > <br> <br>
-            startDate    <input type="text" name="startDate" id="startDate" readonly > <br> <br>
-            Finish Date <input type="text" name="finishDate" id="finishDate"> <br> <br>
-            availedPlan  <input type="text" name="availedPlan" id="availedPlan"> <br> <br>
-            Price        <input type="text" name="Price" id="Price" readonly> <br> <br>
-            AgreementContract <br>
-            Agree   <input type="checkbox" value="Agree" name="Agree"  > 
-            Decline <input type="checkbox" value="Agree" name="Decline" > <br> <br>
-
-            <input type="submit" value="Buy" id="ButtonSubmit">
-            
-            </form>
-
-            
-    </center>
              <script src= "Scripts/AvailService.js"></script>
     </body>
 </html>
