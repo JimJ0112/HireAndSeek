@@ -12,7 +12,7 @@ if($accountType == "Freelancer"){
     $redirectQuery= "Customer_Dashboard.php";
 }
 
-
+echo "<script> sessionStorage.setItem('sessionName', '$sessionID'); </script>";
 
 ?>
 

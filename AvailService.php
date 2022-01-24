@@ -88,7 +88,7 @@ if(!isset($_SESSION['SessionName'])){
                         <div id="Plan_Premium" class="Plan"> <h3> PREMIUM </h3> </div>
 
                         <div id="Plan_DescriptionContainer"> 
-
+                        <h4 id="Plan_Plan"> Plan  </h4>
                             <h4 id="Plan_Description"> Plan Description Placeholder </h4>
                             <button id = "Buy">Price Php 000.00</button>
                         </div>
@@ -142,6 +142,7 @@ if(!isset($_SESSION['SessionName'])){
             OwnerEmail   <input type="text" name="OwnerEmail" id="OwnerEmail" readonly> <br>
             ClientEmail  <input type="text" name="ClientEmail" id="ClientEmail" readonly> <br>
             ServiceID    <input type="text" name="ServiceID" id="ServiceID" readonly > <br> 
+            Category     <input type="text" name="Category" id="Category" readonly > <br> 
             ServiceTitle <input type="text" name="ServiceTitle" id="ServiceTitle" readonly> <br>
             clientNotes  <input type="text" name="clientNotes" id="clientNotes" > <br>
             startDate    <input type="text" name="startDate" id="startDate" readonly > <br>

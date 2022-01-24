@@ -22,7 +22,11 @@ console.log(AvailedService);
             console.log(AvailedServiceINFO);
             setValues(AvailedServiceINFO);
 
-            
+            availService(AvailedServiceINFO);
+
+
+
+
         } else{window.location.href="ServicesOffered.php"}      
     };
     
@@ -83,12 +87,15 @@ function setValues(array){
 function availService(array){
 var DataArray = array;
 
-            
+var client = sessionStorage.getItem('sessionName');
+var PlanValue = document.getElementById('Plan_Plan').innerText;
+var PriceValue =document.getElementById('Buy').innerText;
 
 const OwnerEmail = document.getElementById("OwnerEmail");
 const ClientEmail = document.getElementById("ClientEmail");
 const ServiceID = document.getElementById("ServiceID");
 const ServiceTitle = document.getElementById("ServiceTitle"); 
+const Category = document.getElementById("Category");
 const clientNotes = document.getElementById("clientNotes");
 const startDate = document.getElementById("startDate");
 const finishedDate =document.getElementById("finishedDate");
@@ -96,11 +103,14 @@ const availedPlan = document.getElementById("availedPlan");
 const Price = document.getElementById("Price");
            
 OwnerEmail.value= DataArray[0]['ServiceOwnerEmail'];
+ClientEmail.value= client;
+ServiceID.value= DataArray[0]['ServiceID'];
+ServiceTitle.value= DataArray[0]['ServiceTitle'];
 
+startDate.value= DataArray[0]['ServiceOwnerEmail'];
 
-  
-    
-
+availedPlan.value= PlanValue;
+Price.value= PriceValue;
 
 } // end of avail service function
 
