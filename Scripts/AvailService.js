@@ -1,14 +1,15 @@
 
 var AvailedService = sessionStorage.getItem('AvailedServiceID');
-
+;
 if(!AvailedService){ window.location.href="ServicesOffered.php";
 console.log(AvailedService);
 }
 
 
     //Main
-    var BuyButton = document.getElementById("Buy");
+    
     var Form = document.getElementById("AvailServiceForm");
+    
 
     var xmlhttp = new XMLHttpRequest(AvailedService);
     xmlhttp.open("POST", "Backend/ServiceInfoRequest.php", true);
@@ -16,24 +17,36 @@ console.log(AvailedService);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     
     xmlhttp.onreadystatechange = function() {
+ 
+
         if (this.readyState === 4 || this.status === 200){ 
            
             
              AvailedServiceINFO=this.response;
+             
              AvailedServiceINFO = JSON.parse(AvailedServiceINFO); 
+            //ArrayForPlan.push(AvailedServiceINFO);
+
             console.log(AvailedServiceINFO);
             setValues(AvailedServiceINFO);
 
-      
+
             
+
             
-            
-            
+
+            /*
+            PlanBasic.addEventListener('click', function(){ alert("Basic")});
+            PlanStandard.addEventListener('click', function(){alert("standard");});
+            PlanPremium.addEventListener('click', function(){ alert("premium")});
+            */
 
 
 
 
-        } else{window.location.href="ServicesOffered.php"}      
+        } else{window.location.href="ServicesOffered.php"}   
+        
+       // console.log("array for plan" + ArrayForPlan);
     };
     
      xmlhttp.send("ReqServiceID=" + AvailedService);
@@ -79,14 +92,16 @@ function setValues(array){
 
    // NOT DONE YET
    
-    //totalRatings.innerHTML = ;
-    
-    //console.log(AccountName);
-    //console.log(AccountLevel);
    console.log(ServiceTitle);
-   // console.log(totalRatings);
-   // console.log(ServiceDescription);
-   // console.log(BuyButton);
+
+const PlanBasicBtn = document.getElementById("Plan_Basic");
+const PlanStandardBtn= document.getElementById("Plan_Standard");
+const PlanPremiumBtn = document.getElementById("Plan_Premium");
+
+PlanBasicBtn.addEventListener('click',BasicPlan(array));
+PlanStandardBtn.addEventListener('click',StandardPlan(array));
+PlanPremiumBtn.addEventListener('click',PremiumPlan(array));
+
 
 
 }
@@ -131,5 +146,50 @@ Category.value = CategoryValue;
 availedPlan.value= PlanValue;
 Price.value= PriceValue;
 
+
+
+
+
+
+
+
 } // end of avail service function
+
+
+
+function BasicPlan(array){
+DataArray = array;
+var Plan = document.getElementById('Plan_Plan');
+var PlanDescription = document.getElementById('Plan_Description');
+var Price  = document.getElementById("Buy");
+
+Plan.innerText = "Basic Plan";
+PlanDescription.innerText = DataArray[0]['ServiceBasicPlanDescription'];
+Price.innerText = "Php "+DataArray[0]['ServiceBasicPlanPrice'] + ".00";
+
+}
+
+function StandardPlan(array){
+    DataArray = array;
+    var Plan = document.getElementById('Plan_Plan');
+    var PlanDescription = document.getElementById('Plan_Description');
+    var Price  = document.getElementById("Buy");
+    
+    Plan.innerText = "Standard Plan";
+    PlanDescription.innerText = DataArray[0]['ServiceStandardPlanDescription'];
+    Price.innerText = "Php "+DataArray[0]['ServiceStandardPlanPrice'] + ".00";
+    
+}
+
+    function PremiumPlan(array){
+        DataArray = array;
+        var Plan = document.getElementById('Plan_Plan');
+        var PlanDescription = document.getElementById('Plan_Description');
+        var Price  = document.getElementById("Buy");
+        
+        Plan.innerText = "Premium Plan";
+        PlanDescription.innerText = DataArray[0]['ServicePremiumPlanDescription'];
+        Price.innerText = "Php "+DataArray[0]['ServicePremiumPlanPrice'] + ".00";
+        
+ }
 
