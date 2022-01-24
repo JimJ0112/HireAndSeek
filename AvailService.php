@@ -55,7 +55,7 @@ if(!isset($_SESSION['SessionName'])){
 
         <!-- Form will show when buy button have been clicked-->
              
-            <form action="" method="post" id="AvailServiceForm"> 
+            <form action="Backend/AvailServiceBackend.php" method="post" id="AvailServiceForm"> 
 
             OwnerEmail   <input type="text" name="OwnerEmail" id="OwnerEmail" readonly> <br> <br>
             ClientEmail  <input type="text" name="ClientEmail" id="ClientEmail" readonly> <br> <br>
