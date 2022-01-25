@@ -907,6 +907,149 @@ padding: auto;
     .Team-Member .memberSocials li a{
         display: block;
         padding: 6px;
+    }/*-----------------------------------------Become a seller----------------------------------------------*/
+    .Become-Container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(auto, auto);
+        height: 100vh;
+        grid-template-areas: 
+        'nav'
+        'caro'
+        'how'
+        'faq'
+        'footer';
+    }
+    .Become-slideCaption{
+        font-size: 60px;
+        text-shadow: 2px 2px 10px #302f2f;
+        color: rgb(255, 255, 255);
+        font-family: fantasy;
+        position: absolute;
+        text-align: center;
+        margin: 0 280px;
+        transform: translateY(-185%);
+    }
+    .getStartedBtn{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        transform: translateY(-360%); 
+    }
+    .getStartedBtn a{
+        font-size: 20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 0.25em;
+        padding: 12px 80px;
+        background-color: #ffaa3a;
+        color: black;
+    }
+    .Become-How{
+        grid-area: how;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .Become-HowGrid{
+        display:flex;
+        height: auto;
+        text-align: center;
+        margin: auto;
+    }
+    /* HOW THIS WEB WORKS / FAQS */
+    .Become-ContentTitle{  
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top:15px;
+    }
+    .How-Card{
+        flex: 1 1 0px;
+        margin: 40px 60px;
+     }
+    .How-Title{
+        font-size: 15px;
+        font-weight: bold;
+        margin: 10px;
+    }
+    /* BECOME A SELLER - FAQS*/
+    .Become-FAQs{
+        grid-area: faq;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(241, 241, 241);
+  
+    }
+    .Become-FAQSGrid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: minmax(auto, auto);
+        height: auto;
+        grid-template-areas: 'FAQ1 FAQ2 FAQ3 FAQ4';
+    }
+    .Become-FAQ1{
+        grid-area: FAQ1;
+    }
+    .Become-FAQ2{
+        grid-area: FAQ2;
+    }
+    .Become-FAQ3{
+        grid-area: FAQ3;
+    }
+    .Become-FAQ4{
+        grid-area: FAQ4;
+    }
+    
+    details{
+        margin: 30px 10px;
+        border-radius: 0.25rem;
+    }
+    details[open]{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 0.3em 0;
+    }
+    Summary{
+        font-size: 15px;
+        font-weight: 500;
+        background-color: #ffaa3a;
+        padding: 10px 20px;
+        border-radius: 0.25rem;
+        position: relative;
+        cursor: pointer;
+        list-style: none;
+    }
+    summary:hover, .getStartedBtn:hover a{
+        box-shadow: 0 0 0 1px;
+    }
+    /* Putting Plus / Minus sign*/
+    details > summary::after{
+        position: absolute;
+        content: "+";
+        right: 10px;
+        font-weight: bold;
+    }
+    details[open] > summary::after{
+        position: absolute;
+        content: "-";
+        right: 10px;
+        font-weight: bold;
+    }   
+    /* Removing Arrow*/
+    details summary::-webkit-details-marker {
+        display:none;
+    }
+     /* Animation*/
+    details[open] summary ~ * {
+        animation: sweep .3s ease-in-out;
+    }
+    
+    @keyframes sweep {
+        0% {opacity: 0; margin-top: -10px;}
+        100% {opacity: 1; margin-top: 0px;}
+    }
+    .Faqs-Content{
+        margin: 0 20px;
+        text-align: center;
+        font-size: 15px;
     }
 /*-----------------------------------------DASHBOARD------------------------------------------------------*/
 
@@ -1300,4 +1443,28 @@ border: 1px solid black;
     .Team-Member{
         margin: 15px;
     }
+    
+    /*--------------BECOME---------------*/
+    .Become-HowGrid{
+        flex-direction: column;
+        height: auto;
+    }
+    .Become-FAQSGrid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'FAQ1 FAQ2'
+        'FAQ3 FAQ4';
+   }
+    .getStartedBtn{
+        transform: translateY(-500%); 
+       
+    }
+    .getStartedBtn a{
+        font-size: 12px;
+        padding: 10px 50px;
+    }
+    .Become-slideCaption{
+        font-size: 30px;
+        margin: 0 50px;
+        transform: translateY(-240%);
+    }    
 }
