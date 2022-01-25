@@ -40,16 +40,122 @@ function GetMessages(){
            
             
             var dataArray = this.response;
-           // dataArray = JSON.parse(dataArray);
+            dataArray = JSON.parse(dataArray);
             console.log(dataArray);
- 
-            
+            var number = dataArray.length;
+            createElements(number);
+            setData(dataArray);
      
         }else{console.log(err);}      
-    };
+    }
     
     xmlhttp.send(params);
     
     }// end of function
 
-GetMessages();
+//GetMessages();
+
+
+// function to create elements
+function createElements(numb){
+    var Number = numb;
+
+    const MessageList = document.getElementById('Messages_DisplayList');
+    //refresh container
+    MessageList.innerHTML = "";
+
+for(var i = 0; i<Number;i++){
+
+    var messageListItem = document.createElement('li');
+    var messageListItemSubject = document.createElement('p');
+    var messageListItemSender = document.createElement('p');
+    var messageListItemDate = document.createElement('p');
+
+    messageListItem.setAttribute('class','messageListItem');
+    messageListItemDate.setAttribute('class','messageListItemDate');
+    messageListItemSender.setAttribute('class','messageListItemSender');
+    messageListItemSubject.setAttribute('class','messageListItemSubject');
+
+    messageListItem.appendChild(messageListItemDate);
+    messageListItem.appendChild(messageListItemSender);
+    messageListItem.appendChild(messageListItemSubject);
+
+    MessageList.appendChild(messageListItem);
+    
+}
+
+}// end of create elements
+
+
+function setData(array){
+var DataArray = array;
+var Number = DataArray.length;
+
+const messageListItem = document.getElementsByClassName("messageListItem");
+const messageListItemDate = document.getElementsByClassName("messageListItemDate");
+const messageListItemSender = document.getElementsByClassName("messageListItemSender");
+const messageListItemSubject = document.getElementsByClassName("messageListItemSubject");
+
+
+for(var i =0; i<=Number;i++){
+
+    messageListItemDate[i].innerText = DataArray[i]['MessageDate'] +" - "+DataArray[i]['MessageTime'];
+    messageListItemSender[i].innerText= DataArray[i]['SenderEmail'];
+    messageListItemSubject[i].innerText= DataArray[i]['Subject'];
+    messageListItem[i].setAttribute('onclick','showMessage(' +DataArray[i]['MessageID'] +')');
+console.log("running");
+
+}
+
+
+
+} // end of function
+
+// show Message function
+function showMessage(ID){
+
+    var UserId = ID;
+    
+    var xmlhttp = new XMLHttpRequest();
+    var params = "data="+UserId;
+    xmlhttp.open("POST", "Backend/GetDisplayMessages.php", true);
+    
+
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+            
+            var dataArray = this.response;
+            dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+            setMessage(dataArray);
+
+
+
+     
+        }else{console.log("error");}      
+    }
+    
+    xmlhttp.send(params);
+
+
+
+
+
+}
+
+
+function setMessage(data){
+
+    dataArray = data;
+    const messageSender = document.getElementById("Message_SenderContainer");
+    const messageSubject = document.getElementById("Message_SubjectContainer");
+    const messageBody = document.getElementById("Message_BodyContainer");
+
+    messageSender.innerText = dataArray[0]['SenderEmail'];
+    messageSubject.innerText = dataArray[0]['Subject'];
+    messageBody.innerText = dataArray[0]['MessageBody'];
+    
+}

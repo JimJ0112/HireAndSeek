@@ -1,27 +1,23 @@
 <?php
-session_start();
-require('Includes/databaseConnection.php');
+require('../includes/databaseConnection.php');
+$id= $_POST['data'];
 
-$username= $_POST['data'];
+$QueryString = "SELECT * FROM inbox WHERE MessageID = '$id'";
 
-
-$SelectQuery = "Select * FROM inbox WHERE RecieverEmail = '$username'";
-//$SelectQuery = "Select * FROM inbox ";
-
-//echo $SelectQuery;
-
-
-$result = mysqli_query($conn,$SelectQuery);
+$result = mysqli_query($conn,$QueryString);
 $resultCheck = mysqli_num_rows($result);
 $data = array();
+
 
 if($resultCheck > 0){
        
     while($row = mysqli_fetch_array($result)){
         
         
- 
+        //$data[] = $row;
+
         
+
 
         $data[] = $row;
 
@@ -35,6 +31,5 @@ if($resultCheck > 0){
 } else{
     echo" connection failed";
 }
-
 
 ?>

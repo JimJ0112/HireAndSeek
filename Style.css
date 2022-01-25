@@ -1085,6 +1085,26 @@ table{
     padding: 0;
 
 }
+
+#Message_DisplayList{
+    list-style-type: none;
+    border: 1px solid black;
+    width: 100%;
+    padding: 0;
+    text-decoration: none;
+    margin-left: 0;
+    
+}
+
+.messageListItem{
+    height: 100px;
+    border: 1px solid black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
 #MessageDisplay_Message{
     border: 1px solid black;
     grid-area: messagebody;

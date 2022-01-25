@@ -76,8 +76,14 @@ $data = $_GET['data'];
  
                   
                 </ul>
+
+
                  
             </nav>
+
+            <ul id="Messages_DisplayList">
+                    
+            <ul>
 
 
         </div>
