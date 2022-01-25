@@ -85,12 +85,13 @@ function generateCards(int){
 // INITIAL LOADING CONTENT DATA  
 console.log("js loaded");
 
-
+function initialGet(){
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET","Backend/GET_HighRatedServicesDATA.php",true);
 
-xhr.onload = function(){
+xhr.onreadystatechange = function(){
+if (this.readyState === 4 || this.status === 200){ 
 var PhpHandler = this.response;
 
 PhpHandler = JSON.parse(PhpHandler);
@@ -100,11 +101,12 @@ console.log(PhpHandler);
 
 
 GetProcessDatas(PhpHandler);
-
-}
+} // end of if
+} // end of onreadystatechange
 
 xhr.send();
-
+}
+initialGet();
 
 
 
