@@ -9,7 +9,7 @@ $Username = $_POST['UserName'];
 
 
 
-    $queryString = "SELECT * FROM transactionrecords WHERE OwnerEmail = '$Username' && TransactionStatus = 'Delivered' ";
+    $queryString = "SELECT * FROM transactionrecords WHERE OwnerEmail = '$Username' && TransactionStatus = 'Delivered' ORDER BY transactionID DESC ";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
     $data = array();

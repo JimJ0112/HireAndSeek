@@ -392,6 +392,7 @@
     margin: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: inline-block;
+    overflow-wrap: break-word;
   }
   
              /*--------- Price button -------*/
@@ -450,6 +451,7 @@ padding: 0;
 position: relative;
 top: -45px;
 left: 55px;
+
 }
 
 .AccountLevel{
@@ -1229,7 +1231,7 @@ table{
     text-decoration: none;
     margin-left: 0;
     font-family: Arial, Helvetica, sans-serif;
-    
+    overflow: scroll;
 }
 
 .messageListItem{
