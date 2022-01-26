@@ -9,10 +9,10 @@ $Username = $_POST['UserName'];
 
 
 
-    $queryString = "SELECT * FROM transactionrecords WHERE OwnerEmail = '$Username' && TransactionStatus = 'Pending' ";
+    $queryString = "SELECT * FROM servicesinfo WHERE ServiceOwnerEmail = '$Username' ";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
-    $data = array();
+     $data = array();
 
 
     if($resultCheck > 0){

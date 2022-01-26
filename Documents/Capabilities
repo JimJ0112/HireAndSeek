@@ -21,8 +21,7 @@ Progress:
 - the website can let customers  browse and avail services offered by the freelancers
     //progress: almost done na inaayos nalang frontend saka aayusin nalang table sa db
 
-
-        // almost complete, need nalang makapag notif and display sa freelancer everytime na magkaka request sakanya
+    // almost complete, need nalang ng customer ng notif pag nadeliver na request niya
 
 -the website can let freelancers and customers can search existing services 
     //progress: done na pero naiiisip iimplement yung pag pinindot yung search button may new page na lalabas tas nandun cards ng results

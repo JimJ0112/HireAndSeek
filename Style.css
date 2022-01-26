@@ -1334,6 +1334,21 @@ border: 1px solid black;
     border-collapse: collapse;
 }
 
+/*---------------------------------Jobs.php-------------------------------------------------*/
+#JobsTable{
+    border: 1px solid black;
+
+}
+
+#JobsTable td{
+    border: 1px solid black;
+    height: fit-content;
+    padding:10px;
+}
+#JobsContainer{
+    height: 100%;
+}
+
 /*-------------------------------------- Media Testing------------------------------------ */
 @media all and (max-width:800px){
     .Grid-container{

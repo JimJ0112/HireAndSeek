@@ -30,6 +30,7 @@ if(!isset($_SESSION['SessionName'])){
            }
            ?>
 
+
 <nav id="Dashboard_Categories">
 
 <ul id="Dashboard_CategoriesList">
@@ -45,26 +46,38 @@ if(!isset($_SESSION['SessionName'])){
 
     </nav>
 
+        <div id="JobsContainer">
 
-        <div id="OrdersContainer">
+       <tr>
+       <td> category </td>
+       <td>Title </td>
+       <td>Description </td> 
+       <td>BasicPlanDescription </td> 
+       <td>BasicPlanPrice </td>
+       <td>StandardPlanDescription </td> 
+       <td>StandardPlanPrice </td>
+       <td>PremiumPlanDescription </td>
+       <td>PremiumPlanPrice </td>
+       <td>JobTotalRatings </td>
+       <td>Job5StarRatings </td>
+       <td>Job4StarRatings </td>
+       <td>Job3StarRatings </td>
+       <td>Job2StarRatings </td>
+       <td>Job1StarRatings </td>
+    
+        </tr>
 
-           <table id="OrdersTable">
-           <tr>
-               <td>  Buyer </td> 
-               <td>  JOB   </td>
-               <td>  Plan Availed </td>
-               <td>  Due Date </td>
-               <td>  Mailing Address </td>
-               <td>  Notes </td>
-               <td> Status </td>
-            <tr>
+           <table id="JobsTable">
 
            </table>
 
         </div>
 
 
-            <script src="Scripts/Orders.js"> </script>
+        
+
+
+            <script src="Scripts/Jobs.js"> </script> 
                  <!-- Footer -->
                  <?php include_once('Includes/footer.php')?>
 
