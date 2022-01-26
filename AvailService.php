@@ -23,7 +23,7 @@ $data = $_GET['data'];
 <!DOCTYPE html>
 <html>
     <head>
-    <script scr="Scripts/RateService.js"> </script>
+    
        <!-- <script src= "Scripts/AvailService.js"></script>-->
         <link rel="stylesheet" href="Style.css" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
