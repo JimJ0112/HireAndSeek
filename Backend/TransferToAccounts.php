@@ -13,7 +13,7 @@
         while($row = mysqli_fetch_array($result)){
          $email = strstr($row['email'],'@',true);   
         
-        $InsertQuery = "INSERT INTO accounts VALUES ('$row[email]', '$row[firstname]', '$row[lastname]', '$row[middlename]', '$row[Birthdate]', '$row[gender]', '$row[userpassword]', '$row[contact]', '$row[address]', '$row[description]', '$row[userlanguage]', '$row[occupation]', '$row[education]', '$row[skills]', '$row[snapshotPath]', '$row[idimage1type]', '$row[idimage1Path]', '$row[idimage2type]', '$row[idimage2Path]', '$row[AccountType]', 'Level 1', '$row[filesdirectory]', '$email$row[firstname]Transactions','$email$row[firstname]Inbox','$row[customUsername]')";
+        $InsertQuery = "INSERT INTO accounts VALUES ('$row[email]', '$row[firstname]', '$row[lastname]', '$row[middlename]', '$row[Birthdate]', '$row[gender]', '$row[userpassword]', '$row[contact]', '$row[address]', '$row[description]', '$row[userlanguage]', '$row[occupation]', '$row[education]', '$row[skills]', '$row[snapshotPath]', '$row[idimage1type]', '$row[idimage1Path]', '$row[idimage2type]', '$row[idimage2Path]', '$row[AccountType]', 'Level 1', '$row[filesdirectory]','','','$row[customUsername]')";
          
         mysqli_query($conn,$InsertQuery);
             

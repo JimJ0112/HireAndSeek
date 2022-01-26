@@ -18,9 +18,9 @@ Progress:
     // progress: Highest rated services nalang kulang
     // almost done na yung highest rated services, 
 
-- the website can let customers can browse and avail services offered by the freelancers
+- the website can let customers  browse and avail services offered by the freelancers
     //progress: almost done na inaayos nalang frontend saka aayusin nalang table sa db
-    // Account level at images nalang kulang since wala pang users and wala pang form para makapag create ng service (ininsert lang dummy data mula sa db mismo)
+
 
         // almost complete, need nalang makapag notif and display sa freelancer everytime na magkaka request sakanya
 
@@ -28,9 +28,6 @@ Progress:
     //progress: done na pero naiiisip iimplement yung pag pinindot yung search button may new page na lalabas tas nandun cards ng results
 
 -the website can let the administrator  manually verify if the given personal details/identity of the user is valid
-    // nasetup na maintenance page, nafefetch narin yung files from database, need nalang gawan ng functions
-
-    // nalilist na sa table yung data ni user tapos naaapprove na ni admin 
 
     // naaapprove na at natatransfer sa main accounts table. done na yung 1 capability (need pa ayusin yung user reports)
 
@@ -40,6 +37,5 @@ Progress:
 
 
 -the website can let the freelancers and customers can communicate via messages
-    // almost done, nakakapag send ng message at fetch ng messages 
     // problem lang yung address, mahaba masyado need ng address suggester
     // reply button need din iimplement, automatic mag gegenerate sa frontend yung address ng rereplyan

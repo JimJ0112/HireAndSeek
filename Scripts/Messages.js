@@ -28,6 +28,7 @@ function ReadMessage(){
 /* ajax function */
 
 function GetMessages(){
+    const SessionName = sessionStorage.getItem("sessionName");
     var xmlhttp = new XMLHttpRequest();
     var params = "data="+SessionName
     xmlhttp.open("POST", "Backend/GetMessages.php", true);
@@ -46,7 +47,14 @@ function GetMessages(){
             createElements(number);
             setData(dataArray);
      
-        }else{console.log(err);}      
+        }else{
+
+            const MessageList = document.getElementById('Messages_DisplayList');
+            //refresh container
+            MessageList.innerHTML = "";
+
+
+        }      
     }
     
     xmlhttp.send(params);
@@ -54,6 +62,35 @@ function GetMessages(){
     }// end of function
 
 //GetMessages();
+
+
+// get sent messages
+function GetSentMessages(){
+    const SessionName = sessionStorage.getItem("sessionName");
+    var xmlhttp = new XMLHttpRequest();
+    var params = "data="+SessionName
+    xmlhttp.open("POST", "Backend/GetSentMessages.php", true);
+    
+
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+            
+            var dataArray = this.response;
+           dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+            var number = dataArray.length;
+            createElements(number);
+            setData(dataArray);
+     
+        }else{console.log(err);}      
+    }
+    
+    xmlhttp.send(params);
+    
+    }// end of function
 
 
 // function to create elements
@@ -100,7 +137,7 @@ const messageListItemSubject = document.getElementsByClassName("messageListItemS
 for(var i =0; i<=Number;i++){
 
     messageListItemDate[i].innerText = DataArray[i]['MessageDate'] +" - "+DataArray[i]['MessageTime'];
-    messageListItemSender[i].innerText= DataArray[i]['SenderEmail'];
+    messageListItemSender[i].innerText= "Sender : "+DataArray[i]['SenderEmail'];
     messageListItemSubject[i].innerText= DataArray[i]['Subject'];
     messageListItem[i].setAttribute('onclick','showMessage(' +DataArray[i]['MessageID'] +')');
 console.log("running");
@@ -153,9 +190,11 @@ function setMessage(data){
     const messageSender = document.getElementById("Message_SenderContainer");
     const messageSubject = document.getElementById("Message_SubjectContainer");
     const messageBody = document.getElementById("Message_BodyContainer");
+    const messageReciever = document.getElementById("Message_RecepientContainer");
 
-    messageSender.innerText = dataArray[0]['SenderEmail'];
-    messageSubject.innerText = dataArray[0]['Subject'];
+    messageSender.innerText = "Sender: "+dataArray[0]['SenderEmail'];
+    messageSubject.innerText = "Subject: "+dataArray[0]['Subject'];
     messageBody.innerText = dataArray[0]['MessageBody'];
+    messageReciever.innerHTML = "Reciever: "+dataArray[0]['RecieverEmail'];
     
 }

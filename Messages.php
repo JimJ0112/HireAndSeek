@@ -71,7 +71,7 @@ $data = $_GET['data'];
                 <ul>
                    
                     <li onclick ="ReadMessage()" class="Message_categories"> Inbox </li> 
-                    <li onclick = "" class="Message_categories"> Sent Box </li> 
+                    <li onclick = "GetSentMessages()" class="Message_categories"> Sent Box </li> 
                     <li onclick = "CreateMessage()" class="Message_categories" > New Message </li>
  
                   
@@ -113,6 +113,7 @@ $data = $_GET['data'];
                     <div id="Message_ControlsContainer"> </div>
                    
                     <h4 id="Message_SenderContainer">  Message Sender </h4> 
+                    <h4 id="Message_RecepientContainer">  Message Recepient </h4> 
                     <h4 id="Message_SubjectContainer">  Subject placeholder </h4> 
                     <h5 id="Message_BodyContainer"> Message Body</h5> 
                     

@@ -3,6 +3,7 @@
                body{
                 margin: 0;
                 padding:0;
+                
                 }
     /* ------------------------Grid ng index---------------------------*/ 
                 .Grid-container{
@@ -1227,6 +1228,7 @@ table{
     padding: 0;
     text-decoration: none;
     margin-left: 0;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
@@ -1242,6 +1244,7 @@ table{
 #MessageDisplay_Message{
     border: 1px solid black;
     grid-area: messagebody;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -1291,6 +1294,12 @@ border: 1px solid black;
 }
 
 #Message_SenderContainer{
+    height: 5%;
+    width: 99.5%;
+    border: 1px solid black;
+}
+
+#Message_RecepientContainer{
     height: 5%;
     width: 99.5%;
     border: 1px solid black;
