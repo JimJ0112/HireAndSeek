@@ -44,7 +44,7 @@ else{
     <ul id="Dashboard_CategoriesList">
     <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="CreateJob.php"> Add Job </a> </li>
     <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="Messages.php"> Messages </a> </li>
-    <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > DASHBOARD </li>
+    <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="Orders.php"> ORDERS </a> </li>
     <li class="Dashboard_CategoriesElement" id="Freelancer_jobs" > JOBS </li>
     <li class="Dashboard_CategoriesElement" id="Freelancerd_transactions" > TRANSACTIONS </li>
     <li class="Dashboard_CategoriesElement" id="Freelancer_performance" > PERFORMANCE</li>

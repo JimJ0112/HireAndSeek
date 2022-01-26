@@ -5,7 +5,7 @@ require('Includes/databaseConnection.php');
 $username= $_POST['data'];
 
 
-$SelectQuery = "Select * FROM inbox WHERE SenderEmail = '$username'";
+$SelectQuery = "Select * FROM inbox WHERE SenderEmail = '$username' ORDER BY MessageID DESC";
 //$SelectQuery = "Select * FROM inbox ";
 
 //echo $SelectQuery;

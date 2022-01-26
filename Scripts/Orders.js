@@ -1,3 +1,16 @@
+function init() // This is the function the browser first runs when it's loaded.
+{
+  displayOrders() // Then runs the refresh function for the first time.
+  var int = self.setInterval(function () {
+    displayOrders() 
+  }, 10000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+}
+
+
+
+
+
+function displayOrders() {
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.open("POST", "Backend/OrdersBackend.php", true);
 
@@ -22,7 +35,7 @@ xmlhttp.onreadystatechange = function() {
 
 xmlhttp.send(params);
 
-
+}
 
 
 // function to create elements

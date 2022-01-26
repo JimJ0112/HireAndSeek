@@ -28,7 +28,7 @@ $data = $_GET['data'];
             
 
         </head>
-        <body>
+        <body onload="init()">
 
             <?php
            
@@ -62,9 +62,9 @@ $data = $_GET['data'];
 
 
 <!-- Page body -->
-        <div id="Messages_Body" class="MessagesPage_div">
+        <div id="Messages_Body" class="MessagesPage_div" >
 
-        <div id="Messages_List" class="MessagesPage_div"> 
+        <div id="Messages_List" class="MessagesPage_div" > 
 
             <nav id="message_nav">
                
