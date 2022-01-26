@@ -40,7 +40,7 @@ console.log(AvailedService);
             setValues(AvailedServiceINFO);
 
              BasicPlan();
-            
+             TotalRatings();
 
             
 
@@ -345,6 +345,37 @@ function StandardPlan(){
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
     var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=5";
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+           
+            var dataArray = this.response;
+           //dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+
+            
+     
+        }else{console.log(err);}      
+    };
+    
+    xmlhttp.send(params);
+    
+    
+
+ }// end of add1 star
+
+
+
+
+ function TotalRatings(){
+    var totalRatings = document.getElementById("totalRatings").innerText;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "Backend/TotalRatingsUpdateBackend.php", true);
+    
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&totalRatings="+totalRatings;
     
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     
