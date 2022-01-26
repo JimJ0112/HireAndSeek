@@ -23,14 +23,14 @@ $data = $_GET['data'];
 <!DOCTYPE html>
 <html>
     <head>
-
+    <script scr="Scripts/RateService.js"> </script>
        <!-- <script src= "Scripts/AvailService.js"></script>-->
         <link rel="stylesheet" href="Style.css" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
 
-    <body>
+    <body onload="init()">
         
             <!-- Nav bar section -->
             <?php
@@ -167,12 +167,12 @@ $data = $_GET['data'];
 
                     <div id="Rate" class="ServiceContainerChild"> 
                         <center>
-
-                        <div id="1Star" class="StarRatings"></div>
-                        <div id="2Star" class="StarRatings"></div>
-                        <div id="3Star" class="StarRatings"></div>
-                        <div id="4Star" class="StarRatings"></div>
-                        <div id="5Star" class="StarRatings"></div>
+                   
+                        <div id="1Star" class="StarRatings" onclick="add1star()"></div>
+                        <div id="2Star" class="StarRatings"onclick="add2star()"></div>
+                        <div id="3Star" class="StarRatings"onclick="add3star()"></div>
+                        <div id="4Star" class="StarRatings"onclick="add4star()"></div>
+                        <div id="5Star" class="StarRatings"onclick="add5star()"></div>
 
                         </center>
                     
@@ -180,8 +180,6 @@ $data = $_GET['data'];
                     </div>
 
                 </div>
-               <!-- <script src= "Scripts/AvailService.js"></script> -->
-             <!-- Footer -->
 
 
              <!-- Avail servie form -->
@@ -201,7 +199,7 @@ $data = $_GET['data'];
     </div> <!--end of contents -->
              <?php include_once('Includes/footer.php')?>
 
-
+            
              <script src= "Scripts/AvailService.js"></script>
     </body>
 </html>
