@@ -18,8 +18,8 @@
 
 <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="../Messages.php"> Messages </a> </li>
 <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="../CustomerOrders.php"> ORDERS </a> </li>
-<li class="Dashboard_CategoriesElement" id="Freelancerd_transactions" > <a href="../CanceledOrders.php"> Canceled Orders </a> </li>
-<li class="Dashboard_CategoriesElement" id="Freelancer_performance" > <a href="../DeliveredOrders.php">Delivered Orders </a></li>
+<li class="Dashboard_CategoriesElement" id="Freelancerd_transactions" > <a href="../CustomerCanceledOrders.php"> Canceled Orders </a> </li>
+<li class="Dashboard_CategoriesElement" id="Freelancer_performance" > <a href="../CustomerDeliveredOrders.php">Delivered Orders </a></li>
 <li class="Dashboard_CategoriesElement" id="Freelancer_profile" > PROFILE </li>
 
 </ul>

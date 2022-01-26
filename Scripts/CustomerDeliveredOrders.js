@@ -12,7 +12,7 @@ function init() // This is the function the browser first runs when it's loaded.
 
 function displayOrders() {
 var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("POST", "Backend/CustomerOrdersBackend.php", true);
+xmlhttp.open("POST", "Backend/CustomerDeliveredOrdersBackend.php", true);
 
 var params = "UserName="+ sessionStorage.getItem('sessionName');
 
@@ -38,6 +38,7 @@ xmlhttp.send(params);
 }
 
 
+
 // function to create elements
 function createElements(Number){
 
@@ -60,7 +61,7 @@ function createElements(Number){
     Notes = document.createElement('td');
     Status = document.createElement('td');
     FileMailing = document.createElement('td');
-    CancelButton = document.createElement('Button');
+ 
     
 
 
@@ -75,7 +76,7 @@ function createElements(Number){
     Notes.setAttribute('class','Notes'); 
     Status.setAttribute('class','Status'); 
     FileMailing.setAttribute('class','FileMailing');
-    CancelButton.setAttribute('class','Cancel');
+  
    // DeliverButton.setAttribute('onclick','JOBDelivered(');
     
     
@@ -86,7 +87,7 @@ function createElements(Number){
  row.appendChild(FileMailing);
  row.appendChild(Notes);
  row.appendChild(Status);
- row.appendChild(CancelButton);
+
 
     Table.append(row);
 
@@ -123,45 +124,8 @@ function setData(array){
         FileMailing[i].innerText = DataArray[i]['FileMailingAddress'];
         Notes[i].innerText = DataArray[i]['clientNotes']; 
          Status[i].innerText = DataArray[i]['TransactionStatus']; 
-         CancelButton[i].innerText = "Cancel"; 
-         CancelButton[i].setAttribute('onclick','CancelJob('+DataArray[i]['transactionID']+')');
- 
+
+
     }
 
 }// end of function
-
-
-
-
-
-
-
-function CancelJob(ID){
-    var TransactionID = ID;
-
-
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("POST", "Backend/CancelOrder.php", true);
-
-var params = "TransactionID="+ TransactionID;
-
-xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState === 4 || this.status === 200){ 
-       
-        //Table = document.getElementById("OrdersTable").innerHTML = "";
-        var dataArray = this.response;
-        //dataArray = JSON.parse(dataArray);
-        console.log(dataArray);
-        //var Number = dataArray.length;  
-       //createElements(Number);
-        //setData(dataArray);
-        
- 
-    }else{console.log(err);}      
-};
-
-xmlhttp.send(params);
-    
-} //// end of deliver job
