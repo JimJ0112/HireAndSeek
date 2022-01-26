@@ -125,6 +125,7 @@ const CategoryValue = document.getElementById("ServCategory").innerText;
 
 const OwnerEmail = document.getElementById("OwnerEmail");
 const ClientEmail = document.getElementById("ClientEmail");
+const MailingAddress = document.getElementById("MailingAddress");
 const ServiceID = document.getElementById("ServiceID");
 const ServiceTitleForm = document.getElementById("ServiceTitleForm"); 
 const Category = document.getElementById("Category");
@@ -140,6 +141,7 @@ OwnerEmail.value= AccountName;
 ClientEmail.value= client;
 ServiceID.value= AvailedID;
 ServiceTitleForm.value = Title;
+MailingAddress.value = sessionStorage.getItem('MailingAddress');
 
 startDate.value= date.getMonth() + 1 +"/"+ date.getDay()+"/" + date.getFullYear() ;
 

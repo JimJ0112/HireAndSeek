@@ -12,6 +12,12 @@ if(isset($_GET['data'])){
 $data = $_GET['data'];
     echo"<script> alert('Result: $data') </script>";
 }
+
+
+    $MailingAdd = $_SESSION["MailingAddress"];
+    echo "<script> sessionStorage.setItem('MailingAddress','$MailingAdd');</script>";
+
+
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +58,7 @@ $data = $_GET['data'];
 
             OwnerEmail   <input type="text" name="OwnerEmail" id="OwnerEmail" readonly> <br> <br>
             ClientEmail  <input type="text" name="ClientEmail" id="ClientEmail" readonly> <br> <br>
+            Mailing Address  <input type="text" name="MailingAddress" id="MailingAddress" > <br> <br>
             ServiceID    <input type="text" name="ServiceID" id="ServiceID" readonly > <br> <br>
             Category     <input type="text" name="Category" id="Category" readonly > <br> <br>
             ServiceTitle <input type="text" name="ServiceTitleForm" id="ServiceTitleForm" readonly> <br> <br>

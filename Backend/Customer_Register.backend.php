@@ -20,7 +20,7 @@ session_start();
          
        $description = $_POST[ "Description"];
        $language = $_POST[ "Language"];
-
+       $FileMailing = $_POST['FileEmail'];
 
 
        /* making directory to store the files for user */
@@ -84,7 +84,7 @@ session_start();
         header('location:../Customer_Register.php?data=registrationfailed-email_already_exists');
  
       } else{
-        $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middlename,Birthdate,gender,email,userpassword,contact,address,description,userlanguage,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,SignupStatus,filesdirectory,customUsername) VALUES(0,'$firstname','$lastname','$middleInitial','$Birthdate','$gender','$email','$password','$contact','$address','$description','$language','$snapshotdirectory','$idType','$ID1directory','$idType2','$ID2directory','$AccountType','','$Directory','$customUsername');";
+        $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middlename,Birthdate,gender,email,userpassword,contact,address,description,userlanguage,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,SignupStatus,filesdirectory,customUsername,FileMailingAddress) VALUES(0,'$firstname','$lastname','$middleInitial','$Birthdate','$gender','$email','$password','$contact','$address','$description','$language','$snapshotdirectory','$idType','$ID1directory','$idType2','$ID2directory','$AccountType','','$Directory','$customUsername','$FileMailing');";
         $result = mysqli_query($conn,$sqlquery) ;
         
         //echo $result;

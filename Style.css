@@ -1318,7 +1318,21 @@ border: 1px solid black;
 }
 
 
+/*-----------------------------------Orders.php---------------------------------------------*/
+#OrdersContainer{
+    height: 100%;
+    width: 100%;
+}
 
+#OrdersTable{
+    border: 1px solid black;
+}
+
+#OrdersTable td{
+    border: 1px solid black;
+    padding: 10px;
+    border-collapse: collapse;
+}
 
 /*-------------------------------------- Media Testing------------------------------------ */
 @media all and (max-width:800px){

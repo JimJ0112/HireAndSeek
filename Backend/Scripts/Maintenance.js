@@ -70,6 +70,7 @@ function createElements(Number){
     
     AccountIDCOL = document.createElement('td');
     AccountEmailCOL = document.createElement('td'); 
+    AccountFileMailingAddress= document.createElement('td');
     AccountFirstName = document.createElement('td');
     AccountLastname = document.createElement('td');
     AccountMiddleName = document.createElement('td');
@@ -92,7 +93,7 @@ function createElements(Number){
     AccountType = document.createElement('td');
     
     
-    
+    AccountFileMailingAddress.setAttribute('class','MailingAddress');
     AccountCheckBox.setAttribute('type','checkbox');
     AccountCheckBox.setAttribute('class','AccountCheckBox');
     AccountCheckBox.setAttribute('name','AccountCheckBox[]');
@@ -141,6 +142,7 @@ function createElements(Number){
     row.appendChild(AccountMiddleName);
     row.appendChild(AccountAge);
     row.appendChild(AccountContact);
+    row.appendChild(AccountFileMailingAddress); //MailingAddress
     row.appendChild(AccountAddress);
     row.appendChild(AccountGender);
     row.appendChild(AccountLanguage);
@@ -168,7 +170,7 @@ function createElements(Number){
         var SnapshotimgArray = new Array();
 
 
-     
+        MailingAddress = document.getElementsByClassName('MailingAddress');
         AccountCheckBox = document.getElementsByClassName('AccountCheckBox');
         AccountIDCOL= document.getElementsByClassName('AccountID');
         AccountEmailCOL = document.getElementsByClassName('AccountEmail');
@@ -194,7 +196,7 @@ function createElements(Number){
         for(var i =0;i<Number;i++){
 
 
-            
+            MailingAddress[i].innerText = DataArray[i]['FileMailingAddress'];
             AccountCheckBox[i].setAttribute('value',DataArray[i]['id']);
             AccountIDCOL[i].innerText = DataArray[i]['id'];
             AccountEmailCOL[i].innerText = DataArray[i]['email'];

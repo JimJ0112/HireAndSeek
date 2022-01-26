@@ -25,6 +25,8 @@ session_start();
        $education = $_POST[ "Education" ];
        $skills = $_POST[ "Skills" ];
 
+       $FileMailing = $_POST['FileEmail'];
+
 
        /* making directory to store the files for user */
        $Directory = 'UserRegisterFiles/'.$email.$firstname;
@@ -87,7 +89,7 @@ session_start();
         header('location:../Freelancer_Register.php?data=registrationfailed-email_already_exists');
  
       } else{
-        $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middlename,Birthdate,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,SignupStatus,filesdirectory,customUsername) VALUES(0,'$firstname','$lastname','$middleInitial','$Birthdate','$gender','$email','$password','$contact','$address','$description','$language','$occupation','$education','$skills','$snapshotdirectory','$idType','$ID1directory','$idType2','$ID2directory','$AccountType','','$Directory','$customUsername');";
+        $sqlquery = "INSERT INTO signupverification(id,firstname,lastname,middlename,Birthdate,gender,email,userpassword,contact,address,description,userlanguage,occupation,education,skills,snapshotPath,idimage1type,idimage1Path,idimage2type,idimage2Path,AccountType,SignupStatus,filesdirectory,customUsername,FileMailingAddress) VALUES(0,'$firstname','$lastname','$middleInitial','$Birthdate','$gender','$email','$password','$contact','$address','$description','$language','$occupation','$education','$skills','$snapshotdirectory','$idType','$ID1directory','$idType2','$ID2directory','$AccountType','','$Directory','$customUsername','$FileMailing');";
         $result = mysqli_query($conn,$sqlquery) ;
         
         //echo $result;

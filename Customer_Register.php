@@ -39,6 +39,7 @@ $data = $_GET['data'];
             <input type="password" name="UserPassword" placeholder="Password"> <br> 
             <input type="password" placeholder=" Confirm Password"> <br> <br> 
 
+            <input type="text" name="FileEmail" placeholder="Files Email Address"> <br>
             <input type="text" name="FirstName" placeholder="FIRST NAME" required> 
             <input type="text" name="LastName" placeholder="LAST NAME" required> 
             <input type="text" name="MiddleInitial" placeholder="MIDDLE NAME"> <br> 
