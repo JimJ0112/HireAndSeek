@@ -4,17 +4,25 @@
 
 require('../Includes/databaseConnection.php');
 
-$Username = $_POST['UserName'];
-//echo $Username
+$TransactionID = $_POST['TransactionID'];
+//echo $TransactionID;
 
 
 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
 
-    $queryString = "SELECT * FROM transactionrecords WHERE OwnerEmail = '$Username' && TransactionStatus = 'Pending' ";
+   echo $queryString = "UPDATE transactionrecords SET TransactionStatus = 'Delivered' WHERE transactionID = $TransactionID ";
     $result = mysqli_query($conn,$queryString);
+
+
+
+
+/*
     $resultCheck = mysqli_num_rows($result);
     $data = array();
-
+  
 
     if($resultCheck > 0){
        
@@ -39,7 +47,7 @@ $Username = $_POST['UserName'];
     }
 
 
-
+*/
 
 
 

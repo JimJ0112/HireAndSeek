@@ -3,7 +3,7 @@ function init() // This is the function the browser first runs when it's loaded.
   displayOrders() // Then runs the refresh function for the first time.
   var int = self.setInterval(function () {
     displayOrders() 
-  }, 10000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+  }, 3000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
 }
 
 
@@ -129,7 +129,70 @@ function setData(array){
          DeliverButton[i].innerText = "Deliver";
          DeliverButton[i].setAttribute('onclick','DeliverJob('+DataArray[i]['transactionID']+')');
          CancelButton[i].innerText = "Cancel"; 
+         CancelButton[i].setAttribute('onclick','CancelJob('+DataArray[i]['transactionID']+')');
 
     }
 
-}
+}// end of function
+
+function DeliverJob(ID){
+    var TransactionID = ID;
+
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("POST", "Backend/DeliverOrder.php", true);
+
+var params = "TransactionID="+ TransactionID;
+
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState === 4 || this.status === 200){ 
+       
+      
+        var dataArray = this.response;
+     
+        console.log(dataArray);
+ 
+        
+ 
+    }else{console.log(err);}      
+};
+
+xmlhttp.send(params);
+    
+} // end of deliver job
+
+
+
+
+
+function CancelJob(ID){
+    var TransactionID = ID;
+
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("POST", "Backend/CancelOrder.php", true);
+
+var params = "TransactionID="+ TransactionID;
+
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState === 4 || this.status === 200){ 
+       
+        //Table = document.getElementById("OrdersTable").innerHTML = "";
+        var dataArray = this.response;
+        //dataArray = JSON.parse(dataArray);
+        console.log(dataArray);
+        //var Number = dataArray.length;  
+       //createElements(Number);
+        //setData(dataArray);
+        
+ 
+    }else{console.log(err);}      
+};
+
+xmlhttp.send(params);
+    
+} //// end of deliver job
