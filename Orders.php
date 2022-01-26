@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if(!isset($_SESSION['SessionName'])){
+
+    header('location:Login_Index.php?data=PleaseLogIn');
+}
+
 ?>
 
 <DOCTYPE>

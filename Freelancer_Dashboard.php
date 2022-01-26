@@ -12,6 +12,12 @@ else{
 }
 
 //include_once('includes/SessionName.php');
+
+if(!isset($_SESSION['SessionName']) || $_SESSION['AccountType'] != "Freelancer"){
+
+    header('location:Login_Index.php?data=PleaseLogIn');
+}
+
 ?>
 
 

@@ -10,7 +10,7 @@ $Username = $_POST['UserName'];
 
 
 
-    $queryString = "SELECT * FROM transactionrecords WHERE OwnerEmail = '$Username' && TransactionStatus != 'Cancelled' ";
+    $queryString = "SELECT * FROM transactionrecords WHERE OwnerEmail = '$Username' && TransactionStatus = 'Pending' ";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
     $data = array();
