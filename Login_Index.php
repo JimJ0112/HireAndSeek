@@ -45,7 +45,7 @@ $err= $_GET['data'];
                     </div>
                     <div class="logDivCreate">
                         <a href="Freelancer_Register.php" class="logACreateFree">Create an Account as Freelancer</a> <br>
-                        <a href="Freelancer_Register.php" class="logACreateCus">Create an Account as Customer</a>
+                        <a href="Customer_Register.php" class="logACreateCus">Create an Account as Customer</a>
                     </div>
                     
                     <div class="lineBehind"><span id="logSpan"></span><h3 class="logTxtOr">OR LOGIN WITH</h3></div>
