@@ -152,7 +152,7 @@ else{
                             </ul>
                         </div>
                         <div class="Team-Member">
-                            <img class="memberImages" src="WebsiteImages/Saez.png" >
+                            <img class="memberImages" src="WebsiteImages/Saez.jpg" >
                             <div class="memberName">John Carlo C. Saez</div>
                             <div class="memberRole">Software Tester</div>
                             <ul class="memberSocials">

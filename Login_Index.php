@@ -39,13 +39,13 @@ $err= $_GET['data'];
                         <div class="logDiv"><input type="text" name="Username_TB" placeholder="juandelacruz@email.com" class="logTB"></div>
                         <div class="logDiv"><label class="logTxt">PASSWORD</label></div>
                         <div class="logDiv"><input type="password" name="Password_TB" class="logTB"></div>
-                        <div class="logDiv"><a href="Freelancer_Register.php" class="logAForgot">Forgot Password?</a></div>
+                        <div class="logDiv"><a href="#" class="logAForgot">Forgot Password?</a></div>
                     <div class="logDiv">
                         <input type="submit" value="LOG IN" class="logBtnSubmit">
                     </div>
                     <div class="logDivCreate">
                         <a href="Freelancer_Register.php" class="logACreateFree">Create an Account as Freelancer</a> <br>
-                        <a href="Freelancer_Register.php" class="logACreateCus">Create an Account as Customer</a>
+                        <a href="Customer_Register.php" class="logACreateCus">Create an Account as Customer</a>
                     </div>
                     
                     <div class="lineBehind"><span id="logSpan"></span><h3 class="logTxtOr">OR LOGIN WITH</h3></div>

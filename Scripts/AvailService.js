@@ -165,11 +165,12 @@ function BasicPlan(){
     const BasicPlanDescription = document.getElementById("BasicPlanDescription_Info");
     const BasicPlanPrice = document.getElementById("BasicPlanPrice_Info");
 
-
+document.getElementById("BasicBtn").focus();
 
 var Plan = document.getElementById('Plan_Plan');
 var PlanDescription = document.getElementById('Plan_Description');
 var Price  = document.getElementById("Buy");
+
 
 Plan.innerText = "Basic Plan";
 PlanDescription.innerText = BasicPlanDescription.innerText;
