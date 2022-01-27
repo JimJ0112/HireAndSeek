@@ -14,7 +14,7 @@ else{
 
 //include_once('includes/SessionName.php');
 
-
+//mail($row['email'],'Account Approved','Hello, Welcome to Hire and Seek, your account has been approved','From: hireandseekdemo@gmail.com');
 
 ?>
 
