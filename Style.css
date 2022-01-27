@@ -1220,6 +1220,7 @@ table{
     border: 1px solid black;
     grid-area: messagelist;
     padding: 0;
+    overflow: scroll;
 
 }
 
