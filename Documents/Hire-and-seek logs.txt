@@ -58,9 +58,19 @@
 -Fixed bugs on carousel's left & right navigation button. 
 -Responsive to media screen size (Homepage, Explore, login)
 
+01/24/22 Logs:
+-Completed the About page design (Overview and Team members)
+
+01/25/22 Logs:
+-Completed the Become a Seller page design
+
+
+01/27/22 Logs:
+-Completed the Avail services page design
+-Responsive to media screen size (All pages)
+
 01/27/22
 -the website can sort services into 5 categories (Highest rated services, Graphics and Design, Video and Presentation, Music and Audio, Development and IT): Backend: 100%
-
 
 
 -the website can let the freelancers offer/post their services to the customers
@@ -72,8 +82,6 @@
 
 - the website can let customers  browse and avail services offered by the freelancers
     // wala pang notification pero may page na na pwedeng tignan ni customer kung delivered na yunug request niya
-
-
 
  -the website can let the freelancers and customers can communicate via messages
     // problem lang yung address, mahaba masyado need ng address suggester

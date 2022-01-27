@@ -1,17 +1,17 @@
 <?php
 
-session_start();
+// session_start();
 
- if(!isset($_SESSION['SessionName'])){
+//  if(!isset($_SESSION['SessionName'])){
 
-     header('location:Login_Index.php?data=PleaseLogIn');
-  }
+//      header('location:Login_Index.php?data=PleaseLogIn');
+//   }
 
 
- if(isset($_GET['data'])){
-     $data = $_GET['data'];
-      echo"<script> alert('Result: $data') </script>";
- }
+//  if(isset($_GET['data'])){
+//      $data = $_GET['data'];
+//       echo"<script> alert('Result: $data') </script>";
+//  }
 
 
     $MailingAdd = $_SESSION["MailingAddress"];
@@ -48,36 +48,32 @@ session_start();
 
 
 
-
-
-            <center>
-
         <!-- Form will show when buy button have been clicked-->
              
             <form action="Backend/AvailServiceBackend.php" method="post" id="AvailServiceForm"> 
+            <h3 class="AvailServiceForm_Text">CHECKOUT  </h3>
+            <div class="AvailServiceForm-Container">
 
-            OwnerEmail   <input type="text" name="OwnerEmail" id="OwnerEmail" readonly> <br> <br>
-            ClientEmail  <input type="text" name="ClientEmail" id="ClientEmail" readonly> <br> <br>
-            Mailing Address  <input type="text" name="MailingAddress" id="MailingAddress" > <br> <br>
-            ServiceID    <input type="text" name="ServiceID" id="ServiceID" readonly > <br> <br>
-            Category     <input type="text" name="Category" id="Category" readonly > <br> <br>
-            ServiceTitle <input type="text" name="ServiceTitleForm" id="ServiceTitleForm" readonly> <br> <br>
-            clientNotes  <input type="text" name="clientNotes" id="clientNotes" > <br> <br>
-            startDate    <input type="text" name="startDate" id="startDate" readonly > <br> <br>
-            Finish Date <input type="text" name="finishDate" id="finishDate"> <br> <br>
-            availedPlan  <input type="text" name="availedPlan" id="availedPlan" readonly> <br> <br>
-            Price        <input type="text" name="Price" id="Price" readonly> <br> <br>
-            AgreementContract <br>
+            <div class="AvailServiceForm_Text"> Owner Email:   <input type="text" name="OwnerEmail" id="OwnerEmail" readonly></div>
+            <div class="AvailServiceForm_Text"> Client Email:  <input type="text" name="ClientEmail" id="ClientEmail" readonly> </div>
+            <div class="AvailServiceForm_Text"> Mailing Address:<input type="text" name="MailingAddress" id="MailingAddress" > </div>
+            <div class="AvailServiceForm_Text"> Service ID:    <input type="text" name="ServiceID" id="ServiceID" readonly > </div>
+            <div class="AvailServiceForm_Text"> Category:     <input type="text" name="Category" id="Category" readonly > </div>
+            <div class="AvailServiceForm_Text"> Service Title: <input type="text" name="ServiceTitleForm" id="ServiceTitleForm" readonly> </div>
+            <div class="AvailServiceForm_Text"> Client Notes:  <input type="text" name="clientNotes" id="clientNotes" > </div>
+            <div class="AvailServiceForm_Text"> Start Date:    <input type="text" name="startDate" id="startDate" readonly > </div>
+            <div class="AvailServiceForm_Text"> Finish Date: <input type="date" name="finishDate" id="finishDate"> </div>
+            <div class="AvailServiceForm_Text"> Availed Plan:  <input type="text" name="availedPlan" id="availedPlan" readonly>  </div>
+            <div class="AvailServiceForm_Text"> Price:        <input type="text" name="Price" id="Price" readonly>  </div>
+            <div class="AvailServiceForm_Text"> Agreement Contract:  </div>
+            <div class="AvailServiceForm_Text"> 
             Agree   <input type="checkbox" value="Agree" name="AgreedToContract"  > 
-            Decline <input type="checkbox" value="Agree" name="Decline" > <br> <br>
-
-            <input type="submit" value="Buy" id="ButtonSubmit" onclick="HideDiv()"> <input type="button" value="Cancel" onclick="HideDiv()">
-            
+            Decline <input type="checkbox" value="Agree" name="Decline" >
+            </div>
+            <button id="ButtonSubmit" onclick="HideDiv()">BUY </button>
+            <button id="ButtonCancel" onclick="HideDiv()">CANCEL</button>
+            </div>
             </form>
-
-            
-            </center>
-
 
 
 
