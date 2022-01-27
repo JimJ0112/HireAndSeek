@@ -30,7 +30,7 @@ session_start();
 
     </head>
 
-    <body onload="init()>
+    <body onload="init()">
     <div class="Avail-Container"> 
     <div class="nav">
 
