@@ -14,7 +14,7 @@ if ($conn->connect_error) {
    echo $queryString = "DELETE FROM servicesinfo WHERE ServiceID = $ServiceID";
    $result = mysqli_query($conn,$queryString);
 
-
+   mysqli_close($conn);
 
 
 

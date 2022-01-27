@@ -7,4 +7,6 @@ $query = "UPDATE servicesinfo SET ServiceTotalRatings = $TotalRatings WHERE Serv
 echo $query;
 
 $result = mysqli_query($conn,$query);
+
+mysqli_close($conn);
 ?>
