@@ -1,3 +1,13 @@
+function init() // This is the function the browser first runs when it's loaded.
+{
+    displayAvailedService() // Then runs the refresh function for the first time.
+  var int = self.setInterval(function () {
+    displayAvailedService()
+  }, 3000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+}
+
+
+
 var AvailedService = sessionStorage.getItem('AvailedServiceID');
 
 if(!AvailedService){ window.location.href="ServicesOffered.php";
@@ -6,7 +16,7 @@ console.log(AvailedService);
 
 
     //Main
-    
+    function displayAvailedService(){
     var Form = document.getElementById("AvailServiceForm");
     
 
@@ -30,7 +40,7 @@ console.log(AvailedService);
             setValues(AvailedServiceINFO);
 
              BasicPlan();
-            
+             TotalRatings();
 
             
 
@@ -44,7 +54,7 @@ console.log(AvailedService);
     
      xmlhttp.send("ReqServiceID=" + AvailedService);
 
-
+    } // end of display availed service
 // functions
 
 function setValues(array){
@@ -216,3 +226,175 @@ function StandardPlan(){
     document.getElementById("AvailServiceForm").style.display = "none";
  }
 
+
+
+ function add1star(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "Backend/AddRatings.php", true);
+    
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=1";
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+           
+            var dataArray = this.response;
+           //dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+
+            
+     
+        }else{console.log(err);}      
+    };
+    
+    xmlhttp.send(params);
+    
+    
+
+ }// end of add1 star
+
+
+
+ function add2star(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "Backend/AddRatings.php", true);
+    
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=2";
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+           
+            var dataArray = this.response;
+           //dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+
+            
+     
+        }else{console.log(err);}      
+    };
+    
+    xmlhttp.send(params);
+    
+    
+
+ }// end of add1 star
+
+
+ function add3star(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "Backend/AddRatings.php", true);
+    
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=3";
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+           
+            var dataArray = this.response;
+           //dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+
+            
+     
+        }else{console.log(err);}      
+    };
+    
+    xmlhttp.send(params);
+    
+    
+
+ }// end of add1 star
+
+
+ function add4star(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "Backend/AddRatings.php", true);
+    
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=4";
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+           
+            var dataArray = this.response;
+           //dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+
+            
+     
+        }else{console.log(err);}      
+    };
+    
+    xmlhttp.send(params);
+    
+    
+
+ }// end of add1 star
+
+
+ function add5star(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "Backend/AddRatings.php", true);
+    
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=5";
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+           
+            var dataArray = this.response;
+           //dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+
+            
+     
+        }else{console.log(err);}      
+    };
+    
+    xmlhttp.send(params);
+    
+    
+
+ }// end of add1 star
+
+
+
+
+ function TotalRatings(){
+    var totalRatings = document.getElementById("totalRatings").innerText;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "Backend/TotalRatingsUpdateBackend.php", true);
+    
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&totalRatings="+totalRatings;
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+           
+            var dataArray = this.response;
+           //dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+
+            
+     
+        }else{console.log(err);}      
+    };
+    
+    xmlhttp.send(params);
+    
+    
+
+ }// end of add1 star

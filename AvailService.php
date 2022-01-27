@@ -23,16 +23,18 @@ if(isset($_GET['data'])){
 <!DOCTYPE html>
 <html>
     <head>
-
+    
        <!-- <script src= "Scripts/AvailService.js"></script>-->
         <link rel="stylesheet" href="Style.css" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
 
-    <body>
+    <body onload="init()>
 <div class="Avail-Container"> 
     <div class="nav">
+
+
             <!-- Nav bar section -->
             <?php
             if(isset($_SESSION['SessionName'])){
@@ -192,23 +194,21 @@ if(isset($_GET['data'])){
                    </div>
                     </div>
 
-
                     <div id="Rate" class="ServiceContainerChild">
                     <div class="RateTitle">RATE</div>
                     <div class="rating">
                          
                     <!--elements are in reversed order, to allow "previous sibling selectors" in CSS-->
-                    <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
-                    <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
-                    <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-                    <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-                    <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                    <input type="radio" name="rating" value="5" id="5"><label for="5" onclick="add5star()>☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4" onclick="add4star()>☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3" onclick="add3star()>☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2" onclick="add2star()>☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1" onclick="add1star()>☆</label>
                     </div>
                     </div>
             </div>
                <!-- <script src= "Scripts/AvailService.js"></script> -->
              <!-- Footer -->
-
 
              <!-- Avail servie form -->
 
@@ -227,7 +227,7 @@ if(isset($_GET['data'])){
     </div> <!--end of contents -->
              <?php include_once('Includes/footer.php')?>
 
-
+            
              <script src= "Scripts/AvailService.js"></script>
              </div>  
     </body>

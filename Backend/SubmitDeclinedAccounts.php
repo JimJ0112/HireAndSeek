@@ -18,6 +18,6 @@ if(!empty($_POST["AccountCheckBox"])){
 }
 
 
-
+header("location:Maintenance.php");
 
 ?>

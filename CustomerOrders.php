@@ -59,7 +59,7 @@ if(!isset($_SESSION['SessionName'])){
         </div>
 
 
-            <script src="Scripts/CanceledOrders.js"> </script>
+            <script src="Scripts/CustomerOrders.js"> </script>
                  <!-- Footer -->
                  <?php include_once('Includes/footer.php')?>
 

@@ -30,7 +30,7 @@ function init() // This is the function the browser first runs when it's loaded.
     GetMessages() // Then runs the refresh function for the first time.
   var int = self.setInterval(function () {
     GetMessages()
-  }, 5000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+  }, 10000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
 }
 
 

@@ -14,14 +14,11 @@
 
 Progress:
 
--the website can sort services into 5 categories (Highest rated services, Graphics and Design, Video and Presentation, Music and Audio, Development and IT) 
-    // progress: Highest rated services nalang kulang
-    // almost done na yung highest rated services, 
+-the website can sort services into 5 categories (Highest rated services, Graphics and Design, Video and Presentation, Music and Audio, Development and IT): Backend: 100%
+
 
 - the website can let customers  browse and avail services offered by the freelancers
-    //progress: almost done na inaayos nalang frontend saka aayusin nalang table sa db
-
-    // almost complete, need nalang ng customer ng notif pag nadeliver na request niya
+    // wala pang notification pero may page na na pwedeng tignan ni customer kung delivered na yunug request niya
 
 -the website can let freelancers and customers can search existing services 
     //progress: done na pero naiiisip iimplement yung pag pinindot yung search button may new page na lalabas tas nandun cards ng results
@@ -31,10 +28,13 @@ Progress:
     // naaapprove na at natatransfer sa main accounts table. done na yung 1 capability (need pa ayusin yung user reports)
 
 
--the website can let the freelancers can offer/post their services to the customers
-    // almost complete, nalalagay na sa database lahat ng info dito + file management
+-the website can let the freelancers offer/post their services to the customers
+    Backend: 100%;
 
 
 -the website can let the freelancers and customers can communicate via messages
     // problem lang yung address, mahaba masyado need ng address suggester
     // reply button need din iimplement, automatic mag gegenerate sa frontend yung address ng rereplyan
+
+-the website can let customers can rate the services 
+    // computation nalang ng total ratings and 1 rating per user

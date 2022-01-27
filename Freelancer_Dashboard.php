@@ -42,23 +42,20 @@ if(!isset($_SESSION['SessionName']) || $_SESSION['AccountType'] != "Freelancer")
             else{
                 include_once("includes/Header.php");
             }
+
+            if($_SESSION['AccountType'] == "Freelancer"){
+                include_once("includes/FreelancerDashboard.php");
+            } else{
+                include_once("includes/CustomerDashboard.php");
+            }
+
+
+
+
             ?>
             <!-- dashboard pages -->
             <br> 
-            <nav id="Dashboard_Categories">
 
-<ul id="Dashboard_CategoriesList">
-<li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="CreateJob.php"> Add Job </a> </li>
-<li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="Messages.php"> Messages </a> </li>
-<li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="Orders.php"> ORDERS </a> </li>
-<li class="Dashboard_CategoriesElement" id="Freelancer_jobs" > <a href="Jobs.php"> JOBS <a> </li>
-<li class="Dashboard_CategoriesElement" id="Freelancerd_transactions" > <a href="CanceledOrders.php"> Canceled Orders </a> </li>
-<li class="Dashboard_CategoriesElement" id="Freelancer_performance" > <a href="DeliveredOrders.php">PERFORMANCE </a></li>
-<li class="Dashboard_CategoriesElement" id="Freelancer_profile" > PROFILE </li>
-
-</ul>
-
-    </nav>
             <br>
         <!-- dashboard content -->
         <div id="dashboard_content_grid"> 
