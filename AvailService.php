@@ -2,16 +2,16 @@
 
 session_start();
 
-if(!isset($_SESSION['SessionName'])){
+ if(!isset($_SESSION['SessionName'])){
 
-    header('location:Login_Index.php?data=PleaseLogIn');
+     header('location:Login_Index.php?data=PleaseLogIn');
+  }
+
+
+ if(isset($_GET['data'])){
+     $data = $_GET['data'];
+      echo"<script> alert('Result: $data') </script>";
  }
-
-
-if(isset($_GET['data'])){
-    $data = $_GET['data'];
-     echo"<script> alert('Result: $data') </script>";
-}
 
 
     $MailingAdd = $_SESSION["MailingAddress"];
@@ -31,7 +31,7 @@ if(isset($_GET['data'])){
     </head>
 
     <body onload="init()>
-<div class="Avail-Container"> 
+    <div class="Avail-Container"> 
     <div class="nav">
 
 
@@ -176,16 +176,7 @@ if(isset($_GET['data'])){
                         <div id="ServiceRatings_Title">RATINGS </div> 
                         <div id="ServiceRatings_Total"> TOTAL RATINGS: <span id="totalRatings"> N </span> </div>
                     <br>
-                    <div class="Service_Rating">
-                         
-                         <!--elements are in reversed order, to allow "previous sibling selectors" in CSS-->
-                         <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
-                         <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
-                         <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
-                         <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
-                         <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
-                    </div>
-                    <div id="ServiceRatings_Count">
+                     <div id="ServiceRatings_Count">
                    <div> 5 Star Ratings: <span id="5starRatingsTotal"> N </span> </div>
                    <div> 4 Star Ratings: <span id="4starRatingsTotal"> N </span> </div>
                    <div> 3 Star Ratings: <span id="3starRatingsTotal"> N </span> </div>
@@ -199,11 +190,11 @@ if(isset($_GET['data'])){
                     <div class="rating">
                          
                     <!--elements are in reversed order, to allow "previous sibling selectors" in CSS-->
-                    <input type="radio" name="rating" value="5" id="5"><label for="5" onclick="add5star()>☆</label>
-                    <input type="radio" name="rating" value="4" id="4"><label for="4" onclick="add4star()>☆</label>
-                    <input type="radio" name="rating" value="3" id="3"><label for="3" onclick="add3star()>☆</label>
-                    <input type="radio" name="rating" value="2" id="2"><label for="2" onclick="add2star()>☆</label>
-                    <input type="radio" name="rating" value="1" id="1"><label for="1" onclick="add1star()>☆</label>
+                    <input type="radio" name="rating" value="5" id="5"><label for="5" onclick="add5star()">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4" onclick="add4star()">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3" onclick="add3star()">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2" onclick="add2star()">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1" onclick="add1star()">☆</label>
                     </div>
                     </div>
             </div>
