@@ -2,16 +2,16 @@
 
 session_start();
 
-if(!isset($_SESSION['SessionName'])){
+ if(!isset($_SESSION['SessionName'])){
 
-    header('location:Login_Index.php?data=PleaseLogIn');
-}
+     header('location:Login_Index.php?data=PleaseLogIn');
+  }
 
 
-if(isset($_GET['data'])){
-$data = $_GET['data'];
-    echo"<script> alert('Result: $data') </script>";
-}
+ if(isset($_GET['data'])){
+     $data = $_GET['data'];
+      echo"<script> alert('Result: $data') </script>";
+ }
 
 
     $MailingAdd = $_SESSION["MailingAddress"];
@@ -30,21 +30,21 @@ $data = $_GET['data'];
 
     </head>
 
-    <body onload="init()">
-        
+    <body onload="init()>
+    <div class="Avail-Container"> 
+    <div class="nav">
+
+
             <!-- Nav bar section -->
             <?php
-          
-          if(isset($_SESSION['SessionName'])){
-
-            include_once("includes/LoggedIn_Header.php");
-            
-        }
-        else{
-            include_once("includes/Header.php");
-        }
+            if(isset($_SESSION['SessionName'])){
+                include_once("includes/LoggedIn_Header.php");
+            }
+            else{
+                include_once("includes/Header.php");
+            }
             ?>
-            
+    </div>
 
 
 
@@ -81,106 +81,125 @@ $data = $_GET['data'];
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="content"> 
+            <div id="content"> 
+           
+            <div class="caro" id="AvailService_Carousel">
                 <!-- Carousel-->
-                <div id="AvailService_Carousel">
-
-                     <h1> Carousel Placeholder</h1>
+                <div class="carousel">
+                <img class="slides" src="WebsiteImages/Placeholder.png" style="width:100%">
+             
+                <div class="display-caro">
+                <div class="display-leftNav"><button class="display-leftBtn" onclick="plusDivs(-1)">&#10094;</button></div>
+                <div class="display-rightNav"><button class="display-rightBtn" onclick="plusDivs(1)">&#10095;</button></div>
                 </div>
 
-                <!-- functions (grid container) -->
-                <div id="ServiceContainer"> 
+                <div class="dotNav"style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                 </div>
+              </div>
+           
+           
+              <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
 
-                    <div id="ServiceDescription" class="ServiceContainerChild"> 
-                        <h2 id="ServiceTitle"> Service Title Placeholder</h2>
-                        <h4 id="ServCategory"> Category </h4>
-                         <h3> About the Service </h3>
-                         <p Id="AvailService_Description"> This is a Description Placeholder</p>
+                function plusDivs(n) {
+                showDivs(slideIndex += n);
+                }
+                function currentSlide(n) {
+                showDivs(slideIndex = n);
+                }
+
+                function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("slides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                x[slideIndex-1].style.display = "block"; 
+                dots[slideIndex-1].className += " active"; 
+                }
+                </script>
+            </div>
+
+                <!-- functions (grid container) -->
+            <div id="ServiceContainer"> 
+
+                    <div id="ServiceDescription" class="ServiceContainerChild">
+                        <div class="Avail-TextDescription">
+                            <div id="ServiceTitle"> Service Title Placeholder</div>
+                            <div id="ServCategory"> Category </div>
+                            <div id="Availservice_About"> About The Service </div>
+                            <div Id="AvailService_Description"> This is a Description Placeholder</div>
+                        </div> 
                     </div>
 
 
                     <div id="MessageTheFreelancer" class="ServiceContainerChild"> 
-                        <center>
-                        <img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"> 
-                        <h4 class="AccountName">Account Name </h4> 
-                       
-
-                       <p class="AccountLevel">Level </p>
-
-                       <p class="AccountDescription"> Account Description Placeholder</p>
-                       <input type="text" id="MessageToFreelancer" placeholder="Leave a Message...">
-                        <br>
-                        <br>
-                        <button id="SendButton" >  SEND  </button>
-                    </center>
-
+                        <div class="Avail-ProfilePicture"><img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"></div> 
+                        <div class="Avail-AccountName AccountName">Account Name </div> 
+                        <div class="Avail-AccountLevel AccountLevel">Level </div>
+                        <div class="Avail-AccDesc AccountDescription"> Account Description Placeholder</div>
+                        <div class="Avail-Message">
+                            <input type="text" id="MessageToFreelancer" placeholder="Leave a Message...">
+                        </div>
+                        <div class="Avail-SendBtn"><button id="SendButton">  SEND  </button></div>
+                 
                     </div>
 
 
 
                     <div id="ServicePlans" class="ServiceContainerChild"> 
-                        
-                        <div id="Plan_Basic" class="Plan" onclick="BasicPlan()"> <h3>BASIC </h3></div>
-                        <div id="Plan_Standard" class="Plan" onclick="StandardPlan()"> <h3> STANDARD  </h3> </div>
-                        <div id="Plan_Premium" class="Plan" onclick="PremiumPlan()"> <h3> PREMIUM </h3> </div>
-
+                        <div class="Plan">
+                        <input type="button" value="BASIC" id="BasicBtn" class="Plans" onclick="BasicPlan()">
+                        <input type="button" value="STANDARD" id="Standardtn" class="Plans" onclick="StandardPlan()">
+                        <input type="button" value="PREMIUM" id="PremiumBtn" class="Plans" onclick="PremiumPlan()">
+                        </div>
                         <div id="Plan_DescriptionContainer"> 
-                        <h4 id="Plan_Plan"> Plan  </h4>
-                            <h4 id="Plan_Description"> Plan Description Placeholder </h4>
-                            <button id = "Buy" onclick="availService()">Price Php 000.00</button>
+                            <div id="Plan_Plan"> Plan  </div>
+                            <div id="Plan_Description"> Plan Description Placeholder </div>
+                            <div class="Plan_BuyBtn"><button id = "Buy" onclick="availService()">Price Php 000.00</button></div>
                         </div>
                    
                     </div>
 
 
-                    <div id="ServiceRatings" class="ServiceContainerChild"> <h3>Ratings </h3> 
-                   <h2> TOTAL RATINGS: <span id="totalRatings"> N </span> </h2>
+                    <div id="ServiceRatings" class="ServiceContainerChild"> 
+                        <div id="ServiceRatings_Title">RATINGS </div> 
+                        <div id="ServiceRatings_Total"> TOTAL RATINGS: <span id="totalRatings"> N </span> </div>
                     <br>
-                    
-                   <h3> 5 Star Ratings: <span id="5starRatingsTotal"> N </span> </h3>
-                   <h3> 4 Star Ratings: <span id="4starRatingsTotal"> N </span> </h3>
-                   <h3> 3 Star Ratings: <span id="3starRatingsTotal"> N </span> </h3>
-                   <h3> 2 Star Ratings: <span id="2starRatingsTotal"> N </span> </h3>
-                   <h3> 1 Star Ratings: <span id="1starRatingsTotal"> N </span> </h3>
-                    
+                     <div id="ServiceRatings_Count">
+                   <div> 5 Star Ratings: <span id="5starRatingsTotal"> N </span> </div>
+                   <div> 4 Star Ratings: <span id="4starRatingsTotal"> N </span> </div>
+                   <div> 3 Star Ratings: <span id="3starRatingsTotal"> N </span> </div>
+                   <div> 2 Star Ratings: <span id="2starRatingsTotal"> N </span> </div>
+                   <div> 1 Star Ratings: <span id="1starRatingsTotal"> N </span> </div>
+                   </div>
                     </div>
 
-
-                    <div id="Rate" class="ServiceContainerChild"> 
-                        <center>
-                   
-                        <div id="1Star" class="StarRatings" onclick="add1star()"></div>
-                        <div id="2Star" class="StarRatings"onclick="add2star()"></div>
-                        <div id="3Star" class="StarRatings"onclick="add3star()"></div>
-                        <div id="4Star" class="StarRatings"onclick="add4star()"></div>
-                        <div id="5Star" class="StarRatings"onclick="add5star()"></div>
-
-                        </center>
-                    
-                    
+                    <div id="Rate" class="ServiceContainerChild">
+                    <div class="RateTitle">RATE</div>
+                    <div class="rating">
+                         
+                    <!--elements are in reversed order, to allow "previous sibling selectors" in CSS-->
+                    <input type="radio" name="rating" value="5" id="5"><label for="5" onclick="add5star()">☆</label>
+                    <input type="radio" name="rating" value="4" id="4"><label for="4" onclick="add4star()">☆</label>
+                    <input type="radio" name="rating" value="3" id="3"><label for="3" onclick="add3star()">☆</label>
+                    <input type="radio" name="rating" value="2" id="2"><label for="2" onclick="add2star()">☆</label>
+                    <input type="radio" name="rating" value="1" id="1"><label for="1" onclick="add1star()">☆</label>
                     </div>
-
-                </div>
-
+                    </div>
+            </div>
+               <!-- <script src= "Scripts/AvailService.js"></script> -->
+             <!-- Footer -->
 
              <!-- Avail servie form -->
 
@@ -201,5 +220,6 @@ $data = $_GET['data'];
 
             
              <script src= "Scripts/AvailService.js"></script>
+             </div>  
     </body>
 </html>

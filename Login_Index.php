@@ -39,7 +39,7 @@ $err= $_GET['data'];
                         <div class="logDiv"><input type="text" name="Username_TB" placeholder="juandelacruz@email.com" class="logTB"></div>
                         <div class="logDiv"><label class="logTxt">PASSWORD</label></div>
                         <div class="logDiv"><input type="password" name="Password_TB" class="logTB"></div>
-                        <div class="logDiv"><a href="Freelancer_Register.php" class="logAForgot">Forgot Password?</a></div>
+                        <div class="logDiv"><a href="#" class="logAForgot">Forgot Password?</a></div>
                     <div class="logDiv">
                         <input type="submit" value="LOG IN" class="logBtnSubmit">
                     </div>
