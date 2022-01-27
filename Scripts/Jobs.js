@@ -3,7 +3,7 @@ function init() // This is the function the browser first runs when it's loaded.
     displayJobs() // Then runs the refresh function for the first time.
   var int = self.setInterval(function () {
     displayJobs()
-  }, 5000000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+  }, 1000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
 }
 
 
@@ -78,7 +78,10 @@ function createElements(Number){
     Job3StarRatings = document.createElement('td');
     Job2StarRatings = document.createElement('td');
     Job1StarRatings = document.createElement('td');
+    JobDeleteButton = document.createElement('button');
 
+
+    JobDeleteButton.setAttribute('class','JobDeleteButton');
     category.setAttribute('class','category');
     Title.setAttribute('class','Title');
     Description.setAttribute('class','Description');
@@ -111,7 +114,7 @@ function createElements(Number){
     row.appendChild(Job3StarRatings);
     row.appendChild(Job2StarRatings);
     row.appendChild(Job1StarRatings);
-    
+    row.appendChild(JobDeleteButton);
     Table.append(row);
 
     } 
@@ -139,7 +142,7 @@ function createElements(Number){
     Job3StarRatings= document.getElementsByClassName('Job3StarRatings'); 
     Job2StarRatings= document.getElementsByClassName('Job2StarRatings'); 
     Job1StarRatings= document.getElementsByClassName('Job1StarRatings'); 
-    
+    JobDeleteButton = document.getElementsByClassName('JobDeleteButton');
  
     
         for(var i = 0; i<Number; i++){
@@ -159,10 +162,42 @@ function createElements(Number){
             Job3StarRatings[i].innerText = DataArray[i]['Service3StarRatings'];
             Job2StarRatings[i].innerText = DataArray[i]['Service2StarRatings'];
             Job1StarRatings[i].innerText = DataArray[i]['Service1StarRatings'];
-
+            JobDeleteButton[i].setAttribute('onclick','DeleteJob('+DataArray[i]['ServiceID']+')');
+            JobDeleteButton[i].innerText = "Remove";
 
 
     
         }
     
     }// end of function
+
+
+
+
+    function DeleteJob(ID){
+    var ServiceID = ID;
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", "Backend/DeleteJobsBackend.php", true);
+
+        var params = "ServiceID="+ID;
+
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState === 4 || this.status === 200){ 
+       
+       Table = document.getElementById("JobsTable").innerHTML = "";
+        var dataArray = this.response;
+       // dataArray = JSON.parse(dataArray);
+        console.log(dataArray);
+       // var Number = dataArray.length;  
+       // createElements(Number);
+       // setData(dataArray);
+        
+ 
+    }else{console.log(err);}      
+};
+
+xmlhttp.send(params);
+    }

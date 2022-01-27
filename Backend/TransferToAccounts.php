@@ -11,6 +11,8 @@
     if($resultCheck > 0){
        
         while($row = mysqli_fetch_array($result)){
+            //mail($row['email'],'Account Approved','Hello, Welcome to Hire and Seek, your account has been approved','From: hireandseekdemo@gmail.com');
+
          $email = strstr($row['email'],'@',true);   
         
         $InsertQuery = "INSERT INTO accounts VALUES ('$row[email]', '$row[firstname]', '$row[lastname]', '$row[middlename]', '$row[Birthdate]', '$row[gender]', '$row[userpassword]', '$row[contact]', '$row[address]', '$row[description]', '$row[userlanguage]', '$row[occupation]', '$row[education]', '$row[skills]', '$row[snapshotPath]', '$row[idimage1type]', '$row[idimage1Path]', '$row[idimage2type]', '$row[idimage2Path]', '$row[AccountType]', 'Level 1', '$row[filesdirectory]','','','$row[customUsername]','$row[FileMailingAddress]')";

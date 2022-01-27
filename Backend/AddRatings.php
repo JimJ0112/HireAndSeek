@@ -37,4 +37,6 @@ if($_POST["Star"]==1){
 
 
 $result = mysqli_query($conn,$query);
+
+mysqli_close($conn);
 ?>

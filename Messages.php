@@ -70,7 +70,7 @@ $data = $_GET['data'];
                 <ul>
                    
                     <li onclick ="ReadMessage()" class="Message_categories"> Inbox </li> 
-                    <li onclick = "GetSentMessages()" class="Message_categories"> Sent Box </li> 
+                    <li onclick = "ReadSentMessages()" class="Message_categories"> Sent Box </li> 
                     <li onclick = "CreateMessage()" class="Message_categories" > New Message </li>
  
                   

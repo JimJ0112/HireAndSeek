@@ -24,6 +24,12 @@ function ReadMessage(){
     GetMessages();
 }
 
+function ReadSentMessages(){
+    Create_MessageDiv.style.display = "none";
+    Read_MessageDiv.style.display = "block";
+    GetSentMessages();
+}
+
 
 function init() // This is the function the browser first runs when it's loaded.
 {

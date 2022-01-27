@@ -17,6 +17,8 @@ $InsertQuery = "INSERT INTO inbox (MessageID,SenderEmail,RecieverEmail,MessageDa
 //echo $InsertQuery;
 $result = mysqli_query($conn,$InsertQuery);
 
+
+mysqli_close($conn);
 header('location:../Messages.php?data=Message Sent');
 
 ?>
