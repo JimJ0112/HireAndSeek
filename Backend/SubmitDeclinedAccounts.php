@@ -1,7 +1,10 @@
 <?Php
 require('Includes/databaseConnection.php');
 $_POST["AccountCheckBox"];
+$AccountEmailHidden = $_POST['AccountEmailHidden'];
 $Queries = array();
+
+mail($AccountEmailHidden,'Account Approved','Account Delined,  Hire and Seek, your account has been declined ','From: hireandseekdemo@gmail.com');
 
 if(!empty($_POST["AccountCheckBox"])){
 
