@@ -79,7 +79,7 @@ function createElements(Number){
     Job2StarRatings = document.createElement('td');
     Job1StarRatings = document.createElement('td');
     JobDeleteButton = document.createElement('button');
-
+    Gcash = document.createElement('td');
 
     JobDeleteButton.setAttribute('class','JobDeleteButton');
     category.setAttribute('class','category');
@@ -97,7 +97,7 @@ function createElements(Number){
     Job3StarRatings.setAttribute('class','Job3StarRatings'); 
     Job2StarRatings.setAttribute('class','Job2StarRatings'); 
     Job1StarRatings.setAttribute('class','Job1StarRatings'); 
-    
+    Gcash.setAttribute('class','Gcash');
 
     row.appendChild(category);
     row.appendChild(Title);
@@ -114,7 +114,9 @@ function createElements(Number){
     row.appendChild(Job3StarRatings);
     row.appendChild(Job2StarRatings);
     row.appendChild(Job1StarRatings);
+    row.appendChild(Gcash);
     row.appendChild(JobDeleteButton);
+
     Table.append(row);
 
     } 
@@ -142,6 +144,7 @@ function createElements(Number){
     Job3StarRatings= document.getElementsByClassName('Job3StarRatings'); 
     Job2StarRatings= document.getElementsByClassName('Job2StarRatings'); 
     Job1StarRatings= document.getElementsByClassName('Job1StarRatings'); 
+    const Gcash = document.getElementsByClassName('Gcash');
     JobDeleteButton = document.getElementsByClassName('JobDeleteButton');
  
     
@@ -164,6 +167,7 @@ function createElements(Number){
             Job1StarRatings[i].innerText = DataArray[i]['Service1StarRatings'];
             JobDeleteButton[i].setAttribute('onclick','DeleteJob('+DataArray[i]['ServiceID']+')');
             JobDeleteButton[i].innerText = "Remove";
+            Gcash[i].innerText = DataArray[i]['Gcash'];
 
 
     

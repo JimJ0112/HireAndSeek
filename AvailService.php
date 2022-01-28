@@ -12,6 +12,11 @@
 //      $data = $_GET['data'];
 //       echo"<script> alert('Result: $data') </script>";
 //  }
+if(isset($_GET['data'])){
+
+    $data= $_GET['data'];
+    echo"<script> $data </script>";
+}
 
 
     $MailingAdd = $_SESSION["MailingAddress"];
@@ -58,6 +63,8 @@ $AccountType = $_SESSION["AccountType"];
             <form action="Backend/AvailServiceBackend.php" method="post" id="AvailServiceForm"> 
             <h3 class="AvailServiceForm_Text">CHECKOUT  </h3>
             <div class="AvailServiceForm-Container">
+
+            <input type="hidden" name="GcashNumber" id="GcashNumber" readonly>
 
             <div class="AvailServiceForm_Text"> Owner Email:   <input type="text" name="OwnerEmail" id="OwnerEmail" readonly></div>
             <div class="AvailServiceForm_Text"> Client Email:  <input type="text" name="ClientEmail" id="ClientEmail" readonly> </div>

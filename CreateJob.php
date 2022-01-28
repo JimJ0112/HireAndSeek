@@ -89,7 +89,7 @@ if($_SESSION["AccountType"] != "Freelancer"){
                         <div class="logDiv"><input type="text" name="BasicPlanPrice" placeholder="Job Basic Plan Price" class="logTB"></div>
                         <div class="logDiv"><input type="text" name="StandardPlanPrice" placeholder="Job Standard Plan Price" class="logTB"></div>
                         <div class="logDiv"><input type="text" name="PremiumPlanPrice" placeholder="Job Premium Price" class="logTB"></div>
-                        
+                        <div class="logDiv"><input type="text" name="GcashNumber" placeholder="G-Cash Account Number" class="logTB"></div>
                         
                         <input type="file" name="Banner1" accept=".jpg,.png">
                         <input type="file" name="Banner2" accept=".jpg,.png">

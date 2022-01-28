@@ -85,13 +85,14 @@ function setValues(array){
     const PremiumPlanDescription = document.getElementById("PremiumPlanDescription_Info");
     const PremiumPlanPrice = document.getElementById("PremiumPlanPrice_Info");
     const image = document.getElementsByClassName('slides');
-
+    
 
     // hidden frames value
     const MessageDate = document.getElementById('MessageDate');
     const MessageTime = document.getElementById('MessageTime');
     const MessageRecepient_Form = document.getElementById('MessageRecepient_Form');
     const MessageSubject_Form = document.getElementById('MessageSubject_Form');
+    const GcashNumber = document.getElementById('GcashNumber');
 
     var now = new Date();
     var Freelancer = sessionStorage.getItem('sessionName');
@@ -100,6 +101,7 @@ function setValues(array){
     MessageTime.value = now.getUTCHours() + " : " + now.getUTCMinutes();
     MessageRecepient_Form.value = Freelancer;
     MessageSubject_Form.value=array[0]['ServiceTitle'];
+    GcashNumber.value = array[0]['GcashNumber'];
 
 
     // total ratings (not yet final)
