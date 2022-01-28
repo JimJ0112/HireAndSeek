@@ -7,7 +7,7 @@ require('../includes/databaseConnection.php');
 
 function search(mysqli $conn,$tablename,$category,$column){
 
-    $queryString = "SELECT * FROM $tablename WHERE UPPER( $column) LIKE UPPER('$category%')";
+    $queryString = "SELECT * FROM $tablename WHERE UPPER( $column) LIKE UPPER('$category%') ORDER BY ServiceTotalRatings DESC";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
     $data = array();
