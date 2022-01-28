@@ -177,7 +177,7 @@ $AccountType = $_SESSION["AccountType"];
                     <div id="ServicePlans" class="ServiceContainerChild"> 
                         <div class="Plan">
                         <input type="button" value="BASIC" id="BasicBtn" class="Plans" onclick="BasicPlan()">
-                        <input type="button" value="STANDARD" id="Standardtn" class="Plans" onclick="StandardPlan()">
+                        <input type="button" value="STANDARD" id="StandardBtn" class="Plans" onclick="StandardPlan()">
                         <input type="button" value="PREMIUM" id="PremiumBtn" class="Plans" onclick="PremiumPlan()">
                         </div>
                         <div id="Plan_DescriptionContainer"> 
