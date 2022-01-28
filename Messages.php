@@ -80,9 +80,9 @@ $data = $_GET['data'];
                  
             </nav>
 
-            <ul id="Messages_DisplayList">
+            <table id="Messages_DisplayList">
                     
-            <ul>
+        </table>
 
 
         </div>
@@ -95,6 +95,7 @@ $data = $_GET['data'];
                 <br>
                 <input type="hidden" name="MessageDate" id="MessageDate"> 
                 <input type="hidden" name="MessageTime" id="MessageTime"> 
+                
                 <input type="text" name="MessageRecepient_Form" id="MessageRecepient_Form" placeholder="Recepient"> <input type="submit" value="SEND"> <br> <br>
                 <input type="text" name="MessageSubject_Form" id="MessageSubject_Form" placeholder="Subject"> <br> <br>
                 <textarea name="MessageBody_Form" id="MessageBody_Form" placeholder="Message..."> </textarea> <br> <br>

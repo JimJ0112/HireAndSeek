@@ -1,11 +1,12 @@
 function init() // This is the function the browser first runs when it's loaded.
 {
-    ButtonColor();
-
     displayAvailedService() // Then runs the refresh function for the first time.
+
+    updateRatings(); // Then runs the refresh function for the first time.
+
   var int = self.setInterval(function () {
-    displayAvailedService()
-  }, 10000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+    updateRatings();
+  }, 5000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
 }
 
 
@@ -40,9 +41,9 @@ console.log(AvailedService);
 
             console.log(AvailedServiceINFO);
             setValues(AvailedServiceINFO);
-
-             BasicPlan();
-             TotalRatings();
+            BasicPlan();
+             
+             
 
           
 
@@ -50,12 +51,14 @@ console.log(AvailedService);
         } else{window.location.href="ServicesOffered.php"}   
         
        // console.log("array for plan" + ArrayForPlan);
+       
     };
     
      xmlhttp.send("ReqServiceID=" + AvailedService);
 
     } // end of display availed service
 // functions
+displayAvailedService();
 
 function setValues(array){
 
@@ -82,6 +85,23 @@ function setValues(array){
     const PremiumPlanDescription = document.getElementById("PremiumPlanDescription_Info");
     const PremiumPlanPrice = document.getElementById("PremiumPlanPrice_Info");
     const image = document.getElementsByClassName('slides');
+
+
+    // hidden frames value
+    const MessageDate = document.getElementById('MessageDate');
+    const MessageTime = document.getElementById('MessageTime');
+    const MessageRecepient_Form = document.getElementById('MessageRecepient_Form');
+    const MessageSubject_Form = document.getElementById('MessageSubject_Form');
+
+    var now = new Date();
+    var Freelancer = sessionStorage.getItem('sessionName');
+
+    MessageDate.value = now.getUTCMonth() + 1 + " / " + parseInt(now.getUTCDate() + 1) + " / " + now.getUTCFullYear();
+    MessageTime.value = now.getUTCHours() + " : " + now.getUTCMinutes();
+    MessageRecepient_Form.value = Freelancer;
+    MessageSubject_Form.value=array[0]['ServiceTitle'];
+
+
     // total ratings (not yet final)
     var ComputedTotalRatings = (1*parseFloat(array[0]['Service5StarRatings'])+2 * parseFloat(array[0]['Service4StarRatings'])+3* parseFloat(array[0]['Service3StarRatings'])+4* parseFloat(array[0]['Service2StarRatings'])+5* parseFloat(array[0]['Service1StarRatings']))/5;
   console.log(ComputedTotalRatings);
@@ -110,6 +130,10 @@ function setValues(array){
    image[1].src= array[0]['Banner2Path'];
    image[2].src= array[0]['Banner3Path'];
 
+
+   AccountLevel.innerText = array[0]['AccountLevel'];
+
+
    
    // NOT DONE YET
    
@@ -123,7 +147,14 @@ function setValues(array){
 
 
 function availService(){
+
+var AccountType = sessionStorage.getItem('AccountType');
+
+if(AccountType === "Customer"){
 document.getElementById("AvailServiceForm").style.display = "block";
+
+} else{alert('Availing Jobs is only for Customers');}
+
 //declarations
 var date = new Date();
 
@@ -401,6 +432,7 @@ function StandardPlan(){
 
  }// end of add1 star
 
+
  function ButtonColor(){
     var planText = document.getElementById("Plan_Plan");
     var basic = document.getElementById("BasicBtn");
@@ -432,3 +464,74 @@ function StandardPlan(){
         document.getElementById("PremiumBtn").style.backgroundColor = "#6b6b6b";
     } 
  }
+
+
+ // function to update ratings
+
+     //Main
+     function updateRatings(){
+         
+        var Form = document.getElementById("AvailServiceForm");
+        
+    
+        var xmlhttp = new XMLHttpRequest(AvailedService);
+        xmlhttp.open("POST", "Backend/ServiceInfoRequest.php", true);
+        
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        
+        xmlhttp.onreadystatechange = function() {
+     
+    
+            if (this.readyState === 4 || this.status === 200){ 
+               
+                
+                 AvailedServiceINFO=this.response;
+                 
+                 AvailedServiceINFO = JSON.parse(AvailedServiceINFO); 
+                
+    
+                console.log(AvailedServiceINFO);
+ 
+                 setRatings(AvailedServiceINFO);
+    
+    
+    
+    
+            } else{window.location.href="ServicesOffered.php"}   
+            
+        
+           
+        };
+        
+         xmlhttp.send("ReqServiceID=" + AvailedService);
+    
+        } // end 
+
+
+        function setRatings(data){
+            array = data;
+
+
+            const totalRatings = document.getElementById("totalRatings");
+            const Service5StarRatings = document.getElementById("5starRatingsTotal");
+            const Service4StarRatings = document.getElementById("4starRatingsTotal");
+            const Service3StarRatings = document.getElementById("3starRatingsTotal");
+            const Service2StarRatings =  document.getElementById("2starRatingsTotal");
+            const Service1StarRatings = document.getElementById("1starRatingsTotal");
+
+
+            var ComputedTotalRatings = (1*parseFloat(array[0]['Service5StarRatings'])+2 * parseFloat(array[0]['Service4StarRatings'])+3* parseFloat(array[0]['Service3StarRatings'])+4* parseFloat(array[0]['Service2StarRatings'])+5* parseFloat(array[0]['Service1StarRatings']))/5;
+            console.log(ComputedTotalRatings);
+          
+
+
+            totalRatings.innerText = ComputedTotalRatings;
+            Service5StarRatings.innerText =  array[0]['Service5StarRatings'];
+            Service4StarRatings.innerText =  array[0]['Service4StarRatings'];
+            Service3StarRatings.innerText =  array[0]['Service3StarRatings'];
+            Service2StarRatings.innerText =  array[0]['Service2StarRatings'];
+            Service1StarRatings.innerText =  array[0]['Service1StarRatings'];
+
+            TotalRatings();
+        }
+

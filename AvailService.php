@@ -17,6 +17,11 @@
     $MailingAdd = $_SESSION["MailingAddress"];
     echo "<script> sessionStorage.setItem('MailingAddress','$MailingAdd');</script>";
 
+if(isset( $_SESSION["AccountType"])){
+
+$AccountType = $_SESSION["AccountType"];
+    echo"<script> sessionStorage.setItem('AccountType','$AccountType')</script>";
+}
 
 ?>
 
@@ -145,15 +150,26 @@
 
 
                     <div id="MessageTheFreelancer" class="ServiceContainerChild"> 
+
+                    <form method="POST" action="Backend/SendMessage.php">
+
+                    <input type="hidden" name="MessageDate" id="MessageDate"> 
+                    <input type="hidden" name="MessageTime" id="MessageTime"> 
+                    <input type="hidden" name="MessageRecepient_Form" id="MessageRecepient_Form"> 
+                    <input type="hidden" name="MessageSubject_Form" id="MessageSubject_Form"> 
+
+
                         <div class="Avail-ProfilePicture"><img class="AccountProfilePicture" src="WebsiteImages/profilepic-placeholder.jpg"></div> 
                         <div class="Avail-AccountName AccountName">Account Name </div> 
                         <div class="Avail-AccountLevel AccountLevel">Level </div>
-                        <div class="Avail-AccDesc AccountDescription"> Account Description Placeholder</div>
+                        
                         <div class="Avail-Message">
-                            <input type="text" id="MessageToFreelancer" placeholder="Leave a Message...">
+                            <input type="text" id="MessageToFreelancer" name="MessageBody_Form" placeholder="Leave a Message...">
                         </div>
-                        <div class="Avail-SendBtn"><button id="SendButton">  SEND  </button></div>
-                 
+
+                        <div class="Avail-SendBtn"> <input id="SendButton" type="submit" value="SEND">  </div>
+
+                        </form>
                     </div>
 
 

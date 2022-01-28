@@ -119,21 +119,38 @@ function createElements(numb){
 
 for(var i = 0; i<Number;i++){
 
-    var messageListItem = document.createElement('li');
+    var messageListItem = document.createElement('tr');
+    var messageListItemStatus = document.createElement('p');
     var messageListItemSubject = document.createElement('p');
     var messageListItemSender = document.createElement('p');
     var messageListItemDate = document.createElement('p');
+    var ReplyButton = document.createElement('button');
+    var breakLine = document.createElement('br');
+    var horizon = document.createElement('hr');
 
+    messageListItemStatus.setAttribute('class','messageListItemStatus');
     messageListItem.setAttribute('class','messageListItem');
     messageListItemDate.setAttribute('class','messageListItemDate');
     messageListItemSender.setAttribute('class','messageListItemSender');
     messageListItemSubject.setAttribute('class','messageListItemSubject');
 
+    ReplyButton.setAttribute('class','ReplyButton');
+    
+    
+    messageListItem.appendChild(ReplyButton);
+    messageListItem.appendChild(breakLine);
+    messageListItem.appendChild(breakLine);
+    messageListItem.appendChild(messageListItemStatus);
     messageListItem.appendChild(messageListItemDate);
     messageListItem.appendChild(messageListItemSender);
     messageListItem.appendChild(messageListItemSubject);
+    
+
+
+
 
     MessageList.appendChild(messageListItem);
+    MessageList.appendChild(horizon);
     
 }
 
@@ -144,19 +161,26 @@ function setData(array){
 var DataArray = array;
 var Number = DataArray.length;
 
+const messageListItemStatus = document.getElementsByClassName("messageListItemStatus");
 const messageListItem = document.getElementsByClassName("messageListItem");
 const messageListItemDate = document.getElementsByClassName("messageListItemDate");
 const messageListItemSender = document.getElementsByClassName("messageListItemSender");
 const messageListItemSubject = document.getElementsByClassName("messageListItemSubject");
-
+const ReplyButton = document.getElementsByClassName('ReplyButton');
 
 for(var i =0; i<=Number;i++){
-
+    messageListItemStatus[i].innerText ="Status: "+ DataArray[i]['MessageStatus'];
     messageListItemDate[i].innerText = DataArray[i]['MessageDate'] +" - "+DataArray[i]['MessageTime'];
     messageListItemSender[i].innerText= "Sender : "+DataArray[i]['SenderEmail'];
-    messageListItemSubject[i].innerText= DataArray[i]['Subject'];
+    messageListItemSubject[i].innerText= "Subject : "+DataArray[i]['Subject'];
     messageListItem[i].setAttribute('onclick','showMessage(' +DataArray[i]['MessageID'] +')');
-console.log("running");
+    ReplyButton[i].innerText = "Reply";
+    ReplyButton[i].setAttribute('onclick',"replyMessage('"+DataArray[i]['SenderEmail']+"', '"+DataArray[i]['Subject']+"')");
+    console.log("running");
+
+    if(DataArray[i]['MessageStatus'] =="Seen"){
+        messageListItem[i].style.backgroundColor = "white";
+    }
 
 }
 
@@ -213,4 +237,19 @@ function setMessage(data){
     messageBody.innerText = dataArray[0]['MessageBody'];
     messageReciever.innerHTML = "Reciever: "+dataArray[0]['RecieverEmail'];
     
+}
+
+
+
+function replyMessage(recepient,subject){
+MessageRecepient = recepient;
+MessageSubject = subject;
+
+    const MessageRecepient_Form = document.getElementById('MessageRecepient_Form');
+    const MessageSubject_Form = document.getElementById('MessageSubject_Form');
+
+    MessageSubject_Form.value = MessageSubject;
+    MessageRecepient_Form.value =MessageRecepient;
+   CreateMessage();
+
 }
