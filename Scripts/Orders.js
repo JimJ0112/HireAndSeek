@@ -60,7 +60,7 @@ function createElements(Number){
     Notes = document.createElement('td');
     Status = document.createElement('td');
     FileMailing = document.createElement('td');
-    Gcash = document.createElement('td')
+    Gcash = document.createElement('td');
     DeliverButton = document.createElement('Button');
     CancelButton = document.createElement('Button');
     

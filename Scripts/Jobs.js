@@ -144,7 +144,7 @@ function createElements(Number){
     Job3StarRatings= document.getElementsByClassName('Job3StarRatings'); 
     Job2StarRatings= document.getElementsByClassName('Job2StarRatings'); 
     Job1StarRatings= document.getElementsByClassName('Job1StarRatings'); 
-    const Gcash = document.getElementsByClassName('Gcash');
+    Gcash = document.getElementsByClassName('Gcash');
     JobDeleteButton = document.getElementsByClassName('JobDeleteButton');
  
     
@@ -167,7 +167,7 @@ function createElements(Number){
             Job1StarRatings[i].innerText = DataArray[i]['Service1StarRatings'];
             JobDeleteButton[i].setAttribute('onclick','DeleteJob('+DataArray[i]['ServiceID']+')');
             JobDeleteButton[i].innerText = "Remove";
-            Gcash[i].innerText = DataArray[i]['Gcash'];
+            Gcash[i].innerText = DataArray[i]['GcashNumber'];
 
 
     
