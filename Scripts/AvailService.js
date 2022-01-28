@@ -1,5 +1,7 @@
 function init() // This is the function the browser first runs when it's loaded.
 {
+    ButtonColor();
+
     displayAvailedService() // Then runs the refresh function for the first time.
   var int = self.setInterval(function () {
     displayAvailedService()
@@ -42,9 +44,7 @@ console.log(AvailedService);
              BasicPlan();
              TotalRatings();
 
-            
-
-
+          
 
 
         } else{window.location.href="ServicesOffered.php"}   
@@ -178,7 +178,6 @@ function BasicPlan(){
     const BasicPlanDescription = document.getElementById("BasicPlanDescription_Info");
     const BasicPlanPrice = document.getElementById("BasicPlanPrice_Info");
 
-document.getElementById("BasicBtn").focus();
 
 var Plan = document.getElementById('Plan_Plan');
 var PlanDescription = document.getElementById('Plan_Description');
@@ -188,7 +187,7 @@ var Price  = document.getElementById("Buy");
 Plan.innerText = "Basic Plan";
 PlanDescription.innerText = BasicPlanDescription.innerText;
 Price.innerText = "Php "+BasicPlanPrice.innerText + ".00";
-
+ButtonColor();
 }
 
 function StandardPlan(){
@@ -205,12 +204,12 @@ function StandardPlan(){
     Plan.innerText = "Standard Plan";
     PlanDescription.innerText = StandardPlanDescription.innerText;
     Price.innerText = "Php "+StandardPlanPrice.innerText+ ".00";
-    
+    ButtonColor();
 }
 
     function PremiumPlan(){
         
-
+    
         const PremiumPlanDescription = document.getElementById("PremiumPlanDescription_Info");
         const PremiumPlanPrice = document.getElementById("PremiumPlanPrice_Info");
 
@@ -221,7 +220,7 @@ function StandardPlan(){
         Plan.innerText = "Premium Plan";
         PlanDescription.innerText = PremiumPlanDescription.innerText;
         Price.innerText ="Php "+ PremiumPlanPrice.innerText+ ".00";
-        
+        ButtonColor();
  }
 
 
@@ -401,3 +400,35 @@ function StandardPlan(){
     
 
  }// end of add1 star
+
+ function ButtonColor(){
+    var planText = document.getElementById("Plan_Plan");
+    var basic = document.getElementById("BasicBtn");
+    var standard = document.getElementById("StandardBtn");
+    var premium = document.getElementById("PremiumBtn");
+
+    if(planText.innerText == "Basic Plan"){
+        document.getElementById("BasicBtn").style.color = "#ffffff";
+        document.getElementById("BasicBtn").style.backgroundColor = "#6b6b6b";
+        document.getElementById("StandardBtn").style.color = "#000000";
+        document.getElementById("StandardBtn").style.backgroundColor = "#dddddd";
+        document.getElementById("PremiumBtn").style.color = "#000000";
+        document.getElementById("PremiumBtn").style.backgroundColor = "#dddddd";
+
+    } else if(planText.innerText == "Standard Plan"){
+        document.getElementById("BasicBtn").style.color = "#000000";
+        document.getElementById("BasicBtn").style.backgroundColor = "#dddddd";
+        document.getElementById("StandardBtn").style.color = "#ffffff";
+        document.getElementById("StandardBtn").style.backgroundColor = "#6b6b6b";
+        document.getElementById("PremiumBtn").style.color = "#000000";
+        document.getElementById("PremiumBtn").style.backgroundColor = "#dddddd";
+        
+    } else if(planText.innerText == "Premium Plan"){
+        document.getElementById("BasicBtn").style.color = "#000000";
+        document.getElementById("BasicBtn").style.backgroundColor = "#dddddd";
+        document.getElementById("StandardBtn").style.color = "#000000";
+        document.getElementById("StandardBtn").style.backgroundColor = "#dddddd";
+        document.getElementById("PremiumBtn").style.color = "#ffffff";
+        document.getElementById("PremiumBtn").style.backgroundColor = "#6b6b6b";
+    } 
+ }
