@@ -172,7 +172,7 @@ for(var i =0; i<=Number;i++){
     messageListItemStatus[i].innerText ="Status: "+ DataArray[i]['MessageStatus'];
     messageListItemDate[i].innerText = DataArray[i]['MessageDate'] +" - "+DataArray[i]['MessageTime'];
     messageListItemSender[i].innerText= "Sender : "+DataArray[i]['SenderEmail'];
-    messageListItemSubject[i].innerText= DataArray[i]['Subject'];
+    messageListItemSubject[i].innerText= "Subject : "+DataArray[i]['Subject'];
     messageListItem[i].setAttribute('onclick','showMessage(' +DataArray[i]['MessageID'] +')');
     ReplyButton[i].innerText = "Reply";
     ReplyButton[i].setAttribute('onclick',"replyMessage('"+DataArray[i]['SenderEmail']+"', '"+DataArray[i]['Subject']+"')");

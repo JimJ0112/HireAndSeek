@@ -145,8 +145,13 @@ function setValues(array){
 
 
 function availService(){
+
+var AccountType = sessionStorage.getItem('AccountType');
+
+if(AccountType === "Customer"){
 document.getElementById("AvailServiceForm").style.display = "block";
 //declarations
+} else{alert('Availing Jobs is only for Customers');}
 var date = new Date();
 
 var client = sessionStorage.getItem('sessionName');

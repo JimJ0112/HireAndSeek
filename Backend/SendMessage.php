@@ -13,7 +13,7 @@ $From = $_SESSION['SessionName'];
 
 
 //MessageID	SenderEmail	RecieverEmail	MessageDate	MessageTime	Subject	MessageBody	
-$InsertQuery = "INSERT INTO inbox (MessageID,SenderEmail,RecieverEmail,MessageDate,MessageTime,Subject,MessageBody) VALUES (0,'$From','$AddressedTo','$date','$time','$Subject','$MessageBody');";
+$InsertQuery = "INSERT INTO inbox (MessageID,SenderEmail,RecieverEmail,MessageDate,MessageTime,Subject,MessageBody,MessageStatus) VALUES (0,'$From','$AddressedTo','$date','$time','$Subject','$MessageBody','Delivered');";
 //echo $InsertQuery;
 $result = mysqli_query($conn,$InsertQuery);
 

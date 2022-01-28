@@ -17,6 +17,11 @@
     $MailingAdd = $_SESSION["MailingAddress"];
     echo "<script> sessionStorage.setItem('MailingAddress','$MailingAdd');</script>";
 
+if(isset( $_SESSION["AccountType"])){
+
+$AccountType = $_SESSION["AccountType"];
+    echo"<script> sessionStorage.setItem('AccountType','$AccountType')</script>";
+}
 
 ?>
 

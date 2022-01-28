@@ -9,6 +9,9 @@ $resultCheck = mysqli_num_rows($result);
 $data = array();
 
 
+$UpdateQueryString = "UPDATE inbox SET MessageStatus = 'Seen' WHERE MessageID = '$id'";
+$update = mysqli_query($conn,$UpdateQueryString);
+
 if($resultCheck > 0){
        
     while($row = mysqli_fetch_array($result)){
@@ -24,8 +27,7 @@ if($resultCheck > 0){
         
     }
 
-    $UpdateQueryString = "UPDATE inbox SET MessageStatus = 'Seen' WHERE MessageID = '$id'";
-    $update = mysqli_query($conn,$UpdateQueryString);
+
 
      echo json_encode($data);
 
