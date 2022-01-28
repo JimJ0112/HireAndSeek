@@ -24,6 +24,9 @@ if($resultCheck > 0){
         
     }
 
+    $UpdateQueryString = "UPDATE inbox SET MessageStatus = 'Seen' WHERE MessageID = '$id'";
+    $update = mysqli_query($conn,$UpdateQueryString);
+
      echo json_encode($data);
 
 
@@ -31,5 +34,11 @@ if($resultCheck > 0){
 } else{
     echo" connection failed";
 }
+
+
+
+
+
+
 
 ?>

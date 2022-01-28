@@ -1442,7 +1442,7 @@ table{
     grid-area: messagelist;
     padding: 0;
     overflow: scroll;
-
+    background-color: rgb(53, 52, 52);
 }
 
 #Message_DisplayList{
@@ -1454,15 +1454,17 @@ table{
     margin-left: 0;
     font-family: Arial, Helvetica, sans-serif;
     overflow: scroll;
+    background-color: rgb(53, 52, 52);
 }
 
 .messageListItem{
-    height: 100px;
+    height: 150px;
     border: 1px solid black;
     list-style-type: none;
     margin: 0;
     padding: 0;
     cursor: pointer;
+    background-color: rgb(53, 52, 52);
 }
 
 #MessageDisplay_Message{
