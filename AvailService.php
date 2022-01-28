@@ -1,6 +1,6 @@
 <?php
 
-// session_start();
+ session_start();
 
 //  if(!isset($_SESSION['SessionName'])){
 
@@ -82,8 +82,13 @@
             <div class="caro" id="AvailService_Carousel">
                 <!-- Carousel-->
                 <div class="carousel">
-                <img class="slides" src="WebsiteImages/Placeholder.png" style="width:100%">
-             
+               <!-- <img class="slides" src="WebsiteImages/Placeholder.png" style="width:100%"> -->
+               <img class="slides" src=" " style="width:100%">
+               <img class="slides" src=" " style="width:100%">
+               <img class="slides" src=" " style="width:100%">
+
+
+
                 <div class="display-caro">
                 <div class="display-leftNav"><button class="display-leftBtn" onclick="plusDivs(-1)">&#10094;</button></div>
                 <div class="display-rightNav"><button class="display-rightBtn" onclick="plusDivs(1)">&#10095;</button></div>

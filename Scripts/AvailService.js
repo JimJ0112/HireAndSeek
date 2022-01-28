@@ -3,7 +3,7 @@ function init() // This is the function the browser first runs when it's loaded.
     displayAvailedService() // Then runs the refresh function for the first time.
   var int = self.setInterval(function () {
     displayAvailedService()
-  }, 3000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+  }, 10000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
 }
 
 
@@ -81,7 +81,7 @@ function setValues(array){
     const StandardPlanPrice = document.getElementById("StandardPlanPrice_Info");
     const PremiumPlanDescription = document.getElementById("PremiumPlanDescription_Info");
     const PremiumPlanPrice = document.getElementById("PremiumPlanPrice_Info");
-
+    const image = document.getElementsByClassName('slides');
     // total ratings (not yet final)
     var ComputedTotalRatings = (1*parseFloat(array[0]['Service5StarRatings'])+2 * parseFloat(array[0]['Service4StarRatings'])+3* parseFloat(array[0]['Service3StarRatings'])+4* parseFloat(array[0]['Service2StarRatings'])+5* parseFloat(array[0]['Service1StarRatings']))/5;
   console.log(ComputedTotalRatings);
@@ -106,6 +106,9 @@ function setValues(array){
    StandardPlanPrice.innerText = array[0]['ServiceStandardPlanPrice'];
    PremiumPlanDescription.innerText = array[0]['ServicePremiumPlanDescription'];
    PremiumPlanPrice.innerText = array[0]['ServicePremiumPlanPrice'];
+   image[0].src= array[0]['Banner1Path'];
+   image[1].src= array[0]['Banner2Path'];
+   image[2].src= array[0]['Banner3Path'];
 
    
    // NOT DONE YET
