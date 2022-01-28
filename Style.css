@@ -156,6 +156,7 @@
                 .display-caro{
                     position: absolute;
                     width: 100%;
+                    
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     grid-template-areas: 
@@ -589,7 +590,7 @@ padding: auto;
 
 #MessageToFreelancer{
     font-size: 15px;
-    height: 40px;
+    height: 90px;
     width: 70%;
     margin: 20px;
     text-align: center;

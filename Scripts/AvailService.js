@@ -82,6 +82,23 @@ function setValues(array){
     const PremiumPlanDescription = document.getElementById("PremiumPlanDescription_Info");
     const PremiumPlanPrice = document.getElementById("PremiumPlanPrice_Info");
     const image = document.getElementsByClassName('slides');
+
+
+    // hidden frames value
+    const MessageDate = document.getElementById('MessageDate');
+    const MessageTime = document.getElementById('MessageTime');
+    const MessageRecepient_Form = document.getElementById('MessageRecepient_Form');
+    const MessageSubject_Form = document.getElementById('MessageSubject_Form');
+
+    var now = new Date();
+    var Freelancer = sessionStorage.getItem('sessionName');
+
+    MessageDate.value = now.getUTCMonth() + 1 + " / " + parseInt(now.getUTCDate() + 1) + " / " + now.getUTCFullYear();
+    MessageTime.value = now.getUTCHours() + " : " + now.getUTCMinutes();
+    MessageRecepient_Form.value = Freelancer;
+    MessageSubject_Form.value=array[0]['ServiceTitle'];
+
+
     // total ratings (not yet final)
     var ComputedTotalRatings = (1*parseFloat(array[0]['Service5StarRatings'])+2 * parseFloat(array[0]['Service4StarRatings'])+3* parseFloat(array[0]['Service3StarRatings'])+4* parseFloat(array[0]['Service2StarRatings'])+5* parseFloat(array[0]['Service1StarRatings']))/5;
   console.log(ComputedTotalRatings);
@@ -109,6 +126,10 @@ function setValues(array){
    image[0].src= array[0]['Banner1Path'];
    image[1].src= array[0]['Banner2Path'];
    image[2].src= array[0]['Banner3Path'];
+
+
+   AccountLevel.innerText = array[0]['AccountLevel'];
+
 
    
    // NOT DONE YET
