@@ -1,7 +1,7 @@
 <?php
 require('../includes/databaseConnection.php');
 /*
-echo $_POST["ServiceID"];
+echo $_POST["UserEmail"];
 echo $_POST["Star"];
 */
 if($_POST["Star"]==1){
@@ -39,4 +39,12 @@ if($_POST["Star"]==1){
 $result = mysqli_query($conn,$query);
 
 mysqli_close($conn);
+
+$UserEmail= $_POST["UserEmail"];
+$encodedEmail = urlencode($UserEmail);
+$ServiceID = $_POST["ServiceID"];
+$Rating = $_POST["Star"];
+
+
+header("location:RememberRatings.php?useremail=$encodedEmail&serviceid=$ServiceID&rating=$Rating");
 ?>
