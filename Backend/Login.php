@@ -29,7 +29,8 @@ if($resultCheck > 0){
  
 
     } // end of while
-} else{echo"Login Failed";
+} else{
+    header('location:../Login_Index.php?data=LoginFailed');
 
 }// end of if
 
@@ -47,17 +48,18 @@ if($resultCheck > 0){
 if(isset($_SESSION["SessionName"]) && isset($_SESSION["AccountType"])){
 
     if($_SESSION["AccountType"] == "Freelancer"){
-        header("Location: ../Freelancer_Dashboard.php");
+        header("Location: ../ManageProfile.php");
         //session_regenerate_id(true);
         //exit();
 
     } else if($_SESSION["AccountType"] == "Customer"){
-        header("Location: ../ServicesOffered.php");
+        header("Location: ../ManageProfile.php");
         //session_regenerate_id(true);
         //exit();
     }
     }else{
-        header("Location: ../ServicesOffered.php");
+        //header("Location: ../ServicesOffered.php");
+        header('location:../Login_Index.php?data=LoginFailed');
         //session_regenerate_id(true);
         //exit();
     }

@@ -20,9 +20,9 @@
 <li class="Dashboard_CategoriesElement" id="Freelancer_dashboard" > <a href="../Orders.php"> ORDERS </a> </li>
 <li class="Dashboard_CategoriesElement" id="Freelancer_jobs" > <a href="../Jobs.php"> JOBS <a> </li>
 <li class="Dashboard_CategoriesElement" id="Freelancerd_transactions" > <a href="../CanceledOrders.php"> Canceled Orders </a> </li>
-<li class="Dashboard_CategoriesElement" id="Freelancer_performance" > <a href="../DeliveredOrders.php">PERFORMANCE </a></li>
+<li class="Dashboard_CategoriesElement" id="Freelancer_performance" > <a href="../DeliveredOrders.php">Completed </a></li>
 
-<li class="Dashboard_CategoriesElement" id="Freelancer_profile" > PROFILE </li>
+<li class="Dashboard_CategoriesElement" id="Freelancer_profile" > <a href="../ManageProfile.php">  PROFILE </a> </li>
 
 </ul>
 
