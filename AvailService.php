@@ -2,10 +2,10 @@
 
  session_start();
 
-//  if(!isset($_SESSION['SessionName'])){
+ if(!isset($_SESSION['SessionName'])){
 
-//      header('location:Login_Index.php?data=PleaseLogIn');
-//   }
+      header('location:Login_Index.php?data=PleaseLogIn');
+  }
 
 
 //  if(isset($_GET['data'])){
@@ -18,9 +18,10 @@ if(isset($_GET['data'])){
     echo"<script> $data </script>";
 }
 
-
+if(isset($_SESSION['MailingAddress'])){
     $MailingAdd = $_SESSION["MailingAddress"];
     echo "<script> sessionStorage.setItem('MailingAddress','$MailingAdd');</script>";
+}
 
 if(isset( $_SESSION["AccountType"])){
 
