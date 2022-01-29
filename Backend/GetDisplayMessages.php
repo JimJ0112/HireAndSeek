@@ -9,7 +9,7 @@ $resultCheck = mysqli_num_rows($result);
 $data = array();
 
 
-$UpdateQueryString = "UPDATE inbox SET MessageStatus = 'Seen' WHERE MessageID = '$id'";
+$UpdateQueryString = "UPDATE inbox SET MessageStatus = 'Read' WHERE MessageID = '$id'";
 $update = mysqli_query($conn,$UpdateQueryString);
 
 if($resultCheck > 0){

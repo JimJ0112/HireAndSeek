@@ -13,29 +13,35 @@ MessageTime.value = now.getUTCHours() + " : " + now.getUTCMinutes();
 
 function CreateMessage(){
 
+    document.getElementById('Read_Message').style.display="none";
+    document.getElementById('Messages_List').style.display="none";
     Create_MessageDiv.style.display = "block";
-    Read_MessageDiv.style.display = "none";
+   
     
 }
 
 function ReadMessage(){
-    Create_MessageDiv.style.display = "none";
-    Read_MessageDiv.style.display = "block";
+    document.getElementById('Read_Message').style.display="none";
+    document.getElementById('Messages_List').style.display="block";
+    document.getElementById("Messages_DisplayList").style.display ="block";
+    document.getElementById('SentMessages_DisplayList').style.display = "none";
     GetMessages();
 }
 
 function ReadSentMessages(){
-    Create_MessageDiv.style.display = "none";
-    Read_MessageDiv.style.display = "block";
+    document.getElementById('Read_Message').style.display="none";
+    document.getElementById('Messages_List').style.display="block";
+    document.getElementById("Messages_DisplayList").style.display ="none";
+    document.getElementById('SentMessages_DisplayList').style.display = "block";
     GetSentMessages();
 }
 
 
 function init() // This is the function the browser first runs when it's loaded.
 {
-    GetMessages() // Then runs the refresh function for the first time.
+    GetMessages();// Then runs the refresh function for the first time.
   var int = self.setInterval(function () {
-    GetMessages()
+    GetMessages();
   }, 10000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
 }
 
@@ -56,6 +62,11 @@ function GetMessages(){
         if (this.readyState === 4 || this.status === 200){ 
            
             
+             
+            //refresh container
+ 
+
+
             var dataArray = this.response;
             dataArray = JSON.parse(dataArray);
             console.log(dataArray);
@@ -79,34 +90,6 @@ function GetMessages(){
 
 //GetMessages();
 
-
-// get sent messages
-function GetSentMessages(){
-    const SessionName = sessionStorage.getItem("sessionName");
-    var xmlhttp = new XMLHttpRequest();
-    var params = "data="+SessionName
-    xmlhttp.open("POST", "Backend/GetSentMessages.php", true);
-    
-
-    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState === 4 || this.status === 200){ 
-           
-            
-            var dataArray = this.response;
-           dataArray = JSON.parse(dataArray);
-            console.log(dataArray);
-            var number = dataArray.length;
-            createElements(number);
-            setData(dataArray);
-     
-        }else{console.log(err);}      
-    }
-    
-    xmlhttp.send(params);
-    
-    }// end of function
 
 
 // function to create elements
@@ -169,7 +152,7 @@ const messageListItemSubject = document.getElementsByClassName("messageListItemS
 const ReplyButton = document.getElementsByClassName('ReplyButton');
 
 for(var i =0; i<=Number;i++){
-    messageListItemStatus[i].innerText ="Status: "+ DataArray[i]['MessageStatus'];
+    
     messageListItemDate[i].innerText = DataArray[i]['MessageDate'] +" - "+DataArray[i]['MessageTime'];
     messageListItemSender[i].innerText= "Sender : "+DataArray[i]['SenderEmail'];
     messageListItemSubject[i].innerText= "Subject : "+DataArray[i]['Subject'];
@@ -178,8 +161,14 @@ for(var i =0; i<=Number;i++){
     ReplyButton[i].setAttribute('onclick',"replyMessage('"+DataArray[i]['SenderEmail']+"', '"+DataArray[i]['Subject']+"')");
     console.log("running");
 
-    if(DataArray[i]['MessageStatus'] =="Seen"){
-        messageListItem[i].style.backgroundColor = "white";
+    if(DataArray[i]['MessageStatus'] =="Delivered"){
+        messageListItem[i].style.backgroundColor = "#D1CFCF";
+    }
+
+    if(DataArray[i]['MessageStatus'] == "New"){
+        messageListItemStatus[i].innerText = DataArray[i]['MessageStatus'];
+        messageListItemStatus[i].style.backgroundColor = "blue";
+        messageListItemStatus[i].style.color = "white";
     }
 
 }
@@ -203,7 +192,11 @@ function showMessage(ID){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 || this.status === 200){ 
            
-            
+            document.getElementById('Read_Message').style.display="block";
+            document.getElementById('Messages_List').style.display="none";
+
+
+
             var dataArray = this.response;
             dataArray = JSON.parse(dataArray);
             console.log(dataArray);
@@ -224,8 +217,120 @@ function showMessage(ID){
 }
 
 
+
+// get sent messages
+function GetSentMessages(){
+    const SessionName = sessionStorage.getItem("sessionName");
+    var xmlhttp = new XMLHttpRequest();
+    var params = "data="+SessionName
+    xmlhttp.open("POST", "Backend/GetSentMessages.php", true);
+    
+
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+
+            
+            var dataArray = this.response;
+           dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+            var number = dataArray.length;
+            createSentElements(number);
+            setSentData(dataArray);
+     
+        }else{console.log(err);}      
+    }
+    
+    xmlhttp.send(params);
+    
+    }// end of function
+
+
+function createSentElements(numb){
+    var Number = numb;
+
+    const SentMessageList = document.getElementById('SentMessages_DisplayList');
+    //refresh container
+    SentMessageList.innerHTML = "";
+
+for(var i = 0; i<Number;i++){
+
+    var messageListItem = document.createElement('tr');
+   
+    var messageListItemSubject = document.createElement('p');
+    var messageListItemRecepient = document.createElement('p');
+    var messageListItemDate = document.createElement('p');
+    var ReplyButton = document.createElement('button');
+    var breakLine = document.createElement('br');
+    var horizon = document.createElement('hr');
+
+   
+    messageListItem.setAttribute('class','SentmessageListItem');
+    messageListItemDate.setAttribute('class','SentmessageListItemDate');
+    messageListItemRecepient.setAttribute('class','SentmessageListItemRecepient');
+    messageListItemSubject.setAttribute('class','SentmessageListItemSubject');
+
+    ReplyButton.setAttribute('class','ReplyButton');
+    
+    
+    messageListItem.appendChild(ReplyButton);
+    messageListItem.appendChild(breakLine);
+    messageListItem.appendChild(breakLine);
+   
+    messageListItem.appendChild(messageListItemDate);
+    messageListItem.appendChild(messageListItemRecepient);
+    messageListItem.appendChild(messageListItemSubject);
+    
+
+
+
+
+    SentMessageList.appendChild(messageListItem);
+    SentMessageList.appendChild(horizon);
+    
+}
+
+}// end of create elements
+
+
+function setSentData(array){
+var DataArray = array;
+var Number = DataArray.length;
+
+
+const messageListItem = document.getElementsByClassName("SentmessageListItem");
+const messageListItemDate = document.getElementsByClassName("SentmessageListItemDate");
+const messageListItemRecepient = document.getElementsByClassName("SentmessageListItemRecepient");
+const messageListItemSubject = document.getElementsByClassName("SentmessageListItemSubject");
+const ReplyButton = document.getElementsByClassName('ReplyButton');
+
+for(var i=0;i<=Number;i++){
+    ReplyButton[i].innerText = "Reply";
+    messageListItemDate[i].innerText = DataArray[i]['MessageDate'] +" - "+DataArray[i]['MessageTime'];
+    messageListItemRecepient[i].innerText= "Recepient : "+DataArray[i]['RecieverEmail'];
+    messageListItemSubject[i].innerText= "Subject : "+DataArray[i]['Subject'];
+    messageListItem[i].setAttribute('onclick','showMessage(' +DataArray[i]['MessageID'] +')');
+    
+   // ReplyButton[i].setAttribute('onclick',"replyMessage('"+DataArray[i]['RecieverEmail']+"','"+DataArray[i]['Subject']+"')");
+
+ 
+
+
+
+}
+
+
+
+} // end of function
+
+
+
+
 function setMessage(data){
 
+    
     dataArray = data;
     const messageSender = document.getElementById("Message_SenderContainer");
     const messageSubject = document.getElementById("Message_SubjectContainer");
@@ -250,6 +355,33 @@ MessageSubject = subject;
 
     MessageSubject_Form.value = MessageSubject;
     MessageRecepient_Form.value =MessageRecepient;
+
+    
    CreateMessage();
 
+}
+
+
+
+function hideRead(){
+
+    document.getElementById('Read_Message').style.display="none";
+    document.getElementById('Messages_List').style.display="block";
+
+
+   
+    document.getElementById('Message_ControlsContainer').innerText = " ";
+    document.getElementById('Message_SenderContainer').innerText = " ";
+    document.getElementById('Message_RecepientContainer').innerText = " ";
+    document.getElementById('Message_SubjectContainer').innerText = " ";
+    document.getElementById('Message_BodyContainer').innerText = " ";
+}
+
+function hideCreate(){
+
+    document.getElementById('Read_Message').style.display="none";
+    document.getElementById('Messages_List').style.display="block";
+    document.getElementById("Create_Message").style.display="none";
+
+   
 }
