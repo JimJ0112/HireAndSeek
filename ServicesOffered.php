@@ -29,7 +29,7 @@ $data = "Backend/GET_".$_GET['data']."DATA.php";
         <script src="Scripts/ServicesOffered.js"> </script>
     </head>
 
-    <body onload="<script> var data = sessionStorage.getItem('data'); GetData(data)</script>">
+    <body>
         
 <div class="SO-container">
         <div class="nav">
