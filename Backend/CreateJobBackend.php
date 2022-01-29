@@ -16,6 +16,7 @@ $PremiumDescription = $_POST["PremiumPlanDescription"];
 $BasicPrice = $_POST["BasicPlanPrice"]; 
 $StandardPrice = $_POST["StandardPlanPrice"]; 
 $PremiumPrice = $_POST["PremiumPlanPrice"];
+$GcashNumber = $_POST['GcashNumber'];
 
 $Directory = "ServicesFiles/$JobName.$AccountName";
 $CommentsTable = "$JobName.$AccountName.Comments";
@@ -50,7 +51,7 @@ $Banner3Path = $Directory."/Banner3".$JobName.'.png';
 
 
 
-$InsertQuery = "INSERT INTO servicesinfo() VALUES (0,'$JobName','$AccountName','$AccountInbox','$AccountLevel','','$Directory', '$Description','$BasicDescription', '$BasicPrice' , '$StandardDescription', '$StandardPrice','$PremiumDescription','$PremiumPrice' ,0,0,0,0,0,0,'$CommentsTable','$Category','$Banner1Path','$Banner2Path','$Banner3Path');";
+$InsertQuery = "INSERT INTO servicesinfo() VALUES (0,'$JobName','$AccountName','$AccountInbox','$AccountLevel','','$Directory', '$Description','$BasicDescription', '$BasicPrice' , '$StandardDescription', '$StandardPrice','$PremiumDescription','$PremiumPrice' ,0,0,0,0,0,0,'$CommentsTable','$Category','$Banner1Path','$Banner2Path','$Banner3Path','$GcashNumber');";
 $result = mysqli_query($conn,$InsertQuery);
 
 header('location:../ServicesOffered.php');

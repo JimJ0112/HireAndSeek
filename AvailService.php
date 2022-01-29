@@ -12,6 +12,11 @@
 //      $data = $_GET['data'];
 //       echo"<script> alert('Result: $data') </script>";
 //  }
+if(isset($_GET['data'])){
+
+    $data= $_GET['data'];
+    echo"<script> $data </script>";
+}
 
 
     $MailingAdd = $_SESSION["MailingAddress"];
@@ -58,6 +63,8 @@ $AccountType = $_SESSION["AccountType"];
             <form action="Backend/AvailServiceBackend.php" method="post" id="AvailServiceForm"> 
             <h3 class="AvailServiceForm_Text">CHECKOUT  </h3>
             <div class="AvailServiceForm-Container">
+
+            <input type="hidden" name="GcashNumber" id="GcashNumber" readonly>
 
             <div class="AvailServiceForm_Text"> Owner Email:   <input type="text" name="OwnerEmail" id="OwnerEmail" readonly></div>
             <div class="AvailServiceForm_Text"> Client Email:  <input type="text" name="ClientEmail" id="ClientEmail" readonly> </div>
@@ -207,11 +214,11 @@ $AccountType = $_SESSION["AccountType"];
                     <div class="rating">
                          
                     <!--elements are in reversed order, to allow "previous sibling selectors" in CSS-->
-                    <input type="radio" name="rating" value="5" id="5"><label for="5" onclick="add5star()">☆</label>
-                    <input type="radio" name="rating" value="4" id="4"><label for="4" onclick="add4star()">☆</label>
-                    <input type="radio" name="rating" value="3" id="3"><label for="3" onclick="add3star()">☆</label>
-                    <input type="radio" name="rating" value="2" id="2"><label for="2" onclick="add2star()">☆</label>
-                    <input type="radio" name="rating" value="1" id="1"><label for="1" onclick="add1star()">☆</label>
+                    <input type="radio" name="rating" class= "ratingButton" value="5" id="5"><label for="5" onclick="add5star()">☆</label>
+                    <input type="radio" name="rating" class= "ratingButton" value="4" id="4"><label for="4" onclick="add4star()">☆</label>
+                    <input type="radio" name="rating" class= "ratingButton" value="3" id="3"><label for="3" onclick="add3star()">☆</label>
+                    <input type="radio" name="rating" class= "ratingButton" value="2" id="2"><label for="2" onclick="add2star()">☆</label>
+                    <input type="radio" name="rating" class= "ratingButton" value="1" id="1"><label for="1" onclick="add1star()">☆</label>
                     </div>
                     </div>
             </div>

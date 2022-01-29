@@ -43,7 +43,7 @@ console.log(AvailedService);
             setValues(AvailedServiceINFO);
             BasicPlan();
              
-             
+            AlreadyRated();
 
           
 
@@ -85,13 +85,14 @@ function setValues(array){
     const PremiumPlanDescription = document.getElementById("PremiumPlanDescription_Info");
     const PremiumPlanPrice = document.getElementById("PremiumPlanPrice_Info");
     const image = document.getElementsByClassName('slides');
-
+    
 
     // hidden frames value
     const MessageDate = document.getElementById('MessageDate');
     const MessageTime = document.getElementById('MessageTime');
     const MessageRecepient_Form = document.getElementById('MessageRecepient_Form');
     const MessageSubject_Form = document.getElementById('MessageSubject_Form');
+    const GcashNumber = document.getElementById('GcashNumber');
 
     var now = new Date();
     var Freelancer = sessionStorage.getItem('sessionName');
@@ -100,6 +101,7 @@ function setValues(array){
     MessageTime.value = now.getUTCHours() + " : " + now.getUTCMinutes();
     MessageRecepient_Form.value = Freelancer;
     MessageSubject_Form.value=array[0]['ServiceTitle'];
+    GcashNumber.value = array[0]['GcashNumber'];
 
 
     // total ratings (not yet final)
@@ -265,7 +267,7 @@ function StandardPlan(){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
-    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=1";
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=1&UserEmail="+sessionStorage.getItem('sessionName');
     
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     
@@ -294,7 +296,7 @@ function StandardPlan(){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
-    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=2";
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=2&UserEmail="+sessionStorage.getItem('sessionName');
     
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     
@@ -322,7 +324,7 @@ function StandardPlan(){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
-    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=3";
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=3&UserEmail="+sessionStorage.getItem('sessionName');
     
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     
@@ -350,7 +352,7 @@ function StandardPlan(){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
-    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=4";
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=4&UserEmail="+sessionStorage.getItem('sessionName');
     
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     
@@ -378,7 +380,7 @@ function StandardPlan(){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
-    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=5";
+    var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=5&UserEmail="+sessionStorage.getItem('sessionName');
     
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     
@@ -468,7 +470,7 @@ function StandardPlan(){
 
  // function to update ratings
 
-     //Main
+   
      function updateRatings(){
          
         var Form = document.getElementById("AvailServiceForm");
@@ -534,4 +536,78 @@ function StandardPlan(){
 
             TotalRatings();
         }
+
+
+
+
+        // check if user already rated
+
+        function AlreadyRated(){
+         
+            var params = "ServiceID="+ sessionStorage.getItem('AvailedServiceID')+"&Star=4&UserEmail="+sessionStorage.getItem('sessionName');
+        
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "Backend/AlreadyRated.php", true);
+            
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            
+            xmlhttp.onreadystatechange = function() {
+         
+        
+                if (this.readyState === 4 || this.status === 200){ 
+                   
+                    
+                     alreadyRated=this.response;
+                     
+                     
+                    
+        
+                    console.log(alreadyRated);
+
+                    var star1 = document.getElementById('1');
+                    var star2 = document.getElementById('2');
+                    var star3 = document.getElementById('3');
+                    var star4 = document.getElementById('4');
+                    var star5 = document.getElementById('5');
+                    var ratingButtons = document.getElementsByClassName('ratingButton');
+     
+                     if(alreadyRated > 0 && alreadyRated <=5 ){
+
+
+                        if(alreadyRated == 1){
+                            star1.checked = true;
+                            star1.onclick = null;
+                        } else if(alreadyRated == 2){
+                            star2.checked = true;
+                            star2.onclick = null;
+                        }else if(alreadyRated == 3){
+                            star3.checked = true;
+                            star3.onclick = null;
+                        }else if(alreadyRated == 4){
+                            star4.checked = true;
+                            star4.onclick = null;
+                        }else if(alreadyRated == 5){
+                            star5.checked = true;
+                            star5.onclick = null;
+                        }
+
+                        for(var i=1;i<=5;i++){
+                            ratingButtons[i].onclick = null;
+                        }
+
+                     }
+        
+        
+        
+        
+                } else{window.location.href="ServicesOffered.php"}   
+                
+            
+               
+            };
+            
+             xmlhttp.send(params);
+        
+            } // end 
+    
 

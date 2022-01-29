@@ -60,6 +60,7 @@ function createElements(Number){
     Notes = document.createElement('td');
     Status = document.createElement('td');
     FileMailing = document.createElement('td');
+    Gcash = document.createElement('td');
     DeliverButton = document.createElement('Button');
     CancelButton = document.createElement('Button');
     
@@ -69,7 +70,7 @@ function createElements(Number){
     Buyer.setAttribute('class','Buyer');
     JOB.setAttribute('class','JOB');
     
-    
+    Gcash.setAttribute('class','Gcash');
     PlanAvailed.setAttribute('class','PlanAvailed');
     Price.setAttribute('class','price');
     DueDate.setAttribute('class','DueDate'); 
@@ -87,6 +88,7 @@ function createElements(Number){
  row.appendChild(Price);
  row.appendChild(FileMailing);
  row.appendChild(Notes);
+ row.appendChild(Gcash);
  row.appendChild(Status);
  row.appendChild(DeliverButton);
  row.appendChild(CancelButton);
@@ -116,6 +118,7 @@ function setData(array){
     const DeliverButton = document.getElementsByClassName('Deliver');
     const CancelButton = document.getElementsByClassName('Cancel');
     const price = document.getElementsByClassName('price');
+    const Gcash = document.getElementsByClassName('Gcash');
 
     for(var i = 0; i<Number; i++){
 
@@ -127,6 +130,7 @@ function setData(array){
         Notes[i].innerText = DataArray[i]['clientNotes']; 
          Status[i].innerText = DataArray[i]['TransactionStatus']; 
          DeliverButton[i].innerText = "Deliver";
+         Gcash[i].innerText = DataArray[i]['Gcash'];
          DeliverButton[i].setAttribute('onclick','DeliverJob('+DataArray[i]['transactionID']+')');
          CancelButton[i].innerText = "Cancel"; 
          CancelButton[i].setAttribute('onclick','CancelJob('+DataArray[i]['transactionID']+')');
