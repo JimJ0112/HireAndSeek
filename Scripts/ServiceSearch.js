@@ -1,9 +1,10 @@
-
+const Lisearchbar = document.getElementById('searchbar');
 const searchSuggestions = document.getElementById("SearchSuggestions");
 const searchBar = document.getElementById("title");
-console.log(searchBar);
+//console.log(searchBar);
 var searchResults;
 
+Lisearchbar.style.visibility = "hidden";
 
 function searchSuggestionResults(){
     
@@ -58,8 +59,51 @@ function searchSuggestionResults(){
 
 
 /* function for clicking the search suggestions */
+/*
 function searchSuggestionClicked($id){
 
     alert('You have clicked suggestion id number: '+$id);
 }
 
+*/
+
+function showSearchBar(){
+
+    const Lisearchbar = document.getElementById('searchbar');
+    const searchBar = document.getElementById('title');
+    const btnSearch = document.getElementById('btnSearch');
+    var search = window.getComputedStyle(Lisearchbar).getPropertyValue("Visibility");
+
+
+
+
+       // alert(search);
+
+        if(search === "hidden"){
+            viewSearchBar();
+            search = window.getComputedStyle(searchBar).getPropertyValue("Visibility");
+        } else{
+            hideSearchBar();
+            search = window.getComputedStyle(searchBar).getPropertyValue("Visibility");
+        }
+    
+
+}
+
+function hideSearchBar(){
+    const Lisearchbar = document.getElementById('searchbar');
+    const searchBar = document.getElementById('title');
+    const btnSearch = document.getElementById('btnSearch');
+
+    Lisearchbar.style.visibility = "hidden";
+    
+}
+
+function viewSearchBar(){
+    const Lisearchbar = document.getElementById('searchbar');
+    const searchBar = document.getElementById('title');
+    const btnSearch = document.getElementById('btnSearch');
+
+    Lisearchbar.style.visibility = "visible";
+    searchbar.style.visibility = "visible";
+}

@@ -68,7 +68,7 @@ $data = $_GET['data'];
             <nav id="message_nav">
                
                 <ul>
-                   
+                <!--    <li onclick ="GetMessages()" class="Message_categories"> Refresh </li> --> 
                     <li onclick ="ReadMessage()" class="Message_categories"> Inbox </li> 
                     <li onclick = "ReadSentMessages()" class="Message_categories"> Sent Box </li> 
                     <li onclick = "CreateMessage()" class="Message_categories" > New Message </li>
@@ -84,6 +84,10 @@ $data = $_GET['data'];
                     
         </table>
 
+        
+        <table id="SentMessages_DisplayList">
+                    
+        </table>
 
         </div>
 
@@ -91,6 +95,7 @@ $data = $_GET['data'];
         <div id="MessageDisplay_Message" class="MessagesPage_div">
             <center>
                 <div id="Create_Message">
+                <button id="Back" onclick="hideCreate()"> Back </button>
                 <form method="POST" id="MessageForm" action="Backend/SendMessage.php">
                 <br>
                 <input type="hidden" name="MessageDate" id="MessageDate"> 
@@ -109,13 +114,13 @@ $data = $_GET['data'];
             </center>
         
                 <div id="Read_Message">
-                    
+                    <button id="Back" onclick="hideRead()"> Back </button>
                     <div id="Message_ControlsContainer"> </div>
                    
-                    <h4 id="Message_SenderContainer">  Message Sender </h4> 
-                    <h4 id="Message_RecepientContainer">  Message Recepient </h4> 
-                    <h4 id="Message_SubjectContainer">  Subject placeholder </h4> 
-                    <h5 id="Message_BodyContainer"> Message Body</h5> 
+                    <h4 id="Message_SenderContainer">   </h4> 
+                    <h4 id="Message_RecepientContainer">   </h4> 
+                    <h4 id="Message_SubjectContainer">   </h4> 
+                    <h5 id="Message_BodyContainer"> </h5> 
                     
 
                 </div>

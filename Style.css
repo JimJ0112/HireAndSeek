@@ -1691,6 +1691,7 @@ table{
 
 /*------------------------Messages Page--------------------------------------------------------*/
 
+/*
 #Messages_Body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
@@ -1704,39 +1705,59 @@ table{
                          "messagelist messagebody messagebody messagebody messagebody messagebody messagebody"
                          "messagelist messagebody messagebody messagebody messagebody messagebody messagebody";
 }
+*/
 
 #Messages_List{
-    border: 1px solid black;
-    grid-area: messagelist;
+  
+  /*  grid-area: messagelist; */
+    position: absolute;
+    z-index: 1;
     padding: 0;
     overflow: scroll;
-    background-color: rgb(53, 52, 52);
+    background-color: white;
+    width: 100%;
 }
 
 #Message_DisplayList{
     list-style-type: none;
-    border: 1px solid black;
     width: 100%;
     padding: 0;
     text-decoration: none;
     margin-left: 0;
     font-family: Arial, Helvetica, sans-serif;
     overflow: scroll;
-    background-color: rgb(53, 52, 52);
+    background-color: #0b171f;  
 }
 
 .messageListItem{
     height: 150px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     list-style-type: none;
     margin: 0;
     padding: 0;
     cursor: pointer;
-    background-color: rgb(53, 52, 52);
+    background-color: white;
+ 
 }
 
+#Read_Message{
+   
+    z-index: 0;
+    height: 100%;
+    
+}
+
+#Create_Message{
+       
+    z-index: 0;
+    height: 100%;
+}
+
+ 
+
+
 #MessageDisplay_Message{
-    border: 1px solid black;
+   
     grid-area: messagebody;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -1756,6 +1777,7 @@ table{
 #message_nav{
 /*text-align: center;*/
 border: 1px solid black;
+border-bottom: 5px solid black;
 }
 
 
@@ -1790,19 +1812,19 @@ border: 1px solid black;
 #Message_SenderContainer{
     height: 5%;
     width: 99.5%;
-    border: 1px solid black;
+    
 }
 
 #Message_RecepientContainer{
     height: 5%;
     width: 99.5%;
-    border: 1px solid black;
+   
 }
 
 #Message_SubjectContainer{
     width: 99.5%;
     height: 7%;
-    border: 1px solid black;
+    
 }
 
 #Message_BodyContainer{
@@ -1843,6 +1865,29 @@ border: 1px solid black;
     height: 100%;
 }
 
+/*-----------------------------------------dashboard ---------------------------------------*/
+.Dashboard_CategoriesElement{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(245, 236, 236);
+}
+.Dashboard_CategoriesElement a{
+    text-decoration: none;
+    color: white;
+}
+#Dashboard_Categories{
+    background-color: gray;
+    padding: 5px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
 /*-------------------------------------- Media Testing------------------------------------ */
 @media all and (max-width:800px){
     .Grid-container{
@@ -1864,6 +1909,7 @@ border: 1px solid black;
         height: 30px;
         font-size: 10px;
         margin: 0px 0px 10px 0px;
+        
      }
      #btnSearch{
         background-size: 100% 100%;  

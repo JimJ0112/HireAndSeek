@@ -99,7 +99,7 @@ function setValues(array){
 
     MessageDate.value = now.getUTCMonth() + 1 + " / " + parseInt(now.getUTCDate() + 1) + " / " + now.getUTCFullYear();
     MessageTime.value = now.getUTCHours() + " : " + now.getUTCMinutes();
-    MessageRecepient_Form.value = Freelancer;
+    MessageRecepient_Form.value = array[0]['ServiceOwnerEmail'];
     MessageSubject_Form.value=array[0]['ServiceTitle'];
     GcashNumber.value = array[0]['GcashNumber'];
 
