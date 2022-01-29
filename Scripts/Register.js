@@ -19,11 +19,11 @@ var Layer4_Display = window.getComputedStyle(Layer4).display;
 if(Layer1_Display != "none" && Layer2_Display == "none" && Layer3_Display == "none" && Layer4_Display == "none"){
 console.log(Layer1_Display + " /" + Layer2_Display + " / " + Layer3_Display+ " / " + Layer4_Display);
 Layer1.style.display = "none";
-Layer2.style.display = "block";
+Layer2.style.display = "grid";
 Layer3.style.display = "none";
 Layer4.style.display = "none";
 displayVideo.style.display = "none";
-document.getElementById("Next").style.display = "block";
+document.getElementById("Next").style.display = "grid";
 document.getElementById("CaptureImage").style.display="none";
 
 } 
@@ -31,11 +31,11 @@ else if(Layer2_Display != "none" && Layer1_Display == "none" && Layer3_Display =
 console.log(Layer1_Display + " /" + Layer2_Display + " / " + Layer3_Display+ " / " + Layer4_Display);
 Layer1.style.display = "none";
 Layer2.style.display = "none";
-Layer3.style.display = "block";
+Layer3.style.display = "grid";
 Layer4.style.display = "none";
 displayVideo.style.display = "block";
 document.getElementById("CaptureImage").style.display="block";
-document.getElementById("Next").style.display = "block";
+document.getElementById("Next").style.display = "grid";
 
 }
 else if(Layer3_Display != "none" && Layer1_Display == "none" && Layer2_Display == "none" && Layer4_Display == "none"){
@@ -43,7 +43,7 @@ else if(Layer3_Display != "none" && Layer1_Display == "none" && Layer2_Display =
 Layer1.style.display = "none";
 Layer2.style.display = "none";
 Layer3.style.display = "none";
-Layer4.style.display = "block";
+Layer4.style.display = "grid";
 displayVideo.style.display = "none";
 document.getElementById("Next").style.display = "none";
 document.getElementById("CaptureImage").style.display="none";
@@ -51,7 +51,7 @@ document.getElementById("CaptureImage").style.display="none";
 }
 else if(Layer4_Display != "none" && Layer1_Display == "none" && Layer2_Display == "none" && Layer3_Display == "none"){
     console.log(Layer1_Display + " /" + Layer2_Display + " / " + Layer3_Display+ " / " + Layer4_Display);
-Layer1.style.display = "block";
+Layer1.style.display = "grid";
 Layer2.style.display = "none";
 Layer3.style.display = "none";
 Layer4.style.display = "none";
@@ -91,9 +91,21 @@ document.getElementById("CaptureImage").addEventListener('click',function(){
 } 
 
 
+
 );
+    // Preview image in Layer 2 Registration
+    function previewBeforeUpload(id){
+        document.querySelector("#"+id).addEventListener("change", function(e){
+            if(e.target.files.length==0){
+                return;
+            }
+        let file = e.target.files[0];
+        let url = URL.createObjectURL(file);
+        document.querySelector("#"+id+"-Preview div").innerText = file.name;
+        document.querySelector("#"+id+"-Preview img").src = url;
+    });
+    }
 
-
-
-
+    previewBeforeUpload("file1");
+    previewBeforeUpload("file2");
 
