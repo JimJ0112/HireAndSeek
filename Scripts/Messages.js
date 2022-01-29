@@ -30,8 +30,9 @@ function ReadMessage(){
 
 function ReadSentMessages(){
     document.getElementById('Read_Message').style.display="none";
-    document.getElementById('Messages_List').style.display="block";
+    
     document.getElementById("Messages_DisplayList").style.display ="none";
+    document.getElementById('Messages_List').style.display="block";
     document.getElementById('SentMessages_DisplayList').style.display = "block";
     GetSentMessages();
 }
@@ -42,7 +43,7 @@ function init() // This is the function the browser first runs when it's loaded.
     GetMessages();// Then runs the refresh function for the first time.
   var int = self.setInterval(function () {
     GetMessages();
-  }, 10000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+  }, 5000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
 }
 
 
@@ -61,11 +62,6 @@ function GetMessages(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 || this.status === 200){ 
            
-            
-             
-            //refresh container
- 
-
 
             var dataArray = this.response;
             dataArray = JSON.parse(dataArray);
@@ -253,7 +249,8 @@ function createSentElements(numb){
 
     const SentMessageList = document.getElementById('SentMessages_DisplayList');
     //refresh container
-    SentMessageList.innerHTML = "";
+    SentMessageList.innerHTML = " ";
+    
 
 for(var i = 0; i<Number;i++){
 
@@ -272,7 +269,7 @@ for(var i = 0; i<Number;i++){
     messageListItemRecepient.setAttribute('class','SentmessageListItemRecepient');
     messageListItemSubject.setAttribute('class','SentmessageListItemSubject');
 
-    ReplyButton.setAttribute('class','ReplyButton');
+    ReplyButton.setAttribute('class','SentReplyButton');
     
     
     messageListItem.appendChild(ReplyButton);
@@ -304,16 +301,17 @@ const messageListItem = document.getElementsByClassName("SentmessageListItem");
 const messageListItemDate = document.getElementsByClassName("SentmessageListItemDate");
 const messageListItemRecepient = document.getElementsByClassName("SentmessageListItemRecepient");
 const messageListItemSubject = document.getElementsByClassName("SentmessageListItemSubject");
-const ReplyButton = document.getElementsByClassName('ReplyButton');
+const ReplyButton = document.getElementsByClassName('SentReplyButton');
 
 for(var i=0;i<=Number;i++){
+    console.count(i);
     ReplyButton[i].innerText = "Reply";
     messageListItemDate[i].innerText = DataArray[i]['MessageDate'] +" - "+DataArray[i]['MessageTime'];
     messageListItemRecepient[i].innerText= "Recepient : "+DataArray[i]['RecieverEmail'];
     messageListItemSubject[i].innerText= "Subject : "+DataArray[i]['Subject'];
     messageListItem[i].setAttribute('onclick','showMessage(' +DataArray[i]['MessageID'] +')');
     
-   // ReplyButton[i].setAttribute('onclick',"replyMessage('"+DataArray[i]['RecieverEmail']+"','"+DataArray[i]['Subject']+"')");
+   ReplyButton[i].setAttribute('onclick',"replyMessage('"+DataArray[i]['RecieverEmail']+"','"+DataArray[i]['Subject']+"')");
 
  
 
@@ -370,11 +368,6 @@ function hideRead(){
 
 
    
-    document.getElementById('Message_ControlsContainer').innerText = " ";
-    document.getElementById('Message_SenderContainer').innerText = " ";
-    document.getElementById('Message_RecepientContainer').innerText = " ";
-    document.getElementById('Message_SubjectContainer').innerText = " ";
-    document.getElementById('Message_BodyContainer').innerText = " ";
 }
 
 function hideCreate(){
