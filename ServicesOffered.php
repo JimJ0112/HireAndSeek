@@ -17,7 +17,7 @@ else{
 if(isset($_GET['data'])){
 $data = "Backend/GET_".$_GET['data']."DATA.php";
     echo "<script> sessionStorage.setItem('data','$data');</script>";
-}
+} else {echo "<script> sessionStorage.setItem('data','');</script>"; }
 ?>
 
 <html>
