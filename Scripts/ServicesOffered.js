@@ -1,5 +1,20 @@
 //Generate cards function
 
+
+window.addEventListener('load',function(){
+    var data = sessionStorage.getItem('data'); 
+    if(data != ""){
+        GetData(data);
+    }
+
+});
+
+
+
+
+
+
+
 function generateCards(int){
     var loopNumber = int;
     console.log(loopNumber);
@@ -9,7 +24,7 @@ function generateCards(int){
 
     for(var i = 1;i<=loopNumber;i++){
     
-    console.log("i = "+i);
+  //  console.log("i = "+i);
     
     var card = document.createElement('div');
     var ServiceID = document.createElement('p');
@@ -95,7 +110,7 @@ if (this.readyState === 4 || this.status === 200){
 var PhpHandler = this.response;
 
 PhpHandler = JSON.parse(PhpHandler);
-console.log(PhpHandler);
+//console.log(PhpHandler);
 
 
 
@@ -131,7 +146,7 @@ xhr.open("GET",PHPQuery,true);
         PhpHandler = JSON.parse(PhpHandler);
        // console.log(JSON.stringify(PhpHandler));
         
-       console.log(PhpHandler);
+      // console.log(PhpHandler);
         GetProcessDatas(PhpHandler);
     }
 

@@ -11,6 +11,9 @@ function init() // This is the function the browser first runs when it's loaded.
 
 
 
+
+
+
 var AvailedService = sessionStorage.getItem('AvailedServiceID');
 
 if(!AvailedService){ window.location.href="ServicesOffered.php";

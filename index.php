@@ -98,11 +98,11 @@ else{
    
         <table id="index_ServicesOfferedTable">
             <tr class="index_ServicesOfferedtr">
-                <th class="thCategory" style="background-image: url('WebsiteImages/HighRated.png'); "><a href="" class="thText"> High<br> Rated<br> Services </a>
-                <th class="thCategory" style="background-image: url('WebsiteImages/Graphics.png');"><a href="" class="thText"> Graphics<br> and<br> Design </a></th>
-                <th class="thCategory" style="background-image: url('WebsiteImages/Video.png');"><a href="" class="thText"> Video<br> and<br> Presentation </a></th>
-                <th class="thCategory" style="background-image: url('WebsiteImages/Music.jpg');"><a href="" class="thText"> Music<br> and<br> Audio </a></th>
-                <th class="thCategory" style="background-image: url('WebsiteImages/Development.png');"><a href="" class="thText" id="thText5"> Development<br> and IT </a></th>
+                <th class="thCategory" style="background-image: url('WebsiteImages/HighRated.png'); "><a href="ServicesOffered.php?data=HighRatedServices" class="thText"> High<br> Rated<br> Services </a>
+                <th class="thCategory" style="background-image: url('WebsiteImages/Graphics.png');"><a href="ServicesOffered.php?data=GraphicsAndDesign" class="thText"> Graphics<br> and<br> Design </a></th>
+                <th class="thCategory" style="background-image: url('WebsiteImages/Video.png');"><a href="ServicesOffered.php?data=VideoandPresentation" class="thText"> Video<br> and<br> Presentation </a></th>
+                <th class="thCategory" style="background-image: url('WebsiteImages/Music.jpg');"><a href="ServicesOffered.php?data=MusicandAudio" class="thText"> Music<br> and<br> Audio </a></th>
+                <th class="thCategory" style="background-image: url('WebsiteImages/Development.png');"><a href="ServicesOffered.php?data=DevelopmentandIT" class="thText" id="thText5"> Development<br> and IT </a></th>
             </tr>
         </table>
     </div>

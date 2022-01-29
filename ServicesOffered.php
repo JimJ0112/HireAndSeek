@@ -12,6 +12,12 @@ else{
 
 
 //include_once('includes/SessionName.php');
+
+
+if(isset($_GET['data'])){
+$data = "Backend/GET_".$_GET['data']."DATA.php";
+    echo "<script> sessionStorage.setItem('data','$data');</script>";
+}
 ?>
 
 <html>
@@ -23,7 +29,7 @@ else{
         <script src="Scripts/ServicesOffered.js"> </script>
     </head>
 
-    <body>
+    <body onload="<script> var data = sessionStorage.getItem('data'); GetData(data)</script>">
         
 <div class="SO-container">
         <div class="nav">
