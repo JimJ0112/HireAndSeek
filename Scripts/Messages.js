@@ -43,7 +43,7 @@ function init() // This is the function the browser first runs when it's loaded.
     GetMessages();// Then runs the refresh function for the first time.
   var int = self.setInterval(function () {
     GetMessages();
-  }, 5000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+  }, 2000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
 }
 
 
@@ -309,7 +309,7 @@ for(var i=0;i<=Number;i++){
     messageListItemDate[i].innerText = DataArray[i]['MessageDate'] +" - "+DataArray[i]['MessageTime'];
     messageListItemRecepient[i].innerText= "Recepient : "+DataArray[i]['RecieverEmail'];
     messageListItemSubject[i].innerText= "Subject : "+DataArray[i]['Subject'];
-    messageListItem[i].setAttribute('onclick','showMessage(' +DataArray[i]['MessageID'] +')');
+    messageListItem[i].setAttribute('onclick','showSentMessage(' +DataArray[i]['MessageID'] +')');
     
    ReplyButton[i].setAttribute('onclick',"replyMessage('"+DataArray[i]['RecieverEmail']+"','"+DataArray[i]['Subject']+"')");
 
@@ -377,4 +377,44 @@ function hideCreate(){
     document.getElementById("Create_Message").style.display="none";
 
    
+}
+
+
+// show Message function
+function showSentMessage(ID){
+
+    var UserId = ID;
+    
+    var xmlhttp = new XMLHttpRequest();
+    var params = "data="+UserId;
+    xmlhttp.open("POST", "Backend/GetSentDisplayMessages.php", true);
+    
+
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+            document.getElementById('Read_Message').style.display="block";
+            document.getElementById('Messages_List').style.display="none";
+
+
+
+            var dataArray = this.response;
+            dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+            setMessage(dataArray);
+
+
+
+     
+        }else{console.log("error");}      
+    }
+    
+    xmlhttp.send(params);
+
+
+
+
+
 }
