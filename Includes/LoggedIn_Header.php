@@ -6,10 +6,10 @@ $accountType = $_SESSION["AccountType"];
 
 
 if($accountType == "Freelancer"){
-    $redirectQuery = "Freelancer_Dashboard.php";
+    $redirectQuery = "ManageProfile.php";
 
 } else if($accountType == "Customer"){
-    $redirectQuery= "Customer_Dashboard.php";
+    $redirectQuery= "ManageProfile.php";
 }
 
 echo "<script> sessionStorage.setItem('sessionName', '$sessionID'); </script>";

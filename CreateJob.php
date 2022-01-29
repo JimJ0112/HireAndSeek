@@ -2,7 +2,7 @@
 session_start();
 
 //echo $_SESSION["SessionName"];
-echo $_SESSION["AccountType"];
+//echo $_SESSION["AccountType"];
 if(!isset($_SESSION['SessionName'])){
 
     header('location:Login_Index.php?data=PleaseLogIn');
