@@ -78,9 +78,9 @@ $AccountType = $_SESSION["AccountType"];
             <div class="AvailServiceForm_Text"> Finish Date: <input type="date" name="finishDate" id="finishDate"> </div>
             <div class="AvailServiceForm_Text"> Availed Plan:  <input type="text" name="availedPlan" id="availedPlan" readonly>  </div>
             <div class="AvailServiceForm_Text"> Price:        <input type="text" name="Price" id="Price" readonly>  </div>
-            <div class="AvailServiceForm_Text"> Agreement Contract:  </div>
+            <div class="AvailServiceForm_Text"> Are you sure?  </div>
             <div class="AvailServiceForm_Text"> 
-            Agree   <input type="checkbox" value="Agree" name="AgreedToContract"  > 
+            Yes, i am sure  <input type="checkbox" value="Agree" name="AgreedToContract"  > 
             Decline <input type="checkbox" value="Agree" name="Decline" >
             </div>
             <button id="ButtonSubmit" onclick="HideDiv()">BUY </button>

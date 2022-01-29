@@ -154,6 +154,7 @@ $data = $_GET['data'];
                 </div>
 </div>  <!-- Close login form -->
 </div> <!-- content  -->
+
 <div class="nextBtn"><button onclick="displayNext()" id="Next"> NEXT &#8594 </button></div>
 
         <!-- Footer -->
