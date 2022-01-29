@@ -60,10 +60,12 @@ echo "<script> sessionStorage.setItem('sessionName', '$sessionID'); </script>";
             <nav> 
                 <ul id = "navlist">
                 <a href="index.php"><img id="Logo" src="WebsiteImages/Logo.png"></a>
-                <li class= "navElement" id="searchbar"> <input type = "text" id="title" placeholder="Search..  "   oninput="searchSuggestionResults()" >
-                    <div id="SearchSuggestions"> </div>
+                <li class= "navElement" id="searchbar" > <input type = "text" id="title" placeholder="Search..  "   oninput="searchSuggestionResults()" >
+                    
+                <div id="SearchSuggestions"> </div>
+                    
                 </li>
-                    <li class= "navElement"> <input type="button" id="btnSearch" onclick="SendSearch()" > </li>
+                    <li class= "navElement" > <input type="button" id="btnSearch" onclick="showSearchBar()" > </li>
                     <li class= "navElement" id="btnExplore"> <a href = "ServicesOffered.php"> EXPLORE </a> </li>
                     <li class= "navElement" id="btnAbout"> <a href = "About.php"> ABOUT </a> </li>
                     <li class="navElement" id="btnUser"> <a href=<?php echo $redirectQuery;?>> <?php echo $sessionID;?> </a> </li>
