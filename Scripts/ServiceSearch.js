@@ -1,9 +1,10 @@
-
+const Lisearchbar = document.getElementById('searchbar');
 const searchSuggestions = document.getElementById("SearchSuggestions");
 const searchBar = document.getElementById("title");
-console.log(searchBar);
+//console.log(searchBar);
 var searchResults;
 
+Lisearchbar.style.visibility = "hidden";
 
 function searchSuggestionResults(){
     
