@@ -42,18 +42,18 @@ $data = $_GET['data'];
             <div class="Layer-Already">Already have an account? <a href="Login_Index.php">Sign-in &#8594</a></div>
             <div class="Layer-Title">PERSONAL INFORMATION </div>
             <div class="Layer-div1">
-                    <div class="div-input"><input type="email" name="Email" placeholder="Email" required></div>
-                    <div class="div-input guide" data-tooltip="This is where your future files will be sent."><input type="email" name="FileEmail" placeholder="Files Email Address" required></div>
-                    <div class="div-input"><input type="text" name="UserName" placeholder="Username"></div>
-                    <div class="div-input check"><input type="password" name="UserPassword" placeholder="Password" required></div>
-                    <div class="div-input"><input type="password" placeholder="Confirm Password" required></div>
+                    <div class="div-input"><input type="email" id="Email" name="Email" placeholder="Email" required></div>
+                    <div class="div-input guide" data-tooltip="This is where your future files will be sent."><input type="email" id="FileEmail" name="FileEmail" placeholder="Files Email Address" required></div>
+                    <div class="div-input"><input type="text"  id="Username" name="UserName" placeholder="Username"required></div>
+                    <div class="div-input check"><input type="password" id="Password" name="UserPassword" placeholder="Password" required></div>
+                    <div class="div-input"><input type="password" id="ConfirmPassword" name="UserConfirm" placeholder="Confirm Password" required></div>
                 </div>
 
             <div class="Layer-div2">
                 <div class="div-input">
-                    <input type="text" name="FirstName" placeholder="First Name" required> 
-                    <input type="text" name="MiddleInitial" placeholder="Middle Name">
-                    <input type="text" name="LastName" placeholder="Last Name" required> 
+                    <input type="text" name="FirstName" id="Fname" placeholder="First Name" required> 
+                    <input type="text" name="MiddleInitial" id="Mname" placeholder="Middle Name"required>
+                    <input type="text" name="LastName" id="Lname" placeholder="Last Name" required> 
                 </div>
                 
                 <div class="div-input">
@@ -83,7 +83,7 @@ $data = $_GET['data'];
         <div class="Layer-Title">VERIFICATION </div>
         
         <div class="div-inputUpload1">
-            <select name="IDTYPE" required> 
+            <select name="IDTYPE" id="id1" required> 
                 <option value="" disabled selected hidden> ID TYPE </option>
                 <option value="Driving License"> Driving License </option>
                 <option value="National ID"> National ID </option>
@@ -99,7 +99,7 @@ $data = $_GET['data'];
         </div>
        
         <div class="div-inputUpload2">  
-            <select name="IDTYPE2" required> 
+            <select name="IDTYPE2" id="id2" required> 
                 <option value="" disabled selected hidden> ID TYPE </option>
                 <option value="Driving License"> Driving License </option>
                 <option value="National ID"> National ID </option>
