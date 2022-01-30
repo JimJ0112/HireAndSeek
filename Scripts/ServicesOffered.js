@@ -5,7 +5,7 @@ window.addEventListener('load',function(){
     var data = sessionStorage.getItem('data'); 
     if(data != ""){
         GetData(data);
-    }
+    } else{initialGet();}
 
 });
 
@@ -121,7 +121,7 @@ GetProcessDatas(PhpHandler);
 
 xhr.send();
 }
-initialGet();
+
 
 
 
@@ -176,7 +176,7 @@ var imgCarousel = document.getElementsByClassName("Card_Carousel");
 //console.log(serviceID);
 
 //assign value
-for(var i = 0; i<=cards.length;i++){
+for(var i = 0; i<cards.length;i++){
    // var ratings = parseFloat(arrays[i]['Service1StarRatings'] + arrays[i]['Service2StarRatings']+arrays[i]['Service3StarRatings']+ arrays[i]['Service4StarRatings']+ arrays[i]['Service5StarRatings']).toFixed(1);
    // console.log(ratings);
    // totalRatings = parseFloat(1*arrays[i]['Service1StarRatings'] + 2* arrays[i]['Service2StarRatings']+3* arrays[i]['Service3StarRatings']+ 4*arrays[i]['Service4StarRatings']+ 5* arrays[i]['Service5StarRatings']/ratings).toFixed(1);
