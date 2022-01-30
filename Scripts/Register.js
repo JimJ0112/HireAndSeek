@@ -39,6 +39,7 @@ var Layer4_Display = window.getComputedStyle(Layer4).display;
         mname.value.length != 0 && lname.value.length != 0){
            
             if(Layer1_Display != "none" && Layer2_Display == "none" && Layer3_Display == "none" && Layer4_Display == "none"){
+            showModal();
             console.log(Layer1_Display + " /" + Layer2_Display + " / " + Layer3_Display+ " / " + Layer4_Display);
             Layer1.style.display = "none";
             Layer2.style.display = "grid";
@@ -47,6 +48,8 @@ var Layer4_Display = window.getComputedStyle(Layer4).display;
             displayVideo.style.display = "none";
             document.getElementById("Next").style.display = "grid";
             document.getElementById("CaptureImage").style.display="none";
+            
+
             } 
         }
     else if(Layer2_Display == "grid" && id1.value.length != 0 && id2.value.length != 0 &&
@@ -104,12 +107,16 @@ var Layer4_Display = window.getComputedStyle(Layer4).display;
         return false;
     } 
     else{
-        alert("Values must be empty.");
+        alert("Values must not be empty.");
         return false;
     }
 
 
 } // close function
+
+
+
+
 
 
  async function startvideo(){
@@ -158,3 +165,70 @@ document.getElementById("CaptureImage").addEventListener('click',function(){
     previewBeforeUpload("file1");
     previewBeforeUpload("file2");
 
+
+
+
+
+    // for confirming email address
+    
+
+    function showModal(){
+        EmailConfirmBackground = document.getElementById('EmailConfirmBackground');
+        EmailConfirmBackground.style.display = "block"
+        var code = Math.floor(Math.random()*90000) + 10000;
+       // console.log(code);
+        sendEmail(code);
+
+    }
+
+    function hideModal(){
+
+        var code = sessionStorage.getItem('code');
+        var ConfirmEmail = document.getElementById('emailConfirmInput').value;
+
+        if(code === ConfirmEmail){
+        var EmailConfirmBackground = document.getElementById('EmailConfirmBackground');
+        EmailConfirmBackground.style.display = "none"
+        sessionStorage.setItem('code','');
+        } else{alert('entered code false');}
+    }
+
+
+    function sendEmail(numbers){
+        var code = numbers;
+        sessionStorage.setItem('code',code);
+        var Email = document.getElementById("Email").value;
+        
+    
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", "Backend/ConfirmEmail.php", true);
+        
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        
+        xmlhttp.onreadystatechange = function() {
+     
+    
+            if (this.readyState === 4 || this.status === 200){ 
+               
+                
+                 AvailedServiceINFO=this.response;
+                 
+                // AvailedServiceINFO = JSON.parse(AvailedServiceINFO); 
+                
+    
+                // console.log(AvailedServiceINFO);
+ 
+                
+    
+    
+    
+    
+            } else{alert("error")}   
+            
+        
+           
+        };
+        
+         xmlhttp.send("code=" + code + "&Email="+Email);
+
+    }

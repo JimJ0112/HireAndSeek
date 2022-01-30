@@ -17,12 +17,13 @@ $clientIP = $_SERVER['REMOTE_ADDR'];
 $MyServerIP = "122.53.36.68";
 $PartnerIP = "180.191.216.101";    
 
+/*
 if($clientIP != $MyServerIP && $clientIP != $PartnerIP){
     header('location:../index.php?data=ACCESSNOTALLOWED');
 } else {
     //echo $clientIP." equal to ".$ServerIP."\n Hello Admin";
 }
-
+*/
 
 
 echo "<br> <br> <br>";

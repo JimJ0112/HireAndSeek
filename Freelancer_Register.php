@@ -18,6 +18,22 @@ $data = $_GET['data'];
 
         </head>
         <body>
+
+            <!-- div for confirming email -->
+            <div id="EmailConfirmBackground">
+            <div id="EmailConfirm"> 
+            <p> Please enter the code we have sent to your email address </p>
+            <input type="text" id="emailConfirmInput">
+            <button id="emailConfirmButton" onclick="hideModal()"> Confirm </button>
+            </div>
+            </div>
+
+
+        <div class="Freelancer-Content">
+
+
+        
+
 <div class="Freelancer-Container">
            <!-- Nav bar section -->
             <?php
@@ -32,7 +48,7 @@ $data = $_GET['data'];
             <div class="Freelancer-HeaderText">COMPLETE YOUR PROFILE BY FILLING UP THIS ACCOUNT CREATION FORM</div>
         </div>
 
-        <div class="Freelancer-Content">
+
             <!-- Php form-->  
 
             <div id="LoginForm">
@@ -57,7 +73,7 @@ $data = $_GET['data'];
                 </div>
                 
                 <div class="div-input">
-                    <input type="text" name="Birthdate" placeholder="Birthday">
+                    <input type="date" name="Birthdate" placeholder="Birthday">
                     <input type="text" name="Contact" placeholder="Contact Number">
                
                     <select name="Gender">
