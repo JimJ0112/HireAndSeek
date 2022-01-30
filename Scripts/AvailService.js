@@ -6,7 +6,8 @@ function init() // This is the function the browser first runs when it's loaded.
 
   var int = self.setInterval(function () {
     updateRatings();
-  }, 5000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+    AlreadyRated();
+  }, 2000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
 }
 
 
@@ -615,6 +616,9 @@ function StandardPlan(){
                     var ratingButtons = document.getElementsByClassName('ratingButton');
      
                      if(alreadyRated > 0 && alreadyRated <=5 ){
+                       // make the freelancer not rate again to avoid spam  
+                        var ratingDiv = document.getElementsByClassName('rating')[0];
+                        ratingDiv.style.pointerEvents = "none";
 
 
                         if(alreadyRated == 1){
