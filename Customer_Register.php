@@ -18,6 +18,18 @@ $data = $_GET['data'];
 
         </head>
         <body>
+
+
+                    <!-- div for confirming email -->
+            <div id="EmailConfirmBackground">
+            <div id="EmailConfirm"> 
+            <p> Please enter the code we have sent to your email address </p>
+            <input type="text" id="emailConfirmInput">
+            <p id="codeWrong">  </p>
+            <button id="emailConfirmButton" onclick="hideModal()"> Confirm </button>
+            </div>
+            </div>
+
 <div class="Freelancer-Container">
            <!-- Nav bar section -->
             <?php

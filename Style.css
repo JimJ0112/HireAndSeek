@@ -1652,10 +1652,28 @@ table{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
     
 }
+#emailConfirmButton{
+    font-size: 20px;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(221, 118, 0);
+}
 
+#codeWrong{
+    color: red;
+    font-weight: bold;
+}
+
+#emailConfirmInput{
+    border: 2px solid black;
+    height:50px;
+    
+}
 
 
 /*----------------------------Avail service form---------------------------------------------*/

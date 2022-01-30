@@ -185,12 +185,17 @@ document.getElementById("CaptureImage").addEventListener('click',function(){
 
         var code = sessionStorage.getItem('code');
         var ConfirmEmail = document.getElementById('emailConfirmInput').value;
+        var codeWrong = document.getElementById('codeWrong');
 
         if(code === ConfirmEmail){
         var EmailConfirmBackground = document.getElementById('EmailConfirmBackground');
         EmailConfirmBackground.style.display = "none"
         sessionStorage.setItem('code','');
-        } else{alert('entered code false');}
+        codeWrong.innerText = "";
+        } else{
+            //alert('entered code false');
+            codeWrong.innerText = "entered code false!";
+        }// end of if
     }
 
 
