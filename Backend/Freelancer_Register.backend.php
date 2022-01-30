@@ -94,7 +94,7 @@ session_start();
         
         //echo $result;
   
-        header('location:../Freelancer_Register.php?data=registrationSuccess');
+        header('location:../Login_Index.php?data=registration Success');
 
       }
 

@@ -97,9 +97,12 @@ $data = $_GET['data'];
         <div class="div-inputUpload1">
             <select name="IDTYPE" id="id1" required> 
                 <option value="" disabled selected hidden> ID TYPE </option>
-                <option value="Driving License"> Driving License </option>
+                <option value="Driving License"> Driver's License </option>
                 <option value="National ID"> National ID </option>
                 <option value="School ID"> School ID </option>
+                <option value="PhilHealth ID"> PhilHealth ID </option>
+                <option value="Voter's ID"> Voter's ID </option>
+                <option value="UMID"> UMID </option>
             </select>
             <div class="div-upload" title="Upload FIle">
                 <input type="file" name="IDFile" placeholder="ID" accept=".jpg,.png" id="file1"required>
@@ -113,9 +116,12 @@ $data = $_GET['data'];
         <div class="div-inputUpload2">  
             <select name="IDTYPE2" id="id2" required> 
                 <option value="" disabled selected hidden> ID TYPE </option>
-                <option value="Driving License"> Driving License </option>
+                <option value="Driving License"> Driver's License </option>
                 <option value="National ID"> National ID </option>
                 <option value="School ID"> School ID </option>
+                <option value="PhilHealth ID"> PhilHealth ID </option>
+                <option value="Voter's ID"> Voter's ID </option>
+                <option value="UMID"> UMID </option>
             </select>
             <div class="div-upload" title="Upload FIle">
                 <input type="file" name="IDFile2" placeholder="ID" accept=".jpg,.png" id="file2"required>
