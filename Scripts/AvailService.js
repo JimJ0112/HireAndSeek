@@ -282,6 +282,13 @@ function StandardPlan(){
 
 
  function add1star(){
+
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+   
+    
+    
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
@@ -304,13 +311,18 @@ function StandardPlan(){
     
     xmlhttp.send(params);
     
-    
+} else{alert('Rating Jobs is only for Customers');}
 
  }// end of add1 star
 
 
 
  function add2star(){
+
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
@@ -333,12 +345,16 @@ function StandardPlan(){
     
     xmlhttp.send(params);
     
-    
+    } else{alert('Rating Jobs is only for Customers');}
 
  }// end of add1 star
 
 
  function add3star(){
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
@@ -361,12 +377,17 @@ function StandardPlan(){
     
     xmlhttp.send(params);
     
-    
+} else{alert('Rating Jobs is only for Customers');}
 
  }// end of add1 star
 
 
  function add4star(){
+
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
@@ -389,12 +410,16 @@ function StandardPlan(){
     
     xmlhttp.send(params);
     
-    
+} else{alert('Rating Jobs is only for Customers');}
 
  }// end of add1 star
 
 
  function add5star(){
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
@@ -417,7 +442,7 @@ function StandardPlan(){
     
     xmlhttp.send(params);
     
-    
+} else{alert('Rating Jobs is only for Customers');}
 
  }// end of add1 star
 
@@ -629,3 +654,33 @@ function StandardPlan(){
             } // end 
     
 
+
+window.addEventListener('load',function(){
+
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+   
+ 
+
+    
+    } else{
+        var ratingDiv = document.getElementsByClassName('rating')[0];
+        var ratingButton = document.getElementsByClassName('ratingButton');
+
+        ratingDiv.style.opacity = "0.6";
+        ratingDiv.style.pointerEvents = "none";
+
+        ratingButton[0].disabled = true;
+        ratingButton[1].disabled = true;
+        ratingButton[2].disabled = true;
+        ratingButton[3].disabled = true;
+        ratingButton[4].disabled = true;
+
+
+    
+    
+    }
+
+
+});
