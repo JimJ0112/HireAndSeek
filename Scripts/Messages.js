@@ -6,8 +6,18 @@ const SessionName = sessionStorage.getItem("sessionName");
 
 
 var now = new Date();
-MessageDate.value = now.getUTCMonth() + 1 + " / " + parseInt(now.getUTCDate() + 1) + " / " + now.getUTCFullYear();
-MessageTime.value = now.getUTCHours() + " : " + now.getUTCMinutes();
+
+console.log("date:"+now);
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+time =  today.getHours() + ":" + today.getMinutes();
+today = mm + '/' + dd + '/' + yyyy;
+
+MessageDate.value = today;
+MessageTime.value = time;
 
 
 

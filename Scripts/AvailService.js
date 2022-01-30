@@ -6,7 +6,8 @@ function init() // This is the function the browser first runs when it's loaded.
 
   var int = self.setInterval(function () {
     updateRatings();
-  }, 5000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
+    AlreadyRated();
+  }, 2000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.
 }
 
 
@@ -100,8 +101,17 @@ function setValues(array){
     var now = new Date();
     var Freelancer = sessionStorage.getItem('sessionName');
 
-    MessageDate.value = now.getUTCMonth() + 1 + " / " + parseInt(now.getUTCDate() + 1) + " / " + now.getUTCFullYear();
-    MessageTime.value = now.getUTCHours() + " : " + now.getUTCMinutes();
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    
+    time =  today.getHours() + ":" + today.getMinutes();
+    today = mm + '/' + dd + '/' + yyyy;
+
+
+    MessageDate.value = today;
+    MessageTime.value = time;
     MessageRecepient_Form.value = array[0]['ServiceOwnerEmail'];
     MessageSubject_Form.value=array[0]['ServiceTitle'];
     GcashNumber.value = array[0]['GcashNumber'];
@@ -161,7 +171,13 @@ document.getElementById("AvailServiceForm").style.display = "block";
 } else{alert('Availing Jobs is only for Customers');}
 
 //declarations
-var date = new Date();
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
 
 var client = sessionStorage.getItem('sessionName');
 var AvailedID = sessionStorage.getItem('AvailedServiceID');
@@ -192,7 +208,7 @@ ServiceID.value= AvailedID;
 ServiceTitleForm.value = Title;
 MailingAddress.value = sessionStorage.getItem('MailingAddress');
 
-startDate.value= date.getMonth() + 1 +"/"+ date.getDay()+"/" + date.getFullYear() ;
+startDate.value= today;
 
 
 Category.value = CategoryValue;
@@ -267,6 +283,13 @@ function StandardPlan(){
 
 
  function add1star(){
+
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+   
+    
+    
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
@@ -289,13 +312,18 @@ function StandardPlan(){
     
     xmlhttp.send(params);
     
-    
+} else{alert('Rating Jobs is only for Customers');}
 
  }// end of add1 star
 
 
 
  function add2star(){
+
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
@@ -318,12 +346,16 @@ function StandardPlan(){
     
     xmlhttp.send(params);
     
-    
+    } else{alert('Rating Jobs is only for Customers');}
 
  }// end of add1 star
 
 
  function add3star(){
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
@@ -346,12 +378,17 @@ function StandardPlan(){
     
     xmlhttp.send(params);
     
-    
+} else{alert('Rating Jobs is only for Customers');}
 
  }// end of add1 star
 
 
  function add4star(){
+
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
@@ -374,12 +411,16 @@ function StandardPlan(){
     
     xmlhttp.send(params);
     
-    
+} else{alert('Rating Jobs is only for Customers');}
 
  }// end of add1 star
 
 
  function add5star(){
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "Backend/AddRatings.php", true);
     
@@ -402,7 +443,7 @@ function StandardPlan(){
     
     xmlhttp.send(params);
     
-    
+} else{alert('Rating Jobs is only for Customers');}
 
  }// end of add1 star
 
@@ -575,6 +616,9 @@ function StandardPlan(){
                     var ratingButtons = document.getElementsByClassName('ratingButton');
      
                      if(alreadyRated > 0 && alreadyRated <=5 ){
+                       // make the freelancer not rate again to avoid spam  
+                        var ratingDiv = document.getElementsByClassName('rating')[0];
+                        ratingDiv.style.pointerEvents = "none";
 
 
                         if(alreadyRated == 1){
@@ -614,3 +658,33 @@ function StandardPlan(){
             } // end 
     
 
+
+window.addEventListener('load',function(){
+
+    var AccountType = sessionStorage.getItem('AccountType');
+
+    if(AccountType === "Customer"){
+   
+ 
+
+    
+    } else{
+        var ratingDiv = document.getElementsByClassName('rating')[0];
+        var ratingButton = document.getElementsByClassName('ratingButton');
+
+        ratingDiv.style.opacity = "0.6";
+        ratingDiv.style.pointerEvents = "none";
+
+        ratingButton[0].disabled = true;
+        ratingButton[1].disabled = true;
+        ratingButton[2].disabled = true;
+        ratingButton[3].disabled = true;
+        ratingButton[4].disabled = true;
+
+
+    
+    
+    }
+
+
+});

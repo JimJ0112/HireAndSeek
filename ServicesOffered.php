@@ -2,22 +2,16 @@
 
  session_start();
  
-if(isset($_SESSION['SessionName'])){
-
-    //echo "welcome, ".$_SESSION['SessionName'];
-}
-else{
-    //echo "Session name invalid";
-}
 
 
-//include_once('includes/SessionName.php');
+
+
 
 
 if(isset($_GET['data'])){
 $data = "Backend/GET_".$_GET['data']."DATA.php";
     echo "<script> sessionStorage.setItem('data','$data');</script>";
-}
+} else {echo "<script> sessionStorage.setItem('data','');</script>"; }
 ?>
 
 <html>
