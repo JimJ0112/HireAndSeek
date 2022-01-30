@@ -53,7 +53,7 @@ var Layer4_Display = window.getComputedStyle(Layer4).display;
             } 
         }
     else if(Layer2_Display == "grid" && id1.value.length != 0 && id2.value.length != 0 &&
-            file1.files.length != 0 && file2.files.length != 0){
+            file1.files.length != 0 && file2.files.length != 0 && id1.value != id2.value){
 
             if(Layer2_Display != "none" && Layer1_Display == "none" && Layer3_Display == "none" && Layer4_Display == "none"){
             console.log(Layer1_Display + " /" + Layer2_Display + " / " + Layer3_Display+ " / " + Layer4_Display);
@@ -105,7 +105,11 @@ var Layer4_Display = window.getComputedStyle(Layer4).display;
         alert("Password doesnt match!");
         confirmPass.focus();
         return false;
-    } 
+    } else if(id1.value == id2.value){
+
+         alert('you must submit 2 different valid ids');
+    
+    }
     else{
         alert("Values must not be empty.");
         return false;
@@ -236,4 +240,19 @@ document.getElementById("CaptureImage").addEventListener('click',function(){
         
          xmlhttp.send("code=" + code + "&Email="+Email);
 
-    }
+    }// end of function
+
+
+ function selectid1(){   
+   var id1 = document.getElementById('id1');
+   var id2 = document.getElementById('id2');
+    
+
+}// end of function
+
+function selectid2(){
+    var id1 = document.getElementById('id1');
+    var id2 = document.getElementById('id2');
+ 
+
+}
