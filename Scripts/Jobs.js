@@ -80,6 +80,7 @@ function createElements(Number){
     Job1StarRatings = document.createElement('td');
     JobDeleteButton = document.createElement('button');
     Gcash = document.createElement('td');
+    ButtonCol = document.createElement('td');
 
     JobDeleteButton.setAttribute('class','JobDeleteButton');
     category.setAttribute('class','category');
@@ -115,7 +116,8 @@ function createElements(Number){
     row.appendChild(Job2StarRatings);
     row.appendChild(Job1StarRatings);
     row.appendChild(Gcash);
-    row.appendChild(JobDeleteButton);
+    ButtonCol.appendChild(JobDeleteButton);
+    row.appendChild(ButtonCol);
 
     Table.append(row);
 

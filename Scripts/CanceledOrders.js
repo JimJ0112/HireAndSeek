@@ -83,6 +83,7 @@ function createElements(Number){
  row.appendChild(Buyer);
  row.appendChild(JOB);
  row.appendChild(PlanAvailed);
+ row.appendChild(DueDate);
  row.appendChild(Price);
  row.appendChild(FileMailing);
  row.appendChild(Gcash);
@@ -105,7 +106,7 @@ function setData(array){
     var Number = DataArray.length;
 
 
-
+    const DueDate = document.getElementsByClassName('DueDate');
     const Buyer = document.getElementsByClassName('Buyer');
     const JOB = document.getElementsByClassName('JOB');
     const PlanAvailed = document.getElementsByClassName('PlanAvailed');
@@ -116,7 +117,7 @@ function setData(array){
     const CancelButton = document.getElementsByClassName('Cancel');
     const price = document.getElementsByClassName('price');
     const Gcash = document.getElementsByClassName('Gcash');
-
+    var today = new Date();
     for(var i = 0; i<Number; i++){
 
         Buyer[i].innerText = DataArray[i]['ClientEmail'];
@@ -125,9 +126,18 @@ function setData(array){
        PlanAvailed[i].innerText = DataArray[i]['availedPlan']; 
         FileMailing[i].innerText = DataArray[i]['FileMailingAddress'];
         Notes[i].innerText = DataArray[i]['clientNotes']; 
-         Status[i].innerText = DataArray[i]['TransactionStatus']; 
+         Status[i].innerText = DataArray[i]['TransactionStatus'];
+         Status[i].style.color="red"; 
+         Status[i].style.fontWeight="bold"; 
          Gcash[i].innerText = DataArray[i]['Gcash'];
+         DueDate[i].innerText = DataArray[i]['transactionFinishedDate'];
 
+         
+         var deadline = new Date(DataArray[i]['transactionFinishedDate']);
+
+         if(today > deadline){
+            DueDate[i].style.color = "red";
+         }
 
     }
 

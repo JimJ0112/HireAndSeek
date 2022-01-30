@@ -126,6 +126,8 @@ function setData(array){
         FileMailing[i].innerText = DataArray[i]['FileMailingAddress'];
         Notes[i].innerText = DataArray[i]['clientNotes']; 
          Status[i].innerText = DataArray[i]['TransactionStatus']; 
+         Status[i].style.color="green"; 
+         Status[i].style.fontWeight="bold"; 
          Gcash[i].innerText = DataArray[i]['Gcash'];
 
 

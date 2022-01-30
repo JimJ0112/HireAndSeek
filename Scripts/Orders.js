@@ -63,6 +63,7 @@ function createElements(Number){
     Gcash = document.createElement('td');
     DeliverButton = document.createElement('Button');
     CancelButton = document.createElement('Button');
+    ButtonsCol = document.createElement('td');
     
 
 
@@ -77,21 +78,25 @@ function createElements(Number){
     Notes.setAttribute('class','Notes'); 
     Status.setAttribute('class','Status'); 
     FileMailing.setAttribute('class','FileMailing');
+
     DeliverButton.setAttribute('class','Deliver');
     CancelButton.setAttribute('class','Cancel');
+    
    // DeliverButton.setAttribute('onclick','JOBDelivered(');
     
     
  row.appendChild(Buyer);
  row.appendChild(JOB);
  row.appendChild(PlanAvailed);
+ row.appendChild(DueDate);
  row.appendChild(Price);
  row.appendChild(FileMailing);
  row.appendChild(Notes);
  row.appendChild(Gcash);
  row.appendChild(Status);
- row.appendChild(DeliverButton);
- row.appendChild(CancelButton);
+ ButtonsCol.appendChild(DeliverButton);
+ ButtonsCol.appendChild(CancelButton);
+ row.appendChild(ButtonsCol);
 
     Table.append(row);
 
@@ -108,7 +113,7 @@ function setData(array){
     var Number = DataArray.length;
 
 
-
+    const DueDate = document.getElementsByClassName('DueDate');
     const Buyer = document.getElementsByClassName('Buyer');
     const JOB = document.getElementsByClassName('JOB');
     const PlanAvailed = document.getElementsByClassName('PlanAvailed');
@@ -119,6 +124,7 @@ function setData(array){
     const CancelButton = document.getElementsByClassName('Cancel');
     const price = document.getElementsByClassName('price');
     const Gcash = document.getElementsByClassName('Gcash');
+    var today = new Date();
 
     for(var i = 0; i<Number; i++){
 
@@ -129,11 +135,23 @@ function setData(array){
         FileMailing[i].innerText = DataArray[i]['FileMailingAddress'];
         Notes[i].innerText = DataArray[i]['clientNotes']; 
          Status[i].innerText = DataArray[i]['TransactionStatus']; 
+         Status[i].style.color="darkblue"; 
+         Status[i].style.fontWeight="bold"; 
+
          DeliverButton[i].innerText = "Deliver";
          Gcash[i].innerText = DataArray[i]['Gcash'];
          DeliverButton[i].setAttribute('onclick','DeliverJob('+DataArray[i]['transactionID']+')');
          CancelButton[i].innerText = "Cancel"; 
          CancelButton[i].setAttribute('onclick','CancelJob('+DataArray[i]['transactionID']+')');
+
+         DueDate[i].innerText = DataArray[i]['transactionFinishedDate'];
+
+         
+         var deadline = new Date(DataArray[i]['transactionFinishedDate']);
+
+         if(today > deadline){
+            DueDate[i].style.color = "red";
+         }
 
     }
 

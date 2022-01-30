@@ -41,29 +41,32 @@ if(!isset($_SESSION['SessionName'])){
            ?>
 
         <div id="JobsContainer">
+        <table id="JobsTableContainer">
 
        <tr>
-       <td> category </td>
-       <td>Title </td>
-       <td>Description </td> 
-       <td>BasicPlanDescription </td> 
-       <td>BasicPlanPrice </td>
-       <td>StandardPlanDescription </td> 
-       <td>StandardPlanPrice </td>
-       <td>PremiumPlanDescription </td>
-       <td>PremiumPlanPrice </td>
-       <td>JobTotalRatings </td>
-       <td>Job5StarRatings </td>
-       <td>Job4StarRatings </td>
-       <td>Job3StarRatings </td>
-       <td>Job2StarRatings </td>
-       <td>Job1StarRatings </td>
+       <td> CATEGORY </td>
+       <td>JOB TITLE </td>
+       <td>DESCRIPTION </td> 
+       <td>BP-DESCRIPTION </td> 
+       <td>BP-PRICE </td>
+       <td>SP-DESCRIPTION </td> 
+       <td>SP-PRICE </td>
+       <td>PP-DESCRIPTION </td>
+       <td>PP-PRICE </td>
+       <td>TTL-RTNGS </td>
+       <td>5 STR-RTS </td>
+       <td>4 STR-RTS</td>
+       <td>3 STR-RTS</td>
+       <td>2 STR-RTS </td>
+       <td>1 STR-RTS </td>
+       <td>G-CASH NMBR </td>
     
         </tr>
 
            <table id="JobsTable">
 
            </table>
+      </table>
 
         </div>
 
