@@ -50,8 +50,8 @@ $err= $_GET['data'];
                     
                     <div class="lineBehind"><span id="logSpan"></span><h3 class="logTxtOr">OR LOGIN WITH</h3></div>
                         <div class="logSocials">
-                        <input type="button" class="logBtnFB">
-                        <input type="button" class="logBtnGM">
+                        <input type="button" class="logBtnFB" onclick="alert('Feature coming soon')">
+                        <input type="button" class="logBtnGM" onclick="alert('Feature coming soon')">
                         </div>
                     
                     </fieldset>
