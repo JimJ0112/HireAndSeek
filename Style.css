@@ -374,12 +374,13 @@
 #ServicesOffered_Cards{
     line-height: 0px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-rows: minmax(auto, auto);
+    grid-template-columns: auto auto auto auto auto;
+    grid-auto-rows: minmax(auto, auto); 
 }
 
 /*Services Card Children*/
 .ServiceID{
+    grid-area: id;
     color:gray;
     font-size: 15px;
     font-weight: bolder;
@@ -387,13 +388,20 @@
     margin: 10px;
 }
 .card {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: minmax(auto, auto);
+    grid-template-areas: 
+    'id id id'
+    'cardCaro cardCaro cardCaro'
+    'profile name name'
+    'profile level ratings'
+    'cardTitle cardTitle cardTitle'
+    'cardDesc cardDesc cardDesc'
+    'cardBtn cardBtn cardBtn';
     border: 2px solid black;
-    max-width: 300px;
-    max-height: 500px;
     margin: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: inline-block;
-    overflow-wrap: break-word;
   }
   
              /*--------- Price button -------*/
@@ -403,6 +411,7 @@
   }
   
   .card button {
+      grid-area: cardBtn;
     border: none;
     padding: 12px;
     color: white;
@@ -410,14 +419,16 @@
     text-align: center;
     cursor: pointer;
     width: 100%; 
+  
   }
   
 
 .AccountProfilePicture{
+    grid-area: profile;
     height: 40px;
     width: 40px;
     border-radius: 50px;
-    margin: 10px 7px;
+    margin: 5px;
     border: 1px solid black;
     position: relative;
 }
@@ -427,6 +438,7 @@
 }
          /*----------- Card image ----------*/
 .Card_Carousel{
+    grid-area: cardCaro;
     border: 1px solid black;
     object-fit:cover;
     width: 100%;
@@ -438,7 +450,7 @@
 .card_Banner{
     
     object-fit:cover;
-    width: 99%;
+    width: 100%;
     padding: 0px;
     height: 160px;
     position: relative;
@@ -446,48 +458,36 @@
 }
 
 .AccountName{
-width: 100%; 
-margin: 5px;
+    grid-area: name;
 padding: 0;
-position: relative;
-top: -45px;
-left: 55px;
-
+margin: 15px 5px 0 5px;
 }
 
 .AccountLevel{
-width: 100%; 
-margin: 5px;
-position: relative;
-top: -30px;
-left: 55px;
+    grid-area: level;
+    margin: 10px 5px 0 5px;
 }
 
 .ServiceTitle{
-margin: 5px;
-position: relative;
-top: -5px;
-left: 5px;
+    grid-area: cardTitle;
+    margin: 20px 5px 0 5px;
 font-weight:bolder;
 }
 
-.ratings{
-    margin: 5px;
-    position: relative;
-    top: -40px;
-    right: 5px;
+.ratings{   
+    grid-area: ratings;
+    margin: 10px 5px 0 5px;
     text-align: right;
 }
 
 .ServiceDescription{
- /*   
-width: 100%; 
-margin: 20px;
-position: relative;
-*/
-
+grid-area: cardDesc;
+justify-self: center;
+width: max-content;
+width: 95%;
 line-height: 1.8;
 white-space: normal;
+margin: 20px 0px;
 padding: auto;
 }
 
@@ -1402,6 +1402,7 @@ table{
     border: none;
     outline: none;
     position: relative;
+    width: 195px;
 }
 .div-input> input:hover,select:hover{
     cursor: pointer;
@@ -1698,6 +1699,7 @@ table{
     transform: translate(-50%, 10%);
     z-index: 1;
     background-color: rgb(255, 255, 247);
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     border-radius: 0.25em;
     box-shadow: 0 0em 0.2em 0.1em;
 }

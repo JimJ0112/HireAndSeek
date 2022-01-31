@@ -105,7 +105,7 @@ var Layer4_Display = window.getComputedStyle(Layer4).display;
         alert("Password doesnt match!");
         confirmPass.focus();
         return false;
-    } else if(id1.value == id2.value){
+    } else if(id1.value.length != 0 && id2.value.length != 0 && id1.value == id2.value){
 
          alert('you must submit 2 different valid ids');
     
