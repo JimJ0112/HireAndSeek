@@ -11,6 +11,7 @@ if(!isset($_SESSION['SessionName'])){
 <DOCTYPE>
     <html>
         <head>
+        <link rel="icon" href="favicon.ico">
             <link rel="Stylesheet" href="Style.css" type="text/css">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             
@@ -44,23 +45,24 @@ if(!isset($_SESSION['SessionName'])){
         <table id="JobsTableContainer">
 
        <tr>
+       
        <td> CATEGORY </td>
-       <td>JOB TITLE </td>
+       <td>JOB TITLE</td>
        <td>DESCRIPTION </td> 
-       <td>BP-DESCRIPTION </td> 
-       <td>BP-PRICE </td>
-       <td>SP-DESCRIPTION </td> 
-       <td>SP-PRICE </td>
-       <td>PP-DESCRIPTION </td>
-       <td>PP-PRICE </td>
-       <td>TTL-RTNGS </td>
-       <td>5 STR-RTS </td>
-       <td>4 STR-RTS</td>
-       <td>3 STR-RTS</td>
-       <td>2 STR-RTS </td>
-       <td>1 STR-RTS </td>
+       <td>BP-DESC </td> 
+       <td>BP-PRC </td>
+       <td>SP-DESC </td> 
+       <td>SP-PRC </td>
+       <td>PP-DESC </td>
+       <td>PP-PRC</td>
+       <td>TTL-RTS </td>
+       <td>5 </td>
+       <td>4</td>
+       <td>3</td>
+       <td>2</td>
+       <td>1 </td>
        <td>G-CASH NMBR </td>
-    
+        
         </tr>
 
            <table id="JobsTable">

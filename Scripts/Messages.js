@@ -157,6 +157,8 @@ const messageListItemSender = document.getElementsByClassName("messageListItemSe
 const messageListItemSubject = document.getElementsByClassName("messageListItemSubject");
 const ReplyButton = document.getElementsByClassName('ReplyButton');
 
+const inboxButton = document.getElementById('InboxButton');
+
 for(var i =0; i<=Number;i++){
     
     messageListItemDate[i].innerText = DataArray[i]['MessageDate'] +" - "+DataArray[i]['MessageTime'];
@@ -175,7 +177,11 @@ for(var i =0; i<=Number;i++){
         messageListItemStatus[i].innerText = DataArray[i]['MessageStatus'];
         messageListItemStatus[i].style.backgroundColor = "blue";
         messageListItemStatus[i].style.color = "white";
-    }
+
+     //  inboxButton.style.border = "1px solid blue";
+    } 
+
+
 
 }
 
