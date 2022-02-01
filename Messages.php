@@ -114,7 +114,7 @@ $data = $_GET['data'];
             </center>
         
                 <div id="Read_Message">
-                    <button id="Back" onclick="hideRead()"> Back </button>
+                    <button id="Back" onclick="hideRead()" class="MessageButton" > Back </button>
                     <div id="Message_ControlsContainer"> </div>
                    
                     <h4 id="Message_SenderContainer">   </h4> 
@@ -129,8 +129,8 @@ $data = $_GET['data'];
         </div>
 
             <script src="Scripts/Messages.js"> </script>
-                 <!-- Footer -->
-                 <?php include_once('Includes/footer.php')?>
+              
+               
 
         </body>
     </html>

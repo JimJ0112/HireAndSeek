@@ -83,7 +83,7 @@ session_start();
 
 
        //check if the email address is already taken
-       $checker = checkIfExists($conn,'signupverification',$email,'email');
+       $checker = checkIfExists($conn,'accounts',$email,'email');
 
       if( $checker > 0){
         header('location:../Freelancer_Register.php?data=registrationfailed-email_already_exists');

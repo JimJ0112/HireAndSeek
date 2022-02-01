@@ -42,8 +42,8 @@ $AccountType = $_SESSION["AccountType"];
     </head>
 
     <body onload="init()">
-    <div class="Avail-Container"> 
-    <div class="nav">
+ 
+   
 
 
             <!-- Nav bar section -->
@@ -63,13 +63,19 @@ $AccountType = $_SESSION["AccountType"];
             }
  
             ?>
-    </div>
+ 
 
 
 
 
 
-
+<div id="Manageprofilecontent">
+    
+<div id="imageDiv"> 
+    <center>
+    <img src="WebsiteImages/Logo.png" id="HSLogo">
+    <center>
+ </div>
 
             <div id="Profilecontent"> 
            <h3 id="ManageName"> Name Placeholder </h3>
@@ -87,11 +93,15 @@ $AccountType = $_SESSION["AccountType"];
 
 
              </div>
-     <!--end of contents -->
-             <?php include_once('Includes/footer.php')?>
 
+        </div>
+     <!--end of contents -->
+             
+   
+     <?php include_once('Includes/footer.php')?>
+      
              <script src= "Scripts/ManageProfile.js"></script> 
-          
+           
     </body>
 
 </html>
