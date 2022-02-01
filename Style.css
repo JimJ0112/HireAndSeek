@@ -394,6 +394,8 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: inline-block;
     overflow-wrap: break-word;
+    overflow: hidden;
+    
   }
   
              /*--------- Price button -------*/
@@ -410,6 +412,8 @@
     text-align: center;
     cursor: pointer;
     width: 100%; 
+    
+   
   }
   
 
@@ -485,7 +489,7 @@ width: 100%;
 margin: 20px;
 position: relative;
 */
-
+margin: 20px;
 line-height: 1.8;
 white-space: normal;
 padding: auto;
@@ -1804,6 +1808,22 @@ table{
     cursor: pointer;
     background-color: white;
     width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:small;
+ 
+}
+
+.SentmessageListItem{
+    height: 150px;
+    border-bottom: 1px solid black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: white;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:small;
  
 }
 

@@ -3,9 +3,30 @@
 
 window.addEventListener('load',function(){
     var data = sessionStorage.getItem('data'); 
+    var ServicesOffered_CategoryTxt = document.getElementById('ServicesOffered_CategoryTxt');
     if(data != ""){
         GetData(data);
     } else{initialGet();}
+
+    if(data == "Backend/GET_HighRatedServicesDATA.php"){
+        ServicesOffered_CategoryTxt.innerText = "High Rated Services";
+    } else if(data == "Backend/GET_GraphicsAndDesignDATA.php"){
+        ServicesOffered_CategoryTxt.innerText = "Graphics and Design";
+
+    }else if(data == "Backend/GET_VideoandPresentationDATA.php"){
+        ServicesOffered_CategoryTxt.innerText = "Video and Presentation";
+        
+    }else if(data == "Backend/GET_MusicandAudioDATA.php"){
+        ServicesOffered_CategoryTxt.innerText = "Music and Audio ";
+        
+    }else if(data == "Backend/GET_DevelopmentandITDATA.php"){
+        ServicesOffered_CategoryTxt.innerText = "Development and IT";
+        
+    }else if(data == ""){
+        ServicesOffered_CategoryTxt.innerText = "High Rated Services";
+        
+    }
+    
 
 });
 
@@ -135,6 +156,7 @@ function GetData(string){
     
 console.log("js loaded");
 var PHPQuery = string;
+setEXPLORE(PHPQuery)
 
 var xhr = new XMLHttpRequest();
 
@@ -173,6 +195,7 @@ var cards = document.getElementsByClassName("card");
 var totalRatings;
 var imgCarousel = document.getElementsByClassName("Card_Carousel");
 
+
 //console.log(serviceID);
 
 //assign value
@@ -200,6 +223,10 @@ for(var i = 0; i<cards.length;i++){
 
     //sets id to button 
     price[i].setAttribute('id',arrays[i][0]);
+
+
+    
+    
 }
 
 
@@ -250,7 +277,30 @@ function AvailThis(ID){
 
 
 
+function setEXPLORE(text){
+    data = text;
+    var ServicesOffered_CategoryTxt = document.getElementById('ServicesOffered_CategoryTxt');
 
+    if(data == "Backend/GET_HighRatedServicesDATA.php"){
+        ServicesOffered_CategoryTxt.innerText = "High Rated Services";
+    } else if(data == "Backend/GET_GraphicsAndDesignDATA.php"){
+        ServicesOffered_CategoryTxt.innerText = "Graphics and Design";
+
+    }else if(data == "Backend/GET_VideoandPresentationDATA.php"){
+        ServicesOffered_CategoryTxt.innerText = "Video and Presentation";
+        
+    }else if(data == "Backend/GET_MusicandAudioDATA.php"){
+        ServicesOffered_CategoryTxt.innerText = "Music and Audio ";
+        
+    }else if(data == "Backend/GET_DevelopmentandITDATA.php"){
+        ServicesOffered_CategoryTxt.innerText = "Development and IT";
+        
+    }
+
+
+    //ServicesOffered_CategoryTxt.innerText = data;
+
+}
 
 
 
