@@ -16,6 +16,13 @@ else{
 
 //mail($row['email'],'Account Approved','Hello, Welcome to Hire and Seek, your account has been approved','From: hireandseekdemo@gmail.com');
 
+
+if(isset($_GET['data'])){
+
+   $data = $_GET['data'];
+   
+   echo "<script> alert('$data')</script>";
+}
 ?>
 
 <DOCTYPE>

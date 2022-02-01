@@ -12,6 +12,15 @@ else{
 }
 
 
+if(isset($_POST['Logout'])){
+
+    
+    session_destroy();
+    session_unset();
+    header('location:../index.php?data=Logged Out');
+    
+}
+
 
 
 /*
@@ -40,7 +49,16 @@ echo "<br> <br> <br>";
         </head>
         <body onload = "listFreelancerAccounts()">
 
-        
+            <!-- modal for image -->
+            <div id="EmailConfirmBackground">
+            <button id="emailConfirmButton" onclick="hideModal()"> X </button>
+            <div id="EmailConfirm"> 
+            
+            <img src="" id="modalImg" draggable="true">
+            
+            </div>
+            </div>
+
 
         <div id="Maintenance_Content">
 
@@ -48,10 +66,13 @@ echo "<br> <br> <br>";
             <nav id="categories">
                 <ul>
                     <center>
-                    <li onclick ="listCustomerAccounts()"> Approve Client Accounts </li> 
-                    <li onclick = "listFreelancerAccounts()"> Approve Freelancer Accounts </li> 
+                    <li onclick ="listCustomerAccounts()" class="categoryItem"> Approve Client Accounts </li> 
+                    <li onclick = "listFreelancerAccounts()" class="categoryItem"> Approve Freelancer Accounts </li> 
+                    
+                    <!--<li><form action="Maintenance.php" method="POST" id="logoutform"> <input type="submit" value="Logout" name="Logout" id="logoutbutton" > </form> </li>
                     <li> User Reports </li>
                     <li> Monitor User Accounts </li>
+                    -->
                     </center>
                 </ul>           
             </nav>
@@ -62,13 +83,17 @@ echo "<br> <br> <br>";
             <div id="ApproveControls">
                 <br> <br>
                 <center>
-                    <Button class="ControlButtons" onclick="submitAccept()"> Accept Accounts </button> <br> <br>
-                    <button class="ControlButtons" onclick="submitDecline()"> Decline </button> <br> <br> 
+                    <Button class="ControlButtons" onclick="submitAccept()" id="ControlButtons1"> Accept Accounts </button> <br> <br>
+                    <button class="ControlButtons1" onclick="submitDecline()" id="ControlButtons2"> Decline </button> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+                     <form action="Maintenance.php" method="POST" id="logoutform"> <input type="submit" value="Logout" name="Logout" id="logoutbutton"  > </form> 
+
+<!--
                     <button class="ControlButtons"> Status             </button> <br> <br>
                     <button class="ControlButtons"> Send Notice        </button> <br> <br> 
+-->
                 </center>
             </div>
-
+<!--
             <div id="ReportControls">
                 <br> <br>
                 <center>
@@ -81,7 +106,7 @@ echo "<br> <br> <br>";
                     
                 </center>
             </div>
-
+-->
         </div>
 
 
