@@ -61,13 +61,13 @@ function createElements(Number){
     var BtnsCOL = document.createElement('td');
 
 
-    CustomerCOL.innerText="JOB OWNER";
+    CustomerCOL.innerText="FREELANCER";
     JobNameCOL.innerText="TITLE";
-    PlanAvailedCOL.innerText="DESCRIPTION";
+    PlanAvailedCOL.innerText="AVAILED PLAN";
     DueDateCOL.innerText="DUE DATE";
     PriceCOL.innerText="PRICE";
     FileMailingCOL.innerText="RECIEVE IN ";
-    NotesCOL.innerText="CLIENT NOTES";
+    NotesCOL.innerText="YOUR NOTES";
     GcashNumCOL.innerText="SEND PAYMENT TO";
     StatusCOL.innerText="STATUS";
     

@@ -1,21 +1,18 @@
 <?php
 session_start();
     
-if(isset($_SESSION['SessionName'])){
+if(isset($_SESSION['admin'])){
 
     //echo "welcome, ".$_SESSION['SessionName'];
     
 }
 else{
    // echo "Session name invalid";
+   header('location:../index.php?data=ACCESSNOTALLOWED');
 }
 
 
 
-$clientIP = $_SERVER['REMOTE_ADDR'];
-//$MyServerIP = "122.52.82.255";
-$MyServerIP = "122.53.36.68";
-$PartnerIP = "180.191.216.101";    
 
 /*
 if($clientIP != $MyServerIP && $clientIP != $PartnerIP){
@@ -41,7 +38,7 @@ echo "<br> <br> <br>";
             <script src="Scripts/Maintenance.js"> </script>
 
         </head>
-        <body>
+        <body onload = "listFreelancerAccounts()">
 
         
 

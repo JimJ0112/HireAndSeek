@@ -68,7 +68,7 @@ function createElements(Number){
 
     CustomerCOL.innerText="CUSTOMER";
     JobNameCOL.innerText="TITLE";
-    PlanAvailedCOL.innerText="DESCRIPTION";
+    PlanAvailedCOL.innerText="AVAILED PLAN";
     
     PriceCOL.innerText="PRICE";
     FileMailingCOL.innerText="SEND FILES TO ";

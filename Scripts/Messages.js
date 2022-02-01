@@ -26,6 +26,15 @@ function CreateMessage(){
     document.getElementById('Read_Message').style.display="none";
     document.getElementById('Messages_List').style.display="none";
     Create_MessageDiv.style.display = "block";
+
+
+    var Inbox = document.getElementsByClassName('Message_categories')[0];
+    var Sentbox = document.getElementsByClassName('Message_categories')[1];
+    var NewMessage = document.getElementsByClassName('Message_categories')[2];
+
+    Inbox.style.backgroundColor = "";
+    Sentbox.style.backgroundColor = "";
+  
    
     
 }
@@ -36,6 +45,15 @@ function ReadMessage(){
     document.getElementById("Messages_DisplayList").style.display ="block";
     document.getElementById('SentMessages_DisplayList').style.display = "none";
     GetMessages();
+
+
+    var Inbox = document.getElementsByClassName('Message_categories')[0];
+    var Sentbox = document.getElementsByClassName('Message_categories')[1];
+    var NewMessage = document.getElementsByClassName('Message_categories')[2];
+
+    Inbox.style.backgroundColor = "skyblue";
+    Sentbox.style.backgroundColor = "";
+    
 }
 
 function ReadSentMessages(){
@@ -45,12 +63,21 @@ function ReadSentMessages(){
     document.getElementById('Messages_List').style.display="block";
     document.getElementById('SentMessages_DisplayList').style.display = "block";
     GetSentMessages();
+
+    var Inbox = document.getElementsByClassName('Message_categories')[0];
+    var Sentbox = document.getElementsByClassName('Message_categories')[1];
+    var NewMessage = document.getElementsByClassName('Message_categories')[2];
+
+    Inbox.style.backgroundColor = "";
+    Sentbox.style.backgroundColor = " skyblue";
+    
 }
 
 
 function init() // This is the function the browser first runs when it's loaded.
 {
     GetMessages();// Then runs the refresh function for the first time.
+    ReadMessage();
   var int = self.setInterval(function () {
     GetMessages();
   }, 2000); // Set the refresh() function to run every 10 seconds. [1 second would be 1000, and 1/10th of a second would be 100 etc.

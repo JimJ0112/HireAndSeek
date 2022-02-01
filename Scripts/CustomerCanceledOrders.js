@@ -64,7 +64,7 @@ function createElements(Number){
     var BtnsCOL = document.createElement('td');
 
 
-    CustomerCOL.innerText="CUSTOMER";
+    CustomerCOL.innerText="FREELANCER";
     JobNameCOL.innerText="TITLE";
     PlanAvailedCOL.innerText="DESCRIPTION";
     DueDateCOL.innerText="DUE DATE";

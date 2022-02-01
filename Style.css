@@ -1840,6 +1840,18 @@ table{
  
 }
 
+.MessageButton{
+    background-color: rgb(82, 216, 221);
+    border: 1px solid black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+
 .ReplyButton{
     background-color: rgb(82, 216, 221);
 border: 1px solid black;

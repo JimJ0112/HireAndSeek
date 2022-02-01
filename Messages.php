@@ -95,13 +95,13 @@ $data = $_GET['data'];
         <div id="MessageDisplay_Message" class="MessagesPage_div">
             <center>
                 <div id="Create_Message">
-                <button id="Back" onclick="hideCreate()"> Back </button>
+                <button id="Back" onclick="hideCreate()" class="MessageButton"> Back </button>
                 <form method="POST" id="MessageForm" action="Backend/SendMessage.php">
                 <br>
                 <input type="hidden" name="MessageDate" id="MessageDate"> 
                 <input type="hidden" name="MessageTime" id="MessageTime"> 
                 
-                <input type="text" name="MessageRecepient_Form" id="MessageRecepient_Form" placeholder="Recepient"> <input type="submit" value="SEND"> <br> <br>
+                <input type="text" name="MessageRecepient_Form" id="MessageRecepient_Form" placeholder="Recepient"> <input type="submit" value="SEND" class="MessageButton"> <br> <br>
                 <input type="text" name="MessageSubject_Form" id="MessageSubject_Form" placeholder="Subject"> <br> <br>
                 <textarea name="MessageBody_Form" id="MessageBody_Form" placeholder="Message..."> </textarea> <br> <br>
                 
