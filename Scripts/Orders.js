@@ -43,6 +43,50 @@ function createElements(Number){
 
     DataNumber = Number;
     Table = document.getElementById("OrdersTable");
+
+    // column headers
+    var columnHeaders  = document.createElement('tr');
+    columnHeaders.setAttribute('class','columnHeaders');
+
+    var CustomerCOL = document.createElement('td');
+    var JobNameCOL = document.createElement('td');
+    var PlanAvailedCOL = document.createElement('td');
+    var DueDateCOL = document.createElement('td');
+    var PriceCOL = document.createElement('td');
+    var FileMailingCOL = document.createElement('td');
+    var NotesCOL = document.createElement('td');
+    var GcashNumCOL = document.createElement('td');
+    var StatusCOL = document.createElement('td');
+    var BtnsCOL = document.createElement('td');
+
+
+    CustomerCOL.innerText="CATEGORY";
+    JobNameCOL.innerText="TITLE";
+    PlanAvailedCOL.innerText="DESCRIPTION";
+    DueDateCOL.innerText="BASIC PLAN DESCRIPTION";
+    PriceCOL.innerText="BASIC PLAN PRICE";
+    FileMailingCOL.innerText="STANDARD PLAN DESCRIPTION";
+    NotesCOL.innerText="STANDARD PLAN PRICE";
+    GcashNumCOL.innerText="PREMIUM PLAN DESCRIPTION";
+    StatusCOL.innerText="PREMIUM PLAN PRICE";
+    
+
+    
+     
+     columnHeaders.appendChild(CustomerCOL);
+     columnHeaders.appendChild(JobNameCOL);
+     columnHeaders.appendChild(PlanAvailedCOL);
+     columnHeaders.appendChild(DueDateCOL);
+     columnHeaders.appendChild(PriceCOL);
+     columnHeaders.appendChild(FileMailingCOL);
+     columnHeaders.appendChild(NotesCOL);
+     columnHeaders.appendChild(GcashNumCOL);
+     columnHeaders.appendChild( StatusCOL);
+     columnHeaders.appendChild(BtnsCOL);
+
+
+     Table.appendChild(columnHeaders);
+     // end 
     
     for(var i = 0;i<DataNumber;i++){
     

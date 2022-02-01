@@ -42,33 +42,14 @@ if(!isset($_SESSION['SessionName'])){
            ?>
 
         <div id="JobsContainer">
-        <table id="JobsTableContainer">
+   
 
-       <tr>
-       
-       <td> CATEGORY </td>
-       <td>JOB TITLE</td>
-       <td>DESCRIPTION </td> 
-       <td>BP-DESC </td> 
-       <td>BP-PRC </td>
-       <td>SP-DESC </td> 
-       <td>SP-PRC </td>
-       <td>PP-DESC </td>
-       <td>PP-PRC</td>
-       <td>TTL-RTS </td>
-       <td>5 </td>
-       <td>4</td>
-       <td>3</td>
-       <td>2</td>
-       <td>1 </td>
-       <td>G-CASH NMBR </td>
-        
-        </tr>
+
 
            <table id="JobsTable">
 
            </table>
-      </table>
+   
 
         </div>
 

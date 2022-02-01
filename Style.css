@@ -1991,6 +1991,11 @@ border-bottom: 5px solid black;
    overflow: scroll;
 }
 
+.columnHeaders{
+    color: gray;
+    font-weight: bolder;
+}
+
 #JobsTableContainer{
     text-align: center;
     overflow: scroll;
