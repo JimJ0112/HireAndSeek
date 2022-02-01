@@ -393,8 +393,9 @@
     margin: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: inline-block;
-
+   
     overflow: hidden;
+    overflow-wrap: break-word;
     white-space: nowrap;
     text-overflow: ellipsis;
     
@@ -475,6 +476,8 @@ position: relative;
 top: -5px;
 left: 5px;
 font-weight:bolder;
+
+overflow-wrap: break-word;
 white-space: nowrap;
 text-overflow: ellipsis;
 
@@ -499,6 +502,10 @@ margin: 20px;
 line-height: 1.8;
 white-space: normal;
 padding: auto;
+
+
+
+text-overflow: ellipsis;
 }
 
 /*======================================= Avail Service==============================================*/
