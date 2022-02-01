@@ -60,15 +60,15 @@ function createElements(Number){
     var BtnsCOL = document.createElement('td');
 
 
-    CustomerCOL.innerText="CATEGORY";
+    CustomerCOL.innerText="CUSTOMER";
     JobNameCOL.innerText="TITLE";
     PlanAvailedCOL.innerText="DESCRIPTION";
-    DueDateCOL.innerText="BASIC PLAN DESCRIPTION";
-    PriceCOL.innerText="BASIC PLAN PRICE";
-    FileMailingCOL.innerText="STANDARD PLAN DESCRIPTION";
-    NotesCOL.innerText="STANDARD PLAN PRICE";
-    GcashNumCOL.innerText="PREMIUM PLAN DESCRIPTION";
-    StatusCOL.innerText="PREMIUM PLAN PRICE";
+    DueDateCOL.innerText="DUE DATE";
+    PriceCOL.innerText="PRICE";
+    FileMailingCOL.innerText="SEND TO ";
+    NotesCOL.innerText="CLIENT NOTES";
+    GcashNumCOL.innerText="RECIEVE PAYMENT TO";
+    StatusCOL.innerText="STATUS";
     
 
     
