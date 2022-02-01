@@ -393,8 +393,10 @@
     margin: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: inline-block;
-    overflow-wrap: break-word;
+
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     
   }
   
@@ -473,6 +475,10 @@ position: relative;
 top: -5px;
 left: 5px;
 font-weight:bolder;
+white-space: nowrap;
+text-overflow: ellipsis;
+
+
 }
 
 .ratings{
