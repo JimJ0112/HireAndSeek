@@ -374,7 +374,7 @@
 #ServicesOffered_Cards{
     line-height: 0px;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(auto, auto); 
     grid-column-gap: 0;
 }
@@ -1264,22 +1264,6 @@ text-overflow: ellipsis;
 
 /* Dashboard Categories*/
 
-#Dashboard_Categories{
-    height: 50px;
-}
-
-#Dashboard_CategoriesList{
-   
-}
-
-.Dashboard_CategoriesElement{
-display: inline;
-
-
-margin-right: 5%;
-margin-left: 0;
-padding: 10px;
-cursor: pointer;}
 
 /*Dashboard Content*/
 #dashboard_content_grid{
@@ -1728,10 +1712,9 @@ table{
     position:Absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, 5%);
     z-index: 1;
     background-color: rgb(255, 255, 247);
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     border-radius: 0.25em;
     box-shadow: 0 0em 0.2em 0.1em;
 }
@@ -1791,207 +1774,232 @@ table{
 
 /*------------------------Messages Page--------------------------------------------------------*/
 
-/*
+
 #Messages_Body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
-    border: 1px solid black;
-    width: 100%;
-    height: 100%;
     display: grid;
-    grid-template-columns: 23% 75%;
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: minmax(90vh, auto);
     grid-template-areas: 
-                         "messagelist messagebody messagebody messagebody messagebody messagebody messagebody"
-                         "messagelist messagebody messagebody messagebody messagebody messagebody messagebody"
-                         "messagelist messagebody messagebody messagebody messagebody messagebody messagebody";
+                         "messagenav chatmessage";
 }
-*/
+
+#message_nav{
+    grid-area: messagenav;
+    background-color: rgb(168, 168, 168);
+    width: 50px;
+    padding-top: 10px;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+#message_nav:hover{
+    width: 250px;
+    transition: 0.4s; 
+    color: white;
+    background-color: rgb(69, 97, 104);
+}
+#message_nav ul{    
+    margin: 0;
+    padding: 0;
+}
+.Message_categories{
+    text-decoration:none;
+    list-style-type: none;
+    cursor: pointer;
+    display: block;
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+}
+.Message_categories img{
+    height: 30px;
+    width: auto;
+    margin-right: 20px;
+}
+.Message_categories > label{
+    vertical-align:50%;
+    text-align: center;
+}
+
+.Message_categories:hover{
+    background-color: rgb(226, 245, 255);
+}
 
 #Messages_List{
-  
-  /*  grid-area: messagelist; */
-    position: absolute;
-    z-index: 1;
+    grid-area: chatmessage;
+    z-index: 0;
     padding: 0;
-    overflow: scroll;
-    background-color: white;
-    width: 100%;
-    height: 100%;
+    background-color: rgb(219, 219, 219);
 }
 
 #Message_DisplayList{
     list-style-type: none;
-    width: 100%;
     padding: 0;
     text-decoration: none;
-    margin-left: 0;
     font-family: Arial, Helvetica, sans-serif;
     overflow: scroll;
     background-color: #0b171f;  
-    height: 100%;
-   
 }
 
 .messageListItem{
-    height: 150px;
-    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    height: auto;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: 20px;
     cursor: pointer;
-    background-color: white;
-    width: 100%;
+    background-color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:small;
- 
+
+}
+.messageListItem:hover{
+    background-color: rgb(241, 241, 241);
 }
 
 .SentmessageListItem{
-    height: 150px;
-    border-bottom: 1px solid black;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: auto;
+    list-style-type: none;
+    margin: auto;
+    padding: 20px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:small;
- 
 }
-
-.MessageButton{
-    background-color: rgb(82, 216, 221);
-    border: 1px solid black;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 8px;
-    cursor: pointer;
-    margin: 10px;
+.SentmessageListItem:hover{
+    background-color: rgb(241, 241, 241);
 }
-
-
 
 .ReplyButton{
+    width: 20%;
+    border-radius: 0.3em;
+    border: 1px solid black;
     background-color: rgb(82, 216, 221);
-border: 1px solid black;
-font-weight: bold;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-padding: 8px;
-cursor: pointer;
-margin: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 40px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.ReplyButton:hover{
+    transform: scale(1.05);
+    color: white;
 }
 
 
 .SentReplyButton{
+    width: 20%;
+    border-radius: 0.3em;
+    border: 1px solid black;
     background-color: rgb(82, 216, 221);
-border: 1px solid black;
-font-weight: bold;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-padding: 8px;
-cursor: pointer;
-margin: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 40px;
+    cursor: pointer;
+    margin-top: 10px;
 }
-
-
+.SentReplyButton:hover{
+    transform: scale(1.05);
+    color: white;
+}
 
 #Read_Message{
-   
-    z-index: 0;
     height: 100%;
-    
-}
-
-#Create_Message{
-       
     z-index: 0;
-    height: 100%;
-}
-
- 
-
-
-#MessageDisplay_Message{
-   
-    grid-area: messagebody;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.Message_categories{
-    text-decoration:none;
-    list-style-type: none;
-    display: inline;
-    padding:5px;
-    border: 1px solid black;
-    margin-right: 5px;
-    cursor: pointer;
-
-}
-
-#message_nav{
-/*text-align: center;*/
-border: 1px solid black;
-border-bottom: 5px solid black;
-}
-
-
-#MessageRecepient_Form{
-    width: 85%;
-    height: 5%;
-}
-
-#MessageSubject_Form{
-    width: 90%;
-    height: 7%;
-}
-
-#MessageBody_Form{
-    width: 90%;
-    height: 60%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(238, 238, 238);
 }
 
 #Create_Message{
     display:none;
-    z-index: 1;
+    z-index: 0;
+    height: 100%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(238, 238, 238);
+}
+
+ 
+#MessageDisplay_Message{
+    grid-area: chatmessage;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.BackBtn{
+  text-align: left;
+}
+.BackBtn > #Back:hover{
+    box-shadow: 0 0 0 0.1em black;
+    transform: scale(1.05);  
+    transition: 100ms transform;
+}
+#Back{
+    font-size: 17px;
+    padding: 15px 40px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(82, 216, 221);
+}
+
+#MessageRecepient_Form, #MessageSubject_Form{
+    width: 75%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 0.20em;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+#MessageBody_Form{
+    width: 75%;
+    height: 45%;
+    padding: 15px;
+    font-size: 18px;
+}
+.SendBtn{
+    justify-self: center;
+    align-self: center;
+    margin: 20px;
+}
+.SendBtn > input{
+    align-self: right;
+    justify-self: right;
+    font-size: 17px;
+    padding: 15px 50px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+.SendBtn > input:hover{
+    box-shadow: 0 0 0 0.1em rgb(255, 255, 255);
+    transform: scale(1.05);  
+    transition: 100ms transform;
 }
 
 #Read_Message{
-   
-    width: 99%;
-    height: 99%;
-    z-index: 1;
-    padding-left: 10px;
-    
+    line-height: 30px;
 }
-
-#Message_SenderContainer{
-    height: 5%;
-    width: 99.5%;
-    
-}
-
-#Message_RecepientContainer{
-    height: 5%;
-    width: 99.5%;
-   
-}
-
-#Message_SubjectContainer{
-    width: 99.5%;
-    height: 7%;
-    
-}
-
 #Message_BodyContainer{
-    width: 99.5%;
-    border: 1px solid black;
-    height: 60%;
+    width: 75%;
+    height: 45%;
+    padding: 15px;
+    font-size: 18px;
+    margin: 10px;
 }
 
 
 /*------------------------------------Manage profile.php------------------------------------*/
-#Manageprofilecontent{
+/* #Manageprofilecontent{
     width: 100%;
     height: 100%;
     display: grid;
@@ -2020,8 +2028,7 @@ align-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     grid-area: details;
    
-    
-}
+} */
 
 /*--------------------------------------CreateJob.php----------------------------------------*/
 #UploadFiles{
@@ -2141,28 +2148,116 @@ margin: 10px;
     margin: 10px;
 }
 
-/*-----------------------------------------dashboard ---------------------------------------*/
+/*-----------------------------------------dashboard-Nav ---------------------------------------*/
+
+#Dashboard_Categories{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: gray;
+    color: white;
+    z-index: 1;
+}
 .Dashboard_CategoriesElement{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none;
-    text-align: center;
-    color: rgb(245, 236, 236);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
 }
 .Dashboard_CategoriesElement a{
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(70, 70, 70);
     text-decoration: none;
-    color: white;
+    color: rgb(245, 245, 245);
+    font-weight: 500;
 }
-#Dashboard_Categories{
-    background-color: gray;
-    padding: 5px;
-    color: white;
-    margin-bottom: 10px;
+.Dashboard_CategoriesElement a:hover{
+    background-color: #636363;
+    color: rgb(255, 136, 0);
+    transform: scale(1.1);
+    transition: 100ms transform;
 }
 
-
-
-
-
+/*-------------------------------------- Manage Profile------------------------------------ */
+.ManageProfile-Container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(auto, auto);
+    height: 100vh;
+    grid-template-areas: 
+    'nav'
+    'MPnav'
+    'MPcontent'
+    'footer';
+}
+.ManageProfile-Nav{
+    grid-area: MPnav;
+}
+.ManageProfile-Content{
+    grid-area: MPcontent;
+}
+#ProfileContent{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    margin: 30px;
+    grid-auto-rows: minmax(auto, auto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    grid-template-areas: 
+    'Pleft Pright'
+}
+.Profile-Left{
+    grid-area: Pleft;
+    background-color: rgb(221, 118, 0);
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+.Profile-Left img{
+    max-width: 50%;
+    height: auto;
+    position: relative;
+    margin: 10px 0;
+}
+.leftDiv{
+    height: auto;
+    line-height: 45px;
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: rgb(250, 250, 250);
+    font-size: 18px;
+}
+#ManageName{
+    font-size: 25px;
+    font-weight: bold;
+}
+.Profile-Right{
+    grid-area: Pright;
+    align-self: center;
+    justify-self: center;
+    text-align: left;
+    width: 90%;
+}
+.rightDiv input{
+    pointer-events: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0.1em 0  rgb(221, 118, 0);;
+    /* border-bottom: 2px solid rgb(221, 118, 0); */
+    width: 90%;
+    color: #616161;
+}
+.rightDiv label{
+    font-size: 20px;
+    font-weight: bold;
+    cursor:default;
+}
+.rightDiv{
+    width: 100%;
+    margin: 10px;
+}
 
 /*-------------------------------------- Media Testing------------------------------------ */
 @media all and (max-width:800px){
