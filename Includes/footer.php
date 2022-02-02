@@ -23,8 +23,8 @@
                    <div class="txtFooter"><a href="ServicesOffered.php?data=DevelopmentandIT"> Development and IT</a></div></div> 
                 <div class="rightFooter">
                    <div class="txtFooterTitle"><a href="About.php"> About</a></div>
-                   <div class="txtFooter"><a href=""> Team Members</a></div>
-                   <div class="txtFooter"><a href=""> Team Overview</a></div></div>    
+                   <div class="txtFooter"><a href="About.php"> Team Members</a></div>
+                   <div class="txtFooter"><a href="About.php"> Team Overview</a></div></div>    
          </div>
          
 </body>

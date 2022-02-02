@@ -1,6 +1,11 @@
 
 function listFreelancerAccounts(){
 var xmlhttp = new XMLHttpRequest();
+var categoryItem = document.getElementsByClassName('categoryItem');
+categoryItem[0].style.color="white";
+categoryItem[1].style.color="black";
+categoryItem[1].style.border="1px solid black";
+categoryItem[0].style.border="none";
 xmlhttp.open("POST", "GET_FreelancerVerificationDATA.php", true);
 
 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -28,6 +33,12 @@ xmlhttp.send();
 
 function listCustomerAccounts(){
     var xmlhttp = new XMLHttpRequest();
+    var categoryItem = document.getElementsByClassName('categoryItem');
+    categoryItem[0].style.color="black";
+    categoryItem[1].style.color="white";
+    categoryItem[0].style.border="1px solid black";
+    categoryItem[1].style.border="none";
+
     xmlhttp.open("POST", "GET_CustomerVerificationDATA.php", true);
     
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -220,16 +231,19 @@ function createElements(Number){
             imgID1.src = DataArray[i]['idimage1directory'];
             imgID1.setAttribute('class','DataImg');
             AccountID1COL[i].appendChild(imgID1);
+            AccountID1COL[i].setAttribute('onclick',"getID1('" + DataArray[i]['idimage1directory'] +"')");
             
             var imgID2 = new Image();
             imgID2.src = DataArray[i]['idimage2directory'];
             AccountID2COL[i].appendChild(imgID2);
             imgID2.setAttribute('class','DataImg');
+            AccountID2COL[i].setAttribute('onclick',"getID1('" + DataArray[i]['idimage2directory'] +"')");
      
             var imgSS = new Image();
             imgSS.src = DataArray[i]['snapshotdirectory'];
             imgSS.setAttribute('class','DataImg');
             AccountSnapshot[i].appendChild(imgSS);
+            AccountSnapshot[i].setAttribute('onclick',"getID1('" + DataArray[i]['snapshotdirectory'] +"')");
 
          
 
@@ -256,4 +270,31 @@ function submitDecline(){
     document.getElementById("DataForm").submit();
 }
 
+
+function getID1(source){
+
+    var imgstring = source;
+    var modalImg = document.getElementById('modalImg'); 
+    var EmailConfirmBackground = document.getElementById('EmailConfirmBackground');
+    modalImg.src = imgstring;
+    EmailConfirmBackground.style.display ="block";
+ 
+    
+
+
+ }// end 
+
+
+ function hideModal(){
+
+  
+
+    var EmailConfirmBackground = document.getElementById('EmailConfirmBackground');
+ 
+    EmailConfirmBackground.style.display ="none";
+ 
+    
+
+
+ }// end 
  

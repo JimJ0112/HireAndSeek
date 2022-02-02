@@ -20,6 +20,7 @@ if($_SESSION["AccountType"] != "Freelancer"){
 <!DOCTYPE html>
     <html>
         <head>
+        <link rel="icon" href="favicon.ico">
             <link rel="stylesheet" href="Style.css" type="text/css">
             <script src="Scripts/Login.js"> </script>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,10 +92,45 @@ if($_SESSION["AccountType"] != "Freelancer"){
                         <div class="logDiv"><input type="text" name="PremiumPlanPrice" placeholder="Job Premium Price" class="logTB"></div>
                         <div class="logDiv"><input type="text" name="GcashNumber" placeholder="G-Cash Account Number" class="logTB"></div>
                         
+                        <div id="UploadFiles">
                         <input type="file" name="Banner1" accept=".jpg,.png">
                         <input type="file" name="Banner2" accept=".jpg,.png">
                         <input type="file" name="Banner3" accept=".jpg,.png">
+                        </div>
+           <!--
+        <div id="UploadFiles">
 
+                <div class="div-upload" title="Upload FIle">
+                <input type="file" name="Banner1" placeholder="ID" accept=".jpg,.png" id="file1"required>
+                <label for="file1" id="file1-Preview">
+                <img src="WebsiteImages/Placeholder.png">
+                <div><span>+</span></div>
+                </label>
+                </div>
+                
+
+
+                <div class="div-upload" title="Upload FIle">
+                <input type="file" name="Banner2" placeholder="ID" accept=".jpg,.png" id="file1"required>
+                <label for="file1" id="file1-Preview">
+                <img src="WebsiteImages/Placeholder.png">
+                <div><span>+</span></div>
+                </label>
+                </div>
+              
+
+                <div class="div-upload" title="Upload FIle">
+                <input type="file" name="Banner3" placeholder="ID" accept=".jpg,.png" id="file1"required>
+                <label for="file1" id="file1-Preview">
+                <img src="WebsiteImages/Placeholder.png">
+                <div><span>+</span></div>
+                </label>
+                </div>
+             
+        </div>
+
+
+        -->
                     <div class="logDiv">
                         <input type="submit" value="CREATE JOB" class="logBtnSubmit">
                     </div>

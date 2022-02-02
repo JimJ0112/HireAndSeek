@@ -16,14 +16,22 @@ else{
 
 //mail($row['email'],'Account Approved','Hello, Welcome to Hire and Seek, your account has been approved','From: hireandseekdemo@gmail.com');
 
+
+if(isset($_GET['data'])){
+
+   $data = $_GET['data'];
+   
+   echo "<script> alert('$data')</script>";
+}
 ?>
 
 <DOCTYPE>
     <html>
         <head>
+        <link rel="icon" href="favicon.ico">
             <link rel="stylesheet" href="Style.css" type="text/css">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+            
         </head>
         <body>
 

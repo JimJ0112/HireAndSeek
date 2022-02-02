@@ -11,6 +11,7 @@ if(!isset($_SESSION['SessionName'])){
 <DOCTYPE>
     <html>
         <head>
+        <link rel="icon" href="favicon.ico">
             <link rel="Stylesheet" href="Style.css" type="text/css">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             
@@ -41,32 +42,14 @@ if(!isset($_SESSION['SessionName'])){
            ?>
 
         <div id="JobsContainer">
-        <table id="JobsTableContainer">
+   
 
-       <tr>
-       <td> CATEGORY </td>
-       <td>JOB TITLE </td>
-       <td>DESCRIPTION </td> 
-       <td>BP-DESCRIPTION </td> 
-       <td>BP-PRICE </td>
-       <td>SP-DESCRIPTION </td> 
-       <td>SP-PRICE </td>
-       <td>PP-DESCRIPTION </td>
-       <td>PP-PRICE </td>
-       <td>TTL-RTNGS </td>
-       <td>5 STR-RTS </td>
-       <td>4 STR-RTS</td>
-       <td>3 STR-RTS</td>
-       <td>2 STR-RTS </td>
-       <td>1 STR-RTS </td>
-       <td>G-CASH NMBR </td>
-    
-        </tr>
+
 
            <table id="JobsTable">
 
            </table>
-      </table>
+   
 
         </div>
 

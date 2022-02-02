@@ -11,6 +11,7 @@ if(!isset($_SESSION['SessionName'])){
 <DOCTYPE>
     <html>
         <head>
+        <link rel="icon" href="favicon.ico">
             <link rel="Stylesheet" href="Style.css" type="text/css">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             

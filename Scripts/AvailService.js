@@ -116,9 +116,10 @@ function setValues(array){
     MessageSubject_Form.value=array[0]['ServiceTitle'];
     GcashNumber.value = array[0]['GcashNumber'];
 
-
+    var totalrows = sessionStorage.getItem('allrows');
+    
     // total ratings (not yet final)
-    var ComputedTotalRatings = (1*parseFloat(array[0]['Service5StarRatings'])+2 * parseFloat(array[0]['Service4StarRatings'])+3* parseFloat(array[0]['Service3StarRatings'])+4* parseFloat(array[0]['Service2StarRatings'])+5* parseFloat(array[0]['Service1StarRatings']))/5;
+    var ComputedTotalRatings = (1*parseFloat(array[0]['Service5StarRatings'])+2 * parseFloat(array[0]['Service4StarRatings'])+3* parseFloat(array[0]['Service3StarRatings'])+4* parseFloat(array[0]['Service2StarRatings'])+5* parseFloat(array[0]['Service1StarRatings']))/parseFloat(totalrows);
   console.log(ComputedTotalRatings);
 
 
@@ -688,3 +689,39 @@ window.addEventListener('load',function(){
 
 
 });
+
+
+
+
+function allrows(){
+
+   
+   
+    
+    
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "Backend/getAllData.php", true);
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+           
+            var dataArray = this.response;
+            sessionStorage.setItem('allrows',dataArray);
+           //dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+
+            
+     
+        }else{console.log(err);}      
+    };
+    
+    xmlhttp.send();
+    
+
+
+ }// end 
+
+ allrows();

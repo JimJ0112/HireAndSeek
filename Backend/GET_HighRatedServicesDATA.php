@@ -7,7 +7,7 @@ require('../includes/databaseConnection.php');
 
 function search(mysqli $conn,$tablename){
 
-    $queryString = "SELECT * FROM $tablename ORDER BY ServiceTotalRatings DESC";
+    $queryString = "SELECT * FROM $tablename WHERE ServiceTotalRatings >= 3.0 ORDER BY ServiceTotalRatings DESC";
     $result = mysqli_query($conn,$queryString);
     $resultCheck = mysqli_num_rows($result);
     $data = array();

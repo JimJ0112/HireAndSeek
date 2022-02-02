@@ -402,6 +402,15 @@
     border: 2px solid black;
     margin: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/*
+    display: inline-block;
+   
+    overflow: hidden;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  */  
+
   }
   
              /*--------- Price button -------*/
@@ -419,7 +428,7 @@
     text-align: center;
     cursor: pointer;
     width: 100%; 
-  
+
   }
   
 
@@ -472,6 +481,12 @@ margin: 15px 5px 0 5px;
     grid-area: cardTitle;
     margin: 20px 5px 0 5px;
 font-weight:bolder;
+
+overflow-wrap: break-word;
+white-space: nowrap;
+text-overflow: ellipsis;
+
+
 }
 
 .ratings{   
@@ -481,14 +496,28 @@ font-weight:bolder;
 }
 
 .ServiceDescription{
+  
+
 grid-area: cardDesc;
 justify-self: center;
 width: max-content;
 width: 95%;
+
+ /*   
+width: 100%; 
+margin: 20px;
+position: relative;
+*/
+margin: 20px;
+
 line-height: 1.8;
 white-space: normal;
 margin: 20px 0px;
 padding: auto;
+
+
+
+text-overflow: ellipsis;
 }
 
 /*======================================= Avail Service==============================================*/
@@ -1784,6 +1813,7 @@ table{
     overflow: scroll;
     background-color: white;
     width: 100%;
+    height: 100%;
 }
 
 #Message_DisplayList{
@@ -1795,6 +1825,8 @@ table{
     font-family: Arial, Helvetica, sans-serif;
     overflow: scroll;
     background-color: #0b171f;  
+    height: 100%;
+   
 }
 
 .messageListItem{
@@ -1805,8 +1837,60 @@ table{
     padding: 0;
     cursor: pointer;
     background-color: white;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:small;
  
 }
+
+.SentmessageListItem{
+    height: 150px;
+    border-bottom: 1px solid black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: white;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:small;
+ 
+}
+
+.MessageButton{
+    background-color: rgb(82, 216, 221);
+    border: 1px solid black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+
+.ReplyButton{
+    background-color: rgb(82, 216, 221);
+border: 1px solid black;
+font-weight: bold;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 8px;
+cursor: pointer;
+margin: 10px;
+}
+
+
+.SentReplyButton{
+    background-color: rgb(82, 216, 221);
+border: 1px solid black;
+font-weight: bold;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 8px;
+cursor: pointer;
+margin: 10px;
+}
+
+
 
 #Read_Message{
    
@@ -1870,10 +1954,11 @@ border-bottom: 5px solid black;
 }
 
 #Read_Message{
-    border: 1px solid black;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+   
+    width: 99%;
+    height: 99%;
+    z-index: 1;
+    padding-left: 10px;
     
 }
 
@@ -1898,9 +1983,48 @@ border-bottom: 5px solid black;
 #Message_BodyContainer{
     width: 99.5%;
     border: 1px solid black;
-    height: 75%;
+    height: 60%;
 }
 
+
+/*------------------------------------Manage profile.php------------------------------------*/
+#Manageprofilecontent{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "img img details details"
+                        "footer footer footer footer";
+    grid-column-gap: 0;
+
+}
+
+#HSLogo{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border: 1px solid gray;
+   
+}
+
+#imageDiv{
+grid-area: img;
+
+padding: 0;
+align-content: center;
+}
+
+#Profilecontent{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    grid-area: details;
+   
+    
+}
+
+/*--------------------------------------CreateJob.php----------------------------------------*/
+#UploadFiles{
+float: right;
+
+}
 
 /*-----------------------------------Orders.php---------------------------------------------*/
 #OrdersContainer{
@@ -1936,6 +2060,30 @@ border-bottom: 5px solid black;
    overflow: scroll;
 }
 
+.columnHeaders{
+    color: gray;
+    font-weight: bolder;
+}
+
+#JobsTableContainer{
+    text-align: center;
+    overflow: scroll;
+
+}
+
+#JobsTableContainer td{
+    /*border: 1px solid black;*/
+   /* border: 2px solid gray; */
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: small;
+   background-color: rgb(225, 231, 236);
+   color: gray;
+    height: fit-content;
+    padding:5px;
+    text-align: center;
+    
+}
+
 #JobsTable td{
     /*border: 1px solid black;*/
    /* border: 2px solid gray; */
@@ -1954,7 +2102,7 @@ border-bottom: 5px solid black;
 }
 
 .Deliver{
-background-color: green;
+background-color: rgb(82, 216, 221);
 border: 1px solid black;
 font-weight: bold;
 font-family: Verdana, Geneva, Tahoma, sans-serif;

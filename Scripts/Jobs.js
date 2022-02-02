@@ -57,6 +57,66 @@ function createElements(Number){
 
     DataNumber = Number;
     Table = document.getElementById("JobsTable");
+
+
+    // column names //
+    var columnHeaders  = document.createElement('tr');
+    columnHeaders.setAttribute('class','columnHeaders');
+    var category = document.createElement('td');
+    var jobtitle = document.createElement('td');
+    var description = document.createElement('td');
+    var bpdesc = document.createElement('td');
+    var bpprc = document.createElement('td');
+    var sddesc = document.createElement('td');
+    var sdprc = document.createElement('td');
+    var ppdesc = document.createElement('td');
+    var ppprc = document.createElement('td');
+    var ttlrts = document.createElement('td');
+    var Str5rtngs = document.createElement('td');
+    var Str4rtngs = document.createElement('td');
+    var Str3rtngs = document.createElement('td');
+    var Str2rtngs = document.createElement('td');
+    var Str1rtngs = document.createElement('td');
+    var Gcash = document.createElement('td');
+    var Btns = document.createElement('td');
+
+
+     category.innerText="CATEGORY";
+     jobtitle.innerText="TITLE";
+     description.innerText="DESCRIPTION";
+     bpdesc.innerText="BASIC PLAN DESCRIPTION";
+     bpprc.innerText="BASIC PLAN PRICE";
+     sddesc.innerText="STANDARD PLAN DESCRIPTION";
+     sdprc.innerText="STANDARD PLAN PRICE";
+     ppdesc.innerText="PREMIUM PLAN DESCRIPTION";
+     ppprc.innerText="PREMIUM PLAN PRICE";
+     ttlrts.innerText="TOTAL RATINGS";
+     Str5rtngs.innerText="5 Stars";
+     Str4rtngs.innerText="4 Stars";
+     Str3rtngs.innerText="3 Stars";
+     Str2rtngs.innerText="2 Stars";
+     Str1rtngs.innerText="1 Stars";
+     Gcash.innerText="G-CASH NUMBER";
+     
+     columnHeaders.appendChild(category);
+     columnHeaders.appendChild(jobtitle);
+     columnHeaders.appendChild(description);
+     columnHeaders.appendChild(bpdesc);
+     columnHeaders.appendChild(bpprc);
+     columnHeaders.appendChild(sddesc);
+     columnHeaders.appendChild(sdprc);
+     columnHeaders.appendChild(ppdesc);
+     columnHeaders.appendChild( ppprc);
+     columnHeaders.appendChild(ttlrts);
+     columnHeaders.appendChild(Str5rtngs);
+     columnHeaders.appendChild(Str4rtngs);
+     columnHeaders.appendChild(Str3rtngs);
+     columnHeaders.appendChild(Str2rtngs);
+     columnHeaders.appendChild(Str1rtngs);
+     columnHeaders.appendChild(Gcash);
+     columnHeaders.appendChild(Btns);
+
+     Table.appendChild(columnHeaders);
     
     for(var i = 0;i<DataNumber;i++){
     
