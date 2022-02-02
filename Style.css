@@ -2259,6 +2259,91 @@ margin: 10px;
     margin: 10px;
 }
 
+/*-------------------------------------- Create Job------------------------------------ */
+.CreateJob-Container{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    margin: 0; padding: 0;
+  
+    grid-auto-rows: minmax(auto, auto);
+    grid-template-areas: 
+    'nav'
+    'createContent'
+    'footer';
+}
+.CreateJob-Content{
+    grid-area: createContent;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    place-items: center; 
+    grid-auto-rows: minmax(auto, auto);
+    background-color: #ddd;
+    box-shadow: 0 0 0.1em 0.1em rgb(221, 118, 0);
+    margin: 40px;
+    grid-template-areas: 
+    'CJcateg'
+    'inputs'
+    'upload'
+    'createBtn';
+}
+.CreateJob-Category{
+    grid-area: CJcateg;
+    
+}
+.CreateJob-Inputs{
+    grid-area: inputs;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+}
+.CreateJob-Inputs > div input{
+    font-size: 16px;
+    padding: 15px 20px;
+    margin: 20px;
+    border-radius: 0.25rem;
+    border: none;
+    outline: none;
+    position: relative;
+    height: 30px;   
+    width: 250px;
+}
+.div-input> input:hover,select:hover{
+    cursor: pointer;
+    box-shadow: 0 0 0 0.2em rgb(221, 118, 0);
+}
+.div-input> input:focus,select:focus{
+    cursor: pointer;
+    box-shadow: 0 0 0 0.2em rgb(221, 118, 0);
+}
+.UploadFiles > input{
+    grid-area: upload;
+    text-align: center;
+    font-size: 1em;
+    margin: 30px;
+}
+.CreateJobBtn{
+    grid-area: createBtn;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    margin: 20px
+}
+
+.CreateJobBtn > .CJBtn:hover{
+    box-shadow: 0 0 0 0.1em black;
+    transform: scale(1.1);  
+    transition: 100ms transform;
+}
+.CJBtn{
+    font-size: 20px;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(221, 118, 0);
+}
+
 /*-------------------------------------- Media Testing------------------------------------ */
 @media all and (max-width:800px){
     .Grid-container{
