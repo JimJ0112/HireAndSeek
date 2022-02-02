@@ -376,6 +376,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-auto-rows: minmax(auto, auto); 
+    grid-column-gap: 0;
 }
 
 /*Services Card Children*/
@@ -402,14 +403,16 @@
     border: 2px solid black;
     margin: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-/*
-    display: inline-block;
+    width: 280px;
+    
+
+    
    
     overflow: hidden;
     overflow-wrap: break-word;
     white-space: nowrap;
     text-overflow: ellipsis;
-  */  
+   
 
   }
   
@@ -420,7 +423,7 @@
   }
   
   .card button {
-      grid-area: cardBtn;
+    grid-area: cardBtn;
     border: none;
     padding: 12px;
     color: white;
