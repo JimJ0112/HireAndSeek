@@ -49,7 +49,19 @@ function createElements(Number){
    
 
 
-    
+    // total earnings
+    var rowTotalEarnings = document.createElement('th');
+    rowTotalEarnings.setAttribute('class','totalEarnings');
+    rowTotalEarnings.setAttribute('id','totalEarnings');
+    var tdTotalEarnings = document.createElement('td');
+    var tdTotalEarningsNumber = document.createElement('td');
+    tdTotalEarningsNumber.setAttribute('id','totalEarningsNumber');
+    tdTotalEarnings.innerText = "Total Earnings:";
+    var container = 0;
+  
+
+    rowTotalEarnings.appendChild(tdTotalEarnings);
+    rowTotalEarnings.appendChild(tdTotalEarningsNumber);
     // column headers
     var columnHeaders  = document.createElement('tr');
     columnHeaders.setAttribute('class','columnHeaders');
@@ -90,7 +102,7 @@ function createElements(Number){
      columnHeaders.appendChild( StatusCOL);
      
 
-
+      Table.appendChild(rowTotalEarnings);
      Table.appendChild(columnHeaders);
     
     for(var i = 0;i<DataNumber;i++){
@@ -164,6 +176,9 @@ function setData(array){
     const CancelButton = document.getElementsByClassName('Cancel');
     const price = document.getElementsByClassName('price');
     const Gcash = document.getElementsByClassName('Gcash');
+    const totalEarningsNumber = document.getElementById('totalEarningsNumber');
+    var totalEarnings = 0;
+    var convertprice;
     for(var i = 0; i<Number; i++){
 
         Buyer[i].innerText = DataArray[i]['ClientEmail'];
@@ -177,6 +192,12 @@ function setData(array){
          Status[i].style.fontWeight="bold"; 
          Gcash[i].innerText = DataArray[i]['Gcash'];
 
+        convertprice = parseFloat(DataArray[i]['Price'].replace("Php ",""));
+        totalEarnings = totalEarnings + convertprice;
+
+        
+
     }
+    totalEarningsNumber.innerText = "Php " + totalEarnings;
 
 }// end of function

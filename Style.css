@@ -2337,3 +2337,9 @@ margin: 10px;
         transform: translateY(-240%);
     }    
 }
+
+
+/*Delivered orders*/
+.totalEarnings{
+    text-align: center;
+}
