@@ -34,7 +34,7 @@ function CreateMessage(){
 
     Inbox.style.backgroundColor = "";
     Sentbox.style.backgroundColor = "";
-  
+    NewMessage.style.backgroundColor = "skyblue";
    
     
 }
@@ -53,12 +53,11 @@ function ReadMessage(){
 
     Inbox.style.backgroundColor = "skyblue";
     Sentbox.style.backgroundColor = "";
-    
+    NewMessage.style.backgroundColor = "";
 }
 
 function ReadSentMessages(){
     document.getElementById('Read_Message').style.display="none";
-    
     document.getElementById("Messages_DisplayList").style.display ="none";
     document.getElementById('Messages_List').style.display="block";
     document.getElementById('SentMessages_DisplayList').style.display = "block";
@@ -69,8 +68,8 @@ function ReadSentMessages(){
     var NewMessage = document.getElementsByClassName('Message_categories')[2];
 
     Inbox.style.backgroundColor = "";
-    Sentbox.style.backgroundColor = " skyblue";
-    
+    Sentbox.style.backgroundColor = "skyblue";
+    NewMessage.style.backgroundColor = "";
 }
 
 
@@ -154,8 +153,6 @@ for(var i = 0; i<Number;i++){
     
     
     messageListItem.appendChild(ReplyButton);
-    messageListItem.appendChild(breakLine);
-    messageListItem.appendChild(breakLine);
     messageListItem.appendChild(messageListItemStatus);
     messageListItem.appendChild(messageListItemDate);
     messageListItem.appendChild(messageListItemSender);
@@ -192,7 +189,7 @@ for(var i =0; i<=Number;i++){
     messageListItemSender[i].innerText= "Sender : "+DataArray[i]['SenderEmail'];
     messageListItemSubject[i].innerText= "Subject : "+DataArray[i]['Subject'];
     messageListItem[i].setAttribute('onclick','showMessage(' +DataArray[i]['MessageID'] +')');
-    ReplyButton[i].innerText = "Reply";
+    ReplyButton[i].innerText = "REPLY";
     ReplyButton[i].setAttribute('onclick',"replyMessage('"+DataArray[i]['SenderEmail']+"', '"+DataArray[i]['Subject']+"')");
     console.log("running");
 
@@ -348,7 +345,7 @@ const ReplyButton = document.getElementsByClassName('SentReplyButton');
 
 for(var i=0;i<=Number;i++){
     console.count(i);
-    ReplyButton[i].innerText = "Reply";
+    ReplyButton[i].innerText = "REPLY";
     messageListItemDate[i].innerText = DataArray[i]['MessageDate'] +" - "+DataArray[i]['MessageTime'];
     messageListItemRecepient[i].innerText= "Recepient : "+DataArray[i]['RecieverEmail'];
     messageListItemSubject[i].innerText= "Subject : "+DataArray[i]['Subject'];
