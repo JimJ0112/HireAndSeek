@@ -139,9 +139,12 @@ function createElements(Number){
     Job2StarRatings = document.createElement('td');
     Job1StarRatings = document.createElement('td');
     JobDeleteButton = document.createElement('button');
+    JobEditButton = document.createElement('button');
     Gcash = document.createElement('td');
     ButtonCol = document.createElement('td');
 
+
+    JobEditButton.setAttribute('class','JobEditButton');
     JobDeleteButton.setAttribute('class','JobDeleteButton');
     category.setAttribute('class','category');
     Title.setAttribute('class','Title');
@@ -176,6 +179,7 @@ function createElements(Number){
     row.appendChild(Job2StarRatings);
     row.appendChild(Job1StarRatings);
     row.appendChild(Gcash);
+    ButtonCol.appendChild(JobEditButton);
     ButtonCol.appendChild(JobDeleteButton);
     row.appendChild(ButtonCol);
 
@@ -208,6 +212,7 @@ function createElements(Number){
     Job1StarRatings= document.getElementsByClassName('Job1StarRatings'); 
     Gcash = document.getElementsByClassName('Gcash');
     JobDeleteButton = document.getElementsByClassName('JobDeleteButton');
+    JobEditButton = document.getElementsByClassName('JobEditButton');
  
     
         for(var i = 0; i<Number; i++){
@@ -230,8 +235,8 @@ function createElements(Number){
             JobDeleteButton[i].setAttribute('onclick','DeleteJob('+DataArray[i]['ServiceID']+')');
             JobDeleteButton[i].innerText = "Remove";
             Gcash[i].innerText = DataArray[i]['GcashNumber'];
-
-
+            JobEditButton[i].setAttribute('onclick','getJobData('+DataArray[i]['ServiceID']+')');
+            JobEditButton[i].innerText = "EDIT";
     
         }
     
@@ -267,3 +272,73 @@ function createElements(Number){
 
 xmlhttp.send(params);
     }
+
+
+
+function getJobData(ID){
+
+    editJob = document.getElementById('editJob');
+    editJob.style.display="block";
+
+    var ServiceID = ID;
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "Backend/getJobData.php", true);
+    
+    var params = "ServiceID="+ServiceID;
+    
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 || this.status === 200){ 
+           
+           
+            var dataArray = this.response;
+            dataArray = JSON.parse(dataArray);
+            console.log(dataArray);
+            setFormDatas(dataArray);
+            
+     
+        }else{console.log(err);}      
+    };
+    
+    xmlhttp.send(params);
+    
+}
+
+function HideEditForm(){
+    editJob = document.getElementById('editJob');
+    editJob.style.display="none";
+}
+
+function setFormDatas(data){
+    var dataArray = data;
+    var ServiceID = document.getElementById('ServiceID');
+    var Title = document.getElementById('Title');
+    var Description= document.getElementById('Description');
+    var BPDescription= document.getElementById('BPDescription');
+    var BPPrice= document.getElementById('BPPrice');
+    var SPDescription= document.getElementById('SPDescription');
+    var SPPrice= document.getElementById('SPPrice');
+    var PPDescription= document.getElementById('PPDescription');
+    var PPPrice= document.getElementById('PPPrice');
+    var GcashNumber= document.getElementById('GcashNumber');
+    var Category = document.getElementById('Category');
+
+    Category.value = dataArray[0]['category'];
+    ServiceID.value = dataArray[0]['ServiceID'];
+     Title.value = dataArray[0]['ServiceTitle'];
+     Description.value = dataArray[0]['ServiceDescription'];
+     BPDescription.value = dataArray[0]['ServiceBasicPlanDescription'];
+     BPPrice.value = dataArray[0]['ServiceBasicPlanPrice'];
+     SPDescription.value = dataArray[0]['ServiceStandardPlanDescription'];
+     SPPrice.value = dataArray[0]['ServiceStandardPlanPrice'];
+     PPDescription.value = dataArray[0]['ServicePremiumPlanDescription'];
+     PPPrice.value = dataArray[0]['ServicePremiumPlanPrice'];
+     GcashNumber.value = dataArray[0]['GcashNumber'];
+
+    
+
+
+}
+
