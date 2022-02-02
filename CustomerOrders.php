@@ -6,6 +6,13 @@ if(!isset($_SESSION['SessionName'])){
     header('location:Login_Index.php?data=PleaseLogIn');
 }
 
+
+if(isset($_GET['data'])){
+
+    $data= $_GET['data'];
+    echo"<script> alert('$data') </script>";
+}
+
 ?>
 
 <DOCTYPE>
