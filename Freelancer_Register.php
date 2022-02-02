@@ -31,11 +31,6 @@ $data = $_GET['data'];
             </div>
 
 
-        <div class="Freelancer-Content">
-
-
-        
-
 <div class="Freelancer-Container">
            <!-- Nav bar section -->
             <?php
@@ -51,6 +46,7 @@ $data = $_GET['data'];
         </div>
 
 
+        <div class="Freelancer-Content">
             <!-- Php form-->  
 
             <div id="LoginForm">
@@ -75,7 +71,7 @@ $data = $_GET['data'];
                 </div>
                 
                 <div class="div-input">
-                    <input type="date" name="Birthdate" placeholder="Birthday">
+                    <input type="date" name="Birthdate" placeholder="Birthday" title="Birthday">
                     <input type="text" name="Contact" placeholder="Contact Number">
                
                     <select name="Gender">
