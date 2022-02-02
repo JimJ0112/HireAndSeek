@@ -27,7 +27,7 @@ require('Includes/databaseConnection.php');
          $result = mysqli_query($conn,$queryString);
 
 
-         header('location:../AvailService.php?data=Success');
+         header('location:../CustomerOrders.php?data=Order Success');
          
 
 ?>

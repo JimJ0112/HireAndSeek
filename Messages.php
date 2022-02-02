@@ -91,7 +91,7 @@ $data = $_GET['data'];
                     <div id="Message_RecepientContainer">   </div> 
                     <div id="Message_SubjectContainer">   </div> 
                 </div>
-                    <div><textarea id="Message_BodyContainer"> </textarea></div>
+                    <div><textarea id="Message_BodyContainer" readonly> </textarea></div>
                    
                 </div>
             
